@@ -1,59 +1,57 @@
 #include<stdio.h>
 #include<string.h>
 
-int main(){
-    int et[20],at[10],n,i,j,temp,st[10],ft[10],wt[10],tat[10];
-    int totwt=0,totta=0;
-    float awt,ata;
-    char pr[10][10],t[10];
-    //clscr();
-    printf("Enter number of processes");
-    scanf("%d",&n);
-    for ( i = 0; i < n; i++)
-    {
-        printf("Enter the process name,arrival time and execution time");
-        //flushall();
-        scanf("%s%d%d",pn[i],&at[i],&et[i]);
+int main() {
+    int et[20], at[10], n, i, j, temp, st[10], ft[10], wt[10], tat[10];
+    int totwt = 0, totta = 0;
+    float awt, ata;
+    char pn[10][10], t[10]; 
+
+    printf("Enter number of processes: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        printf("Enter the process name, arrival time, and execution time: ");
+        scanf("%s%d%d", pn[i], &at[i], &et[i]);
     }
-    for ( i = 0; i < n; i++)
-        for (j=0;j<n;j++)
-    {
-        if(et[i]<et[j]){
-            temp = at[i];
-            at[i] = at[j];
-            at[j] = temp;
-            temp = et[i];
-            et[i] = et[j];
-            et[j] = temp;
-            strcpy(t,pn[i]);
-            strcpy(pn[i],pn[j]);
-            strcpy(pn[j],t);
-        }
-    }
-    for ( i = 0; i < n; i++)
-    {
-        if(i == 0)
+
+    for (i = 0; i < n; i++)
+        for (j = 0; j < n; j++)
+            if (et[i] < et[j]) {
+                temp = at[i];
+                at[i] = at[j];
+                at[j] = temp;
+                temp = et[i];
+                et[i] = et[j];
+                et[j] = temp;
+                strcpy(t, pn[i]);
+                strcpy(pn[i], pn[j]);
+                strcpy(pn[j], t);
+            }
+
+    for (i = 0; i < n; i++) {
+        if (i == 0)
             st[i] = at[i];
         else
-            st[i] = ft[i-1];
+            st[i] = ft[i - 1];
 
-        wt[i] = st[i] + ft[i-1];
+        wt[i] = st[i] - at[i];
         ft[i] = st[i] + et[i];
-        ta[i] = ft[i] - at[i];
-        totta += ta[i];
-        totwt  += wt[i];          
+        tat[i] = ft[i] - at[i];
+        totta += tat[i];
+        totwt += wt[i];
     }
-    awt = (float)totwt/n;
-    ata = (float)totta/n;
+
+    awt = (float)totwt / n;
+    ata = (float)totta / n;
+
     printf("\nPname\tarrivaltime\texecution time\twaiting time\ttattime");
-    for ( i = 0; i < n; i++)
-    {
-        printf("\n%s\t%5d\t\t%5d\t\t%5d\t\t%5d",pn[i],at[i],et[i],wt[i],ta[i]);
+    for (i = 0; i < n; i++) {
+        printf("\n%s\t%5d\t\t%5d\t\t%5d\t\t%5d", pn[i], at[i], et[i], wt[i], tat[i]);
     }
-    
-    
-    printf("\n\nAverage Turnaround Time = %f\n",awt);
-    printf("\n\nAverage WT = %f\n",ata);
+
+    printf("\n\nAverage Turnaround Time = %f\n", ata);
+    printf("Average Waiting Time = %f\n", awt);
 
     return 0;
 }
