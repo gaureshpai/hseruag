@@ -46,7 +46,8 @@ int main() {
     ata = (float)totta / n;
 
     printf("\nPname\tarrivaltime\texecution time\twaiting time\ttattime");
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < n; i++)
+    {
         printf("\n%s\t%5d\t\t%5d\t\t%5d\t\t%5d", pn[i], at[i], et[i], wt[i], tat[i]);
     }
 
