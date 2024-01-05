@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 int main(){
     int bt[10] = {0},at[10] = {0},wt[10] = {0},tat[10]={0},ct[10]={0};
     int n,sum=0;
@@ -17,6 +18,7 @@ int main(){
 
         printf("\n");
     }
+    
     for(int j=0;j<n;j++){
         sum +=b[j];
         ct[j]+=sum;
