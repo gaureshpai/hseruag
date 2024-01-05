@@ -1,20 +1,23 @@
 #include <stdio.h>
 #include <string.h>
+
 int main()
 {
     int n;
     printf("Enter total number of processes:");
     scanf("%d", &n);
+
     int et[20],at[10],n,i,j,temp,p[10],st[10],ft[10],wt[10],ta[10],totwt=0,totta=0;
     float awt,ata;
     char pn[10][10],t[10];
+
     for (int i = 0; i < n; i++)
     {
         printf("Enter details of process name,arrival time,execution time & priority:");
         scanf("%s,%d,%d,%d",pn[i],&at[i],&et[i],&p[i]);
     }
     for (i = 0; i < n;i++)
-    for(j=0;j<n;j++)
+    for (j = 0; j < n;j++)
     {
         if (p[i]<p[j])
         {
@@ -32,6 +35,7 @@ int main()
             strcpy(pn[j],t);
         }
     }
+
     for(i=0;i<n;i++){
         if(i==0){
         st[i] = at[i];
@@ -39,6 +43,7 @@ int main()
         ft[i] = st[i] + et[i];
         ta[i] = ft[i] - at[i];
         }
+
         else{
             st[i] = ft[i-1];
             wt[i] = st[i] - at[i];
@@ -47,8 +52,10 @@ int main()
         total+=wt[i];
         total+=ta[i];
     }
+
     float awt = (float)totwt / n;
     float ata = (float)totta / n;
+    
     printf("\nPname\tarrivaltime\texecution time\t priority\t waiting time\ttattime");
     for (i = 0; i < n; i++)
     {
