@@ -1,4 +1,5 @@
-#inlcude<stdio.h>
+#include<stdio.h>
+
 int main(){
     char name[25],college[25],adddress[25];
     printf("Enter your name:");
