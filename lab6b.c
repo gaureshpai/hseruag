@@ -31,7 +31,7 @@ void main()
                     if (lowest > temp)
                     {
                         ff[i] = j;
-                        37 lowest = temp;
+                        lowest = temp;
                     }
             }
         }

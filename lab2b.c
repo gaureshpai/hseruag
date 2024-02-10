@@ -26,7 +26,7 @@ int main()
                 temp = et[i];
                 et[i] = et[j];
                 et[j] = temp;
-                13 strcpy(t, pn[i]);
+                strcpy(t, pn[i]);
                 strcpy(pn[i], pn[j]);
                 strcpy(pn[j], t);
             }
