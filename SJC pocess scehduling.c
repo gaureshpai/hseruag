@@ -6,13 +6,11 @@ int main()
     int totwt = 0, totta = 0;
     float awt, ata;
     char pn[10][10], t[10];
-    // clrscr();
     printf("Enter the number of process:");
     scanf("%d", &n);
     for (i = 0; i < n; i++)
     {
         printf("Enter process name, arrival time& execution time:");
-        // flushall();
         scanf("%s%d%d", pn[i], &at[i], &et[i]);
     }
     for (i = 0; i < n; i++)
