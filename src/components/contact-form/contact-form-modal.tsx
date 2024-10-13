@@ -29,7 +29,7 @@ export default function ContactFormModal({
   const handleSubmit = async (values: ContactFormValues) => {
     setIsSendingMail(true);
     try {
-      const response = await fetch("/api/sendmail", {
+      const response = await fetch("/api/mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
@@ -96,6 +96,7 @@ export default function ContactFormModal({
                     <span>Send Message</span>
                   </Dialog.Title>
                   <button
+                    title="button"
                     className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-accent bg-background p-2 text-sm text-accent transition-transform hover:scale-[1.05] hover:bg-background"
                     onClick={() => setShowModal(false)}
                   >
