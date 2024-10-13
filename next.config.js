@@ -7,9 +7,6 @@ const nextConfig = withBundleAnalyzer({
   output: process.env.BUILD_STANDALONE === "true" ? "standalone" : undefined,
   reactStrictMode: true,
   pageExtensions: ["ts", "tsx", "js"],
-  eslint: {
-    dirs: ["src"],
-  },
   images: {
     domains: ["https://flagcdn.com"],
   },
