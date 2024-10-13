@@ -4,7 +4,7 @@ import { ValidationError } from "yup";
 
 import { mailValidationSchema } from "@/components/contact-form/contact-form";
 import { rateLimiterApi, getUserId } from "@/utility/rate-limiter";
-import { sendMail } from "@/utility/sendMail";
+import { mail } from "@/utility/mail";
 
 const REQUEST_PER_HOUR = 5 as const;
 const RATELIMIT_DURATION = 3600000 as const;
@@ -77,7 +77,7 @@ const handler = async (
 
     const { name, email, subject, message } = body;
 
-    const response = await sendMail(name, email, subject, message);
+    const response = await mail(name, email, subject, message);
     res.status(response.status).send(response);
   } catch (error: any) {
     if (error?.status === 429) {

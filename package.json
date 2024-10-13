@@ -9,8 +9,7 @@
     "lint": "next lint",
     "analyze": "cross-env ANALYZE=true next build",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,mdx,css,json}\"",
-    "format:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,mdx,css,json}\"",
-    "prepare": "husky install"
+    "format:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,mdx,css,json}\""
   },
   "dependencies": {
     "@headlessui/react": "^2.1.10",
@@ -45,7 +44,6 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.2.1",
     "globby": "^14.0.2",
-    "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "postcss": "8.4.47",
     "prettier": "^3.3.3",

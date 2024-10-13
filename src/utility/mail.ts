@@ -1,6 +1,6 @@
 import { createTransport } from "nodemailer";
 
-export const sendMail = async function (
+export const mail = async function (
   name: string,
   email: string | "SELF",
   subject: string,

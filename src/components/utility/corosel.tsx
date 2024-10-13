@@ -78,6 +78,7 @@ export default function Corosel({ aspectRatio = 1, images }: CoroselProps) {
       </AnimatePresence>
       <div className="absolute bottom-0 flex h-12 w-full items-center justify-center gap-2">
         <button
+          title="button"
           onClick={() => paginate(1)}
           className="hidden h-4 w-4 lg:inline-block"
         >
@@ -95,6 +96,7 @@ export default function Corosel({ aspectRatio = 1, images }: CoroselProps) {
           ></span>
         ))}
         <button
+          title="button"
           onClick={() => paginate(-1)}
           className="hidden h-4 w-4 lg:inline-block"
         >
