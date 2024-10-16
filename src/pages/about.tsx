@@ -2,14 +2,13 @@ import { NextSeo } from "next-seo";
 
 import AboutHero from "@/components/about-hero";
 import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
-import { EXPERIENCE } from "@/data/experience";
 import { EDUCATION } from "@/data/education";
 
 export default function About() {
   return (
     <>
       <NextSeo
-        title="About Gauresh G Pai | Engineering Student"
+        title="About | Gauresh"
         description="Learn more about Gauresh G Pai, a dedicated Engineering Student with 2 years of experience. Discover the journey, skills, and passion that drive me to create innovative and user-friendly web solutions."
         openGraph={{
           title: "Learn About Gauresh G Pai - Engineering Student",
@@ -29,7 +28,6 @@ export default function About() {
         ]}
       />
       <AboutHero />
-      <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
       <ExperienceShowcaseList title="Education" details={EDUCATION} />
     </>
   );
