@@ -1,21 +1,19 @@
-import Image from "next/image";
-
+import React from 'react';
 import { motion } from "framer-motion";
-import { FiExternalLink } from "react-icons/fi";
-
-import Corosel from "@/components/utility/corosel";
 import { GithubIcon } from "@/components/icons";
+import { FiExternalLink } from "react-icons/fi"; // Importing the external link icon
 
 export interface ProjectCardProps {
-  name: string;
-  favicon: string;
-  imageUrl: string[];
+  title: string;
   description: string;
-  sourceCodeHref: string;
-  liveWebsiteHref?: string;
+  link: string; // GitHub link
+  liveUrl?: string|null; // Optional live URL prop
+  tags: string[];
+  owner: string; // Owner prop
+  collaborators: string[]; // Collaborators prop
 }
 
-export default function ProjectCard(props: ProjectCardProps) {
+const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   return (
     <motion.div
       initial={{ y: 80 }}
@@ -26,29 +24,50 @@ export default function ProjectCard(props: ProjectCardProps) {
       }}
       className="w-full overflow-hidden rounded-lg border border-accent/20 bg-background shadow-md transition-shadow duration-150 hover:shadow-md hover:shadow-accent/20 dark:bg-zinc-800 dark:hover:shadow-lg"
     >
-      <Corosel images={props.imageUrl} aspectRatio={2.1} />
       <div className="p-3 text-foreground sm:p-4">
         <div className="flex items-center gap-3">
-          <span className="relative h-5 w-5">
-            <Image src={props.favicon} alt="logo" fill />
-          </span>
-          <span className="text-sm font-semibold">{props.name}</span>
+          <span className="text-sm font-semibold">{props.title}</span>
         </div>
         <div className="mt-3">
           <p className="text-xs md:text-sm">{props.description}</p>
         </div>
+        {/* Display the owner */}
+        {props.owner !== 'gaureshpai' && (
+          <div className="mt-3 text-xs text-muted-foreground">
+            Owner: {props.owner}
+          </div>
+        )}
+        {/* Display collaborators */}
+        {props.collaborators.filter(collab => collab !== props.owner).length > 0 && (
+          <div className="mt-3 text-xs text-muted-foreground">
+            <span>
+              Collaborator(s): {props.collaborators.filter(collab => collab !== props.owner).join(', ')}
+            </span>
+          </div>
+        )}
+        <div className="mt-3 flex flex-wrap gap-2">
+          {props.tags.map((tag, index) => (
+            <span key={index} className="rounded-full bg-accent/10 px-2 py-1 text-xs text-accent">
+              {tag}
+            </span>
+          ))}
+        </div>
         <div className="mt-6 flex items-center justify-end gap-6">
+          {/* GitHub link */}
           <a
-            href={props.sourceCodeHref}
+            href={props.link}
             target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-1 text-xs underline md:text-sm"
           >
-            <GithubIcon className="h-5 w-5" /> Source code
+            <GithubIcon className="h-5 w-5" /> View on GitHub
           </a>
-          {props.liveWebsiteHref && (
+          {/* Live URL link */}
+          {props.liveUrl && (
             <a
-              href={props.liveWebsiteHref}
+              href={props.liveUrl}
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-1 text-xs underline md:text-sm"
             >
               <FiExternalLink className="h-5 w-5" /> Live
@@ -58,4 +77,6 @@ export default function ProjectCard(props: ProjectCardProps) {
       </div>
     </motion.div>
   );
-}
+};
+
+export default ProjectCard;
