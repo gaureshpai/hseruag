@@ -29,39 +29,65 @@ export default function MobileMenu({
   return (
     <Transition show={openMenu} as={Fragment}>
       <Dialog as="div" className="z-50" onClose={setOpenMenu}>
-        <div className="fixed inset-0 flex items-center justify-center">
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0 bottom-full"
-            enterTo="opacity-100 bottom-[15%]"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100 bottom-[15%]"
-            leaveTo="opacity-0 bottom-full"
-          >
-            <Dialog.Panel className="pointer-events-none absolute flex min-h-[85%] w-full flex-col items-center justify-center overflow-y-auto rounded-b-2xl border-2 border-accent/20 bg-background px-6 py-8 text-accent shadow-lg shadow-accent/10 md:px-10 md:py-16">
-              <div className="pointer-events-auto flex flex-col items-center gap-6 text-center">
+        <Transition.Child
+          as={Fragment}
+          enter="transform transition ease-in-out duration-300"
+          enterFrom="translate-x-full"
+          enterTo="translate-x-0"
+          leave="transform transition ease-in-out duration-300"
+          leaveFrom="translate-x-0"
+          leaveTo="translate-x-full" 
+        >
+          <Dialog.Panel className="fixed inset-y-0 right-0 flex w-[80%] max-w-xs flex-col bg-black text-white shadow-xl">
+            <div className="flex h-full flex-col items-start gap-8 p-6">
+              <div className="flex w-full justify-end">
+                <button
+                  onClick={() => setOpenMenu(false)}
+                  className="text-accent focus:outline-none"
+                  aria-label="Close menu"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="h-8 w-8"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div className="flex flex-col gap-6 text-xl">
                 {routes.map((link, i) => (
                   <button
                     key={i}
-                    className="group relative py-2 text-3xl font-medium"
+                    className="relative py-2 text-xl font-medium w-full text-left"
                     onClick={() => handleClick(link.href)}
                   >
                     <span
                       className={classNames(
                         pathName === link.href ? "w-full" : "w-0",
-                        "absolute -bottom-1 left-0 h-1 rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full",
+                        "absolute bottom-0 left-0 h-1 rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full"
                       )}
                     ></span>
                     {link.title}
                   </button>
                 ))}
+              </div>
+              <div className="mt-auto">
                 <ThemeSwitch setClose={setOpenMenu} />
               </div>
-              <div className="absolute bottom-0 py-6">©2023 Gauresh G Pai</div>
-            </Dialog.Panel>
-          </Transition.Child>
-        </div>
+              <div className="absolute bottom-6 text-center w-full">
+                ©2024 Gauresh G Pai
+              </div>
+            </div>
+          </Dialog.Panel>
+        </Transition.Child>
       </Dialog>
     </Transition>
   );
