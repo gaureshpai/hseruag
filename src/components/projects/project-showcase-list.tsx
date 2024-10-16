@@ -9,10 +9,6 @@ export type ProjectShowcaseListItem = {
   title: string;
   href: string;
   tags: string[];
-  image: {
-    LIGHT: string;
-    DARK?: string;
-  };
 };
 
 export interface ProjectShowcaseListProps {
