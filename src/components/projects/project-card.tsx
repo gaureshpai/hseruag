@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { GithubIcon } from "@/components/icons";
-import { FiExternalLink } from "react-icons/fi"; // Importing the external link icon
+import { FiExternalLink } from "react-icons/fi";
 
 export interface ProjectCardProps {
   title: string;
   description: string;
-  link: string; // GitHub link
-  liveUrl?: string|null; // Optional live URL prop
+  link: string;
+  liveUrl?: string|null;
   tags: string[];
-  owner: string; // Owner prop
-  collaborators: string[]; // Collaborators prop
+  owner: string;
+  collaborators: string[];
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {

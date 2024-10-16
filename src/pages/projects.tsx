@@ -21,7 +21,7 @@ export const getServerSideProps: GetServerSideProps<ProjectsPageProps> = async (
 
     const projects: ProjectCardProps[] = await Promise.all(
       response.data
-        .filter(repo => repo.owner.type === 'User') // Filter out organization-owned repositories
+        .filter(repo => repo.owner.type === 'User')
         .map(async repo => {
           const collaboratorsResponse = await octokit.repos.listCollaborators({
             owner: repo.owner.login,
@@ -29,20 +29,19 @@ export const getServerSideProps: GetServerSideProps<ProjectsPageProps> = async (
           });
 
           const collaborators = collaboratorsResponse.data
-            .filter(collaborator => collaborator.login !== repo.owner.login) // Exclude the owner
-            .map(collaborator => collaborator.login); // Extract collaborator usernames
+            .filter(collaborator => collaborator.login !== repo.owner.login)
+            .map(collaborator => collaborator.login);
 
-          // Construct the live URL (example: GitHub Pages)
           const liveUrl = repo.homepage;
 
           return {
             title: repo.name,
             description: repo.description || "No description available.",
             link: repo.html_url,
-            liveUrl, // Add live URL here
+            liveUrl,
             tags: repo.topics || [],
-            owner: repo.owner.login, // Add owner information
-            collaborators: [repo.owner.login, ...collaborators], // Include the main user and collaborators
+            owner: repo.owner.login,
+            collaborators: [repo.owner.login, ...collaborators],
           };
         })
     );

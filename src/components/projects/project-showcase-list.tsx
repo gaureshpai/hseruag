@@ -14,7 +14,7 @@ export type ProjectShowcaseListItem = {
 export interface ProjectShowcaseListProps {
   data: ProjectShowcaseListItem;
   activeProject: number;
-  toggleList: (index: number) => void; //eslint-disable-line no-unused-vars
+  toggleList: (index: number) => void;
 }
 
 export default function ProjectShowcaseList(props: ProjectShowcaseListProps) {
