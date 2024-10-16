@@ -2,36 +2,36 @@ import { type ExperienceShowcaseListItemProps } from "@/components/experience/ex
 
 export const EDUCATION: ExperienceShowcaseListItemProps[] = [
   {
-    title: "Bachelor Of Engineering in Electronics and Telecommunication",
+    title: "Bachelor Of Engineering in Computer Science and Engineering",
     organisation: {
-      name: "Rizvi College Of Engineering",
-      href: "https://eng.rizvi.edu.in/",
+      name: "AJ Institute of Engineering & Technology",
+      href: "https://ajiet.edu.in/",
     },
-    date: "2019-2023",
-    location: "Bandra, Mumbai",
+    date: "2022-2026",
+    location: "Mangalore, Karnataka",
     description:
-      "Relevant courses included Data Structures and Algorithms, Web Design, Cloud Computing, Artificial Neural Network and Database Management.",
+      "Currently pursuing a Bachelor's degree with a strong focus on software development, data analysis, and system design. Involved in hands-on projects and collaborative learning experiences that enhance practical skills and readiness for the industry.",
   },
   {
-    title: "Higher Secondary School",
+    title: "Pre-University College",
     organisation: {
-      name: "Mithibai College",
-      href: "https://www.mithibai.ac.in/",
+      name: "ST ALOYSIUS PU COLLEGE",
+      href: "https://staloysiuspuc.in/",
     },
-    date: "2016-2018",
-    location: "Vile Parle, Mumbai",
+    date: "2020-2022",
+    location: "Mangalore, Karnataka",
     description:
-      "Completed the course in Electronics Bifocal Science with 68%. Started freelancing making 3D assets for games. Got interested in game development and learned unity and c#",
+      "Completed Pre-University studies with a specialization in Computer Science. Developed a solid foundation in programming, algorithms, and technology principles.",
   },
   {
-    title: "Secondary School Education",
+    title: "School",
     organisation: {
-      name: "Holy Family High School",
-      href: "https://holyfamilyandheri.org/",
+      name: "SVS English School Vidyagiri Bantwal",
+      href: "https://schools.org.in/dakshina-kannada/29240108307/svs-english-medium-high-school-vidyagiri-bantwal.html",
     },
-    date: "2017-2018",
-    location: "Andheri, Mumbai",
+    date: "2008-2020",
+    location: "Bantwal, Karnataka",
     description:
-      "Learned good values,dedication and disciplne. Played district football for 5 years.",
+      "Acquired essential skills in critical thinking and problem-solving, along with a well-rounded education that emphasizes dedication and commitment to learning.",
   },
 ];

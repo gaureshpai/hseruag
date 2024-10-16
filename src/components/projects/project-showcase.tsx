@@ -1,112 +1,67 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-
-import { AnimatePresence, motion } from "framer-motion";
-
+import { AnimatePresence } from "framer-motion";
 import { ArrowTopRight } from "@/components/icons";
-import ProjectShowcaseList, {
-  type ProjectShowcaseListItem,
-} from "@/components/projects/project-showcase-list";
-
-const generateImageData = (proj: ProjectShowcaseListItem[]) => {
-  return proj.map((p) => p.image);
-};
+import ProjectShowcaseList, { type ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
 
 interface ProjectShowcaseProps {
   projects: ProjectShowcaseListItem[];
 }
 
-export default function ProjectShowcase(props: ProjectShowcaseProps) {
+export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
   const [currentImage, setCurrentImage] = useState<number>(0);
 
-  const images = useMemo(() => {
-    return generateImageData(props.projects);
-  }, [props.projects]);
-
   const handleAnimate = (index: number) => {
-    if (index === currentImage) return;
-    setCurrentImage(index);
+    if (index !== currentImage) {
+      setCurrentImage(index);
+    }
   };
 
+  const projectItems = useMemo(() => {
+    return projects.map((proj, index) => {
+      const { title, href, tags } = proj;
+      return (
+        <ProjectShowcaseList
+          key={title}
+          activeProject={currentImage}
+          toggleList={handleAnimate}
+          data={{ ...proj, index }}
+        />
+      );
+    });
+  }, [projects, currentImage]);
+
   return (
-    <section className="overflow-hidden px-6 py-32 sm:px-14 md:px-20">
+    <section className="overflow-hidden px-6 pt-16 py-16 sm:px-14 md:px-20">
       <div className="relative mx-auto max-w-7xl">
-        <div className="relative right-0 top-0 hidden lg:block">
-          <AnimatePresence>
-            <motion.div
-              key={props.projects[currentImage].title}
-              initial={{ x: "100%", opacity: 0 }}
-              animate={{
-                x: "55%",
-                y: "50%",
-                opacity: 1,
-                transition: {
-                  duration: 0.5,
-                },
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-              }}
-              className="absolute right-0 top-0 -z-50"
-            >
-              <Image
-                src={images[currentImage].LIGHT}
-                unoptimized
-                width={100}
-                height={100}
-                className="h-auto w-1/2 rounded-lg border border-zinc-300 shadow-lg dark:hidden dark:border-accent/50"
-                alt={`project ${currentImage}`}
-              />
-              {images[currentImage].DARK !== undefined && (
-                <Image
-                  src={images[currentImage].DARK!}
-                  unoptimized
-                  width={100}
-                  height={100}
-                  className="hidden h-auto w-1/2 rounded-lg border border-zinc-300 shadow-lg dark:inline-block dark:border-accent/20 dark:shadow-lg dark:shadow-emerald-400/5"
-                  alt={`project ${currentImage}`}
-                />
-              )}
-            </motion.div>
-          </AnimatePresence>
-        </div>
         <h2 className="text-xl font-semibold text-accent sm:text-3xl">
-          My projects
+          Few Featured Projects:
         </h2>
         <div className="hidden flex-col gap-6 py-14 sm:gap-8 sm:py-20 md:gap-10 lg:flex">
-          {props.projects.map((proj, index) => (
-            <ProjectShowcaseList
-              activeProject={currentImage}
-              toggleList={handleAnimate}
-              data={proj}
-              key={index}
-            />
-          ))}
+          {projectItems}
         </div>
         <div className="flex flex-col gap-4 py-14 sm:gap-8 sm:py-20 md:gap-10 lg:hidden">
-          {props.projects.map((proj) => (
+          {projects.map(({ title, href, tags }, index) => (
             <Link
-              key={proj.title}
-              href={proj.href}
+              key={title}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex flex-col gap-1"
+              aria-label={`View project: ${title}`}
             >
               <div className="flex gap-2">
                 <span className="text-3xl font-semibold text-accent transition-colors duration-300 sm:text-4xl md:text-5xl lg:hidden">
-                  {proj.index + 1}.
+                  {index + 1}.
                 </span>
                 <span
-                  key={proj.title}
                   className="-underline-offset-1 text-3xl font-semibold text-accent underline transition-colors duration-300 sm:text-4xl md:text-5xl lg:hidden"
                 >
-                  {proj.title}
+                  {title}
                 </span>
               </div>
               <p className="flex max-w-xl flex-wrap gap-2 text-base font-semibold text-accent-foreground sm:text-lg">
-                {proj.tags.map((tag, index) => (
-                  <span key={index}>#{tag}</span>
-                ))}
+                {tags.join(", ")}
               </p>
             </Link>
           ))}

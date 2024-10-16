@@ -1,34 +1,27 @@
 import {
-  SiExpress,
-  SiSocketdotio,
   SiNextdotjs,
-  SiFlask,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiPython,
+  SiReact,
+  SiMongodb,
+  SiMysql,
+  SiFirebase,
+  SiGit,
+  SiTailwindcss,
+  SiBootstrap,
+  SiVercel,
+  SiNetlify,
+  SiWordpress,
+  SiShopify,
+  SiCloudflare,
 } from "react-icons/si";
-import {
-  ReactRouterDomIcon
-} from "@/components/icons";
+
+import { SiPostman } from "react-icons/si";
+
 import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
-
-// Languages
-import HtmlSvg from "@/public/icons/html.svg";
-import CsssSvg from "@/public/icons/css.svg";
-import JavascriptSvg from "@/public/icons/javascript.svg";
-import TypescriptSvg from "@/public/icons/typescript.svg";
-import PythonSvg from "@/public/icons/python.svg";
-
-// Libraries
-import ReactjsSvg from "@/public/icons/reactjs.svg";
-import TailwindcssSvg from "@/public/icons/tailwindcss.svg";
-
-// Backend
-import NodejsSvg from "@/public/icons/nodejs.svg";
-
-// Database and ORMS
-import MongoDBSvg from "@/public/icons/mongodb.svg";
-
-// Tools and Tech
-import GitSvg from "@/public/icons/git.svg";
-import PostmanSvg from "@/public/icons/postman.svg";
 
 export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
   {
@@ -36,23 +29,23 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
     skills: [
       {
         name: "HTML",
-        icon: HtmlSvg,
+        icon: SiHtml5,
       },
       {
         name: "CSS",
-        icon: CsssSvg,
+        icon: SiCss3,
       },
       {
-        name: "Javascript",
-        icon: JavascriptSvg,
+        name: "JavaScript",
+        icon: SiJavascript,
       },
       {
-        name: "Typescript",
-        icon: TypescriptSvg,
+        name: "TypeScript",
+        icon: SiTypescript,
       },
       {
         name: "Python",
-        icon: PythonSvg,
+        icon: SiPython,
       },
     ],
   },
@@ -60,63 +53,70 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
     sectionName: "Libraries and Frameworks",
     skills: [
       {
-        name: "Reactjs",
-        icon: ReactjsSvg,
+        name: "React",
+        icon: SiReact,
       },
       {
-        name: "Nextjs",
+        name: "Next.js",
         icon: SiNextdotjs,
       },
       {
-        name: "React Router Dom",
-        icon: ReactRouterDomIcon,
+        name: "Bootstrap",
+        icon: SiBootstrap,
       },
       {
-        name: "Tailwindcss",
-        icon: TailwindcssSvg,
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
       },
     ],
   },
   {
-    sectionName: "Backend",
-    skills: [
-      {
-        name: "Nodejs",
-        icon: NodejsSvg,
-      },
-      {
-        name: "Express",
-        icon: SiExpress,
-      },
-      {
-        name: "Socket.io",
-        icon: SiSocketdotio,
-      },
-      {
-        name: "Flask",
-        icon: SiFlask,
-      },
-    ],
-  },
-  {
-    sectionName: "Databases and ORMs",
+    sectionName: "Databases",
     skills: [
       {
         name: "MongoDB",
-        icon: MongoDBSvg,
+        icon: SiMongodb,
+      },
+      {
+        name: "MySQL",
+        icon: SiMysql,
+      },
+      {
+        name: "Firebase",
+        icon: SiFirebase,
       },
     ],
   },
   {
-    sectionName: "Tools and Technologies",
+    sectionName: "Version Control and Tools",
     skills: [
       {
         name: "Git",
-        icon: GitSvg,
+        icon: SiGit,
       },
       {
         name: "Postman",
-        icon: PostmanSvg,
+        icon: SiPostman,
+      },
+      {
+        name: "Vercel",
+        icon: SiVercel,
+      },
+      {
+        name: "Netlify",
+        icon: SiNetlify,
+      },
+      {
+        name: "WordPress",
+        icon: SiWordpress,
+      },
+      {
+        name: "Shopify",
+        icon: SiShopify,
+      },
+      {
+        name: "Cloudflare",
+        icon: SiCloudflare,
       },
     ],
   },
