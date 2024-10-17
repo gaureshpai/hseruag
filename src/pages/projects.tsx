@@ -48,7 +48,6 @@ export const getServerSideProps: GetServerSideProps<ProjectsPageProps> = async (
 
     return { props: { projects } };
   } catch (error) {
-    console.error("Error fetching projects:", error);
     return { props: { projects: [], error: "Failed to load projects. Please try again later." } };
   }
 };
