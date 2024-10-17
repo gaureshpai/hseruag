@@ -60,7 +60,7 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
                   {title}
                 </span>
               </div>
-              <p className="flex max-w-xl flex-wrap gap-2 text-base font-semibold text-accent-foreground sm:text-lg">
+              <p className="flex max-w-xl flex-wrap gap-2 text-base font-semibold text-black dark:text-accent-foreground  sm:text-lg">
                 {tags.join(", ")}
               </p>
             </Link>
