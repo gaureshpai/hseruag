@@ -51,11 +51,11 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
               aria-label={`View project: ${title}`}
             >
               <div className="flex gap-2">
-                <span className="text-3xl font-semibold text-accent transition-colors duration-300 sm:text-4xl md:text-5xl lg:hidden">
+                <span className="text-3xl font-semibold text-accent transition-colors duration-300 sm:text-3xl md:text-3xl lg:hidden">
                   {index + 1}.
                 </span>
                 <span
-                  className="-underline-offset-1 text-3xl font-semibold text-accent underline transition-colors duration-300 sm:text-4xl md:text-5xl lg:hidden"
+                  className="-underline-offset-1 text-3xl font-semibold text-accent underline transition-colors duration-300 sm:text-3xl md:text-3xl lg:hidden"
                 >
                   {title}
                 </span>
