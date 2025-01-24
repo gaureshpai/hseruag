@@ -1,29 +1,22 @@
-import { type ProjectCardProps } from "@/components/projects/project-card";
 import { type ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
 
 export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   {
     index: 0,
-    title: "IdeaSpark",
-    href: "https://github.com/gaureshpai/IdeaSpark",    
-    tags: ["Nextjs","Tailwindcss","JavaScript","Rest API's","Firebase","MongoDB","Vercel"],
-  },
-  {
-    index: 1,
-    title: "Hearease",
-    href: "https://github.com/gaureshpai/Hearease",
-    tags: [
-      "Nextjs",
-      "Tailwindcss",
-      "TypeScript",
-      "html-css-js",
-      "Vercel",
-    ],
+    title: "Ullas Ice Cream",
+    href: "https://www.ullasicecream.com/",
+    tags: ["Website", "Responsive Design", "Modern UI"],
   },
   {
     index: 2,
-    title: "GGQuizopia",
-    href: "https://github.com/gaureshpai/ggquizopia",
-    tags: ["Nextjs", "JavaScript", "Tailwindcss", "Vercel"],
+    title: "SVSTPU",
+    href: "https://www.svstpu.edu.in/",
+    tags: ["Educational Institution", "Responsive Design", "Easy Navigation"],
+  },
+  {
+    index: 3,
+    title: "Exactitude Medical Foundation",
+    href: "https://exactitudemedfoundation.org/",
+    tags: ["Medical Foundation", "Modern Design", "Accessible"],
   },
 ];
