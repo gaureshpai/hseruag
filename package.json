@@ -15,13 +15,13 @@
     "@headlessui/react": "^2.2.0",
     "@octokit/rest": "^21.1.0",
     "@primer/octicons-react": "^19.14.0",
-    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/forms": "^0.5.10",
     "@vercel/analytics": "^1.4.1",
     "analytics": "github:vercel/analytics",
     "formik": "^2.4.6",
     "framer-motion": "^11.16.1",
     "lru-cache": "^11.0.2",
-    "lucide-react": "^0.462.0",
+    "lucide-react": "^0.474.0",
     "nanoid": "^5.0.9",
     "next": "^15.1.6",
     "next-seo": "^6.6.0",
@@ -35,7 +35,7 @@
     "yup": "^1.6.1"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^15.1.4",
+    "@next/bundle-analyzer": "^15.1.6",
     "@svgr/webpack": "^8.1.0",
     "@types/lodash": "^4.17.14",
     "@types/node": "^22.10.10",
@@ -54,7 +54,7 @@
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.3"
   },
   "lint-staged": {
     "*.+(js|jsx|ts|tsx)": [
