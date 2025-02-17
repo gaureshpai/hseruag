@@ -16,7 +16,7 @@
     "@octokit/rest": "^21.1.0",
     "@primer/octicons-react": "^19.15.0",
     "@tailwindcss/forms": "^0.5.10",
-    "@vercel/analytics": "^1.4.1",
+    "@vercel/analytics": "^1.5.0",
     "analytics": "github:vercel/analytics",
     "formik": "^2.4.6",
     "framer-motion": "^11.16.1",
