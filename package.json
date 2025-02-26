@@ -31,7 +31,7 @@
     "react-dom": "18.3.1",
     "react-icons": "^5.4.0",
     "sharp": "^0.33.5",
-    "vercel": "^41.1.4",
+    "vercel": "^41.2.2",
     "yup": "^1.6.1"
   },
   "devDependencies": {
