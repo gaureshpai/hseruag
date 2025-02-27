@@ -48,7 +48,7 @@
     "eslint-config-next": "^15.1.6",
     "eslint-config-prettier": "10.0.1",
     "eslint-plugin-prettier": "5.2.3",
-    "globby": "^14.0.2",
+    "globby": "^14.1.0",
     "lint-staged": "^15.4.3",
     "postcss": "8.4.49",
     "prettier": "^3.5.1",
