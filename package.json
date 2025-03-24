@@ -46,7 +46,7 @@
     "autoprefixer": "10.4.21",
     "cross-env": "^7.0.3",
     "eslint-config-next": "^15.2.3",
-    "eslint-config-prettier": "10.0.1",
+    "eslint-config-prettier": "10.1.1",
     "eslint-plugin-prettier": "5.2.3",
     "globby": "^14.1.0",
     "lint-staged": "^15.4.3",
