@@ -45,7 +45,7 @@
     "@types/uuid": "^10.0.0",
     "autoprefixer": "10.4.21",
     "cross-env": "^7.0.3",
-    "eslint-config-next": "^15.2.3",
+    "eslint-config-next": "^15.2.4",
     "eslint-config-prettier": "10.1.1",
     "eslint-plugin-prettier": "5.2.3",
     "globby": "^14.1.0",
