@@ -17,20 +17,14 @@ export default function AboutHero() {
           </FadeUp>
           <FadeUp key="description-1" duration={0.6} delay={0.2}>
             <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-              I bring ideas to life through innovative coding. 
-              Whether developing websites or crafting digital products, 
-              I am dedicated to creating user-friendly and visually appealing 
-              solutions that prioritize the user experience at every step.
+              I'm Gauresh G Pai, a passionate and driven full-stack developer, project manager, and community contributor currently pursuing my Bachelor's in Computer Science Engineering at AJIET, Mangaluru. With a strong foundation in web development and a hands-on approach to solving real-world problems, I bring both technical expertise and leadership to every project I undertake.<br /><br />
+
+              As a Project Manager at Kree Karvat Technology and a UiPath Student Champion, I lead teams to deliver impactful digital solutions. My active involvement as a core member of DevNation and GDSC AJIET reflects my commitment to building a strong tech community through workshops, mentoring, and collaborative development.<br /><br />
+
+              My experience spans frontend and backend development, automation tools, UI/UX design, and team leadership. I take pride in delivering high-quality work while continuously learning and growing alongside peers and mentors.<br /><br />
+
+              If you're looking to collaborate on a meaningful tech initiative or want to know more about my work, feel free to reach out or explore my <Link href={"/projects"} className="underline text-blue-600">projects</Link>.
             </p>
-          </FadeUp>
-          <FadeUp key="description-2" duration={0.6} delay={0.4}>
-            <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-                Explore my latest{" "}
-                <Link href="/projects" className="underline underline-offset-4">
-                  <span className="text-accent">projects</span>
-                </Link>{" "}
-                that highlight my proficiency in React, Next.js, JavaScript, TypeScript, and modern web development practices.
-              </p>
           </FadeUp>
         </AnimatePresence>
       </div>

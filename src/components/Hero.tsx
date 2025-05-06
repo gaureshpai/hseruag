@@ -47,13 +47,14 @@ export default function Hero() {
             </FadeUp>
             <FadeUp key="description" duration={0.6} delay={0.2}>
               <div className="mt-4 max-w-4xl text-base font-semibold text-black dark:text-white sm:text-base md:text-xl">
-                I am a passionate engineering student specializing in developing
-                high-performance, user-centric web applications.<br/> Proficient in{" "}
+                I’m a passionate engineering student focused on building high-performance, user-centric web applications.<br />
+                Proficient in{" "}
                 <span className="font-semibold text-accent">ReactJS</span>,{" "}
-                <span className="font-semibold text-accent">NextJS</span>, with deep expertise in{" "}
-                <span className="font-semibold text-accent">JavaScript</span>,{" "}
-                <span className="font-semibold text-accent">HTML5</span>, and{" "}
-                <span className="font-semibold text-accent">CSS3</span>.<br/> I focus on creating efficient, scalable, and intuitive interfaces that deliver seamless user experiences.
+                <span className="font-semibold text-accent">NextJS</span>, with strong expertise in{" "}
+                <span className="font-semibold text-accent">TypeScript</span>,{" "}
+                <span className="font-semibold text-accent">TailwindCSS</span>, and{" "}
+                <span className="font-semibold text-accent">MongoDB</span>.<br />
+                I specialize in crafting scalable, efficient, and intuitive interfaces that provide seamless user experiences.
               </div>
             </FadeUp>
           </AnimatePresence>
