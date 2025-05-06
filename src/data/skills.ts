@@ -11,17 +11,14 @@ import {
   SiFirebase,
   SiGit,
   SiTailwindcss,
-  SiBootstrap,
   SiVercel,
-  SiNetlify,
-  SiWordpress,
-  SiShopify,
-  SiCloudflare,
+  SiPostgresql,
 } from "react-icons/si";
 
 import { SiPostman } from "react-icons/si";
 
 import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+import { AiModelIcon } from "@primer/octicons-react";
 
 export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
   {
@@ -61,10 +58,6 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
         icon: SiNextdotjs,
       },
       {
-        name: "Bootstrap",
-        icon: SiBootstrap,
-      },
-      {
         name: "Tailwind CSS",
         icon: SiTailwindcss,
       },
@@ -85,6 +78,10 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
         name: "Firebase",
         icon: SiFirebase,
       },
+      {
+        name: "PostgresSQL",
+        icon: SiPostgresql,
+      },
     ],
   },
   {
@@ -103,21 +100,9 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
         icon: SiVercel,
       },
       {
-        name: "Netlify",
-        icon: SiNetlify,
-      },
-      {
-        name: "WordPress",
-        icon: SiWordpress,
-      },
-      {
-        name: "Shopify",
-        icon: SiShopify,
-      },
-      {
-        name: "Cloudflare",
-        icon: SiCloudflare,
-      },
+        name: "AI Tools",
+        icon: AiModelIcon,
+      }
     ],
   },
 ];

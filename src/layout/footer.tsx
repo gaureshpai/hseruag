@@ -36,15 +36,6 @@ export default function Footer() {
             <GithubIcon className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
-            href='https://x.com/hseruag'
-            target="_blank"
-            rel="noopener noreferrer"
-            className="h-6 w-6"
-            aria-label="link to Twitter"
-          >
-            <TwitterIcon className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
-          </Link>
-          <Link
             href='https://linkedin.com/in/gaureshpai'
             target="_blank"
             rel="noopener noreferrer"
@@ -52,6 +43,15 @@ export default function Footer() {
             aria-label="link to Linkedin"
           >
             <LinkedinIcon className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
+          </Link>
+          <Link
+            href='https://x.com/hseruag'
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-6 w-6"
+            aria-label="link to Twitter"
+          >
+            <TwitterIcon className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
         </div>
       </div>

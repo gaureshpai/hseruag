@@ -31,8 +31,8 @@ export default function ContactMailToast({
         toastState.type === "success"
           ? "bg-teal-500"
           : toastState.type === "warning"
-          ? "bg-yellow-500"
-          : "bg-red-600",
+            ? "bg-yellow-500"
+            : "bg-red-600",
       )}
     >
       <div className="flex w-full max-w-xs items-center gap-2">

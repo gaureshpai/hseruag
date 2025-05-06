@@ -9,9 +9,8 @@ export function cursorTrail(props: CursorTrail) {
   const colorRaw = getComputedStyle(document.documentElement).getPropertyValue(
     "--accent",
   );
-  const accentColor = `hsla(${
-    colorRaw ? colorRaw.split(" ").join(",") : "0, 0%, 0%"
-  }, 0.35)`;
+  const accentColor = `hsla(${colorRaw ? colorRaw.split(" ").join(",") : "0, 0%, 0%"
+    }, 0.35)`;
   const { ref, color } = props;
   const ctx = ref.current?.getContext("2d")!;
   let AnimationFeature = {
@@ -142,7 +141,7 @@ export function cursorTrail(props: CursorTrail) {
   function createLine(event: TouchEvent) {
     event.touches.length === 1 &&
       ((cursorPosition.x = event.touches[0].pageX),
-      (cursorPosition.y = event.touches[0].pageY));
+        (cursorPosition.y = event.touches[0].pageY));
   }
 
   function onMouseMove(e: MouseEvent | TouchEvent) {

@@ -36,7 +36,7 @@ export default function MobileMenu({
           enterTo="translate-x-0"
           leave="transform transition ease-in-out duration-300"
           leaveFrom="translate-x-0"
-          leaveTo="translate-x-full" 
+          leaveTo="translate-x-full"
         >
           <Dialog.Panel className="fixed inset-y-0 right-0 flex w-[80%] max-w-xs flex-col bg-black text-white shadow-xl">
             <div className="flex h-full flex-col items-start gap-8 p-6">

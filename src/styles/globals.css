@@ -4,32 +4,33 @@
 
 @layer base {
   :root {
-    --background: 210 100% 98%; /* Light cool background */
-    --foreground: 220 15% 15%;  /* Dark gray for text */
-    --border: 220 14% 80%;      /* Muted blue-gray for borders */
-    --destructive: 0 78% 65%;   /* Vibrant red for destructive actions */
-    --destructive-foreground: 0 0% 100%; /* White for destructive text */
-    --accent: 260 80% 55%;      /* Bright purple for accents */
-    --accent-foreground: 0 0% 100%; /* White for accent text */
-    --muted: 220 20% 90%;       /* Soft light gray for muted elements */
-    --muted-foreground: 220 15% 50%; /* Muted text in gray */
+    --background: 210 100% 98%;
+    --foreground: 220 15% 15%;
+    --border: 220 14% 80%;
+    --destructive: 0 78% 65%;
+    --destructive-foreground: 0 0% 100%;
+    --accent: 260 80% 55%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 220 20% 90%;
+    --muted-foreground: 220 15% 50%;
   }
 
   .dark {
-    --background: 220 20% 12%;  /* Dark gray for background */
-    --foreground: 0 0% 100%;    /* Pure white for text */
-    --border: 220 20% 35%;      /* Darker blue-gray for borders */
-    --destructive: 0 80% 50%;   /* Deep red for destructive actions */
-    --destructive-foreground: 0 0% 100%; /* White for destructive text */
-    --accent: 285 60% 65%;      /* Soft vibrant pink for accents */
-    --accent-foreground: 0 0% 100%; /* White for accent text */
-    --muted: 220 15% 18%;       /* Dark muted background */
-    --muted-foreground: 220 15% 60%; /* Lighter gray for muted text */
+    --background: 220 20% 12%;
+    --foreground: 0 0% 100%;
+    --border: 220 20% 35%;
+    --destructive: 0 80% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --accent: 285 60% 65%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 15% 60%;
   }
 
   * {
     @apply border-border;
   }
+
   body {
     @apply min-h-screen bg-background text-foreground;
   }
