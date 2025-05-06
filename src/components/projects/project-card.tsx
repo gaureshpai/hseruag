@@ -7,7 +7,7 @@ export interface ProjectCardProps {
   title: string;
   description: string;
   link: string;
-  liveUrl?: string|null;
+  liveUrl?: string | null;
   tags: string[];
   owner: string;
   collaborators: string[];

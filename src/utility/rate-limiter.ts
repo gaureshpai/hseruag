@@ -117,8 +117,7 @@ const setUserTokenCookie = (res: NextApiResponse) => {
   const userUuidToken = nanoid(20);
   res.setHeader(
     "Set-Cookie",
-    `${RATE_LIMITER_USER_ID_COOKIE_NAME}=${userUuidToken}; Max-Age=${
-      60 * 60 * 24
+    `${RATE_LIMITER_USER_ID_COOKIE_NAME}=${userUuidToken}; Max-Age=${60 * 60 * 24
     }; SameSite=Strict`,
   );
   return userUuidToken;
@@ -129,8 +128,7 @@ const setTokenExpiryCookie = (res: NextApiResponse) => {
   newExpirationDate.setSeconds(newExpirationDate.getSeconds() + 60 * 60 * 24);
   res.setHeader(
     "Set-Cookie",
-    `${RATE_LIMITER_EXPIRY_DATE_COOKIE_NAME}=${newExpirationDate.toUTCString()}; Max-Age=${
-      60 * 60 * 24
+    `${RATE_LIMITER_EXPIRY_DATE_COOKIE_NAME}=${newExpirationDate.toUTCString()}; Max-Age=${60 * 60 * 24
     }; SameSite=Strict`,
   );
 };
