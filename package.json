@@ -47,7 +47,7 @@
     "cross-env": "^7.0.3",
     "eslint-config-next": "^15.3.2",
     "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-prettier": "^5.4.1",
     "globby": "^14.1.0",
     "lint-staged": "^16.1.0",
     "postcss": "8.5.3",
