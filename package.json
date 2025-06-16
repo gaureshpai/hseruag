@@ -19,7 +19,7 @@
     "@vercel/analytics": "^1.5.0",
     "analytics": "github:vercel/analytics",
     "formik": "^2.4.6",
-    "framer-motion": "^12.14.0",
+    "framer-motion": "^12.18.1",
     "lru-cache": "^11.1.0",
     "lucide-react": "^0.513.0",
     "nanoid": "^5.1.5",
