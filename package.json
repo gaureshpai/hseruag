@@ -50,7 +50,7 @@
     "eslint-plugin-prettier": "^5.4.1",
     "globby": "^14.1.0",
     "lint-staged": "^16.1.2",
-    "postcss": "^8.5.5",
+    "postcss": "^8.5.6",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.12",
     "tailwindcss": "^3.4.5",
