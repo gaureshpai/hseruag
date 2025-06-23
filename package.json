@@ -35,7 +35,7 @@
     "yup": "^1.6.1"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^15.3.3",
+    "@next/bundle-analyzer": "^15.3.4",
     "@svgr/webpack": "^8.1.0",
     "@types/lodash": "^4.17.17",
     "@types/node": "^24.0.3",
