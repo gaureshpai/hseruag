@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-
 import { AnimatePresence, motion } from "framer-motion";
-
 import FadeUp from "@/animation/fade-up";
 
 export default function Hero() {
@@ -21,7 +19,6 @@ export default function Hero() {
 
   useEffect(() => {
     document.addEventListener("scroll", handleScroll);
-
     return () => document.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -42,19 +39,14 @@ export default function Hero() {
                 Gauresh G Pai
               </h1>
               <span className="text-xl font-semibold text-black dark:text-white md:text-3xl">
-                Engineering Student
+                Full-Stack Developer · Community Builder
               </span>
             </FadeUp>
             <FadeUp key="description" duration={0.6} delay={0.2}>
               <div className="mt-4 max-w-4xl text-base font-semibold text-black dark:text-white sm:text-base md:text-xl">
-                I’m a passionate engineering student focused on building high-performance, user-centric web applications.<br />
-                Proficient in{" "}
-                <span className="font-semibold text-accent">ReactJS</span>,{" "}
-                <span className="font-semibold text-accent">NextJS</span>, with strong expertise in{" "}
-                <span className="font-semibold text-accent">TypeScript</span>,{" "}
-                <span className="font-semibold text-accent">TailwindCSS</span>, and{" "}
-                <span className="font-semibold text-accent">MongoDB</span>.<br />
-                I specialize in crafting scalable, efficient, and intuitive interfaces that provide seamless user experiences.
+                Former Project Manager at Kree Karvat, now shaping tech communities as a core member of <span className="text-accent font-semibold">DevNation</span> and UiPath SDC at AJIET.<br />
+                Skilled in <span className="text-accent font-semibold">Next.js</span>, <span className="text-accent font-semibold">TypeScript</span>, <span className="text-accent font-semibold">TailwindCSS</span>, <span className="text-accent font-semibold">MongoDB</span>, and automation tools.<br />
+                Built tools like a WhatsApp Messaging API, Swiggy & Zomato integration scrapers, and faculty appraisal systems — always focusing on scalability, usability, and impact.
               </div>
             </FadeUp>
           </AnimatePresence>

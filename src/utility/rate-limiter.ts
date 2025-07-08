@@ -1,7 +1,3 @@
-// This piece of code is exact implementation from Nextjs Canary Example
-// https://github.com/vercel/next.js/blob/canary/examples/api-routes-rate-limit/utils/rate-limit.ts
-// This can cause the server to slow down if the cache is hold for longer time for many users.
-
 import { NextApiResponse, NextApiRequest } from "next";
 import { LRUCache } from "lru-cache";
 import { nanoid } from "nanoid";
@@ -12,7 +8,7 @@ const RATE_LIMITER_EXPIRY_DATE_COOKIE_NAME = "userUuid_expires" as const;
 export type rateLimiterApiOptions = {
   uniqueTokenPerInterval?: number;
   interval?: number;
-  getUserId: (req: NextApiRequest, res: NextApiResponse) => string; // eslint-disable-line no-unused-vars
+  getUserId: (req: NextApiRequest, res: NextApiResponse) => string
 };
 
 /**
@@ -84,13 +80,10 @@ export const getUserId = (req: NextApiRequest, res: NextApiResponse) => {
     req.headers["x-forwarded-for"] || req.socket.remoteAddress || "";
   const userAgent = req.headers["user-agent"] || "";
 
-  // If User has an userIp and userAgent return that
-  // No need to set cookies as the userIp and userAgent are sufficient to rateLimit
   if (userIp && userAgent) {
     return `${userIp}-${userAgent}`;
   }
 
-  // If userId and expiry date cookie are present and we are unable to get userIp and userAgent of user.
   if (
     req.cookies[RATE_LIMITER_USER_ID_COOKIE_NAME] &&
     req.cookies[RATE_LIMITER_EXPIRY_DATE_COOKIE_NAME]
@@ -98,17 +91,13 @@ export const getUserId = (req: NextApiRequest, res: NextApiResponse) => {
     const expiryDate = new Date(
       req.cookies[RATE_LIMITER_EXPIRY_DATE_COOKIE_NAME],
     );
-    // If user id have expired set new expiry date cookie
     if (expiryDate <= new Date()) {
-      // If expired give user a new Id and expiry date
-      // TODO: keep the userUuid same and update only the expiry date + updating the LRU cache
       setTokenExpiryCookie(res);
       return setUserTokenCookie(res);
     }
     return req.cookies[RATE_LIMITER_USER_ID_COOKIE_NAME];
   }
 
-  // If no userIp, userAgent and cookies can be found set the cookies
   setTokenExpiryCookie(res);
   return setUserTokenCookie(res);
 };

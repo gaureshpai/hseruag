@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { AnimatePresence } from "framer-motion";
-
 import FadeUp from "@/animation/fade-up";
 
 export default function AboutHero() {
@@ -15,15 +13,18 @@ export default function AboutHero() {
               Hello, I&apos;m Gauresh G Pai
             </h1>
           </FadeUp>
+
           <FadeUp key="description-1" duration={0.6} delay={0.2}>
             <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-              I'm Gauresh G Pai, a passionate and driven full-stack developer, project manager, and community contributor currently pursuing my Bachelor's in Computer Science Engineering at AJIET, Mangaluru. With a strong foundation in web development and a hands-on approach to solving real-world problems, I bring both technical expertise and leadership to every project I undertake.<br /><br />
-
-              As a Project Manager at Kree Karvat Technology and a UiPath Student Champion, I lead teams to deliver impactful digital solutions. My active involvement as a core member of DevNation and GDSC AJIET reflects my commitment to building a strong tech community through workshops, mentoring, and collaborative development.<br /><br />
-
-              My experience spans frontend and backend development, automation tools, UI/UX design, and team leadership. I take pride in delivering high-quality work while continuously learning and growing alongside peers and mentors.<br /><br />
-
-              If you're looking to collaborate on a meaningful tech initiative or want to know more about my work, feel free to reach out or explore my <Link href={"/projects"} className="underline text-blue-600">projects</Link>.
+              I’m a former Project Manager and current Core Team Member at <strong>DevNation</strong>, with a passion for delivering high-quality web development projects and empowering the tech community through workshops and collaborative initiatives.
+              <br /><br />
+              Currently pursuing my Bachelor’s in Computer Science Engineering at <strong>AJIET, Mangaluru</strong>, I focus on building scalable, user-centric solutions with a growing specialization in <strong>Next.js</strong> and full-stack technologies.
+              <br /><br />
+              As the <strong>Student Campus Director (SCD)</strong> for UiPath at AJIET, I actively lead automation awareness and enablement programs, helping students explore and adopt <strong>Robotic Process Automation (RPA)</strong> tools.
+              <br /><br />
+              My experience spans full-stack development, project leadership, RPA, UI/UX, and community mentoring. I thrive in environments that promote continuous learning and collaborative growth, always striving to make meaningful contributions to both product and people.
+              <br /><br />
+              If you're interested in collaborating on impactful tech initiatives or learning more about my work, feel free to connect or explore my <Link href="/projects" className="underline text-blue-600">projects</Link>.
             </p>
           </FadeUp>
         </AnimatePresence>

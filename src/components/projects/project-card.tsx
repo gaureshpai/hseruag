@@ -31,13 +31,11 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
         <div className="mt-3">
           <p className="text-xs md:text-sm">{props.description}</p>
         </div>
-        {/* Display the owner */}
         {props.owner !== 'gaureshpai' && (
           <div className="mt-3 text-xs text-muted-foreground">
             Owner: {props.owner}
           </div>
         )}
-        {/* Display collaborators */}
         {props.collaborators.filter(collab => collab !== props.owner).length > 0 && (
           <div className="mt-3 text-xs text-muted-foreground">
             <span>
@@ -53,7 +51,6 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
           ))}
         </div>
         <div className="mt-6 flex items-center justify-end gap-6">
-          {/* GitHub link */}
           <a
             href={props.link}
             target="_blank"
@@ -62,7 +59,6 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
           >
             <GithubIcon className="h-5 w-5" /> View on GitHub
           </a>
-          {/* Live URL link */}
           {props.liveUrl && (
             <a
               href={props.liveUrl}

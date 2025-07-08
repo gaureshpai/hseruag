@@ -1,7 +1,6 @@
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 
-// import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "next-themes";
 import { AnimatePresence } from "framer-motion";
 
@@ -21,7 +20,6 @@ export default function App({ Component, pageProps }: AppProps) {
           </AnimatePresence>
         </MainLayout>
       </ThemeProvider>
-      {/* <Analytics /> */}
     </>
   );
 }
