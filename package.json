@@ -17,7 +17,7 @@
     "@primer/octicons-react": "^19.15.3",
     "@tailwindcss/forms": "^0.5.10",
     "formik": "^2.4.6",
-    "framer-motion": "^12.14.0",
+    "framer-motion": "^12.23.5",
     "lru-cache": "^11.1.0",
     "lucide-react": "^0.515.0",
     "nanoid": "^5.1.5",
