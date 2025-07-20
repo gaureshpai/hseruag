@@ -1,6 +1,5 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { AnimatePresence } from "framer-motion";
 import { ArrowTopRight } from "@/components/icons";
 import ProjectShowcaseList, { type ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
 
@@ -42,28 +41,22 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
         </div>
         <div className="flex flex-col gap-4 py-14 sm:gap-8 sm:py-20 md:gap-10 lg:hidden">
           {projects.map(({ title, href, tags }, index) => (
-            <Link
+            <div
               key={title}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
               className="flex flex-col gap-1"
-              aria-label={`View project: ${title}`}
             >
-              <div className="flex gap-2">
-                <span className="text-3xl font-semibold text-accent transition-colors duration-300 sm:text-3xl md:text-3xl lg:hidden">
-                  {index + 1}.
-                </span>
-                <span
-                  className="-underline-offset-1 text-3xl font-semibold text-accent underline transition-colors duration-300 sm:text-3xl md:text-3xl lg:hidden"
-                >
-                  {title}
-                </span>
-              </div>
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.preventDefault()}
+                className="flex gap-2 -underline-offset-1 text-3xl font-semibold text-accent underline transition-colors duration-300 sm:text-3xl md:text-3xl lg:hidden">
+                {index + 1}.{" "} {title}
+              </a>
               <p className="flex max-w-xl flex-wrap gap-2 text-base font-semibold text-black dark:text-accent-foreground  sm:text-lg">
                 {tags.join(", ")}
               </p>
-            </Link>
+            </div>
           ))}
         </div>
         <Link

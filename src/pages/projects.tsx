@@ -16,7 +16,7 @@ export const getServerSideProps: GetServerSideProps<ProjectsPageProps> = async (
       sort: 'updated',
       type: 'public',
       direction: 'desc',
-      per_page: 50,
+      per_page: 100,
     });
 
     const projects: ProjectCardProps[] = await Promise.all(
