@@ -50,7 +50,7 @@ const projects: Project[] = [
         liveUrl: "https://svstpu.edu.in",
         tags: ["HTML", "CSS", "Responsive", "Static Site", "Education"],
         owner: "SVS Temple English Medium School",
-        collaborators: ["Jnanesh", "Nidhi D"],
+        collaborators: ["Jnanesh", "Nidhi D","Himanshu Hegde","Milan C I"],
         company: "Kreekarvat Technologies",
         screenshot: "/works/svstems.png"
     },
@@ -62,7 +62,7 @@ const projects: Project[] = [
         liveUrl: "https://ajims.vercel.app",
         tags: ["Next.js", "Tailwind CSS", "MongoDB", "Employee Management", "Medical", "Internal Tool"],
         owner: "Dr. Sreeraj Sundaran",
-        collaborators: ["Jnanesh", "Vikram"],
+        collaborators: ["Jnanesh", "Vikram","Jyothi","Nidhi Jadav","Himanshu Hegde","Milan C I"],
         company: "AJIMS",
         screenshot: "/works/emp.png"
     },
@@ -86,7 +86,7 @@ const projects: Project[] = [
         liveUrl: "https://venjix.kreekarvat.in/",
         tags: ["Portfolio", "Creative", "Studio", "Media"],
         owner: "Vivek Pai",
-        collaborators: [],
+        collaborators: ["Vivek Pai"],
         company: "Kreekarvat Technologies",
         screenshot: "/works/venjix.jpg"
     },
@@ -135,7 +135,7 @@ const projects: Project[] = [
         tags: ["FMCG", "Food", "Branding", "Products"],
         owner: "Ullas",
         company: "Kreekarvat Technologies",
-        collaborators: ["Jnanesh", "Nidhi D"],
+        collaborators: ["Nidhi D"],
         screenshot: "/works/ullas.png"
     },
     {
@@ -170,7 +170,7 @@ const projects: Project[] = [
         tags: ["Zomato", "POS Integration", "Automation"],
         owner: "Billmaxo Solutions",
         company: "Billmaxo Solutions",
-        collaborators: [],
+        collaborators: ["Jnanesh"],
         screenshot: "/works/placeholder.svg"
     },
     {
@@ -182,7 +182,7 @@ const projects: Project[] = [
         tags: ["WhatsApp", "Business Messaging", "Customer Engagement"],
         owner: "Billmaxo Solutions",
         company: "Billmaxo Solutions",
-        collaborators: [],
+        collaborators: ["Jnanesh"],
         screenshot: "/works/placeholder.svg"
     },
     {
@@ -194,7 +194,7 @@ const projects: Project[] = [
         tags: ["Marketing", "Campaigns", "Analytics", "Automation"],
         owner: "Billmaxo Solutions",
         company: "Billmaxo Solutions",
-        collaborators: [],
+        collaborators: ["Jnanesh"],
         screenshot: "/works/placeholder.svg"
     }
 ];
