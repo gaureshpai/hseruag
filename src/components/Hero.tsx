@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import FadeUp from "@/animation/fade-up";
+import Link from "next/link";
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
@@ -29,7 +30,7 @@ export default function Hero() {
       }}
       transition={{ type: "spring", stiffness: 100 }}
       ref={ref}
-      className="pointer-events-none flex max-h-[1000px] min-h-[calc(100vh-200px)] items-center px-6 sm:px-14 md:h-[calc(100vh-200px)] md:min-h-max md:px-20"
+      className="flex max-h-[1000px] min-h-[calc(100vh-200px)] items-center px-6 sm:px-14 md:h-[calc(100vh-200px)] md:min-h-max md:px-20"
     >
       <div className="w-full">
         <div className="mx-auto max-w-7xl">
@@ -47,6 +48,17 @@ export default function Hero() {
                 Former Project Manager at Kree Karvat, now shaping tech communities as a core member of <span className="text-accent font-semibold">DevNation</span> and UiPath SDC at AJIET.<br />
                 Skilled in <span className="text-accent font-semibold">Next.js</span>, <span className="text-accent font-semibold">TypeScript</span>, <span className="text-accent font-semibold">TailwindCSS</span>, <span className="text-accent font-semibold">MongoDB</span>, and automation tools.<br />
                 Built tools like a WhatsApp Messaging API, Swiggy & Zomato integration scrapers, and faculty appraisal systems — always focusing on scalability, usability, and impact.
+              </div>
+              <div className="mt-6 flex cursor-pointer z-100 items-center gap-4">
+                <Link
+                  href="/Gauresh_G_Pai_Full_Stack.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download={true}
+                  className="rounded-md bg-accent cursor-pointer px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+                >
+                  Download Resume
+                </Link>
               </div>
             </FadeUp>
           </AnimatePresence>

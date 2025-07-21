@@ -27,6 +27,17 @@ export default function AboutHero() {
               If you're interested in collaborating on impactful tech initiatives or learning more about my work, feel free to connect or explore my <Link href="/projects" className="underline text-blue-600">projects</Link>.
             </p>
           </FadeUp>
+          <div className="mt-6 flex cursor-pointer z-100 items-center gap-4">
+            <Link
+              href="/Gauresh_G_Pai_Full_Stack.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download={true}
+              className="rounded-md bg-accent cursor-pointer px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+            >
+              Download Resume
+            </Link>
+          </div>
         </AnimatePresence>
       </div>
     </div>
