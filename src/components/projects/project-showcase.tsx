@@ -41,22 +41,21 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
         </div>
         <div className="flex flex-col gap-4 py-14 sm:gap-8 sm:py-20 md:gap-10 lg:hidden">
           {projects.map(({ title, href, tags }, index) => (
-            <div
+            <Link
               key={title}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex flex-col gap-1"
             >
-              <a
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.preventDefault()}
+              <span
                 className="flex gap-2 -underline-offset-1 text-3xl font-semibold text-accent underline transition-colors duration-300 sm:text-3xl md:text-3xl lg:hidden">
                 {index + 1}.{" "} {title}
-              </a>
+              </span>
               <p className="flex max-w-xl flex-wrap gap-2 text-base font-semibold text-black dark:text-accent-foreground  sm:text-lg">
                 {tags.join(", ")}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
         <Link
