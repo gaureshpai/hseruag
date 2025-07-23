@@ -26,8 +26,7 @@ export default function AboutHero() {
               <br /><br />
               If you're interested in collaborating on impactful tech initiatives or learning more about my work, feel free to connect or explore my <Link href="/projects" className="underline text-blue-600">projects</Link>.
             </p>
-          </FadeUp>
-          <div className="mt-6 flex cursor-pointer z-100 items-center gap-4">
+            <div className="mt-6 flex cursor-pointer z-100 items-center gap-4">
             <Link
               href="/Gauresh_G_Pai_Full_Stack.pdf"
               target="_blank"
@@ -38,6 +37,7 @@ export default function AboutHero() {
               Download Resume
             </Link>
           </div>
+          </FadeUp>
         </AnimatePresence>
       </div>
     </div>

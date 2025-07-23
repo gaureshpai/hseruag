@@ -49,7 +49,7 @@ export default function Hero() {
                 Skilled in <span className="text-accent font-semibold">Next.js</span>, <span className="text-accent font-semibold">TypeScript</span>, <span className="text-accent font-semibold">TailwindCSS</span>, <span className="text-accent font-semibold">MongoDB</span>, and automation tools.<br />
                 Built tools like a WhatsApp Messaging API, Swiggy & Zomato integration scrapers, and faculty appraisal systems — always focusing on scalability, usability, and impact.
               </div>
-              <div className="mt-6 flex cursor-pointer z-100 items-center gap-4">
+              <div className="mt-6 flex cursor-pointer items-center gap-4">
                 <Link
                   href="/Gauresh_G_Pai_Full_Stack.pdf"
                   target="_blank"
