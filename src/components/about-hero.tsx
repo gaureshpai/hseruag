@@ -5,12 +5,12 @@ import FadeUp from "@/animation/fade-up";
 
 export default function AboutHero() {
   return (
-    <div className="mx-auto mt-0 flex max-w-7xl flex-col items-center gap-6 px-6 pt-5 text-center sm:px-14 md:mt-20 md:px-20 lg:mt-20 lg:flex-col lg:text-left">
+    <div className="mx-auto mt-0 flex max-w-7xl flex-col items-center gap-6 px-6 pt-5 sm:px-14 md:mt-20 md:px-20 lg:mt-20 lg:flex-col text-left">
       <div className="mt-10 w-full">
         <AnimatePresence>
           <FadeUp key="title-greeting" duration={0.6}>
             <h1 className="text-4xl font-bold text-accent sm:text-7xl md:text-4xl lg:text-4xl xl:text-5xl">
-              Hello, I&apos;m Gauresh G Pai
+              Hello, <br className="md:hidden"/> I&apos;m Gauresh G Pai
             </h1>
           </FadeUp>
 
