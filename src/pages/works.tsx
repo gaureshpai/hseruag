@@ -1,10 +1,32 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import projects, { Project } from '@/data/works';
+import { NextSeo } from 'next-seo';
 
 const WorksPage = () => {
     return (
         <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
+            <NextSeo
+                title="Works | Gauresh G Pai"
+                description="Browse the portfolio of Gauresh G Pai, featuring web development projects built using React, Next.js, and Tailwind CSS. See real-world applications of modern frontend technologies."
+                openGraph={{
+                    title: "Works by Gauresh G Pai",
+                    description:
+                        "A curated portfolio showcasing the work of Gauresh G Pai—featuring interactive web apps and frontend solutions using React, Next.js, and Tailwind CSS.",
+                    siteName: "Gauresh G Pai",
+                    type: "website",
+                }}
+                twitter={{
+                    cardType: "summary_large_image",
+                }}
+                additionalMetaTags={[
+                    {
+                        property: "keywords",
+                        content:
+                            "Gauresh G Pai portfolio, Gauresh G Pai works, web development projects, React portfolio, frontend developer, Next.js, Tailwind CSS, JavaScript, personal website, developer showcase",
+                    },
+                ]}
+            />
             <h1 className="text-2xl font-semibold text-foreground md:text-4xl">Professional Work</h1>
             <div className="my-2">
                 <span className="text-sm text-muted-foreground">
