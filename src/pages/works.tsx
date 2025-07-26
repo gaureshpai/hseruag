@@ -13,17 +13,41 @@ const WorksPage = () => {
                     title: "Works by Gauresh G Pai",
                     description:
                         "A curated portfolio showcasing the work of Gauresh G Pai—featuring interactive web apps and frontend solutions using React, Next.js, and Tailwind CSS.",
+                    url: "https://gauresh.is-a.dev/works",
                     siteName: "Gauresh G Pai",
                     type: "website",
+                    images: [
+                        {
+                            url: "https://gauresh.is-a.dev/images/logo.png",
+                            width: 1200,
+                            height: 630,
+                            alt: "Works by Gauresh G Pai - Portfolio Preview",
+                            type: "image/png",
+                        },
+                    ],
                 }}
                 twitter={{
+                    handle: "@hseruag",
+                    site: "@hseruag",
                     cardType: "summary_large_image",
                 }}
                 additionalMetaTags={[
                     {
-                        property: "keywords",
+                        name: "keywords",
                         content:
                             "Gauresh G Pai portfolio, Gauresh G Pai works, web development projects, React portfolio, frontend developer, Next.js, Tailwind CSS, JavaScript, personal website, developer showcase",
+                    },
+                    {
+                        name: "author",
+                        content: "Gauresh G Pai",
+                    },
+                    {
+                        name: "robots",
+                        content: "index, follow",
+                    },
+                    {
+                        name: "viewport",
+                        content: "width=device-width, initial-scale=1",
                     },
                 ]}
             />

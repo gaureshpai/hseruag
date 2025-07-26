@@ -60,18 +60,43 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects, error }) => {
         description="Explore the innovative projects by Gauresh G Pai, a React Developer. Discover web applications built using modern technologies like Next.js, Tailwind CSS, and more."
         openGraph={{
           title: "Explore Projects by Gauresh G Pai",
-          description: "Discover a collection of innovative web projects developed by Gauresh G Pai, showcasing skills in React, Next.js, and frontend development.",
-          siteName: 'Gauresh G Pai',
+          description:
+            "Discover a collection of innovative web projects developed by Gauresh G Pai, showcasing skills in React, Next.js, and frontend development.",
+          url: "https://gauresh.is-a.dev/projects",
+          siteName: "Gauresh G Pai",
           type: "website",
+          images: [
+            {
+              url: "https://gauresh.is-a.dev/images/logo.png",
+              width: 1200,
+              height: 630,
+              alt: "Projects by Gauresh G Pai - React Developer",
+              type: "image/png",
+            },
+          ],
         }}
         twitter={{
+          handle: "@hseruag",
+          site: "@hseruag",
           cardType: "summary_large_image",
         }}
         additionalMetaTags={[
           {
-            property: "keywords",
+            name: "keywords",
             content:
               "Gauresh G Pai projects, React Developer projects, web applications, frontend development, Next.js, Tailwind CSS, portfolio, innovative web solutions",
+          },
+          {
+            name: "author",
+            content: "Gauresh G Pai",
+          },
+          {
+            name: "robots",
+            content: "index, follow",
+          },
+          {
+            name: "viewport",
+            content: "width=device-width, initial-scale=1",
           },
         ]}
       />
