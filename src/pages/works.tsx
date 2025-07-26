@@ -13,7 +13,7 @@ const WorksPage = () => {
             </div>
             <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-2">
                 {projects.map((project: Project, index: number) => (
-                    <div key={`project-${index}-${project.title}`} className="group relative overflow-hidden border rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 bg-white hover:scale-[1.02]">
+                    <div key={`project-${index}-${project.title}`} className="group relative dark:text-white overflow-hidden border rounded-xl p-6 shadow-sm hover:shadow-accent/20 dark:bg-zinc-800 dark:hover:shadow-lg hover:shadow-lg transition-all duration-300 bg-white hover:scale-[1.02]">
                         <div className="relative w-full aspect-video mb-4 overflow-hidden rounded-lg">
                             <Image
                                 width={1920}
@@ -25,18 +25,18 @@ const WorksPage = () => {
                                 priority={index < 4}
                             />
                         </div>
-                        <h2 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h2>
-                        <p className="text-gray-600 mb-3 test-justify">{project.description}</p>
-                        <div className="text-xs text-gray-500 mb-2 flex items-center gap-1">
+                        <h2 className="text-xl font-bold mb-2">{project.title}</h2>
+                        <p className="mb-3 test-justify">{project.description}</p>
+                        <div className="text-xs mb-2 flex items-center gap-1">
                             <span className="font-medium">Tags:</span>
                             <span>{project.tags.length > 0 ? project.tags.join(', ') : 'None'}</span>
                         </div>
-                        <div className="text-xs text-gray-500 mb-2 flex items-center gap-1">
+                        <div className="text-xs mb-2 flex items-center gap-1">
                             <span className="font-medium">Owner:</span>
                             <span className="capitalize">{project.owner}</span>
 
                         </div>
-                        <div className="text-xs text-gray-500 mb-2 flex items-center gap-1">
+                        <div className="text-xs mb-2 flex items-center gap-1">
                             {project.collaborators.length > 0 && (
                                 <>
                                     <span className="font-medium">Collaborators:</span>
@@ -44,11 +44,11 @@ const WorksPage = () => {
                                 </>
                             )}
                         </div>
-                        <div className="text-xs text-gray-500 mb-2 flex items-center gap-1">
+                        <div className="text-xs mb-2 flex items-center gap-1">
                             <span className="font-medium">Company:</span>
                             <span>{project.company || 'None'}</span>
                         </div>
-                        <div className="text-xs text-gray-500 mb-4 flex items-center gap-1">
+                        <div className="text-xs mb-4 flex items-center gap-1">
                             <span className="font-medium">Role:</span>
                             <span>{project.role || 'Developer'}</span>
                         </div>
