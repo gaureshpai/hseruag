@@ -31,6 +31,23 @@ const projects: Project[] = [
         screenshot: "/works/exactitudemedfoundation.png"
     },
     {
+        title: "RK Baliga Legacy Website",
+        description:
+            "A digital tribute website honoring R.K. Baliga, the visionary behind India's first electronics city. Features timeline, biography, and legacy impact sections.",
+        role: "Full-Stack Developer",
+        liveUrl: "https://rkbaligalegacy.vercel.app",
+        tags: [
+            "Legacy",
+            "Tribute",
+            "Biography",
+            "Static Site"
+        ],
+        owner: "Dr. Ragavendra R Baliga",
+        company: "Kreekarvat Technologies",
+        collaborators: [],
+        screenshot: "/works/rkbaligalegecy.png"
+    },
+    {
         title: "SVS Temple PU College",
         description:
             "Official  website for SVS Temple PU College. Developed a clean and informative layout to present academic offerings, staff information, and admission details. Prioritized performance and responsive design.",
@@ -50,21 +67,9 @@ const projects: Project[] = [
         liveUrl: "https://svstpu.edu.in",
         tags: ["HTML", "CSS", "Responsive", "Static Site", "Education"],
         owner: "SVS Temple English Medium School",
-        collaborators: ["Jnanesh", "Nidhi D","Himanshu Hegde","Milan C I"],
+        collaborators: ["Jnanesh", "Nidhi D", "Himanshu Hegde", "Milan C I"],
         company: "Kreekarvat Technologies",
         screenshot: "/works/svstems.png"
-    },
-    {
-        title: "AJIMS Employee Management Portal",
-        description:
-            "An internal web portal developed for AJ Institute of Medical Sciences to manage employee data efficiently. Features include department-wise access, attendance tracking, role-based permissions, and intuitive UI for HR and administrative tasks.",
-        role: "Full Stack Developer",
-        liveUrl: "https://ajims.vercel.app",
-        tags: ["Next.js", "Tailwind CSS", "MongoDB", "Employee Management", "Medical", "Internal Tool"],
-        owner: "Dr. Sreeraj Sundaran",
-        collaborators: ["Jnanesh", "Vikram","Jyothi","Nidhi Jadav","Himanshu Hegde","Milan C I"],
-        company: "AJIMS",
-        screenshot: "/works/emp.png"
     },
     {
         title: "Gajalakshmi Cranes",
@@ -79,18 +84,6 @@ const projects: Project[] = [
         screenshot: "/works/gajalakshmicranes.png"
     },
     {
-        title: "Venjix",
-        description:
-            "A creative portfolio site for a video editing and design studio. Showcases multimedia projects with optimized performance and animation-driven UI.",
-        role: "Full Stack Developer",
-        liveUrl: "https://venjix.kreekarvat.in/",
-        tags: ["Portfolio", "Creative", "Studio", "Media"],
-        owner: "Vivek Pai",
-        collaborators: ["Vivek Pai"],
-        company: "Kreekarvat Technologies",
-        screenshot: "/works/venjix.jpg"
-    },
-    {
         title: "ExamsMitra",
         description:
             "Multi-purpose educational platform offering academic resources, exam schedules, and student services. Built responsive pages and components for optimized mobile experience.",
@@ -101,6 +94,30 @@ const projects: Project[] = [
         company: "Kreekarvat Technologies",
         collaborators: ["Jnanesh", "Harshitha", "Dhanya", "Yashas"],
         screenshot: "/works/examsmitra.png"
+    },
+    {
+        title: "AJIMS Employee Management Portal",
+        description:
+            "An internal web portal developed for AJ Institute of Medical Sciences to manage employee data efficiently. Features include department-wise access, attendance tracking, role-based permissions, and intuitive UI for HR and administrative tasks.",
+        role: "Full Stack Developer",
+        liveUrl: "https://ajims.vercel.app",
+        tags: ["Next.js", "Tailwind CSS", "MongoDB", "Employee Management", "Medical", "Internal Tool"],
+        owner: "Dr. Sreeraj Sundaran",
+        collaborators: ["Jnanesh", "Vikram", "Jyothi", "Nidhi Jadav", "Himanshu Hegde", "Milan C I"],
+        company: "AJIMS",
+        screenshot: "/works/emp.png"
+    },
+    {
+        title: "Venjix",
+        description:
+            "A creative portfolio site for a video editing and design studio. Showcases multimedia projects with optimized performance and animation-driven UI.",
+        role: "Full Stack Developer",
+        liveUrl: "https://venjix.kreekarvat.in/",
+        tags: ["Portfolio", "Creative", "Studio", "Media"],
+        owner: "Vivek Pai",
+        collaborators: ["Vivek Pai"],
+        company: "Kreekarvat Technologies",
+        screenshot: "/works/venjix.jpg"
     },
     {
         title: "A3 Digital School",

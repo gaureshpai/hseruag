@@ -66,7 +66,7 @@ const WorksPage = () => {
                                 height={1080}
                                 src={project.screenshot}
                                 alt={`${project.title} screenshot`}
-                                className="rounded-lg object-cover transition-transform duration-300 group-hover:scale-105"
+                                className="rounded-lg aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 priority={index < 4}
                             />

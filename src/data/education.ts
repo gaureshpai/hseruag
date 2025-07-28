@@ -8,7 +8,7 @@ export const EDUCATION: ExperienceShowcaseListItemProps[] = [
       href: "https://ajiet.edu.in/",
     },
     date: "2022-2026",
-    location: "Mangalore, Karnataka",
+    location: "Mangaluru, Karnataka",
     description:
       "Currently pursuing a Bachelor's degree with a strong focus on software development, data analysis, and system design. Involved in hands-on projects and collaborative learning experiences that enhance practical skills and readiness for the industry.",
   },
@@ -19,7 +19,7 @@ export const EDUCATION: ExperienceShowcaseListItemProps[] = [
       href: "https://staloysiuspuc.in/",
     },
     date: "2020-2022",
-    location: "Mangalore, Karnataka",
+    location: "Mangaluru, Karnataka",
     description:
       "Completed Pre-University studies with a specialization in Computer Science. Developed a solid foundation in programming, algorithms, and technology principles.",
   },

@@ -4,7 +4,6 @@ import {
   SiCss3,
   SiJavascript,
   SiTypescript,
-  SiPython,
   SiReact,
   SiMongodb,
   SiMysql,
@@ -13,96 +12,78 @@ import {
   SiTailwindcss,
   SiVercel,
   SiPostgresql,
+  SiPostman,
+  SiC,
+  SiCplusplus,
+  SiUipath,
+  SiStorybook,
+  SiPrisma,
+  SiGithub,
+  SiShadcnui,
+  SiMui,
+  SiSupabase,
+  SiNetlify
 } from "react-icons/si";
-
-import { SiPostman } from "react-icons/si";
-
-import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+import { FaJava } from "react-icons/fa";
 import { AiModelIcon } from "@primer/octicons-react";
+import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+import { FaRunning, FaBullseye, FaChalkboardTeacher, FaUsers, FaLightbulb } from "react-icons/fa";
 
 export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
   {
     sectionName: "Languages",
     skills: [
-      {
-        name: "HTML",
-        icon: SiHtml5,
-      },
-      {
-        name: "CSS",
-        icon: SiCss3,
-      },
-      {
-        name: "JavaScript",
-        icon: SiJavascript,
-      },
-      {
-        name: "TypeScript",
-        icon: SiTypescript,
-      },
-      {
-        name: "Python",
-        icon: SiPython,
-      },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "Java", icon: FaJava },
+      { name: "C++", icon: SiCplusplus },
+      { name: "C", icon: SiC },
+      { name: "HTML", icon: SiHtml5 },
+      { name: "CSS", icon: SiCss3 },
     ],
   },
   {
     sectionName: "Libraries and Frameworks",
     skills: [
-      {
-        name: "React",
-        icon: SiReact,
-      },
-      {
-        name: "Next.js",
-        icon: SiNextdotjs,
-      },
-      {
-        name: "Tailwind CSS",
-        icon: SiTailwindcss,
-      },
+      { name: "React", icon: SiReact },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Material UI", icon: SiMui },
+      { name: "ShadCN UI", icon: SiShadcnui },
+      { name: "Storybook", icon: SiStorybook },
     ],
   },
   {
-    sectionName: "Databases",
+    sectionName: "Database Tools / ORMs",
     skills: [
-      {
-        name: "MongoDB",
-        icon: SiMongodb,
-      },
-      {
-        name: "MySQL",
-        icon: SiMysql,
-      },
-      {
-        name: "Firebase",
-        icon: SiFirebase,
-      },
-      {
-        name: "PostgresSQL",
-        icon: SiPostgresql,
-      },
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "MongoDB", icon: SiMongodb },
+      { name: "MySQL", icon: SiMysql },
+      { name: "Firebase", icon: SiFirebase },
+      { name: "Supabase", icon: SiSupabase },
+      { name: "Prisma", icon: SiPrisma },
     ],
   },
   {
     sectionName: "Version Control and Tools",
     skills: [
-      {
-        name: "Git",
-        icon: SiGit,
-      },
-      {
-        name: "Postman",
-        icon: SiPostman,
-      },
-      {
-        name: "Vercel",
-        icon: SiVercel,
-      },
-      {
-        name: "AI Tools",
-        icon: AiModelIcon,
-      }
+      { name: "Git", icon: SiGit },
+      { name: "GitHub", icon: SiGithub },
+      { name: "Vercel", icon: SiVercel },
+      { name: "Netlify", icon: SiNetlify },
+      { name: "Postman", icon: SiPostman },
+      { name: "UiPath", icon: SiUipath },
+      { name: "AI Tools", icon: AiModelIcon },
+    ],
+  },
+  {
+    sectionName: "Soft Skills",
+    skills: [
+      { name: "Consistency", icon: FaRunning },
+      { name: "Determination", icon: FaBullseye },
+      { name: "Leadership", icon: FaChalkboardTeacher },
+      { name: "Teamwork", icon: FaUsers },
+      { name: "Problem-Solving", icon: FaLightbulb },
     ],
   },
 ];
