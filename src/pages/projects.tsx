@@ -67,7 +67,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects, error }) => {
           type: "website",
           images: [
             {
-              url: "https://gauresh.is-a.dev/images/logo.png",
+              url: "https://gauresh.is-a.dev/logo.png",
               width: 1200,
               height: 630,
               alt: "Projects by Gauresh G Pai - React Developer",

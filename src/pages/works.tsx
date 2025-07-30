@@ -18,7 +18,7 @@ const WorksPage = () => {
                     type: "website",
                     images: [
                         {
-                            url: "https://gauresh.is-a.dev/images/logo.png",
+                            url: "https://gauresh.is-a.dev/logo.png",
                             width: 1200,
                             height: 630,
                             alt: "Works by Gauresh G Pai - Portfolio Preview",
