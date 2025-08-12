@@ -13,7 +13,7 @@ export const getServerSideProps: GetServerSideProps<ProjectsPageProps> = async (
 
   try {
     const response = await octokit.repos.listForAuthenticatedUser({
-      sort: 'created',
+      sort: 'pushed',
       type: 'public',
       direction: 'desc',
       per_page: 100,
@@ -21,7 +21,7 @@ export const getServerSideProps: GetServerSideProps<ProjectsPageProps> = async (
 
     const projects: ProjectCardProps[] = await Promise.all(
       response.data
-        .filter(repo => repo.owner.type === 'User' && !['dump', 'hseruag', 'register', 'gaureshpai', 'clickmedude', 'gdg-workshop', 'Eventopia', 'stvst', 'business-acquisition-platform', 'V-Tech-Inc', 'ShreepathiPortfolio', 'Nidhi', ''].includes(repo.name))
+        .filter(repo => repo.owner.type === 'User' && !['dump', 'hseruag', 'register', 'gaureshpai', 'clickmedude', 'gdg-workshop', 'Eventopia', 'stvst', 'business-acquisition-platform-prototype', 'V-Tech-Inc', 'ShreepathiPortfolio', 'Nidhi'].includes(repo.name))
         .map(async repo => {
           const collaboratorsResponse = await octokit.repos.listCollaborators({
             owner: repo.owner.login,

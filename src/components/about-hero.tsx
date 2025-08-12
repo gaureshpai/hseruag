@@ -20,7 +20,7 @@ export default function AboutHero() {
               <br /><br />
               Currently pursuing my Bachelor’s in Computer Science Engineering at <strong>AJIET, Mangaluru</strong>, I focus on building scalable, user-centric solutions with a growing specialization in <strong>Next.js</strong> and full-stack technologies.
               <br /><br />
-              As the <strong>Student Campus Director (SCD)</strong> for UiPath at AJIET, I actively lead automation awareness and enablement programs, helping students explore and adopt <strong>Robotic Process Automation (RPA)</strong> tools.
+              As the <strong>Student Developer Chamipon (SDC)</strong> for UiPath at AJIET, I actively lead automation awareness and enablement programs, helping students explore and adopt <strong>Robotic Process Automation (RPA)</strong> tools.
               <br /><br />
               My experience spans full-stack development, project leadership, RPA, UI/UX, and community mentoring. I thrive in environments that promote continuous learning and collaborative growth, always striving to make meaningful contributions to both product and people.
               <br /><br />
