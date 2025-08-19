@@ -34,7 +34,7 @@
     "@next/bundle-analyzer": "^15.4.6",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^24.1.0",
-    "@types/nodemailer": "^6.4.17",
+    "@types/nodemailer": "^7.0.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.21",
