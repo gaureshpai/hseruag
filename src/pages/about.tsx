@@ -54,8 +54,8 @@ export default function About() {
         ]}
       />
       <AboutHero />
-      <ExperienceShowcaseList title="Education" details={EDUCATION} />
       <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
+      <ExperienceShowcaseList title="Education" details={EDUCATION} />
     </>
   );
 }

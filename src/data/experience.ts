@@ -2,14 +2,14 @@ import { type ExperienceShowcaseListItemProps } from "@/components/experience/ex
 
 export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     {
-        title: "Student Champion",
+        title: "Development Volunteer",
         organisation: {
-            name: "UiPath",
-            href: "https://community.uipath.com/u/mruea7/#/about",
+            name: "billmaxo solutions",
+            href: "https://billmaxo.com/",
         },
-        date: "March 2025 - March 2026",
-        location: "Mangaluru, Karnataka, India",
-        description: "Actively representing UiPath at the student level, promoting automation and engagement initiatives within the academic community.",
+        date: "January 2025 - June 2025",
+        location: "Bengaluru, Karnataka, India",
+        description: "Built a WhatsApp Marketing API using Express.js, Puppeteer, and whatsapp-web.js. Also developed Swiggy and Zomato integration tools for automated menu scraping and restaurant data insights.",
     },
     {
         title: "Project Manager",
@@ -22,16 +22,6 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
         description: "Led a team of freelancers to deliver website projects with a focus on quality and client satisfaction. Managed project lifecycles from planning to execution.",
     },
     {
-        title: "Development Volunteer",
-        organisation: {
-            name: "billmaxo solutions",
-            href: "https://billmaxo.com/",
-        },
-        date: "January 2025 - June 2025",
-        location: "Bengaluru, Karnataka, India",
-        description: "Built a WhatsApp Marketing API using Express.js, Puppeteer, and whatsapp-web.js. Also developed Swiggy and Zomato integration tools for automated menu scraping and restaurant data insights.",
-    },
-    {
         title: "Project Intern",
         organisation: {
             name: "A.J. Institute of Medical Sciences and Research Centre - India",
@@ -40,6 +30,16 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
         date: "September 2023 - August 2024",
         location: "Mangaluru, Karnataka, India",
         description: "Developed user-end and full-stack features for Faculty Appraisal Forum and AJ Journal software with focus on UI/UX improvements under mentorship.",
+    },
+    {
+        title: "Student Champion",
+        organisation: {
+            name: "UiPath",
+            href: "https://community.uipath.com/u/mruea7/#/about",
+        },
+        date: "March 2025 - March 2026",
+        location: "Mangaluru, Karnataka, India",
+        description: "Actively representing UiPath at the student level, promoting automation and engagement initiatives within the academic community.",
     },
     {
         title: "Core Team Member",

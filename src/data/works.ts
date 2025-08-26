@@ -12,6 +12,66 @@ export interface Project {
 
 const projects: Project[] = [
     {
+        title: "Aakar 2025",
+        description:
+            "Promotional site for Aakar 2025 Techno-Cultural Fest. Integrated event listings, dynamic schedules, and registration forms with creative branding.",
+        role: "Frontend Developer",
+        liveUrl: "https://aakar2025.in/",
+        tags: ["Event", "College", "Festival", "Tech Fest"],
+        owner: "Aakar 2025",
+        company: "Kreekarvat Technologies",
+        collaborators: ["Jnanesh"],
+        screenshot: "/works/aakar.png"
+    },
+    {
+        title: "Marketing Tool",
+        description:
+            "Campaign manager for SMS, email, and WhatsApp marketing with real-time analytics. Built to help small businesses track performance and ROI.",
+        role: "Volunteer Tool Developer",
+        liveUrl: null,
+        tags: ["Marketing", "Campaigns", "Analytics", "Automation", "Node.js"],
+        owner: "Billmaxo Solutions",
+        company: "Billmaxo Solutions",
+        collaborators: ["Jnanesh"],
+        screenshot: "/works/placeholder.svg"
+    },
+    {
+        title: "AJIMS Employee Management Portal",
+        description:
+            "An internal web portal developed for AJ Institute of Medical Sciences to manage employee data efficiently. Features include department-wise access, attendance tracking, role-based permissions, and intuitive UI for HR and administrative tasks.",
+        role: "Full Stack Developer",
+        liveUrl: "https://ajims.vercel.app",
+        tags: ["Next.js", "Tailwind CSS", "MongoDB", "Employee Management", "Medical", "Internal Tool"],
+        owner: "Dr. Sreeraj Sundaran",
+        collaborators: ["Jnanesh", "Vikram", "Jyothi", "Nidhi Jadav", "Himanshu Hegde", "Milan C I"],
+        company: "AJIMS",
+        screenshot: "/works/emp.png"
+    },
+    {
+        title: "Ullas Ice Cream",
+        description:
+            "Brand showcase website for Ullas Ice Cream featuring their product range, store locations, and visual branding. Focused on modern UI and product categorization.",
+        role: "Full Stack Developer",
+        liveUrl: "https://www.ullasicecream.com/",
+        tags: ["FMCG", "Food", "Branding", "Products"],
+        owner: "Ullas",
+        company: "Kreekarvat Technologies",
+        collaborators: ["Nidhi D"],
+        screenshot: "/works/ullas.png"
+    },
+    {
+        title: "A3 Digital School",
+        description:
+            "Comprehensive school management dashboard including attendance tracking, staff management, and online notices. Developed secure admin interface and role-based access.",
+        role: "Full Stack Developer",
+        liveUrl: "https://www.school.a3digitalmall.com/",
+        tags: ["School", "Admin", "Management", "Education", "Dashboard"],
+        owner: "A3 Digital Mall",
+        company: "Klientship Pvt Ltd",
+        collaborators: [],
+        screenshot: "/works/a3.png"
+    },
+    {
         title: "Exactitude Medical Foundation",
         description:
             "A precision healthcare platform highlighting epigenetic research and personalized medicine. Designed a fully responsive and scalable frontend architecture with dynamic content control, enabling administrators to manage achievements, advisory members, and contact forms through a secure panel.",
@@ -29,6 +89,30 @@ const projects: Project[] = [
         collaborators: [],
         company: "Kreekarvat Technologies",
         screenshot: "/works/exactitudemedfoundation.png"
+    },
+    {
+        title: "ExamsMitra",
+        description:
+            "Multi-purpose educational platform offering academic resources, exam schedules, and student services. Built responsive pages and components for optimized mobile experience.",
+        role: "Frontend Developer",
+        liveUrl: "https://www.examsmitra.com/",
+        tags: ["Education", "Resources", "Students", "Responsive"],
+        owner: "ExamsMitra",
+        company: "Kreekarvat Technologies",
+        collaborators: ["Jnanesh", "Harshitha", "Dhanya", "Yashas"],
+        screenshot: "/works/examsmitra.png"
+    },
+    {
+        title: "WhatsApp Integration Tool",
+        description:
+            "Tool to send digital receipts, order updates, and offers through WhatsApp Business API to improve customer engagement.",
+        role: "Volunteer Tool Developer",
+        liveUrl: null,
+        tags: ["WhatsApp", "Business Messaging", "Customer Engagement"],
+        owner: "Billmaxo Solutions",
+        company: "Billmaxo Solutions",
+        collaborators: ["Jnanesh"],
+        screenshot: "/works/placeholder.svg"
     },
     {
         title: "RK Baliga Legacy Website",
@@ -60,16 +144,16 @@ const projects: Project[] = [
         screenshot: "/works/svstpu.png"
     },
     {
-        title: "SVS Temple English Medium School",
+        title: "Swiggy Integration Tool",
         description:
-            "Official  website for SVS Temple English Medium School. Developed a clean and informative layout to present academic offerings, staff information, and admission details. Prioritized performance and responsive design.",
-        role: "Frontend Developer",
-        liveUrl: "https://svstpu.edu.in",
-        tags: ["HTML", "CSS", "Responsive", "Static Site", "Education"],
-        owner: "SVS Temple English Medium School",
-        collaborators: ["Jnanesh", "Nidhi D", "Himanshu Hegde", "Milan C I"],
-        company: "Kreekarvat Technologies",
-        screenshot: "/works/svstems.png"
+            "Utility to synchronize restaurant orders from Swiggy with Billmaxo POS for real-time billing, eliminating manual entries and reducing delays.",
+        role: "Volunteer Tool Developer",
+        liveUrl: null,
+        tags: ["Swiggy", "POS", "Automation", "Order Management"],
+        owner: "Billmaxo Solutions",
+        company: "Billmaxo Solutions",
+        collaborators: ["Jnanesh"],
+        screenshot: "/works/placeholder.svg"
     },
     {
         title: "Gajalakshmi Cranes",
@@ -84,28 +168,16 @@ const projects: Project[] = [
         screenshot: "/works/gajalakshmicranes.png"
     },
     {
-        title: "ExamsMitra",
+        title: "SVS Temple English Medium School",
         description:
-            "Multi-purpose educational platform offering academic resources, exam schedules, and student services. Built responsive pages and components for optimized mobile experience.",
+            "Official  website for SVS Temple English Medium School. Developed a clean and informative layout to present academic offerings, staff information, and admission details. Prioritized performance and responsive design.",
         role: "Frontend Developer",
-        liveUrl: "https://www.examsmitra.com/",
-        tags: ["Education", "Resources", "Students", "Responsive"],
-        owner: "ExamsMitra",
+        liveUrl: "https://svstpu.edu.in",
+        tags: ["HTML", "CSS", "Responsive", "Static Site", "Education"],
+        owner: "SVS Temple English Medium School",
+        collaborators: ["Jnanesh", "Nidhi D", "Himanshu Hegde", "Milan C I"],
         company: "Kreekarvat Technologies",
-        collaborators: ["Jnanesh", "Harshitha", "Dhanya", "Yashas"],
-        screenshot: "/works/examsmitra.png"
-    },
-    {
-        title: "AJIMS Employee Management Portal",
-        description:
-            "An internal web portal developed for AJ Institute of Medical Sciences to manage employee data efficiently. Features include department-wise access, attendance tracking, role-based permissions, and intuitive UI for HR and administrative tasks.",
-        role: "Full Stack Developer",
-        liveUrl: "https://ajims.vercel.app",
-        tags: ["Next.js", "Tailwind CSS", "MongoDB", "Employee Management", "Medical", "Internal Tool"],
-        owner: "Dr. Sreeraj Sundaran",
-        collaborators: ["Jnanesh", "Vikram", "Jyothi", "Nidhi Jadav", "Himanshu Hegde", "Milan C I"],
-        company: "AJIMS",
-        screenshot: "/works/emp.png"
+        screenshot: "/works/svstems.png"
     },
     {
         title: "Venjix",
@@ -120,65 +192,6 @@ const projects: Project[] = [
         screenshot: "/works/venjix.jpg"
     },
     {
-        title: "A3 Digital School",
-        description:
-            "Comprehensive school management dashboard including attendance tracking, staff management, and online notices. Developed secure admin interface and role-based access.",
-        role: "Full Stack Developer",
-        liveUrl: "https://www.school.a3digitalmall.com/",
-        tags: ["School", "Admin", "Management", "Education", "Dashboard"],
-        owner: "A3 Digital Mall",
-        company: "Klientship Pvt Ltd",
-        collaborators: [],
-        screenshot: "/works/a3.png"
-    },
-    {
-        title: "Aakar 2025",
-        description:
-            "Promotional site for Aakar 2025 Techno-Cultural Fest. Integrated event listings, dynamic schedules, and registration forms with creative branding.",
-        role: "Frontend Developer",
-        liveUrl: "https://aakar2025.in/",
-        tags: ["Event", "College", "Festival", "Tech Fest"],
-        owner: "Aakar 2025",
-        company: "Kreekarvat Technologies",
-        collaborators: ["Jnanesh"],
-        screenshot: "/works/aakar.png"
-    },
-    {
-        title: "Ullas Ice Cream",
-        description:
-            "Brand showcase website for Ullas Ice Cream featuring their product range, store locations, and visual branding. Focused on modern UI and product categorization.",
-        role: "Full Stack Developer",
-        liveUrl: "https://www.ullasicecream.com/",
-        tags: ["FMCG", "Food", "Branding", "Products"],
-        owner: "Ullas",
-        company: "Kreekarvat Technologies",
-        collaborators: ["Nidhi D"],
-        screenshot: "/works/ullas.png"
-    },
-    {
-        title: "Kreekarvat Portfolio",
-        description:
-            "Personal brand site for Kreekarvat showcasing creative works in UI/UX design, photography, and motion graphics. Built for performance and storytelling.",
-        role: "Frontend Developer",
-        liveUrl: "https://www.kreekarvat.in/",
-        tags: ["Portfolio", "Design", "Creative", "Visual"],
-        owner: "Kreekarvat",
-        collaborators: [],
-        screenshot: "/works/kreekarvat.png"
-    },
-    {
-        title: "Swiggy Integration Tool",
-        description:
-            "Utility to synchronize restaurant orders from Swiggy with Billmaxo POS for real-time billing, eliminating manual entries and reducing delays.",
-        role: "Volunteer Tool Developer",
-        liveUrl: null,
-        tags: ["Swiggy", "POS", "Automation", "Order Management"],
-        owner: "Billmaxo Solutions",
-        company: "Billmaxo Solutions",
-        collaborators: ["Jnanesh"],
-        screenshot: "/works/placeholder.svg"
-    },
-    {
         title: "Zomato Integration Tool",
         description:
             "Automated order fetching and synchronization tool for restaurants using Zomato, integrated directly with billing systems.",
@@ -191,28 +204,15 @@ const projects: Project[] = [
         screenshot: "/works/placeholder.svg"
     },
     {
-        title: "WhatsApp Integration Tool",
+        title: "Kreekarvat Portfolio",
         description:
-            "Tool to send digital receipts, order updates, and offers through WhatsApp Business API to improve customer engagement.",
-        role: "Volunteer Tool Developer",
-        liveUrl: null,
-        tags: ["WhatsApp", "Business Messaging", "Customer Engagement"],
-        owner: "Billmaxo Solutions",
-        company: "Billmaxo Solutions",
-        collaborators: ["Jnanesh"],
-        screenshot: "/works/placeholder.svg"
-    },
-    {
-        title: "Marketing Tool",
-        description:
-            "Campaign manager for SMS, email, and WhatsApp marketing with real-time analytics. Built to help small businesses track performance and ROI.",
-        role: "Volunteer Tool Developer",
-        liveUrl: null,
-        tags: ["Marketing", "Campaigns", "Analytics", "Automation"],
-        owner: "Billmaxo Solutions",
-        company: "Billmaxo Solutions",
-        collaborators: ["Jnanesh"],
-        screenshot: "/works/placeholder.svg"
+            "Personal brand site for Kreekarvat showcasing creative works in UI/UX design, photography, and motion graphics. Built for performance and storytelling.",
+        role: "Frontend Developer",
+        liveUrl: "https://www.kreekarvat.in/",
+        tags: ["Portfolio", "Design", "Creative", "Visual"],
+        owner: "Kreekarvat",
+        collaborators: [],
+        screenshot: "/works/kreekarvat.png"
     }
 ];
 
