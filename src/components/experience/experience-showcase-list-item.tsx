@@ -45,6 +45,7 @@ export interface ExperienceShowcaseListItemProps {
   };
   date: string;
   location: string;
+  marks?: string;
   description: string;
 }
 
