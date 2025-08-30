@@ -45,9 +45,9 @@ export default function Hero() {
             </FadeUp>
             <FadeUp key="description" duration={0.6} delay={0.2}>
               <div className="mt-4 max-w-4xl text-base font-semibold text-black dark:text-white sm:text-base md:text-xl">
-                Former Project Manager at Kree Karvat, now shaping tech communities as a core member of <span className="text-accent font-semibold">DevNation</span> and UiPath SDC at AJIET.<br />
-                Skilled in <span className="text-accent font-semibold">Next.js</span>, <span className="text-accent font-semibold">TypeScript</span>, <span className="text-accent font-semibold">TailwindCSS</span>, <span className="text-accent font-semibold">MongoDB</span>, and automation tools.<br />
-                Built tools like a WhatsApp Messaging API, Swiggy & Zomato integration scrapers, and faculty appraisal systems — always focusing on scalability, usability, and impact.
+                I have a passion for building scalable and user-friendly applications, backed by a proven track record of successful projects.
+                My toolkit includes <span className="text-accent font-semibold">Next.js</span>, <span className="text-accent font-semibold">TypeScript</span>, <span className="text-accent font-semibold">TailwindCSS</span>, and a range of databases like <span className="text-accent font-semibold">PostgreSQL</span> and <span className="text-accent font-semibold">MongoDB</span>.
+                I thrive in collaborative environments and am committed to delivering exceptional results as part of a team.
               </div>
               <div className="mt-6 flex cursor-pointer items-center gap-4">
                 <Link

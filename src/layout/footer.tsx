@@ -1,6 +1,6 @@
 import ContactButton from "@/components/contact-form/contact-button";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/icons";
 import Link from "next/link";
+import { SiGithub, SiLeetcode, SiLinkedin, SiX } from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -33,7 +33,7 @@ export default function Footer() {
             className="h-6 w-6"
             aria-label="link to Github"
           >
-            <GithubIcon className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
+            <SiGithub className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
             href='https://linkedin.com/in/gaureshpai'
@@ -42,7 +42,7 @@ export default function Footer() {
             className="h-6 w-6"
             aria-label="link to Linkedin"
           >
-            <LinkedinIcon className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
+            <SiLinkedin className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
             href='https://x.com/hseruag'
@@ -51,7 +51,16 @@ export default function Footer() {
             className="h-6 w-6"
             aria-label="link to Twitter"
           >
-            <TwitterIcon className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
+            <SiX className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
+          </Link>
+          <Link
+            href='https://leetcode.com/u/gaureshpai'
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-6 w-6"
+            aria-label="link to Leetcode"
+          >
+            <SiLeetcode className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
         </div>
       </div>

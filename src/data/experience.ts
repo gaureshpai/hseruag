@@ -2,34 +2,34 @@ import { type ExperienceShowcaseListItemProps } from "@/components/experience/ex
 
 export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     {
-        title: "Development Volunteer",
+        title: "Tool Developer Intern",
         organisation: {
             name: "billmaxo solutions",
             href: "https://billmaxo.com/",
         },
         date: "January 2025 - June 2025",
-        location: "Bengaluru, Karnataka, India",
-        description: "Built a WhatsApp Marketing API using Express.js, Puppeteer, and whatsapp-web.js. Also developed Swiggy and Zomato integration tools for automated menu scraping and restaurant data insights.",
+        location: "Remote",
+        description: "Built a WhatsApp Marketing API, automating outreach and reducing effort by 70%. Built scraping tools for Swiggy and Zomato, extracting 500+ restaurant orders real time. Derived actionable insights from scraped data to guide strategic decisions and operational improvements. Improved workflow efficiency by integrating APIs and third-party services, reducing processing time by 40%.",
     },
     {
-        title: "Project Manager",
+        title: "Project Manager Developer",
         organisation: {
-            name: "Kree Karvat Technology",
+            name: "Kreekarvat Technologies",
             href: "https://kreekarvat.in/",
         },
         date: "August 2024 - April 2025",
-        location: "Bantwal, Karnataka, India",
-        description: "Led a team of freelancers to deliver website projects with a focus on quality and client satisfaction. Managed project lifecycles from planning to execution.",
+        location: "Hybrid",
+        description: "Delivered 6+ web projects across education, healthcare, FMCG, and events on schedule. Directed frontend and backend development efforts, leveraging Next.js, React.js, MongoDB, and Firebase. Coordinated cross-functional teams and clients, gathering requirements and aligning solutions with business goals. Applied agile methods to streamline workflows, boosting efficiency and collaboration by 25%.",
     },
     {
-        title: "Project Intern",
+        title: "Full Stack developer Intern",
         organisation: {
             name: "A.J. Institute of Medical Sciences and Research Centre - India",
             href: "https://ajims.vercel.app/",
         },
         date: "September 2023 - August 2024",
-        location: "Mangaluru, Karnataka, India",
-        description: "Developed user-end and full-stack features for Faculty Appraisal Forum and AJ Journal software with focus on UI/UX improvements under mentorship.",
+        location: "on Site",
+        description: "Developed a Faculty Appraisal Application for 100+ users, enhancing transparency and adoption. Integrated MongoDB and Firebase for secure, scalable data storage, ensuring 99% uptime during pilot deployment. Collaborated in a 4-member team using agile practices, delivering the project 2 weeks ahead of schedule.",
     },
     {
         title: "Student Champion",

@@ -14,8 +14,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <ThemeProvider attribute="class" defaultTheme="light">
         <MainLayout>
+          <CursorTrailCanvas className="pointer-events-none hidden md:flex fixed inset-0 -z-10 h-full w-full" />
           <AnimatePresence mode="wait" initial={false}>
-            <CursorTrailCanvas className="pointer-events-none hidden md:flex fixed inset-0 -z-10 h-full w-full" />
             <Component key={router.asPath} {...pageProps} />
           </AnimatePresence>
         </MainLayout>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence } from "framer-motion";
 import FadeUp from "@/animation/fade-up";
@@ -16,15 +15,13 @@ export default function AboutHero() {
 
           <FadeUp key="description-1" duration={0.6} delay={0.2}>
             <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-              I’m a former Project Manager and current Core Team Member at <strong>DevNation</strong>, with a passion for delivering high-quality web development projects and empowering the tech community through workshops and collaborative initiatives.
+              I&apos;m a Full Stack Developer skilled in JavaScript frameworks for building scalable web apps, automation tools, and event platforms. Proficient in the MERN stack and the Next.js ecosystem, I have a proven track record of delivering impactful solutions in dynamic teams. My project experience includes a CPRM prototype, a CLI tool, and a faculty appraisal system.
               <br /><br />
-              Currently pursuing my Bachelor’s in Computer Science Engineering at <strong>AJIET, Mangaluru</strong>, I focus on building scalable, user-centric solutions with a growing specialization in <strong>Next.js</strong> and full-stack technologies.
+              I&apos;m passionate about applying my problem-solving skills, technical expertise, and agile experience to create meaningful digital experiences. As a former Project Manager at Kreekarvat Technologies, I have experience in leading teams and delivering projects on schedule.
               <br /><br />
-              As the <strong>Student Developer Chamipon (SDC)</strong> for UiPath at AJIET, I actively lead automation awareness and enablement programs, helping students explore and adopt <strong>Robotic Process Automation (RPA)</strong> tools.
+              Currently, I&apos;m a Student Developer Champion at UiPath, where I promote automation and engagement initiatives within the academic community. I am also a Core Team Member at DevNation, where I contribute to community web development projects and organize workshops.
               <br /><br />
-              My experience spans full-stack development, project leadership, RPA, UI/UX, and community mentoring. I thrive in environments that promote continuous learning and collaborative growth, always striving to make meaningful contributions to both product and people.
-              <br /><br />
-              If you're interested in collaborating on impactful tech initiatives or learning more about my work, feel free to connect or explore my <Link href="/projects" className="underline text-blue-600">projects</Link>.
+              I&apos;m always eager to learn and grow, and I thrive in collaborative environments. If you&apos;re interested in collaborating on impactful tech initiatives or learning more about my work, feel free to connect or explore my <Link href="/projects" className="underline text-blue-600">projects</Link>.
             </p>
             <div className="mt-6 flex cursor-pointer z-100 items-center gap-4">
             <Link

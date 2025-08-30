@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import { RefObject } from "react";
 
 export type CursorTrail = {
@@ -12,8 +13,9 @@ export function cursorTrail(props: CursorTrail) {
   const accentColor = `hsla(${colorRaw ? colorRaw.split(" ").join(",") : "0, 0%, 0%"
     }, 0.35)`;
   const { ref, color } = props;
+  // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
   const ctx = ref.current?.getContext("2d")!;
-  let AnimationFeature = {
+  const AnimationFeature = {
     friction: 0.5,
     trails: 20,
     size: 40,
@@ -21,7 +23,7 @@ export function cursorTrail(props: CursorTrail) {
     tension: 0.98,
   };
 
-  let cursorPosition = {
+  const cursorPosition = {
     x: 0,
     y: 0,
   };
@@ -67,7 +69,9 @@ export function cursorTrail(props: CursorTrail) {
     }
 
     update(): void {
+      // eslint-disable-next-line prefer-const
       let e = this.spring;
+      // eslint-disable-next-line prefer-const
       let t = this.nodes[0];
       t.vx += (cursorPosition.x - t.x) * e;
       t.vy += (cursorPosition.y - t.y) * e;
@@ -130,18 +134,21 @@ export function cursorTrail(props: CursorTrail) {
   let newLines: Line[] = [];
 
   function move(event: MouseEvent | TouchEvent) {
-    !(event instanceof MouseEvent)
-      ? ((cursorPosition.x = event.touches[0].pageX),
-        (cursorPosition.y = event.touches[0].pageY))
-      : ((cursorPosition.x = event.clientX),
-        (cursorPosition.y = event.clientY));
+    if (event instanceof MouseEvent) {
+      cursorPosition.x = event.clientX;
+      cursorPosition.y = event.clientY;
+    } else {
+      cursorPosition.x = event.touches[0].pageX;
+      cursorPosition.y = event.touches[0].pageY;
+    }
     event.preventDefault();
   }
 
   function createLine(event: TouchEvent) {
-    event.touches.length === 1 &&
-      ((cursorPosition.x = event.touches[0].pageX),
-        (cursorPosition.y = event.touches[0].pageY));
+    if (event.touches.length === 1) {
+      cursorPosition.x = event.touches[0].pageX;
+      cursorPosition.y = event.touches[0].pageY;
+    }
   }
 
   function onMouseMove(e: MouseEvent | TouchEvent) {

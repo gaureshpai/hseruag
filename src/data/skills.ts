@@ -22,10 +22,10 @@ import {
   SiShadcnui,
   SiMui,
   SiSupabase,
-  SiNetlify
+  SiNetlify,
+  SiNpm
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
-import { AiModelIcon } from "@primer/octicons-react";
 import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
 import { FaRunning, FaBullseye, FaChalkboardTeacher, FaUsers, FaLightbulb } from "react-icons/fa";
 
@@ -73,7 +73,7 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       { name: "Netlify", icon: SiNetlify },
       { name: "Postman", icon: SiPostman },
       { name: "UiPath", icon: SiUipath },
-      { name: "AI Tools", icon: AiModelIcon },
+      { name: "npm", icon: SiNpm },
     ],
   },
   {

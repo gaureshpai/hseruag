@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { GithubIcon } from "@/components/icons";
+import { SiGithub } from "react-icons/si";
 import { FiExternalLink } from "react-icons/fi";
 
 export interface ProjectCardProps {
@@ -57,7 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-xs underline md:text-sm"
           >
-            <GithubIcon className="h-5 w-5" /> View on GitHub
+            <SiGithub className="h-5 w-5" /> View on GitHub
           </a>
           {props.liveUrl && (
             <a

@@ -15,9 +15,9 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   },
   {
     index: 3,
-    title: "HearEase",
-    href: "https://hearease.vercel.app/",
-    tags: ["Tinnitus Therapy", "Next.js", "Tailwind", "TypeScript", "Audio", "Responsive Design"],
+    title: "Create Next Quick",
+    href: "https://www.npmjs.com/package/create-next-quick",
+    tags: ["Node.js", "Next.js", "Tailwind", "TypeScript", "npm", "CLI"],
   },
   {
     index: 4,

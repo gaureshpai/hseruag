@@ -5,7 +5,6 @@ import { NextSeo } from 'next-seo';
 
 interface ProjectsPageProps {
   projects: ProjectCardProps[];
-  error?: string;
 }
 
 export const getServerSideProps: GetServerSideProps<ProjectsPageProps> = async () => {
@@ -47,12 +46,12 @@ export const getServerSideProps: GetServerSideProps<ProjectsPageProps> = async (
     );
 
     return { props: { projects } };
-  } catch (error) {
-    return { props: { projects: [], error: "Failed to load projects. Please try again later." } };
+  } catch {
+    return { props: { projects: [] } };
   }
 };
 
-const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects, error }) => {
+const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
   return (
     <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
       <NextSeo
@@ -105,15 +104,11 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects, error }) => {
         <div className="my-2">
           <span className="text-sm text-muted-foreground">Here are some of my recent projects from GitHub</span>
         </div>
-        {error ? (
-          <p className="text-red-500">{error}</p>
-        ) : (
-          <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-2">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}
           </div>
-        )}
       </div>
     </section>
   );

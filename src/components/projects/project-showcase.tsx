@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useCallback } from "react";
 import Link from "next/link";
 import { ArrowTopRight } from "@/components/icons";
 import ProjectShowcaseList, { type ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
@@ -10,15 +10,15 @@ interface ProjectShowcaseProps {
 export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
   const [currentImage, setCurrentImage] = useState<number>(0);
 
-  const handleAnimate = (index: number) => {
+  const handleAnimate = useCallback((index: number) => {
     if (index !== currentImage) {
       setCurrentImage(index);
     }
-  };
+  }, [currentImage]);
 
   const projectItems = useMemo(() => {
     return projects.map((proj, index) => {
-      const { title, href, tags } = proj;
+      const { title } = proj;
       return (
         <ProjectShowcaseList
           key={title}
@@ -28,7 +28,7 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
         />
       );
     });
-  }, [projects, currentImage]);
+  }, [projects, currentImage, handleAnimate]);
 
   return (
     <section className="overflow-hidden px-6 pt-16 py-16 sm:px-14 md:px-20">

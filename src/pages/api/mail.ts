@@ -60,12 +60,24 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<{ status: numbe
 
     const response = await mail(name, email, subject, message)
     res.status(response.status).send(response)
-  } catch (error: any) {
-    console.error("API Handler Error:", error)
-    res.status(error.status || 500).json({
-      status: error.status || 500,
-      message: error.message || "Internal server error",
-    })
+  } catch (error: unknown) {
+    console.error("API Handler Error:", error);
+    let status = 500;
+    let message = "Internal server error";
+
+    if (typeof error === 'object' && error !== null) {
+      if ('status' in error && typeof (error as { status: unknown }).status === 'number') {
+        status = (error as { status: number }).status;
+      }
+      if ('message' in error && typeof (error as { message: unknown }).message === 'string') {
+        message = (error as { message: string }).message;
+      }
+    }
+
+    res.status(status).json({
+      status,
+      message,
+    });
   }
 }
 
