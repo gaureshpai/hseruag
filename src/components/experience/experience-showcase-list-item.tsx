@@ -11,6 +11,7 @@ function ShowCaseLiIcon(props: ExperienceListIconProps) {
   const { scrollYProgress } = useScroll({
     target: props.iconRef,
     offset: ["center end", "center center"],
+    layoutEffect: false,
   });
   return (
     <figure className="absolute left-0 stroke-zinc-900">
@@ -44,7 +45,6 @@ export interface ExperienceShowcaseListItemProps {
   };
   date: string;
   location: string;
-  marks?: string;
   description: string;
 }
 
@@ -75,7 +75,7 @@ export default function ExperienceShowcaseListItem(
           </Link>
         </h3>
         <span className="text-sm font-medium text-foreground xs:text-base">
-          {props.date} | {props.location} {props?.marks?`| ${props.marks}`:""}
+          {props.date} | {props.location}
         </span>
         <p className="text-sm font-medium text-muted-foreground xs:text-base">
           {props.description}

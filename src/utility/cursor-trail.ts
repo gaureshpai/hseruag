@@ -15,7 +15,7 @@ export function cursorTrail(props: CursorTrail) {
   const { ref, color } = props;
   // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
   const ctx = ref.current?.getContext("2d")!;
-  const AnimationFeature = {
+  let AnimationFeature = {
     friction: 0.5,
     trails: 20,
     size: 40,
@@ -23,7 +23,7 @@ export function cursorTrail(props: CursorTrail) {
     tension: 0.98,
   };
 
-  const cursorPosition = {
+  let cursorPosition = {
     x: 0,
     y: 0,
   };
