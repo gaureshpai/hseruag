@@ -17,7 +17,7 @@
     "formik": "^2.4.6",
     "framer-motion": "^12.14.0",
     "lru-cache": "^11.1.0",
-    "lucide-react": "^0.541.0",
+    "lucide-react": "^0.542.0",
     "nanoid": "^5.1.5",
     "next": "^15.5.2",
     "next-seo": "^6.8.0",
