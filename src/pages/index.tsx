@@ -5,9 +5,9 @@ import ProjectShowcase from "@/components/projects/project-showcase";
 import CertificateShowcase from "@/components/certificates/certificate-showcase";
 import { PROJECT_SHOWCASE } from "@/data/projects";
 import { SKILLS_DATA } from "@/data/skills";
-import { getCertificates, Certificate } from "@/data/certificates";
+import { certificates } from "@/data/certs-feat";
 
-export default function Home({ certificates }: { certificates: Certificate[] }) {
+export default function Home() {
   return (
     <>
       <NextSeo
@@ -63,11 +63,3 @@ export default function Home({ certificates }: { certificates: Certificate[] }) 
   );
 }
 
-export async function getStaticProps() {
-    const certificates = getCertificates(4);
-    return {
-        props: {
-            certificates,
-        },
-    };
-}
