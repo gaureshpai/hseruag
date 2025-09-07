@@ -1,6 +1,6 @@
 import ContactButton from "@/components/contact-form/contact-button";
 import Link from "next/link";
-import { SiGithub, SiLeetcode, SiLinkedin, SiX } from "react-icons/si";
+import { SiGithub, SiLeetcode, SiLinkedin, SiX, SiNpm } from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -31,7 +31,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
-            aria-label="link to Github"
+            aria-label="link to Github profile"
           >
             <SiGithub className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
@@ -40,7 +40,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
-            aria-label="link to Linkedin"
+            aria-label="link to Linkedin profile"
           >
             <SiLinkedin className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
@@ -49,7 +49,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
-            aria-label="link to Twitter"
+            aria-label="link to Twitter profile"
           >
             <SiX className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
@@ -58,9 +58,18 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
-            aria-label="link to Leetcode"
+            aria-label="link to Leetcode profile"
           >
             <SiLeetcode className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
+          </Link>
+          <Link
+            href='https://www.npmjs.com/~gaureshpai'
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-6 w-6"
+            aria-label="link to NPM profile"
+          >
+            <SiNpm className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
         </div>
       </div>

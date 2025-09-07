@@ -60,14 +60,14 @@ const WorksPage = () => {
                 </div>
                 <div className="mt-8 grid grid-cols-1 gap-x-4 gap-y-10 lg:grid-cols-2">
                     {projects.map((project: Project, index: number) => (
-                        <div key={`project-${index}-${project.title}`} className="group relative dark:text-white overflow-hidden border rounded-xl p-6 shadow-sm hover:shadow-accent/20 dark:bg-zinc-800 dark:hover:shadow-lg hover:shadow-lg transition-all duration-300 bg-white hover:scale-[1.02]">
+                        <div key={`project-${index}-${project.title}`} className="relative dark:text-white overflow-hidden border rounded-xl p-6 shadow-sm dark:bg-zinc-800 transition-all duration-300 bg-white">
                             <div className="relative w-full aspect-video mb-4 overflow-hidden rounded-lg">
                                 <Image
                                     width={1920}
                                     height={1080}
                                     src={project.screenshot}
                                     alt={`${project.title} screenshot`}
-                                    className="rounded-lg aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
+                                    className="rounded-lg aspect-video object-cover transition-transform duration-300"
                                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     priority={index < 4}
                                 />

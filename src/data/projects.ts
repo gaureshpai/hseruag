@@ -9,20 +9,20 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   },
   {
     index: 2,
+    title: "Utility Hub",
+    href: "https://github.com/gaureshpai/UtilityHub",
+    tags: ["MERN", "Tailwind", "JavaScript", "MongoDB", "Vite", "Node.js", "Express.js", "React.js", "Supabase"],
+  },
+  {
+    index: 3,
     title: "Aakar 2025",
     href: "https://aakar2025.in/",
     tags: ["Event Management", "Full-stack", "Next.js", "PostgreSQL", "TypeScript", "HTML5", "CSS3", "Tailwind", "Git"],
   },
   {
-    index: 3,
+    index: 4,
     title: "Create Next Quick",
     href: "https://www.npmjs.com/package/create-next-quick",
     tags: ["Node.js", "Next.js", "Tailwind", "TypeScript", "npm", "CLI"],
-  },
-  {
-    index: 4,
-    title: "Epic Trails DS",
-    href: "https://www.npmjs.com/package/reactnativeepictrailsds",
-    tags: ["Design System", "React Native", "Storybook", "Git", "Team Collaboration", "Project Management", "TypeScript"],
   },
 ];

@@ -2,10 +2,12 @@ import { NextSeo } from "next-seo";
 import Hero from "@/components/Hero";
 import SkillsShowcase from "@/components/skills/skills-showcase";
 import ProjectShowcase from "@/components/projects/project-showcase";
+import CertificateShowcase from "@/components/certificates/certificate-showcase";
 import { PROJECT_SHOWCASE } from "@/data/projects";
 import { SKILLS_DATA } from "@/data/skills";
+import { getCertificates, Certificate } from "@/data/certificates";
 
-export default function Home() {
+export default function Home({ certificates }: { certificates: Certificate[] }) {
   return (
     <>
       <NextSeo
@@ -56,6 +58,16 @@ export default function Home() {
       <Hero />
       <SkillsShowcase skills={SKILLS_DATA} />
       <ProjectShowcase projects={PROJECT_SHOWCASE} />
+      <CertificateShowcase certificates={certificates} />
     </>
   );
+}
+
+export async function getStaticProps() {
+    const certificates = getCertificates(4);
+    return {
+        props: {
+            certificates,
+        },
+    };
 }
