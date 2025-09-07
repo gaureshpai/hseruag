@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,mdx,css,json}\"",
     "format:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,mdx,css,json}\""
   },
@@ -29,12 +29,15 @@
     "yup": "^1.7.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.35.0",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^24.3.0",
     "@types/nodemailer": "^7.0.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.21",
+    "eslint": "^9.35.0",
     "eslint-config-next": "^15.5.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",

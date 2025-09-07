@@ -69,9 +69,7 @@ export function cursorTrail(props: CursorTrail) {
     }
 
     update(): void {
-      // eslint-disable-next-line prefer-const
       let e = this.spring;
-      // eslint-disable-next-line prefer-const
       let t = this.nodes[0];
       t.vx += (cursorPosition.x - t.x) * e;
       t.vy += (cursorPosition.y - t.y) * e;
