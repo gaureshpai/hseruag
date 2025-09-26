@@ -32,7 +32,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.35.0",
     "@svgr/webpack": "^8.1.0",
-    "@types/node": "^24.4.0",
+    "@types/node": "^24.5.2",
     "@types/nodemailer": "^7.0.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
