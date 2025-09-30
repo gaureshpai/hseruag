@@ -12,7 +12,6 @@ import {
   SiTailwindcss,
   SiVercel,
   SiPostgresql,
-  SiPostman,
   SiC,
   SiCplusplus,
   SiUipath,
@@ -25,7 +24,7 @@ import {
   SiNetlify,
   SiNpm
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
+import { FaJava, FaCloud } from "react-icons/fa";
 import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
 import { FaRunning, FaBullseye, FaChalkboardTeacher, FaUsers, FaLightbulb } from "react-icons/fa";
 
@@ -71,7 +70,7 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       { name: "GitHub", icon: SiGithub },
       { name: "Vercel", icon: SiVercel },
       { name: "Netlify", icon: SiNetlify },
-      { name: "Postman", icon: SiPostman },
+      { name: "Azure", icon: FaCloud },
       { name: "UiPath", icon: SiUipath },
       { name: "npm", icon: SiNpm },
     ],

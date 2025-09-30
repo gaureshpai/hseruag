@@ -58,18 +58,32 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
             </Link>
           ))}
         </div>
-        <Link
-          href="/projects"
-          className="group relative flex max-w-max items-center gap-4 text-base font-semibold sm:text-lg md:text-xl"
-        >
-          <div className="relative max-w-max">
-            <span className="text-accent">See more projects</span>
-            <span className="absolute -bottom-1 left-0 h-[2px] w-0 origin-left rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full"></span>
-          </div>
-          <div className="h-8 w-8">
-            <ArrowTopRight className="rotate-45 text-accent transition-transform duration-300 group-hover:rotate-0 group-hover:scale-[1.1]" />
-          </div>
-        </Link>
+        <div className="flex gap-8 flex-col md:flex-row">
+          <Link
+            href="/projects"
+            className="group relative flex max-w-max items-center gap-4 text-base font-semibold sm:text-lg md:text-xl"
+          >
+            <div className="relative max-w-max">
+              <span className="text-accent">See more projects</span>
+              <span className="absolute -bottom-1 left-0 h-[2px] w-0 origin-left rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full"></span>
+            </div>
+            <div className="h-8 w-8">
+              <ArrowTopRight className="rotate-45 text-accent transition-transform duration-300 group-hover:rotate-0 group-hover:scale-[1.1]" />
+            </div>
+          </Link>
+          <Link
+            href="/certificates"
+            className="group relative flex max-w-max items-center gap-4 text-base font-semibold sm:text-lg md:text-xl"
+          >
+            <div className="relative max-w-max">
+              <span className="text-accent">View all certificates</span>
+              <span className="absolute -bottom-1 left-0 h-[2px] w-0 origin-left rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full"></span>
+            </div>
+            <div className="h-8 w-8">
+              <ArrowTopRight className="rotate-45 text-accent transition-transform duration-300 group-hover:rotate-0 group-hover:scale-[1.1]" />
+            </div>
+          </Link>
+        </div>
       </div>
     </section>
   );

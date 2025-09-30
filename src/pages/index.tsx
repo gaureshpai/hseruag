@@ -2,10 +2,8 @@ import { NextSeo } from "next-seo";
 import Hero from "@/components/Hero";
 import SkillsShowcase from "@/components/skills/skills-showcase";
 import ProjectShowcase from "@/components/projects/project-showcase";
-import CertificateShowcase from "@/components/certificates/certificate-showcase";
 import { PROJECT_SHOWCASE } from "@/data/projects";
 import { SKILLS_DATA } from "@/data/skills";
-import { certificates } from "@/data/certs-feat";
 
 export default function Home() {
   return (
@@ -58,7 +56,6 @@ export default function Home() {
       <Hero />
       <SkillsShowcase skills={SKILLS_DATA} />
       <ProjectShowcase projects={PROJECT_SHOWCASE} />
-      <CertificateShowcase certificates={certificates} />
     </>
   );
 }
