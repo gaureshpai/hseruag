@@ -1,57 +1,8 @@
-import { GetServerSideProps } from 'next';
-import { Octokit } from "@octokit/rest";
-import ProjectCard, { ProjectCardProps } from "@/components/projects/project-card";
+import ProjectCard from "@/components/projects/project-page";
 import { NextSeo } from 'next-seo';
+import { PROJECTS } from '@/data/projectsgit';
 
-interface ProjectsPageProps {
-  projects: ProjectCardProps[];
-}
-
-export const getServerSideProps: GetServerSideProps<ProjectsPageProps> = async () => {
-  const octokit = new Octokit({ auth: process.env.GH_TOKEN });
-
-  try {
-    const response = await octokit.repos.listForAuthenticatedUser({
-      sort: 'pushed',
-      type: 'public',
-      direction: 'desc',
-      per_page: 100,
-    });
-
-    const projects: ProjectCardProps[] = await Promise.all(
-      response.data
-        .filter(repo => repo.owner.type === 'User' && !['dump', 'hseruag', 'register', 'gaureshpai', 'clickmedude', 'gdg-workshop', 'Eventopia', 'stvst', 'business-acquisition-platform-prototype', 'V-Tech-Inc', 'ShreepathiPortfolio', 'Nidhi'].includes(repo.name))
-        .map(async repo => {
-          const collaboratorsResponse = await octokit.repos.listCollaborators({
-            owner: repo.owner.login,
-            repo: repo.name,
-          });
-
-          const collaborators = collaboratorsResponse.data
-            .filter(collaborator => collaborator.login !== repo.owner.login)
-            .map(collaborator => collaborator.login);
-
-          const liveUrl = repo.homepage;
-
-          return {
-            title: repo.name,
-            description: repo.description || "No description available.",
-            link: repo.html_url,
-            liveUrl,
-            tags: repo.topics || [],
-            owner: repo.owner.login,
-            collaborators: [repo.owner.login, ...collaborators],
-          };
-        })
-    );
-
-    return { props: { projects } };
-  } catch {
-    return { props: { projects: [] } };
-  }
-};
-
-const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
+const ProjectsPage: React.FC = () => {
   return (
     <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
       <NextSeo
@@ -102,11 +53,11 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
       <div className="mx-auto max-w-7xl">
         <h1 className="text-2xl font-semibold text-foreground md:text-4xl">Projects</h1>
         <div className="my-2">
-          <span className="text-sm text-muted-foreground">Here are some of my recent projects from GitHub</span>
+          <span className="text-sm text-muted-foreground">Here are some of my recent projects</span>
         </div>
         <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-2">
-            {projects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
+            {PROJECTS.map((project, index) => (
+              <ProjectCard key={`project-${index}-${project.title}`} index={index} {...project} />
             ))}
           </div>
       </div>

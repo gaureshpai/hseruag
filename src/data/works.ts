@@ -52,7 +52,7 @@ const projects: Project[] = [
         description:
             "Brand showcase website for Ullas Ice Cream featuring their product range, store locations, and visual branding. Focused on modern UI and product categorization.",
         role: "Full Stack Developer",
-        liveUrl: "https://www.ullasicecream.com/",
+        liveUrl: "https://www.ullasicecreams.com/",
         tags: ["FMCG", "Food", "Branding", "Products"],
         owner: "Ullas",
         company: "Kreekarvat Technologies",
@@ -213,7 +213,19 @@ const projects: Project[] = [
         owner: "Kreekarvat",
         collaborators: [],
         screenshot: "/works/kreekarvat.png"
-    }
+    },
+    {
+        title: "Mangalore Taxi Services",
+        description:
+            "An interactive platform designed to showcase taxi services and tour packages in and around Mangalore, India.",
+        role: "Frontend Developer",
+        liveUrl: "https://www.mangaloretaxiservices.in/",
+        tags: ["Taxi Services", "Travel", "UI/UX", "nodemailer"],
+        owner: "Mangalore Taxi Services",
+        company: "Kreekarvat Technologies",
+        collaborators: [],
+        screenshot: "/works/mangaloretaxi.png"
+    },
 ];
 
 export default projects;

@@ -54,7 +54,7 @@ export default function ExperienceShowcaseListItem(
 ) {
   const ref = useRef(null);
   return (
-    <li ref={ref} className="mx-auto mb-14 flex w-[60%] flex-col gap-1">
+    <li ref={ref} className="mx-auto max-w-full mb-14 flex w-[70%] flex-col gap-1">
       <ShowCaseLiIcon iconRef={ref} />
       <motion.div
         initial={{ y: 50 }}
@@ -76,7 +76,7 @@ export default function ExperienceShowcaseListItem(
           </Link>
         </h3>
         <span className="text-sm font-medium text-foreground xs:text-base">
-          {props.date} | {props.location}
+          {props.date} | {props.location} {props.marks && `| ${props.marks}`}
         </span>
         <p className="text-sm font-medium text-muted-foreground xs:text-base">
           {props.description}

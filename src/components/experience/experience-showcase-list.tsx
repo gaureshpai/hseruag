@@ -20,7 +20,7 @@ export default function ExperienceShowcaseList(
     offset: ["start end", "center start"],
   });
   return (
-    <div className="mx-auto my-40 max-w-7xl px-6 sm:px-14 md:my-30 md:px-20">
+    <div className="mx-auto my-40 px-6 sm:px-14 md:max-w-7xl md:my-30 md:px-20">
       <h2 className="md:mb-30 mb-16 w-full bg-gradient-to-r from-accent/70 to-accent bg-clip-text text-center text-2xl font-bold text-transparent xs:text-4xl sm:text-4xl md:text-6xl">
         {props.title}
       </h2>

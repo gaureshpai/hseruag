@@ -4,6 +4,7 @@ import AboutHero from "@/components/about-hero";
 import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
 import { EDUCATION } from "@/data/education";
 import { EXPERIENCE } from "@/data/experience";
+import { EXTRA } from "@/data/extra";
 
 export default function About() {
   return (
@@ -56,6 +57,7 @@ export default function About() {
       <AboutHero />
       <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
       <ExperienceShowcaseList title="Education" details={EDUCATION} />
+      <ExperienceShowcaseList title="Positions of Responsibility" details={EXTRA} />
     </>
   );
 }
