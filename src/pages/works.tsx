@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import projects, { Project } from '@/data/works';
 import { NextSeo } from 'next-seo';
+import { FiExternalLink } from 'react-icons/fi';
 
 const WorksPage = () => {
     return (
@@ -78,16 +79,17 @@ const WorksPage = () => {
                                 <span className="font-medium">Tags:</span>
                                 <span>{project.tags.length > 0 ? project.tags.join(', ') : 'None'}</span>
                             </div>
-                            <div className="text-xs mb-2 flex items-center gap-1">
-                                <span className="font-medium">Owner:</span>
-                                <span className="capitalize">{project.owner}</span>
-
-                            </div>
+                            {project.owner && project.owner.toLowerCase() !== 'gaureshpai' && (
+                                <div className="text-xs mb-2 flex items-center gap-1">
+                                    <span className="font-medium">Owner:</span>
+                                    <span className="capitalize">{project.owner}</span>
+                                </div>
+                            )}
                             <div className="text-xs mb-2 flex items-center gap-1">
                                 {project.collaborators.length > 0 && (
                                     <>
                                         <span className="font-medium">Collaborators:</span>
-                                        <span className="capitalize">{project.collaborators.join(', ')}</span>
+                                        <span className="capitalize">{project.collaborators.filter(c => c.toLowerCase() !== 'gaureshpai').join(', ')}</span>
                                     </>
                                 )}
                             </div>
@@ -105,23 +107,10 @@ const WorksPage = () => {
                                         href={project.liveUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="group/btn relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 hover:from-green-600 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 active:scale-95"
+                                        className="flex items-center gap-1 text-xs underline md:text-sm"
                                     >
-                                        <svg
-                                            className="w-4 h-4 mr-2 transition-transform duration-300 group-hover/btn:translate-x-0.5"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                            />
-                                        </svg>
+                                        <FiExternalLink className="h-5 w-5" /> 
                                         Live Demo
-                                        <span className="absolute inset-0 rounded-lg bg-white opacity-0 group-hover/btn:opacity-10 transition-opacity duration-300"></span>
                                     </Link>
                                 )}
                             </div>

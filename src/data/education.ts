@@ -9,7 +9,7 @@ export const EDUCATION: ExperienceShowcaseListItemProps[] = [
     },
     date: "2022-2026",
     location: "Mangaluru, Karnataka",
-    marks: "CGPA: 8.775/10 (till 6th sem)",
+    marks: "CGPA: 8.82/10",
     description:
       "Currently pursuing a Bachelor's degree with a strong focus on software development, data analysis, and system design. Involved in hands-on projects and collaborative learning experiences that enhance practical skills and readiness for the industry.",
   },

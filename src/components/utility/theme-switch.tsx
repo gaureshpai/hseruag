@@ -22,7 +22,7 @@ export default function ThemeSwitch(props: ThemeSwitchProps) {
     <button
       type="button"
       aria-label="toggle theme"
-      className="mt-8 h-10 w-10 rounded-full text-accent transition-[scale] duration-200 hover:scale-[1.1] md:mr-4 md:mt-0 md:h-6 md:w-6"
+      className="h-10 w-10 rounded-full text-accent transition-[scale] duration-200 hover:scale-[1.1] md:h-6 md:w-6"
       onClick={handleThemeChange}
     >
       {mounted &&

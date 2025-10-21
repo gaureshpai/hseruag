@@ -1,3 +1,4 @@
+import ButtonContainer from "@/components/ButtonContainer";
 import ContactButton from "@/components/contact-form/contact-button";
 import Link from "next/link";
 import { SiGithub, SiLeetcode, SiLinkedin, SiX, SiNpm } from "react-icons/si";
@@ -23,6 +24,7 @@ export default function Footer() {
           <ContactButton />
         </div>
       </div>
+      <ButtonContainer />
       <div className="flex w-full flex-col items-center justify-between gap-8 text-center md:flex-row md:justify-between lg:mx-auto lg:max-w-7xl">
         <span className="text-foreground">© {new Date().getFullYear()} Gauresh G Pai</span>
         <div className="flex gap-8">

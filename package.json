@@ -1,6 +1,7 @@
 {
   "name": "hseruag",
-  "version": "4.0.0",
+  "version": "5.0.0",
+  "description": "Welcome to my portfolio website, showcasing my projects, skills, and experiences as a developer. This application is built with Next.js, providing a responsive and visually appealing platform to highlight my work.",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -26,11 +27,13 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.5.0",
+    "sparks": "^0.0.49",
     "yup": "^1.7.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.35.0",
+    "@next/eslint-plugin-next": "^15.5.6",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^24.7.2",
     "@types/nodemailer": "^7.0.2",

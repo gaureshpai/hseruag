@@ -47,9 +47,9 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       { name: "React", icon: SiReact },
       { name: "Next.js", icon: SiNextdotjs },
       { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Material UI", icon: SiMui },
       { name: "ShadCN UI", icon: SiShadcnui },
       { name: "Storybook", icon: SiStorybook },
+      { name: "Material UI", icon: SiMui },
     ],
   },
   {
@@ -58,9 +58,9 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       { name: "PostgreSQL", icon: SiPostgresql },
       { name: "MongoDB", icon: SiMongodb },
       { name: "MySQL", icon: SiMysql },
-      { name: "Firebase", icon: SiFirebase },
       { name: "Supabase", icon: SiSupabase },
       { name: "Prisma", icon: SiPrisma },
+      { name: "Firebase", icon: SiFirebase },
     ],
   },
   {
@@ -68,9 +68,9 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
     skills: [
       { name: "Git", icon: SiGit },
       { name: "GitHub", icon: SiGithub },
+      { name: "Azure", icon: FaCloud },
       { name: "Vercel", icon: SiVercel },
       { name: "Netlify", icon: SiNetlify },
-      { name: "Azure", icon: FaCloud },
       { name: "UiPath", icon: SiUipath },
       { name: "npm", icon: SiNpm },
     ],
