@@ -116,7 +116,6 @@ export const PROJECTS: Project[] = [
       "webdevelopment"
     ],
     "collaborators": [
-      "gaureshpai",
       "jnanesh",
       "Himanshu Hegde"
     ],
@@ -185,7 +184,6 @@ export const PROJECTS: Project[] = [
     ],
     "owner": "Enigma",
     "collaborators": [
-      "gaureshpai",
       "Shreyya18",
       "shirha20",
       "Shikhar-Shetty"
@@ -230,12 +228,10 @@ export const PROJECTS: Project[] = [
       "nextjs",
       "pwa",
       "tailwindcss",
-      "typescript",
-      "website-under-construction"
+      "typescript"
     ],
     "owner": "gaureshpai",
     "collaborators": [
-      "gaureshpai",
       "Dhanya Shetty",
       "Harshitha P"
     ],
@@ -258,7 +254,6 @@ export const PROJECTS: Project[] = [
     ],
     "owner": "gaureshpai",
     "collaborators": [
-      "gaureshpai",
       "Darshan Bhandary",
       "Jnanesh",
       "Himanshu Hegde",
@@ -347,7 +342,7 @@ export const PROJECTS: Project[] = [
   },
   {
     "title": "two-cars",
-    "description": "A fast-paced by @Jnanesh , reflex-testing game where players control two cars simultaneously, avoiding obstacles and collecting points. Built using HTML, CSS, and JavaScript, this game is lightweight, responsive, and perfect for casual gameplay.",
+    "description": "A fast-paced by Jnanesh , reflex-testing game where players control two cars simultaneously, avoiding obstacles and collecting points. Built using HTML, CSS, and JavaScript, this game is lightweight, responsive, and perfect for casual gameplay.",
     "link": "https://github.com/gaureshpai/two-cars",
     "liveUrl": "https://Jnanesh-two-cars.netlify.app/",
     "tags": [
@@ -379,7 +374,6 @@ export const PROJECTS: Project[] = [
     ],
     "owner": "Himanshu Hegde",
     "collaborators": [
-      "gaureshpai",
       "Himanshu Hegde",
       "Jnanesh",
       "Milan C I"
@@ -435,7 +429,6 @@ export const PROJECTS: Project[] = [
     ],
     "owner": "Flourish",
     "collaborators": [
-      "gaureshpai",
       "Milan C I"
     ],
     "screenshot": "/projects/demo.png"

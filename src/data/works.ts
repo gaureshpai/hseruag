@@ -5,7 +5,7 @@ export interface Project {
     role: string;
     tags: string[];
     owner: string;
-    collaborators: string[];
+    collaborators?: string[];
     screenshot: string;
     company?: string;
 }
@@ -60,18 +60,6 @@ const projects: Project[] = [
         screenshot: "/works/ullas.png"
     },
     {
-        title: "A3 Digital School",
-        description:
-            "Comprehensive school management dashboard including attendance tracking, staff management, and online notices. Developed secure admin interface and role-based access.",
-        role: "Full Stack Developer",
-        liveUrl: "https://www.school.a3digitalmall.com/",
-        tags: ["School", "Admin", "Management", "Education", "Dashboard"],
-        owner: "A3 Digital Mall",
-        company: "Klientship Pvt Ltd",
-        collaborators: [],
-        screenshot: "/works/a3.png"
-    },
-    {
         title: "Exactitude Medical Foundation",
         description:
             "A precision healthcare platform highlighting epigenetic research and personalized medicine. Designed a fully responsive and scalable frontend architecture with dynamic content control, enabling administrators to manage achievements, advisory members, and contact forms through a secure panel.",
@@ -86,9 +74,19 @@ const projects: Project[] = [
         ],
         role: "Full Stack Developer",
         owner: "Dr. Ragavendra R Baliga",
-        collaborators: [],
         company: "Kreekarvat Technologies",
         screenshot: "/works/exactitudemedfoundation.png"
+    },
+    {
+        title: "Damaru productions Website",
+        description:
+            "A sleek portfolio website for Damaru Productions, showcasing their video production services and past projects. Emphasized visual storytelling with a modern design aesthetic.",
+        role: "Frontend Developer",
+        liveUrl: "https://damaruproductions.com/",
+        tags: ["Portfolio", "Video Production", "Creative", "Visual"],
+        owner: "Damaru Productions",
+        company: "Kreekarvat Technologies",
+        screenshot: "/works/damaru.png"
     },
     {
         title: "ExamsMitra",
@@ -128,7 +126,6 @@ const projects: Project[] = [
         ],
         owner: "Dr. Ragavendra R Baliga",
         company: "Kreekarvat Technologies",
-        collaborators: [],
         screenshot: "/works/rkbaligalegecy.png"
     },
     {
@@ -163,7 +160,6 @@ const projects: Project[] = [
         liveUrl: "https://gajalakshmicranes.com",
         tags: ["Business", "SEO", "Web Development", "Services"],
         owner: "M. Ragavendra Prabhu",
-        collaborators: [],
         company: "Kreekarvat Technologies",
         screenshot: "/works/gajalakshmicranes.png"
     },
@@ -211,7 +207,6 @@ const projects: Project[] = [
         liveUrl: "https://www.kreekarvat.in/",
         tags: ["Portfolio", "Design", "Creative", "Visual"],
         owner: "Kreekarvat",
-        collaborators: [],
         screenshot: "/works/kreekarvat.png"
     },
     {
@@ -223,8 +218,18 @@ const projects: Project[] = [
         tags: ["Taxi Services", "Travel", "UI/UX", "nodemailer"],
         owner: "Mangalore Taxi Services",
         company: "Kreekarvat Technologies",
-        collaborators: [],
         screenshot: "/works/mangaloretaxi.png"
+    },
+    {
+        title: "A3 Digital School",
+        description:
+            "Comprehensive school management dashboard including attendance tracking, staff management, and online notices. Developed secure admin interface and role-based access.",
+        role: "Full Stack Developer",
+        liveUrl: "https://www.school.a3digitalmall.com/",
+        tags: ["School", "Admin", "Management", "Education", "Dashboard"],
+        owner: "A3 Digital Mall",
+        company: "Klientship Pvt Ltd",
+        screenshot: "/works/a3.png"
     },
 ];
 

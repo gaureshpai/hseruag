@@ -18,7 +18,7 @@ export const PROJECT_SHOWCASE: Project[] = [
     liveUrl: "https://signflix.vercel.app/",
     role: "Full Stack Developer",
     tags: ["idea", "incomplete", "innovation", "major-project", "nextjs", "prisma-orm", "tailwind CSS", "typescript", "git"],
-    collaborators: ["Jnanesh", "Himanshu", "Milan"],
+    collaborators: ["Jnanesh", "Himanshu Hegde", "Milan C I"],
     screenshot: "/projects/signflix.jpg",
   },
   {

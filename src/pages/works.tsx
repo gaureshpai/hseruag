@@ -85,14 +85,12 @@ const WorksPage = () => {
                                     <span className="capitalize">{project.owner}</span>
                                 </div>
                             )}
-                            <div className="text-xs mb-2 flex items-center gap-1">
-                                {project.collaborators.length > 0 && (
-                                    <>
-                                        <span className="font-medium">Collaborators:</span>
-                                        <span className="capitalize">{project.collaborators.filter(c => c.toLowerCase() !== 'gaureshpai').join(', ')}</span>
-                                    </>
-                                )}
-                            </div>
+                            {project.collaborators && project.collaborators.filter(c => c.toLowerCase() !== 'gaureshpai').length > 0 && (
+                                <div className="text-xs mb-2 flex items-center gap-1">
+                                    <span className="font-medium">Collaborators:</span>
+                                    <span className="capitalize">{project.collaborators.filter(c => c.toLowerCase() !== 'gaureshpai').join(', ')}</span>
+                                </div>
+                            )}
                             <div className="text-xs mb-2 flex items-center gap-1">
                                 <span className="font-medium">Company:</span>
                                 <span>{project.company || 'None'}</span>

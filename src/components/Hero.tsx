@@ -46,7 +46,7 @@ export default function Hero() {
             <FadeUp key="description" duration={0.6} delay={0.2}>
               <div className="mt-4 max-w-4xl text-base font-semibold text-black dark:text-white sm:text-base md:text-xl">
                 I craft scalable, user-friendly web applications with clean architecture and strong performance.
-                My toolkit includes <span className="text-accent font-semibold">Next.js</span>, <span className="text-accent font-semibold">TypeScript</span>, <span className="text-accent font-semibold">TailwindCSS</span>, <span className="text-accent font-semibold">PostgreSQL</span>, and <span className="text-accent font-semibold">MongoDB</span>.
+                My toolkit includes <span className="text-accent font-semibold">JavaScript</span>, <span className="text-accent font-semibold">TypeScript</span>, <span className="text-accent font-semibold">React</span>, <span className="text-accent font-semibold">Next.js</span>, <span className="text-accent font-semibold">TailwindCSS</span> and more.
                 Collaborative by nature, I thrive on delivering impactful solutions that make a difference.
               </div>
               <div className="mt-6 flex cursor-pointer items-center gap-4">

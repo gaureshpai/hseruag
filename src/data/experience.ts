@@ -9,7 +9,7 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
         },
         date: "January 2025 - June 2025",
         location: "Remote",
-        description: "Built a WhatsApp Marketing API, automating outreach and reducing effort by 70%. Built scraping tools for Swiggy and Zomato, extracting 500+ restaurant orders real time. Derived actionable insights from scraped data to guide strategic decisions and operational improvements. Improved workflow efficiency by integrating APIs and third-party services, reducing processing time by 40%.",
+        description: "developed a WhatsApp marketing API tool that automates outreach and saves 70% of the work.\n developed scraping tools that extract 500+ restaurant orders in real time for Swiggy and Zomato.\n reduced processing time by 40% and increased workflow efficiency through the integration of third-party services and APIs.",
     },
     {
         title: "Project Manager Developer",
@@ -19,7 +19,7 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
         },
         date: "August 2024 - April 2025",
         location: "Hybrid",
-        description: "Delivered 6+ web projects across education, healthcare, FMCG, and events on schedule. Directed frontend and backend development efforts, leveraging Next.js, React.js, MongoDB, and Firebase. Coordinated cross-functional teams and clients, gathering requirements and aligning solutions with business goals. Applied agile methods to streamline workflows, boosting efficiency and collaboration by 25%.",
+        description: "Delivered 9+ web projects across education, healthcare, FMCG sectors.\n Directed frontend and backend dev efforts, leveraging Next.js, React.js, and Node.js stack. \n Coordinated cross-functional teams and clients, gathering requirements and aligning solutions with business goals.\n Applied agile methods to streamline workflows, boosting efficiency and collaboration by 25%.",
     },
     {
         title: "Full Stack developer Intern",
@@ -29,6 +29,6 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
         },
         date: "September 2023 - August 2024",
         location: "on Site",
-        description: "Developed a Faculty Appraisal Application for 100+ users, enhancing transparency and adoption. Integrated MongoDB and Firebase for secure, scalable data storage, ensuring 99% uptime during pilot deployment. Collaborated in a 4-member team using agile practices, delivering the project 2 weeks ahead of schedule.",
+        description: "Developed a Faculty Appraisal Application for 100+ users, enhancing transparency and adoption.\n Integrated MongoDB and Firebase for secure, scalable data storage, ensuring 99% uptime during pilot deployment.\n Collaborated in a 4-member team using agile practices, delivering the project 2 weeks ahead of schedule.",
     }
 ];
