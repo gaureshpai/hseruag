@@ -35,7 +35,7 @@ export const PROJECT_SHOWCASE: Project[] = [
     title: "Utility Hub",
     description: "A collection of useful web utilities built with MERN stack.",
     liveUrl: "https://github.com/gaureshpai/UtilityHub",
-    githubUrl: "https://github.com/gaureshpai/UtilityHub",
+    githubUrl: "https://dkutils.vercel.app",
     role: "Full Stack Developer",
     tags: ["MERN", "Tailwind", "JavaScript", "MongoDB", "Vite", "Node.js", "Express.js", "React.js", "Supabase"],
     collaborators: [],
