@@ -30,7 +30,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           {project.tags.length > 0 ? (
             project.tags.map((tag) => (
               <span key={tag} className="text-xs">
-                {tag}
+                {tag}{tag !== project.tags[project.tags.length - 1] && ','}
               </span>
             ))
           ) : (
