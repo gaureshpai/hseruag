@@ -1,9 +1,16 @@
 import { NextSeo } from "next-seo";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 import Hero from "@/components/Hero";
 import type { Project } from "@/data/projects";
 import type { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
 import type { ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
+import {
+  generateSEOConfig,
+  generatePersonSchema,
+  generateWebsiteSchema,
+  injectJSONLD,
+} from "@/utils/seo";
 
 const SkillsShowcase = dynamic(
   () => import("@/components/skills/skills-showcase"),
@@ -33,53 +40,81 @@ export default function Home({
   experience,
   achievements,
 }: HomePageProps) {
+  const seoConfig = generateSEOConfig({
+    title: "Gauresh G Pai | Frontend Developer & Engineering Student",
+    description:
+      "Explore the professional portfolio of Gauresh G Pai, a skilled Frontend Developer and Engineering Student with 2 years of hands-on experience. Discover innovative projects, expertise in React, Next.js, TypeScript, and modern web technologies.",
+    canonical: "https://gauresh.is-a.dev",
+    openGraph: {
+      title: "Gauresh G Pai - Frontend Developer Portfolio",
+      description:
+        "Frontend Developer specializing in React, Next.js & TypeScript. 9+ client projects delivered with scalable, user-friendly web applications.",
+      type: "profile",
+    },
+    additionalMetaTags: [
+      {
+        name: "keywords",
+        content:
+          "Gauresh G Pai, Frontend Developer, React Developer, Next.js Developer, TypeScript, JavaScript, Web Developer, Engineering Student, UI/UX, Tailwind CSS, Full Stack Developer, Portfolio, Web Development, Software Engineer, India Developer",
+      },
+      {
+        property: "profile:first_name",
+        content: "Gauresh",
+      },
+      {
+        property: "profile:last_name",
+        content: "G Pai",
+      },
+      {
+        property: "profile:username",
+        content: "hseruag",
+      },
+      {
+        name: "geo.region",
+        content: "IN",
+      },
+      {
+        name: "geo.placename",
+        content: "India",
+      },
+      {
+        name: "language",
+        content: "English",
+      },
+    ],
+  });
+
+  const personSchema = generatePersonSchema({
+    name: "Gauresh G Pai",
+    url: "https://gauresh.is-a.dev",
+    jobTitle: "Frontend Developer",
+    description:
+      "Skilled Frontend Developer specializing in React, Next.js, and TypeScript with 2 years of experience delivering scalable web applications.",
+    knowsAbout: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "TailwindCSS",
+      "Frontend Development",
+      "Web Development",
+      "UI/UX Design",
+      "Responsive Design",
+      "Performance Optimization",
+    ],
+  });
+
+  const websiteSchema = generateWebsiteSchema({
+    name: "Gauresh G Pai - Portfolio",
+    url: "https://gauresh.is-a.dev",
+    description:
+      "Professional portfolio showcasing frontend development projects, skills, and experience in modern web technologies.",
+  });
+
   return (
     <>
-      <NextSeo
-        title="Portfolio | Gauresh"
-        description="Explore the professional portfolio of Gauresh G Pai, a skilled Engineering Student with 2 years of hands-on experience. Discover innovative projects, expertise in modern web technologies, and a passion for creating seamless user experiences."
-        openGraph={{
-          title: "Portfolio | Gauresh",
-          description:
-            "Dive into the world of web development with Gauresh G Pai. Discover a Engineering Student with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.",
-          url: "https://gauresh.is-a.dev",
-          siteName: "Gauresh | Portfolio",
-          type: "website",
-          images: [
-            {
-              url: "https://gauresh.is-a.dev/logo.png",
-              width: 1200,
-              height: 630,
-              alt: "Gauresh G Pai Portfolio",
-              type: "image/png",
-            },
-          ],
-        }}
-        twitter={{
-          handle: "@hseruag",
-          site: "@hseruag",
-          cardType: "summary_large_image",
-        }}
-        additionalMetaTags={[
-          {
-            name: "keywords",
-            content:
-              "Nextjs Developer, Engineering Student, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Portfolio, UI/UX, React.js, Frontend Development, Web Development, JavaScript Developer, Responsive Design",
-          },
-          {
-            name: "author",
-            content: "Gauresh G Pai",
-          },
-          {
-            name: "robots",
-            content: "index, follow",
-          },
-          {
-            name: "viewport",
-            content: "width=device-width, initial-scale=1",
-          },
-        ]}
-      />
+      <NextSeo {...seoConfig} />
+      <Head>{injectJSONLD([personSchema, websiteSchema])}</Head>
       <Hero />
       <SkillsShowcase skills={skills} />
       <ProjectShowcase projects={projects} />

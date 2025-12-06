@@ -1,59 +1,59 @@
 import ProjectCard from "@/components/projects/project-page";
 import { NextSeo } from "next-seo";
+import Head from "next/head";
 import type { Project } from "@/data/projectsgit";
+import {
+  generateSEOConfig,
+  generateCollectionPageSchema,
+  generateBreadcrumbSchema,
+  injectJSONLD,
+} from "@/utils/seo";
 
 type ProjectsPageProps = {
   projects: Project[];
 };
 
 const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
+  const seoConfig = generateSEOConfig({
+    title: "Projects by Gauresh G Pai | React & Next.js Web Applications",
+    description:
+      "Explore innovative web development projects by Gauresh G Pai. Discover full-stack applications, responsive websites, and interactive UIs built with React, Next.js, TypeScript, and Tailwind CSS. View live demos and source code.",
+    canonical: "https://gauresh.is-a.dev/projects",
+    openGraph: {
+      title: "Projects Portfolio - Gauresh G Pai",
+      description:
+        "Collection of web applications showcasing expertise in React, Next.js, TypeScript, and modern frontend technologies.",
+      type: "website",
+    },
+    additionalMetaTags: [
+      {
+        name: "keywords",
+        content:
+          "Gauresh G Pai Projects, React Projects, Next.js Applications, TypeScript Projects, Web Development Portfolio, Frontend Projects, Full Stack Projects, Open Source Projects, GitHub Projects, Live Demos, Web Applications",
+      },
+      {
+        name: "og:type",
+        content: "website",
+      },
+    ],
+  });
+
+  const collectionSchema = generateCollectionPageSchema({
+    name: "Projects by Gauresh G Pai",
+    description:
+      "A collection of web development projects showcasing skills in React, Next.js, TypeScript, and modern web technologies.",
+    url: "https://gauresh.is-a.dev/projects",
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://gauresh.is-a.dev" },
+    { name: "Projects", url: "https://gauresh.is-a.dev/projects" },
+  ]);
+
   return (
     <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
-      <NextSeo
-        title="Projects | Gauresh G Pai"
-        description="Explore the innovative projects by Gauresh G Pai, a React Developer. Discover web applications built using modern technologies like Next.js, Tailwind CSS, and more."
-        openGraph={{
-          title: "Explore Projects by Gauresh G Pai",
-          description:
-            "Discover a collection of innovative web projects developed by Gauresh G Pai, showcasing skills in React, Next.js, and frontend development.",
-          url: "https://gauresh.is-a.dev/projects",
-          siteName: "Gauresh G Pai",
-          type: "website",
-          images: [
-            {
-              url: "https://gauresh.is-a.dev/logo.png",
-              width: 1200,
-              height: 630,
-              alt: "Projects by Gauresh G Pai - React Developer",
-              type: "image/png",
-            },
-          ],
-        }}
-        twitter={{
-          handle: "@hseruag",
-          site: "@hseruag",
-          cardType: "summary_large_image",
-        }}
-        additionalMetaTags={[
-          {
-            name: "keywords",
-            content:
-              "Gauresh G Pai projects, React Developer projects, web applications, frontend development, Next.js, Tailwind CSS, portfolio, innovative web solutions",
-          },
-          {
-            name: "author",
-            content: "Gauresh G Pai",
-          },
-          {
-            name: "robots",
-            content: "index, follow",
-          },
-          {
-            name: "viewport",
-            content: "width=device-width, initial-scale=1",
-          },
-        ]}
-      />
+      <NextSeo {...seoConfig} />
+      <Head>{injectJSONLD([collectionSchema, breadcrumbSchema])}</Head>
       <div className="mx-auto max-w-7xl">
         <h1 className="text-2xl font-semibold text-foreground md:text-4xl">
           Projects

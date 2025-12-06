@@ -5,16 +5,16 @@ export default function Hero() {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ scale: 0, opacity: 0, y: 20 }}
-        animate={{ scale: 1, opacity: 1, y: 0 }}
-        exit={{ scale: 0, opacity: 0, y: 20 }}
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0, opacity: 0 }}
         transition={{
           type: "spring",
           stiffness: 260,
           damping: 20,
           duration: 0.5,
         }}
-        className="flex max-h-[1000px] min-h-[calc(100vh-200px)] items-center px-6 sm:px-14 md:h-[calc(100vh-200px)] md:min-h-max md:px-20"
+        className="flex max-h-[1000px] min-h-[calc(100vh-200px)] items-center justify-center px-6 sm:px-14 md:h-[calc(100vh-200px)] md:min-h-max md:px-20"
       >
         <div className="w-full">
           <div className="mx-auto max-w-7xl">

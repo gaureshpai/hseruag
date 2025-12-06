@@ -1,61 +1,57 @@
 import Link from "next/link";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
+import Head from "next/head";
 import { FiExternalLink } from "react-icons/fi";
 import type { Project } from "@/data/works";
+import {
+  generateSEOConfig,
+  generateCollectionPageSchema,
+  generateBreadcrumbSchema,
+  injectJSONLD,
+} from "@/utils/seo";
 
 type WorksPageProps = {
   projects: Project[];
 };
 
 const WorksPage = ({ projects }: WorksPageProps) => {
+  const seoConfig = generateSEOConfig({
+    title: "Professional Work | Gauresh G Pai Client Projects & Engagements",
+    description:
+      "Browse Gauresh G Pai's professional work portfolio featuring 9+ client projects and professional engagements. Real-world web applications built with React, Next.js, TypeScript, and Tailwind CSS for various companies and clients.",
+    canonical: "https://gauresh.is-a.dev/works",
+    openGraph: {
+      title: "Professional Work Portfolio - Gauresh G Pai",
+      description:
+        "Professional client projects and engagements showcasing real-world applications of React, Next.js, and modern frontend technologies.",
+      type: "website",
+    },
+    additionalMetaTags: [
+      {
+        name: "keywords",
+        content:
+          "Gauresh G Pai Professional Work, Client Projects, Professional Portfolio, Freelance Projects, Contract Work, Commercial Projects, Professional Engagements, Company Projects, Real-world Applications, Enterprise Solutions, Business Websites",
+      },
+    ],
+  });
+
+  const collectionSchema = generateCollectionPageSchema({
+    name: "Professional Work by Gauresh G Pai",
+    description:
+      "A collection of professional client projects and engagements demonstrating real-world expertise in web development.",
+    url: "https://gauresh.is-a.dev/works",
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://gauresh.is-a.dev" },
+    { name: "Professional Work", url: "https://gauresh.is-a.dev/works" },
+  ]);
+
   return (
     <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
-      <NextSeo
-        title="Works | Gauresh G Pai"
-        description="Browse the portfolio of Gauresh G Pai, featuring web development projects built using React, Next.js, and Tailwind CSS. See real-world applications of modern frontend technologies."
-        openGraph={{
-          title: "Works by Gauresh G Pai",
-          description:
-            "A curated portfolio showcasing the work of Gauresh G Pai—featuring interactive web apps and frontend solutions using React, Next.js, and Tailwind CSS.",
-          url: "https://gauresh.is-a.dev/works",
-          siteName: "Gauresh G Pai",
-          type: "website",
-          images: [
-            {
-              url: "https://gauresh.is-a.dev/logo.png",
-              width: 1200,
-              height: 630,
-              alt: "Works by Gauresh G Pai - Portfolio Preview",
-              type: "image/png",
-            },
-          ],
-        }}
-        twitter={{
-          handle: "@hseruag",
-          site: "@hseruag",
-          cardType: "summary_large_image",
-        }}
-        additionalMetaTags={[
-          {
-            name: "keywords",
-            content:
-              "Gauresh G Pai portfolio, Gauresh G Pai works, web development projects, React portfolio, frontend developer, Next.js, Tailwind CSS, JavaScript, personal website, developer showcase",
-          },
-          {
-            name: "author",
-            content: "Gauresh G Pai",
-          },
-          {
-            name: "robots",
-            content: "index, follow",
-          },
-          {
-            name: "viewport",
-            content: "width=device-width, initial-scale=1",
-          },
-        ]}
-      />
+      <NextSeo {...seoConfig} />
+      <Head>{injectJSONLD([collectionSchema, breadcrumbSchema])}</Head>
       <div className="mx-auto max-w-7xl">
         <h1 className="text-2xl font-semibold text-foreground md:text-4xl">
           Professional Work

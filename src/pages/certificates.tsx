@@ -1,59 +1,56 @@
 import Image from "next/legacy/image";
 import { NextSeo } from "next-seo";
+import Head from "next/head";
 import type { Certificate } from "@/data/certificates";
+import {
+  generateSEOConfig,
+  generateCollectionPageSchema,
+  generateBreadcrumbSchema,
+  injectJSONLD,
+} from "@/utils/seo";
 
 const CertificatesPage = ({
   certificates,
 }: {
   certificates: Certificate[];
 }) => {
+  const seoConfig = generateSEOConfig({
+    title:
+      "Certificates | Gauresh G Pai Professional Qualifications",
+    description:
+      "View Gauresh G Pai's professional certificates and certifications from Coursera, Udemy, UiPath, and other platforms. Showcasing continuous learning in web development, React, Next.js, TypeScript, automation, and modern technologies.",
+    canonical: "https://gauresh.is-a.dev/certificates",
+    openGraph: {
+      title: "Professional Certificates - Gauresh G Pai",
+      description:
+        "Collection of professional certifications demonstrating expertise and commitment to continuous learning in web development and software engineering.",
+      type: "website",
+    },
+    additionalMetaTags: [
+      {
+        name: "keywords",
+        content:
+          "Gauresh G Pai Certificates, Professional Certifications, Coursera Certificates, Udemy Certificates, UiPath Certification, Web Development Certificates, React Certification, TypeScript Certification, Professional Qualifications, Continuous Learning, Skill Development, Training Certificates",
+      },
+    ],
+  });
+
+  const collectionSchema = generateCollectionPageSchema({
+    name: "Professional Certificates by Gauresh G Pai",
+    description:
+      "A comprehensive collection of professional certificates and qualifications demonstrating continuous learning and expertise in web development.",
+    url: "https://gauresh.is-a.dev/certificates",
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://gauresh.is-a.dev" },
+    { name: "Certificates", url: "https://gauresh.is-a.dev/certificates" },
+  ]);
+
   return (
     <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
-      <NextSeo
-        title="Certificates | Gauresh G Pai"
-        description="Explore the certificates earned by Gauresh G Pai from various platforms like Coursera, Udemy, and UiPath, showcasing expertise in web development, automation, and more."
-        openGraph={{
-          title: "Certificates | Gauresh G Pai",
-          description:
-            "A collection of certificates earned by Gauresh G Pai from platforms like Coursera, Udemy, and UiPath, demonstrating a commitment to continuous learning and skill development.",
-          url: "https://gauresh.is-a.dev/certificates",
-          siteName: "Gauresh G Pai",
-          type: "website",
-          images: [
-            {
-              url: "https://gauresh.is-a.dev/logo.png",
-              width: 1200,
-              height: 630,
-              alt: "Certificates | Gauresh G Pai - Preview",
-              type: "image/png",
-            },
-          ],
-        }}
-        twitter={{
-          handle: "@hseruag",
-          site: "@hseruag",
-          cardType: "summary_large_image",
-        }}
-        additionalMetaTags={[
-          {
-            name: "keywords",
-            content:
-              "Gauresh G Pai certificates, Gauresh G Pai, certificates, web development, react, next.js, typescript, coursera, udemy, uipath, automation",
-          },
-          {
-            name: "author",
-            content: "Gauresh G Pai",
-          },
-          {
-            name: "robots",
-            content: "index, follow",
-          },
-          {
-            name: "viewport",
-            content: "width=device-width, initial-scale=1",
-          },
-        ]}
-      />
+      <NextSeo {...seoConfig} />
+      <Head>{injectJSONLD([collectionSchema, breadcrumbSchema])}</Head>
       <div className="mx-auto max-w-7xl">
         <h1 className="text-2xl font-semibold text-foreground md:text-4xl">
           Certificates
