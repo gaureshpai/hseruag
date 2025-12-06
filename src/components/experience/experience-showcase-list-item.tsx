@@ -1,6 +1,5 @@
 import { RefObject, useRef } from "react";
 import Link from "next/link";
-
 import { motion, useScroll } from "framer-motion";
 
 export interface ExperienceListIconProps {
@@ -56,39 +55,30 @@ export default function ExperienceShowcaseListItem(
   return (
     <li ref={ref} className="mx-auto max-w-full mb-14 flex w-[70%] flex-col gap-1">
       <ShowCaseLiIcon iconRef={ref} />
-      <motion.div
-        initial={{ y: 50 }}
-        whileInView={{ y: 0 }}
-        transition={{
-          type: "spring",
-          duration: 0.4,
-        }}
-      >
-        <h3 className="text-base font-bold text-foreground sm:text-xl md:text-2xl">
-          {props.title}{" "}
-          <Link
-            href={props.organisation.href}
-            className="cursor-pointer text-accent"
-            target="_blank"
-            rel="nofollow"
-          >
-            @{props.organisation.name}
-          </Link>
-        </h3>
-        <span className="text-sm font-medium text-foreground xs:text-base">
-          {props.date} | {props.location} {props.marks && `| ${props.marks}`}
-        </span>
-        <p className="text-sm font-medium text-muted-foreground xs:text-base">
-          {props.description?
-            props.description.split('\n').map((line, index) => (
-              <span key={index}>
-                - {line}
-                <br />
-              </span>
-            ))
-            : null} 
-        </p>
-      </motion.div>
+      <h3 className="text-base font-bold text-foreground sm:text-xl md:text-2xl">
+        {props.title}{" "}
+        <Link
+          href={props.organisation.href}
+          className="cursor-pointer text-accent"
+          target="_blank"
+          rel="nofollow"
+        >
+          @{props.organisation.name}
+        </Link>
+      </h3>
+      <span className="text-sm font-medium text-foreground xs:text-base">
+        {props.date} | {props.location} {props.marks && `| ${props.marks}`}
+      </span>
+      <p className="text-sm font-medium text-muted-foreground xs:text-base">
+        {props.description ?
+          props.description.split('\n').map((line, index) => (
+            <span key={index}>
+              - {line}
+              <br />
+            </span>
+          ))
+          : null}
+      </p>
     </li>
   );
 }

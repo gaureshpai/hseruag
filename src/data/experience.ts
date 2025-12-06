@@ -2,9 +2,19 @@ import { type ExperienceShowcaseListItemProps } from "@/components/experience/ex
 
 export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     {
+        title: "Project Lead Developer",
+        organisation: {
+            name: "Government of Karnataka | UDAL DC Fellowship",
+            href: "https://www.linkedin.com/posts/gaureshpai_udal2025-dcfellow-innovation-activity-7402369146069622785-X8nU",
+        },
+        date: "August 2025 - November 2025",
+        location: "Hybrid",
+        description: "Built a system that powers 73 hospital screens with real-time updates for the blood bank, OT and pharmacy.\n Worked closely with district administration to enhance hospital systems.\n Led a team by collaborating with individuals from diverse tech backgrounds, resulting in one application and multiple services developed during the fellowship.",
+    },
+    {
         title: "Tool Developer Intern",
         organisation: {
-            name: "billmaxo solutions",
+            name: "Billmaxo Solutions",
             href: "https://billmaxo.com/",
         },
         date: "January 2025 - June 2025",

@@ -2,77 +2,42 @@ import {
   SiNextdotjs,
   SiHtml5,
   SiCss3,
-  SiJavascript,
   SiTypescript,
   SiReact,
   SiMongodb,
-  SiMysql,
-  SiFirebase,
   SiGit,
   SiTailwindcss,
-  SiVercel,
   SiPostgresql,
-  SiC,
-  SiCplusplus,
   SiUipath,
-  SiStorybook,
-  SiPrisma,
   SiGithub,
-  SiShadcnui,
-  SiMui,
-  SiSupabase,
-  SiNetlify,
-  SiNpm
+  SiSupabase
 } from "react-icons/si";
-import { FaJava, FaCloud } from "react-icons/fa";
+import { FaJava, FaCloud, FaRunning, FaBullseye, FaChalkboardTeacher, FaUsers, FaLightbulb } from "react-icons/fa";
 import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
-import { FaRunning, FaBullseye, FaChalkboardTeacher, FaUsers, FaLightbulb } from "react-icons/fa";
 
 export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
   {
-    sectionName: "Languages",
+    sectionName: "Languages & Frameworks",
     skills: [
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "React", icon: SiReact },
       { name: "TypeScript", icon: SiTypescript },
-      { name: "JavaScript", icon: SiJavascript },
       { name: "Java", icon: FaJava },
-      { name: "C++", icon: SiCplusplus },
-      { name: "C", icon: SiC },
       { name: "HTML", icon: SiHtml5 },
       { name: "CSS", icon: SiCss3 },
-    ],
-  },
-  {
-    sectionName: "Libraries and Frameworks",
-    skills: [
-      { name: "React", icon: SiReact },
-      { name: "Next.js", icon: SiNextdotjs },
       { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "ShadCN UI", icon: SiShadcnui },
-      { name: "Storybook", icon: SiStorybook },
-      { name: "Material UI", icon: SiMui },
     ],
   },
   {
-    sectionName: "Database Tools / ORMs",
-    skills: [
-      { name: "PostgreSQL", icon: SiPostgresql },
-      { name: "MongoDB", icon: SiMongodb },
-      { name: "MySQL", icon: SiMysql },
-      { name: "Supabase", icon: SiSupabase },
-      { name: "Prisma", icon: SiPrisma },
-      { name: "Firebase", icon: SiFirebase },
-    ],
-  },
-  {
-    sectionName: "Version Control and Tools",
+    sectionName: "Tools & Databases",
     skills: [
       { name: "Git", icon: SiGit },
       { name: "GitHub", icon: SiGithub },
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "MongoDB", icon: SiMongodb },
+      { name: "Supabase", icon: SiSupabase },
       { name: "Azure", icon: FaCloud },
-      { name: "Vercel", icon: SiVercel },
-      { name: "Netlify", icon: SiNetlify },
       { name: "UiPath", icon: SiUipath },
-      { name: "npm", icon: SiNpm },
     ],
   },
   {

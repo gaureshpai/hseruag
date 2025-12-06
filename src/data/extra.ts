@@ -2,6 +2,16 @@ import { type ExperienceShowcaseListItemProps } from "@/components/experience/ex
 
 export const EXTRA: ExperienceShowcaseListItemProps[] = [
     {
+        title: "Core Team Member",
+        organisation: {
+            name: "DK24",
+            href: "https://dk24.org",
+        },
+        date: "July 2025 - Present",
+        location: "Mangaluru, Karnataka, India",
+        description: "Promoting and fostering the growth of the community, organizing events, and engaging with members.",
+    },
+    {
         title: "Student Champion",
         organisation: {
             name: "UiPath",

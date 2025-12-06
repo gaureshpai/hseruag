@@ -7,6 +7,7 @@ import { SKILLS_DATA } from "@/data/skills";
 import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
 import { EDUCATION } from "@/data/education";
 import { EXPERIENCE } from "@/data/experience";
+import { ACHIEVEMENTS } from "@/data/achievements";
 
 export default function Home() {
   return (
@@ -61,7 +62,7 @@ export default function Home() {
       <ProjectShowcase projects={PROJECT_SHOWCASE} />
       <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
       <ExperienceShowcaseList title="Education" details={EDUCATION} />
+      <ExperienceShowcaseList title="Achievements" details={ACHIEVEMENTS} />
     </>
   );
 }
-
