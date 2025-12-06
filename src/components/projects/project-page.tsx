@@ -1,59 +1,72 @@
-import Image from 'next/image';
-import { Project } from '@/data/projectsgit';
+import Image from "next/image";
+import { Project } from "@/data/projectsgit";
 import { SiGithub } from "react-icons/si";
 import { FiExternalLink } from "react-icons/fi";
 
-const ProjectCard: React.FC<Project & { index: number }> = ({ index, ...project }) => {
+const ProjectCard: React.FC<Project & { index: number }> = ({
+  index,
+  ...project
+}) => {
   return (
-    <div key={`project-${index}-${project.title}`} className="relative dark:text-white overflow-hidden border rounded-xl p-6 shadow-sm dark:bg-zinc-800 transition-all duration-300 bg-white flex flex-col">
-      <div className="relative w-full aspect-video mb-4 overflow-hidden rounded-lg">
+    <div
+      key={`project-${index}-${project.title}`}
+      className="relative flex flex-col overflow-hidden rounded-xl border bg-white p-6 shadow-sm transition-all duration-300 dark:bg-zinc-800 dark:text-white"
+    >
+      <div className="relative mb-4 aspect-video w-full overflow-hidden rounded-lg">
         <Image
           width={1920}
           height={1080}
           src={project.screenshot || "placeholder.svg"}
           alt={`${project.title} screenshot`}
-          className="rounded-lg aspect-auto object-contain transition-transform duration-300"
+          className="aspect-auto rounded-lg object-contain transition-transform duration-300"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           priority={index < 4}
         />
       </div>
       <div className="flex-grow">
-        <h2 className="text-xl font-bold mb-2">{project.title}</h2>
-        <p className="mb-3 test-justify">{project.description}</p>
-        <div className="text-xs mb-2 flex flex-wrap items-center gap-1">
+        <h2 className="mb-2 text-xl font-bold">{project.title}</h2>
+        <p className="test-justify mb-3">{project.description}</p>
+        <div className="mb-2 flex flex-wrap items-center gap-1 text-xs">
           <span className="font-medium">Tags:</span>
           {project.tags.length > 0 ? (
             project.tags.map((tag) => (
               <span key={tag} className="text-xs">
-                {tag}{tag !== project.tags[project.tags.length - 1] && ','}
+                {tag}
+                {tag !== project.tags[project.tags.length - 1] && ","}
               </span>
             ))
           ) : (
             <span>None</span>
           )}
         </div>
-        {project.owner && project.owner.toLowerCase() !== 'gaureshpai' && (
-          <div className="text-xs mb-2 flex items-center gap-1">
+        {project.owner && project.owner.toLowerCase() !== "gaureshpai" && (
+          <div className="mb-2 flex items-center gap-1 text-xs">
             <span className="font-medium">Owner:</span>
             <span className="capitalize">{project.owner}</span>
           </div>
         )}
-        {project.collaborators && project.collaborators.filter(c => c.toLowerCase() !== 'gaureshpai').length > 0 && (
-          <div className="text-xs mb-2 flex flex-wrap items-center gap-1">
-            <span className="font-medium">Collaborators:</span>
-            <span className="capitalize text-xs">{project.collaborators.filter(c => c.toLowerCase() !== 'gaureshpai').join(', ')}</span>
-          </div>
-        )}
+        {project.collaborators &&
+          project.collaborators.filter((c) => c.toLowerCase() !== "gaureshpai")
+            .length > 0 && (
+            <div className="mb-2 flex flex-wrap items-center gap-1 text-xs">
+              <span className="font-medium">Collaborators:</span>
+              <span className="text-xs capitalize">
+                {project.collaborators
+                  .filter((c) => c.toLowerCase() !== "gaureshpai")
+                  .join(", ")}
+              </span>
+            </div>
+          )}
         {project.company && (
-          <div className="text-xs mb-2 flex items-center gap-1">
+          <div className="mb-2 flex items-center gap-1 text-xs">
             <span className="font-medium">Company:</span>
-            <span>{project.company || 'None'}</span>
+            <span>{project.company || "None"}</span>
           </div>
         )}
         {project.role && (
-          <div className="text-xs mb-4 flex items-center gap-1">
+          <div className="mb-4 flex items-center gap-1 text-xs">
             <span className="font-medium">Role:</span>
-            <span>{project.role || 'Developer'}</span>
+            <span>{project.role || "Developer"}</span>
           </div>
         )}
       </div>
@@ -81,6 +94,6 @@ const ProjectCard: React.FC<Project & { index: number }> = ({ index, ...project 
       </div>
     </div>
   );
-}
+};
 
 export default ProjectCard;

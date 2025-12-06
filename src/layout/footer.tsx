@@ -26,10 +26,12 @@ export default function Footer() {
       </div>
       <ButtonContainer />
       <div className="flex w-full flex-col items-center justify-between gap-8 text-center md:flex-row md:justify-between lg:mx-auto lg:max-w-7xl">
-        <span className="text-foreground">© {new Date().getFullYear()} Gauresh G Pai</span>
+        <span className="text-foreground">
+          © {new Date().getFullYear()} Gauresh G Pai
+        </span>
         <div className="flex gap-8">
           <Link
-            href='https://github.com/gaureshpai'
+            href="https://github.com/gaureshpai"
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
@@ -38,7 +40,7 @@ export default function Footer() {
             <SiGithub className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
-            href='https://linkedin.com/in/gaureshpai'
+            href="https://linkedin.com/in/gaureshpai"
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
@@ -47,7 +49,7 @@ export default function Footer() {
             <SiLinkedin className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
-            href='https://x.com/hseruag'
+            href="https://x.com/hseruag"
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
@@ -56,7 +58,7 @@ export default function Footer() {
             <SiX className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
-            href='https://leetcode.com/u/gaureshpai'
+            href="https://leetcode.com/u/gaureshpai"
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
@@ -65,7 +67,7 @@ export default function Footer() {
             <SiLeetcode className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
-            href='https://www.npmjs.com/~gaureshpai'
+            href="https://www.npmjs.com/~gaureshpai"
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"

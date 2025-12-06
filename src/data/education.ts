@@ -9,7 +9,7 @@ export const EDUCATION: ExperienceShowcaseListItemProps[] = [
     },
     date: "2022-2026",
     location: "Mangaluru, Karnataka",
-    marks: "CGPA: 8.775/10"
+    marks: "CGPA: 8.775/10",
   },
   {
     title: "Pre-University College",

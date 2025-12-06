@@ -11,7 +11,7 @@ export interface SkillsShowcaseProps {
 
 export default function SkillsShowcase({ skills }: SkillsShowcaseProps) {
   return (
-    <section className="overflow-hidden px-6 pt-32 pb-16 sm:px-14 md:px-20">
+    <section className="overflow-hidden px-6 pb-16 pt-32 sm:px-14 md:px-20">
       <div className="relative mx-auto max-w-7xl">
         <h2 className="md:mb-30 mb-16 w-full bg-gradient-to-r from-accent/70 to-accent bg-clip-text text-center text-2xl font-bold text-transparent xs:text-4xl sm:text-4xl md:text-6xl">
           Skills

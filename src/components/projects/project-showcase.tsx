@@ -32,7 +32,11 @@ export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
         </div>
         <div className="mt-8 grid grid-cols-1 gap-x-4 gap-y-10 lg:grid-cols-2">
           {projects.map((project: Project, index: number) => (
-            <ProjectCard key={`project-${index}-${project.title}`} project={project} index={index} />
+            <ProjectCard
+              key={`project-${index}-${project.title}`}
+              project={project}
+              index={index}
+            />
           ))}
         </div>
       </div>

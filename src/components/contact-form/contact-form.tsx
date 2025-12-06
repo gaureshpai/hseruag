@@ -1,28 +1,28 @@
-"use client"
+"use client";
 
-import { Field, Form, Formik } from "formik"
-import * as Yup from "yup"
-import { Loader2Icon } from "lucide-react"
-import CustomInput from "@/components/utility/custom-input"
-import CustomTextarea from "@/components/utility/custom-textarea"
-import type { FormiKInputFieldProps } from "@/utility/types"
+import { Field, Form, Formik } from "formik";
+import * as Yup from "yup";
+import { Loader2Icon } from "lucide-react";
+import CustomInput from "@/components/utility/custom-input";
+import CustomTextarea from "@/components/utility/custom-textarea";
+import type { FormiKInputFieldProps } from "@/utility/types";
 
 export const mailValidationSchema = Yup.object({
   email: Yup.string().email("Invalid email").required("Email required"),
   name: Yup.string().required("Name required"),
   subject: Yup.string().required("Subject required"),
   message: Yup.string().required("Message required"),
-})
+});
 
-export type ContactFormValues = Yup.InferType<typeof mailValidationSchema>
+export type ContactFormValues = Yup.InferType<typeof mailValidationSchema>;
 
 export type FormFields = {
-  name: keyof ContactFormValues
-  label: string
-  type: "text"
-  fieldType: "text" | "textarea"
-  placeholder: string
-}
+  name: keyof ContactFormValues;
+  label: string;
+  type: "text";
+  fieldType: "text" | "textarea";
+  placeholder: string;
+};
 
 const FormFieldsData: FormFields[] = [
   {
@@ -53,21 +53,24 @@ const FormFieldsData: FormFields[] = [
     fieldType: "textarea",
     placeholder: "Message",
   },
-]
+];
 
 const initialFormValues: ContactFormValues = {
   email: "",
   name: "",
   message: "",
   subject: "",
-}
+};
 
 export interface ContactFormProps {
-  isSubmitting: boolean
-  handleSubmit: (values: ContactFormValues) => Promise<void>
+  isSubmitting: boolean;
+  handleSubmit: (values: ContactFormValues) => Promise<void>;
 }
 
-export default function ContactForm({ isSubmitting, handleSubmit }: ContactFormProps) {
+export default function ContactForm({
+  isSubmitting,
+  handleSubmit,
+}: ContactFormProps) {
   return (
     <>
       <Formik
@@ -80,7 +83,10 @@ export default function ContactForm({ isSubmitting, handleSubmit }: ContactFormP
           {FormFieldsData.map((form) => (
             <div key={form.name} className="flex flex-col gap-1">
               <div>
-                <label htmlFor={form.name} className="inline font-medium text-background">
+                <label
+                  htmlFor={form.name}
+                  className="inline font-medium text-background"
+                >
                   {form.label}
                 </label>
               </div>
@@ -104,7 +110,11 @@ export default function ContactForm({ isSubmitting, handleSubmit }: ContactFormP
                       </>
                     ) : (
                       <>
-                        <CustomTextarea id={form.name} {...field} placeholder={form.placeholder} />
+                        <CustomTextarea
+                          id={form.name}
+                          {...field}
+                          placeholder={form.placeholder}
+                        />
                         {Boolean(meta.touched && meta.error) && (
                           <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-red-400 md:text-sm">
                             {meta.error}
@@ -135,5 +145,5 @@ export default function ContactForm({ isSubmitting, handleSubmit }: ContactFormP
         </Form>
       </Formik>
     </>
-  )
+  );
 }

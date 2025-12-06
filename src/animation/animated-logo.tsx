@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 export default function AnimatedLogo() {
   return (
@@ -13,11 +14,14 @@ export default function AnimatedLogo() {
           damping: 20,
           duration: 1.5,
         }}
-        className="h-full w-full flex items-center justify-center md:m-4"
+        className="flex h-full w-full items-center justify-center md:m-4"
       >
-        <motion.img
+        <Image
           src="/images/logo.png"
           alt="Logo"
+          width={1080}
+          height={1080}
+          priority
           className="max-h-[100px] max-w-[100px]"
         />
       </motion.div>

@@ -10,8 +10,9 @@ export function cursorTrail(props: CursorTrail) {
   const colorRaw = getComputedStyle(document.documentElement).getPropertyValue(
     "--accent",
   );
-  const accentColor = `hsla(${colorRaw ? colorRaw.split(" ").join(",") : "0, 0%, 0%"
-    }, 0.35)`;
+  const accentColor = `hsla(${
+    colorRaw ? colorRaw.split(" ").join(",") : "0, 0%, 0%"
+  }, 0.35)`;
   const { ref, color } = props;
   // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
   const ctx = ref.current?.getContext("2d")!;

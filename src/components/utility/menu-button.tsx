@@ -31,7 +31,7 @@ export default function MenuLogo(props: MenuLogoProps) {
         height="100%"
         viewBox="0 0 23 23"
         className={classNames(
-          "mt-1 ",
+          "mt-1",
           props.open ? "stroke-zinc-100 dark:stroke-accent" : "stroke-accent",
         )}
         animate={props.open ? "open" : "close"}

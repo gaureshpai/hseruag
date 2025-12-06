@@ -5,9 +5,9 @@ export default function Hero() {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0, opacity: 0 }}
+        initial={{ scale: 0, opacity: 0, y: 20 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        exit={{ scale: 0, opacity: 0, y: 20 }}
         transition={{
           type: "spring",
           stiffness: 260,
@@ -25,9 +25,14 @@ export default function Hero() {
               Frontend Developer · 9+ Client Projects Delivered
             </span>
             <div className="mt-4 max-w-4xl text-base font-semibold text-black dark:text-white sm:text-base md:text-xl">
-              I craft scalable, user-friendly web applications with clean architecture and strong performance.
-              My toolkit includes <span className="text-accent font-semibold">TypeScript</span>, <span className="text-accent font-semibold">React</span>, <span className="text-accent font-semibold">Next.js</span>, <span className="text-accent font-semibold">TailwindCSS</span> and more.
-              Collaborative by nature, I thrive on delivering impactful solutions that make a difference.
+              I craft scalable, user-friendly web applications with clean
+              architecture and strong performance. My toolkit includes{" "}
+              <span className="font-semibold text-accent">TypeScript</span>,{" "}
+              <span className="font-semibold text-accent">React</span>,{" "}
+              <span className="font-semibold text-accent">Next.js</span>,{" "}
+              <span className="font-semibold text-accent">TailwindCSS</span> and
+              more. Collaborative by nature, I thrive on delivering impactful
+              solutions that make a difference.
             </div>
             <div className="mt-6 flex cursor-pointer items-center gap-4">
               <Link
@@ -35,7 +40,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 download={true}
-                className="rounded-md bg-accent cursor-pointer px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+                className="cursor-pointer rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
               >
                 Download Resume
               </Link>

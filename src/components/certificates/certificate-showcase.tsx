@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import Image from "next/legacy/image";
 import { ArrowTopRight } from "@/components/icons";
@@ -8,17 +7,22 @@ interface CertificateShowcaseProps {
   certificates: Certificate[];
 }
 
-export default function CertificateShowcase({ certificates }: CertificateShowcaseProps) {
+export default function CertificateShowcase({
+  certificates,
+}: CertificateShowcaseProps) {
   return (
-    <section className="overflow-hidden px-6 pt-16 py-16 sm:px-14 md:px-20">
+    <section className="overflow-hidden px-6 py-16 pt-16 sm:px-14 md:px-20">
       <div className="relative mx-auto max-w-7xl">
         <h2 className="text-xl font-semibold text-accent sm:text-3xl">
           Featured Certificates:
         </h2>
         <div className="grid grid-cols-1 gap-6 py-14 md:grid-cols-2 lg:gap-8">
           {certificates.map((certificate, index) => (
-            <div key={`certificate-showcase-${index}`} className="relative dark:text-white overflow-hidden border rounded-xl p-4 shadow-sm dark:bg-zinc-800 bg-white">
-              <div className="relative w-full aspect-video mb-4 overflow-hidden rounded-lg">
+            <div
+              key={`certificate-showcase-${index}`}
+              className="relative overflow-hidden rounded-xl border bg-white p-4 shadow-sm dark:bg-zinc-800 dark:text-white"
+            >
+              <div className="relative mb-4 aspect-video w-full overflow-hidden rounded-lg">
                 <Image
                   layout="fill"
                   src={certificate.screenshot}

@@ -1,31 +1,29 @@
-import { defineConfig } from "eslint/config";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
 import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
+import tseslint from "typescript-eslint";
+import reactPlugin from "eslint-plugin-react";
+import reactHooksPlugin from "eslint-plugin-react-hooks";
+import nextPlugin from "@next/eslint-plugin-next";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
-});
-
-export default defineConfig([
+export default [
     {
-        ignores: [".next/", "node_modules/", "next-env.d.ts"]
+        ignores: [".next/**", "node_modules/**", "next-env.d.ts", "out/**", ".swc/**"]
     },
+    js.configs.recommended,
+    ...tseslint.configs.recommended,
     {
-        files: ["**/*.{js,mjs,cjs,jsx,ts,tsx}"],
-        ...js.configs.recommended,
+        files: ["**/*.{js,jsx,ts,tsx}"],
+        plugins: {
+            react: reactPlugin,
+            "react-hooks": reactHooksPlugin,
+            "@next/next": nextPlugin,
+        },
         rules: {
-        }
-    },
-    {
-        files: ["**/*.{ts,tsx}"],
-        extends: compat.extends("next/core-web-vitals", "next/typescript"),
-        rules: {
+            ...reactPlugin.configs.recommended.rules,
+            ...reactHooksPlugin.configs.recommended.rules,
+            "react/react-in-jsx-scope": "off",
+            "react/prop-types": "off",
+            "react-hooks/exhaustive-deps": "warn",
+            "react-hooks/set-state-in-effect": "off",
             "no-unused-expressions": "off",
             "@typescript-eslint/no-unused-expressions": ["error", {
                 "allowShortCircuit": true,
@@ -36,14 +34,29 @@ export default defineConfig([
             "@typescript-eslint/no-empty-object-type": "off",
             "@typescript-eslint/no-explicit-any": "off",
             "@typescript-eslint/no-unused-vars": "off",
-            "@next/next/no-assign-module-variable": "off",
-            "@typescript-eslint/no-this-alias": "off"
+            "@typescript-eslint/no-this-alias": "off",
+            "@typescript-eslint/no-require-imports": "off"
+        },
+        settings: {
+            react: {
+                version: "detect"
+            }
         }
     },
     {
-        files: ["*.config.js", "*.config.mjs"],
+        files: ["*.config.js", "*.config.mjs", "*.config.ts"],
+        languageOptions: {
+            globals: {
+                module: "readonly",
+                require: "readonly",
+                process: "readonly",
+                __dirname: "readonly",
+                __filename: "readonly"
+            }
+        },
         rules: {
-            "@typescript-eslint/no-require-imports": "off",
+            "no-undef": "off",
+            "@typescript-eslint/no-require-imports": "off"
         }
     }
-]);
+];

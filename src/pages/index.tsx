@@ -1,15 +1,38 @@
 import { NextSeo } from "next-seo";
+import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
-import SkillsShowcase from "@/components/skills/skills-showcase";
-import ProjectShowcase from "@/components/projects/project-showcase";
-import { PROJECT_SHOWCASE } from "@/data/projects";
-import { SKILLS_DATA } from "@/data/skills";
-import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
-import { EDUCATION } from "@/data/education";
-import { EXPERIENCE } from "@/data/experience";
-import { ACHIEVEMENTS } from "@/data/achievements";
+import type { Project } from "@/data/projects";
+import type { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+import type { ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
 
-export default function Home() {
+const SkillsShowcase = dynamic(
+  () => import("@/components/skills/skills-showcase"),
+  { ssr: true },
+);
+const ProjectShowcase = dynamic(
+  () => import("@/components/projects/project-showcase"),
+  { ssr: true },
+);
+const ExperienceShowcaseList = dynamic(
+  () => import("@/components/experience/experience-showcase-list"),
+  { ssr: true },
+);
+
+type HomePageProps = {
+  projects: Project[];
+  skills: SkillsShowcaseProps["skills"];
+  education: ExperienceShowcaseListItemProps[];
+  experience: ExperienceShowcaseListItemProps[];
+  achievements: ExperienceShowcaseListItemProps[];
+};
+
+export default function Home({
+  projects,
+  skills,
+  education,
+  experience,
+  achievements,
+}: HomePageProps) {
   return (
     <>
       <NextSeo
@@ -54,15 +77,41 @@ export default function Home() {
           {
             name: "viewport",
             content: "width=device-width, initial-scale=1",
-          }
+          },
         ]}
       />
       <Hero />
-      <SkillsShowcase skills={SKILLS_DATA} />
-      <ProjectShowcase projects={PROJECT_SHOWCASE} />
-      <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
-      <ExperienceShowcaseList title="Education" details={EDUCATION} />
-      <ExperienceShowcaseList title="Achievements" details={ACHIEVEMENTS} />
+      <SkillsShowcase skills={skills} />
+      <ProjectShowcase projects={projects} />
+      <ExperienceShowcaseList title="Experience" details={experience} />
+      <ExperienceShowcaseList title="Education" details={education} />
+      <ExperienceShowcaseList title="Achievements" details={achievements} />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const { PROJECT_SHOWCASE } = await import("@/data/projects");
+  const { SKILLS_DATA } = await import("@/data/skills");
+  const { EDUCATION } = await import("@/data/education");
+  const { EXPERIENCE } = await import("@/data/experience");
+  const { ACHIEVEMENTS } = await import("@/data/achievements");
+
+  const skills = SKILLS_DATA.map((section) => ({
+    ...section,
+    skills: section.skills.map((skill) => ({
+      name: skill.name,
+      icon: skill.icon,
+    })),
+  }));
+
+  return {
+    props: {
+      projects: PROJECT_SHOWCASE,
+      skills,
+      education: EDUCATION,
+      experience: EXPERIENCE,
+      achievements: ACHIEVEMENTS,
+    },
+  };
 }

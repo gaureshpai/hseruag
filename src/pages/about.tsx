@@ -2,12 +2,21 @@ import { NextSeo } from "next-seo";
 
 import AboutHero from "@/components/about-hero";
 import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
-import { EDUCATION } from "@/data/education";
-import { EXPERIENCE } from "@/data/experience";
-import { EXTRA } from "@/data/extra";
-import { ACHIEVEMENTS } from "@/data/achievements";
+import type { ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
 
-export default function About() {
+type AboutPageProps = {
+  education: ExperienceShowcaseListItemProps[];
+  experience: ExperienceShowcaseListItemProps[];
+  extra: ExperienceShowcaseListItemProps[];
+  achievements: ExperienceShowcaseListItemProps[];
+};
+
+export default function About({
+  education,
+  experience,
+  extra,
+  achievements,
+}: AboutPageProps) {
   return (
     <>
       <NextSeo
@@ -56,10 +65,30 @@ export default function About() {
         ]}
       />
       <AboutHero />
-      <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
-      <ExperienceShowcaseList title="Education" details={EDUCATION} />
-      <ExperienceShowcaseList title="Positions of Responsibility" details={EXTRA} />\
-      <ExperienceShowcaseList title="Achievements" details={ACHIEVEMENTS} />
+      <ExperienceShowcaseList title="Experience" details={experience} />
+      <ExperienceShowcaseList title="Education" details={education} />
+      <ExperienceShowcaseList
+        title="Positions of Responsibility"
+        details={extra}
+      />
+      \
+      <ExperienceShowcaseList title="Achievements" details={achievements} />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const { EDUCATION } = await import("@/data/education");
+  const { EXPERIENCE } = await import("@/data/experience");
+  const { EXTRA } = await import("@/data/extra");
+  const { ACHIEVEMENTS } = await import("@/data/achievements");
+
+  return {
+    props: {
+      education: EDUCATION,
+      experience: EXPERIENCE,
+      extra: EXTRA,
+      achievements: ACHIEVEMENTS,
+    },
+  };
 }
