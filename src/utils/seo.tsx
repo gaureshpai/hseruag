@@ -13,6 +13,13 @@ export interface SEOConfig {
     title?: string;
     description?: string;
     type?: "website" | "article" | "profile";
+    images?: Array<{
+      url: string;
+      width?: number;
+      height?: number;
+      alt?: string;
+      type?: string;
+    }>;
     article?: {
       publishedTime?: string;
       modifiedTime?: string;
@@ -35,13 +42,14 @@ export function generateSEOConfig(config: SEOConfig): NextSeoProps {
   const ogTitle = openGraph.title || title;
   const ogDescription = openGraph.description || description;
   const ogType = openGraph.type || "website";
-
-  // Generate dynamic OG image URL
-  const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(
-    title,
-  )}&description=${encodeURIComponent(description)}&page=${encodeURIComponent(
-    title.split("|")[0].trim(),
-  )}`;
+  const ogImages = openGraph.images || [
+    {
+      url: `${SITE_URL}/logo.png`,
+      width: 1200,
+      height: 630,
+      alt: `${title} - Preview`,
+    },
+  ];
 
   return {
     title,
@@ -53,15 +61,7 @@ export function generateSEOConfig(config: SEOConfig): NextSeoProps {
       description: ogDescription,
       type: ogType,
       siteName: SITE_NAME,
-      images: [
-        {
-          url: ogImageUrl,
-          width: 1200,
-          height: 630,
-          alt: `${title} - Preview`,
-          type: "image/png",
-        },
-      ],
+      images: ogImages,
       ...(ogType === "article" && openGraph.article
         ? { article: openGraph.article }
         : {}),
