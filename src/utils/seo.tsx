@@ -93,18 +93,6 @@ export function generateSEOConfig(config: SEOConfig): NextSeoProps {
         content: "#8b5cf6",
       },
       {
-        name: "msapplication-TileColor",
-        content: "#8b5cf6",
-      },
-      {
-        name: "apple-mobile-web-app-capable",
-        content: "yes",
-      },
-      {
-        name: "apple-mobile-web-app-status-bar-style",
-        content: "black-translucent",
-      },
-      {
         property: "og:locale",
         content: "en_US",
       },

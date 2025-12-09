@@ -47,10 +47,6 @@ export default function App({ Component, pageProps }: AppProps) {
             name: "viewport",
             content: "width=device-width, initial-scale=1, maximum-scale=5",
           },
-          {
-            name: "theme-color",
-            content: "#8b5cf6",
-          },
         ]}
       />
       <ThemeProvider attribute="class" defaultTheme="light">
