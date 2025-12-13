@@ -1,6 +1,4 @@
-# [Personal Portfolio Website](https://github.com/gaureshpai/hseruag)
-
-## Project Description
+# Personal Portfolio Website
 
 Welcome to my personal portfolio website! This application is built with Next.js to showcase my projects, skills, and experiences as a developer. It provides a responsive and visually appealing platform designed to highlight my work and professional journey.
 
