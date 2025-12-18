@@ -16,8 +16,8 @@ export const PROJECTS: Project[] = [
     title: "SignFlix",
     description:
       "An accessible video streaming platform with integrated sign language interpretation for the deaf and hard-of-hearing community.",
-    link: "https://github.com/gaureshpai/SignFlix",
-    liveUrl: "",
+    link: "",
+    liveUrl: "https://signflix.vercel.app",
     tags: [
       "idea",
       "incomplete",
