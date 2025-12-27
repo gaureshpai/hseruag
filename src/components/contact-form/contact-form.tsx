@@ -72,78 +72,76 @@ export default function ContactForm({
   handleSubmit,
 }: ContactFormProps) {
   return (
-    <>
-      <Formik
-        initialValues={initialFormValues}
-        validationSchema={mailValidationSchema}
-        onSubmit={handleSubmit}
-        validateOnChange
-      >
-        <Form className="mt-6 flex flex-col gap-3">
-          {FormFieldsData.map((form) => (
-            <div key={form.name} className="flex flex-col gap-1">
-              <div>
-                <label
-                  htmlFor={form.name}
-                  className="inline font-medium text-background"
-                >
-                  {form.label}
-                </label>
-              </div>
-              <div className="relative">
-                <Field name={form.name}>
-                  {({ field, meta }: FormiKInputFieldProps<string>) =>
-                    form.fieldType === "text" ? (
-                      <>
-                        <CustomInput
-                          id={form.name}
-                          {...field}
-                          type={form.type}
-                          placeholder={form.placeholder}
-                          autoComplete="off"
-                        />
-                        {Boolean(meta.touched && meta.error) && (
-                          <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-red-400 md:text-sm">
-                            {meta.error}
-                          </span>
-                        )}
-                      </>
-                    ) : (
-                      <>
-                        <CustomTextarea
-                          id={form.name}
-                          {...field}
-                          placeholder={form.placeholder}
-                        />
-                        {Boolean(meta.touched && meta.error) && (
-                          <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-red-400 md:text-sm">
-                            {meta.error}
-                          </span>
-                        )}
-                      </>
-                    )
-                  }
-                </Field>
-              </div>
+    <Formik
+      initialValues={initialFormValues}
+      validationSchema={mailValidationSchema}
+      onSubmit={handleSubmit}
+      validateOnChange
+    >
+      <Form className="mt-6 flex flex-col gap-3">
+        {FormFieldsData.map((form) => (
+          <div key={form.name} className="flex flex-col gap-1">
+            <div>
+              <label
+                htmlFor={form.name}
+                className="inline font-medium text-background"
+              >
+                {form.label}
+              </label>
             </div>
-          ))}
-          <button
-            aria-label="send email"
-            type="submit"
-            className="mt-4 w-full rounded-full bg-background px-4 py-3 text-center text-lg font-semibold text-accent transition-colors duration-150 hover:bg-background/90 disabled:cursor-not-allowed disabled:bg-background/80"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? (
-              <div className="inline-flex items-center space-x-2">
-                <Loader2Icon className="animate-spin" size={16} />
-                <span>Sending</span>
-              </div>
-            ) : (
-              <span>Submit</span>
-            )}
-          </button>
-        </Form>
-      </Formik>
-    </>
+            <div className="relative">
+              <Field name={form.name}>
+                {({ field, meta }: FormiKInputFieldProps<string>) =>
+                  form.fieldType === "text" ? (
+                    <>
+                      <CustomInput
+                        id={form.name}
+                        {...field}
+                        type={form.type}
+                        placeholder={form.placeholder}
+                        autoComplete="off"
+                      />
+                      {Boolean(meta.touched && meta.error) && (
+                        <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-red-400 md:text-sm">
+                          {meta.error}
+                        </span>
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      <CustomTextarea
+                        id={form.name}
+                        {...field}
+                        placeholder={form.placeholder}
+                      />
+                      {Boolean(meta.touched && meta.error) && (
+                        <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-red-400 md:text-sm">
+                          {meta.error}
+                        </span>
+                      )}
+                    </>
+                  )
+                }
+              </Field>
+            </div>
+          </div>
+        ))}
+        <button
+          aria-label="send email"
+          type="submit"
+          className="mt-4 w-full rounded-full bg-background px-4 py-3 text-center text-lg font-semibold text-accent transition-colors duration-150 hover:bg-background/90 disabled:cursor-not-allowed disabled:bg-background/80"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? (
+            <div className="inline-flex items-center space-x-2">
+              <Loader2Icon className="animate-spin" size={16} />
+              <span>Sending</span>
+            </div>
+          ) : (
+            <span>Submit</span>
+          )}
+        </button>
+      </Form>
+    </Formik>
   );
 }

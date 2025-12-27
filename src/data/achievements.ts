@@ -1,4 +1,4 @@
-import { type ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
+import type { ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
 
 export const ACHIEVEMENTS: ExperienceShowcaseListItemProps[] = [
   {

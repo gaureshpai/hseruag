@@ -1,4 +1,4 @@
-import { SVGMotionProps, motion } from "framer-motion";
+import { type SVGMotionProps, motion } from "framer-motion";
 
 import { classNames } from "@/utility/classNames";
 

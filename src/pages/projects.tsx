@@ -15,7 +15,7 @@ type ProjectsPageProps = {
 
 const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
   const seoConfig = generateSEOConfig({
-    title: "Projects by Gauresh G Pai | React & Next.js Web Applications",
+    title: "Projects",
     description:
       "Explore innovative web development projects by Gauresh G Pai. Discover full-stack applications, responsive websites, and interactive UIs built with React, Next.js, TypeScript, and Tailwind CSS. View live demos and source code.",
     canonical: "https://gauresh.is-a.dev/projects",

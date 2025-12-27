@@ -30,7 +30,7 @@ export const mail = async (
   const mailOptions = {
     from: process.env.NODEMAILER_USER,
     to: process.env.NODEMAILER_USER,
-    subject: "Portfolio: [" + subject + " ]",
+    subject: `Portfolio: [${subject}] Message from ${name}`,
     text: `${name}: <${email}>\n${message}`,
   };
 

@@ -1,5 +1,4 @@
-/* eslint-disable prefer-const */
-import { RefObject } from "react";
+import type { RefObject } from "react";
 
 export type CursorTrail = {
   ref: RefObject<HTMLCanvasElement>;
@@ -14,9 +13,8 @@ export function cursorTrail(props: CursorTrail) {
     colorRaw ? colorRaw.split(" ").join(",") : "0, 0%, 0%"
   }, 0.35)`;
   const { ref, color } = props;
-  // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
   const ctx = ref.current?.getContext("2d")!;
-  let AnimationFeature = {
+  const AnimationFeature = {
     friction: 0.5,
     trails: 20,
     size: 40,
@@ -24,7 +22,7 @@ export function cursorTrail(props: CursorTrail) {
     tension: 0.98,
   };
 
-  let cursorPosition = {
+  const cursorPosition = {
     x: 0,
     y: 0,
   };

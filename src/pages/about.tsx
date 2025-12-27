@@ -24,7 +24,7 @@ export default function About({
   achievements,
 }: AboutPageProps) {
   const seoConfig = generateSEOConfig({
-    title: "About Gauresh G Pai | Frontend Developer Journey & Experience",
+    title: "About",
     description:
       "Learn about Gauresh G Pai, a passionate Frontend Developer and Engineering Student with 2+ years of experience. Discover my journey, skills in React, Next.js, TypeScript, professional experience, education, and achievements in web development.",
     canonical: "https://gauresh.is-a.dev/about",

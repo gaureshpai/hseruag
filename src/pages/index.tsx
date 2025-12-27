@@ -41,7 +41,6 @@ export default function Home({
   achievements,
 }: HomePageProps) {
   const seoConfig = generateSEOConfig({
-    title: "Gauresh G Pai | Frontend Developer & Engineering Student",
     description:
       "Explore the professional portfolio of Gauresh G Pai, a skilled Frontend Developer and Engineering Student with 2 years of hands-on experience. Discover innovative projects, expertise in React, Next.js, TypeScript, and modern web technologies.",
     canonical: "https://gauresh.is-a.dev",

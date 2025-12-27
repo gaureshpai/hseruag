@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { Project } from "@/data/projectsgit";
-import { SiGithub } from "react-icons/si";
-import { FiExternalLink } from "react-icons/fi";
+import type { Project } from "@/data/projectsgit";
+import { Github, ExternalLink } from "lucide-react";
 
 const ProjectCard: React.FC<Project & { index: number }> = ({
   index,
@@ -78,7 +77,7 @@ const ProjectCard: React.FC<Project & { index: number }> = ({
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-xs underline md:text-sm"
           >
-            <SiGithub className="h-5 w-5" /> View on GitHub
+            <Github className="h-5 w-5" /> View on GitHub
           </a>
         )}
         {project.liveUrl && (
@@ -88,7 +87,7 @@ const ProjectCard: React.FC<Project & { index: number }> = ({
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-xs underline md:text-sm"
           >
-            <FiExternalLink className="h-5 w-5" /> Live Demo
+            <ExternalLink className="h-5 w-5" /> Live Demo
           </a>
         )}
       </div>

@@ -1,4 +1,4 @@
-import { FieldInputProps, FieldMetaProps } from "formik";
+import type { FieldInputProps, FieldMetaProps } from "formik";
 
 export type FormiKInputFieldProps<Value> = {
   field: FieldInputProps<Value>;

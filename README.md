@@ -38,16 +38,25 @@ This project is built with a modern and robust set of technologies:
   - [`@octokit/rest`](https://github.com/octokit/rest.js/) - GitHub REST API client for JavaScript.
 - **Icons:**
   - [Lucide React](https://lucide.dev/) - A collection of beautiful open-source icons.
-  - [React Icons](https://react-icons.github.io/react-icons/) - Popular icon sets as React components.
+- **Code Quality:**
+  - [Biome](https://biomejs.dev/) - A high-performance toolchain for web development, used for linting and formatting.
+  - [Husky](https://typicode.github.io/husky/) - Modern native Git hooks made easy.
+  - [lint-staged](https://github.com/okonet/lint-staged) - Run linters against staged git files and don't let 💩 slip into your code base!
 
 ## Scripts Overview
 
 -   `dev`: Starts the Next.js development server.
 -   `build`: Builds the Next.js application for production.
 -   `start`: Starts the Next.js production server.
--   `lint`: Lints the project code.
--   `format:check`: Checks code formatting with Prettier.
--   `format:fix`: Fixes code formatting with Prettier.
+-   `lint`: Lints the project code using Biome.
+-   `format`: Formats the project code using Biome.
+-   `prepare`: Installs Husky hooks.
+
+## Linting, Formatting, and Git Hooks
+
+This project uses [Biome](https://biomejs.dev/) for code formatting and linting. [Husky](https://typicode.github.io/husky/) is used to manage Git hooks, and [lint-staged](https://github.com/okonet/lint-staged) is configured to run Biome on staged files before each commit. This ensures that all committed code adheres to the project's code style and quality standards.
+
+The pre-commit hook will automatically format and lint your staged files. If there are any linting errors that cannot be fixed automatically, the commit will be aborted.
 
 ## Getting Started
 

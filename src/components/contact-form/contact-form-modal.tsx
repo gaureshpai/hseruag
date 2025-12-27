@@ -1,4 +1,4 @@
-import { Dispatch, Fragment, SetStateAction, useState } from "react";
+import { type Dispatch, Fragment, type SetStateAction, useState } from "react";
 
 import { Dialog, Transition } from "@headlessui/react";
 import { MailIcon, XIcon } from "lucide-react";

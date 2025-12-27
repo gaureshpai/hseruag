@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
-import { FiExternalLink } from "react-icons/fi";
+import { ExternalLink } from "lucide-react";
 import type { Project } from "@/data/works";
 import {
   generateSEOConfig,
@@ -17,7 +17,7 @@ type WorksPageProps = {
 
 const WorksPage = ({ projects }: WorksPageProps) => {
   const seoConfig = generateSEOConfig({
-    title: "Professional Work | Gauresh G Pai Client Projects & Engagements",
+    title: "Professional Work",
     description:
       "Browse Gauresh G Pai's professional work portfolio featuring 9+ client projects and professional engagements. Real-world web applications built with React, Next.js, TypeScript, and Tailwind CSS for various companies and clients.",
     canonical: "https://gauresh.is-a.dev/works",
@@ -123,7 +123,7 @@ const WorksPage = ({ projects }: WorksPageProps) => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 text-xs underline md:text-sm"
                   >
-                    <FiExternalLink className="h-5 w-5" />
+                    <ExternalLink className="h-5 w-5" />
                     Live Demo
                   </Link>
                 )}

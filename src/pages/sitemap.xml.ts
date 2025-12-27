@@ -5,7 +5,14 @@ const SITE_URL = "https://gauresh.is-a.dev";
 interface SitemapURL {
   loc: string;
   lastmod: string;
-  changefreq: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
+  changefreq:
+    | "always"
+    | "hourly"
+    | "daily"
+    | "weekly"
+    | "monthly"
+    | "yearly"
+    | "never";
   priority: number;
 }
 

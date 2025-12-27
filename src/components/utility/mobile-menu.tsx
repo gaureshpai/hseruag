@@ -1,12 +1,8 @@
-import { Dispatch, Fragment, SetStateAction } from "react";
-import { useRouter } from "next/router";
-import { usePathname } from "next/navigation";
+import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import ThemeSwitch from "@/components/utility/theme-switch";
 
 export default function MobileMenu() {
-  const router = useRouter();
-
   return (
     <Transition as={Fragment}>
       <Transition.Child

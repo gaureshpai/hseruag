@@ -1,15 +1,15 @@
 {
   "name": "hseruag",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Welcome to my portfolio website, showcasing my projects, skills, and experiences as a developer. This application is built with Next.js, providing a responsive and visually appealing platform to highlight my work.",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
-    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,mdx,css,json}\"",
-    "format:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,mdx,css,json}\""
+    "lint": "biome lint --css-parse-tailwind-directives=true .",
+    "format": "biome format --write .",
+    "prepare": "husky"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
@@ -31,32 +31,23 @@
     "yup": "^1.7.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.3",
-    "@eslint/js": "^9.39.2",
-    "@next/eslint-plugin-next": "^16.0.1",
+    "@biomejs/biome": "^2.3.10",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^24.10.0",
     "@types/nodemailer": "^7.0.3",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.23",
-    "eslint": "^9.39.0",
-    "eslint-config-next": "^16.0.7",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "postcss": "^8.5.6",
-    "prettier": "^3.7.4",
-    "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^3.4.5",
     "typescript": "^5.9.3"
   },
   "lint-staged": {
-    "*.+(js|jsx|ts|tsx)": [
-      "eslint --fix"
-    ],
-    "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
-      "prettier --write"
+    "*.{js,jsx,ts,tsx, json}": [
+      "biome lint --write --css-parse-tailwind-directives=true",
+      "biome format --write"
     ]
   }
 }

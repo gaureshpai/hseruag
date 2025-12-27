@@ -15,8 +15,7 @@ const CertificatesPage = ({
   certificates: Certificate[];
 }) => {
   const seoConfig = generateSEOConfig({
-    title:
-      "Certificates | Gauresh G Pai Professional Qualifications",
+    title: "Certificates",
     description:
       "View Gauresh G Pai's professional certificates and certifications from Coursera, Udemy, UiPath, and other platforms. Showcasing continuous learning in web development, React, Next.js, TypeScript, automation, and modern technologies.",
     canonical: "https://gauresh.is-a.dev/certificates",

@@ -1,12 +1,11 @@
 import type { NextSeoProps } from "next-seo";
-import React from "react";
 
 const SITE_URL = "https://gauresh.is-a.dev";
 const SITE_NAME = "Gauresh G Pai";
 const TWITTER_HANDLE = "@hseruag";
 
 export interface SEOConfig {
-  title: string;
+  title?: string;
   description: string;
   canonical?: string;
   openGraph?: {
@@ -32,12 +31,16 @@ export interface SEOConfig {
 
 export function generateSEOConfig(config: SEOConfig): NextSeoProps {
   const {
-    title,
+    title: pageTitle,
     description,
     canonical = SITE_URL,
     openGraph = {},
     additionalMetaTags = [],
   } = config;
+
+  const title = pageTitle
+    ? `${pageTitle} | Gauresh G Pai`
+    : "Frontend Developer";
 
   const ogTitle = openGraph.title || title;
   const ogDescription = openGraph.description || description;
@@ -246,8 +249,9 @@ export function injectJSONLD(data: object | object[]) {
   const schemas = Array.isArray(data) ? data : [data];
   return schemas.map((schema, index) => (
     <script
-      key={`jsonld-${index}`}
+      key={`jsonld-${index + 1}`}
       type="application/ld+json"
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: This is a valid use case for injecting JSON-LD.
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
   ));

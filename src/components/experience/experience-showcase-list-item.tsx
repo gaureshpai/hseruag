@@ -1,4 +1,4 @@
-import { RefObject, useRef } from "react";
+import { type RefObject, useRef } from "react";
 import Link from "next/link";
 import { motion, useScroll } from "framer-motion";
 
@@ -62,7 +62,7 @@ export default function ExperienceShowcaseListItem(
         {props.title}{" "}
         <Link
           href={props.organisation.href}
-          className="cursor-pointer text-accent"
+          className="cursor-pointer text-accent underline"
           target="_blank"
           rel="nofollow"
         >

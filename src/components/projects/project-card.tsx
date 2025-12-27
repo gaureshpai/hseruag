@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { Project } from "@/data/projects";
-import { SiGithub } from "react-icons/si";
-import { FiExternalLink } from "react-icons/fi";
+import type { Project } from "@/data/projects";
+import { Github, ExternalLink } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
@@ -80,7 +79,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-xs underline md:text-sm"
           >
-            <SiGithub className="h-5 w-5" /> View on GitHub
+            <Github className="h-5 w-5" /> View on GitHub
           </a>
         )}
         {project.liveUrl && (
@@ -90,7 +89,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-xs underline md:text-sm"
           >
-            <FiExternalLink className="h-5 w-5" /> Live Demo
+            <ExternalLink className="h-5 w-5" /> Live Demo
           </a>
         )}
       </div>

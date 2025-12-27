@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowTopRight } from "@/components/icons";
 import ProjectCard from "@/components/projects/project-card";
-import { Project } from "@/data/projects";
+import type { Project } from "@/data/projects";
 
 interface ProjectShowcaseProps {
   projects: Project[];

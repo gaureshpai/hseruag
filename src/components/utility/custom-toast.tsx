@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from "react";
+import { type ReactNode, useEffect } from "react";
 import { createPortal } from "react-dom";
 
 export interface CustomToastProps {

@@ -1,4 +1,4 @@
-import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+import type { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
 
 export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
   {

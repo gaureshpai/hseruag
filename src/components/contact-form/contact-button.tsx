@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { MailIcon } from "lucide-react";
 
@@ -13,10 +13,13 @@ export default function ContactButton() {
   const [isBtnVisible, setIsBtnVisible] = useState(false);
   const [isOpenModal, setIsOpenModal] = useState(false);
 
-  const observerCallback = (entries: IntersectionObserverEntry[]) => {
-    const [entry] = entries;
-    setIsBtnVisible(!entry.isIntersecting);
-  };
+  const observerCallback = useCallback(
+    (entries: IntersectionObserverEntry[]) => {
+      const [entry] = entries;
+      setIsBtnVisible(!entry.isIntersecting);
+    },
+    [],
+  );
 
   useEffect(() => {
     const btn = refSendBtn.current;
@@ -28,7 +31,7 @@ export default function ContactButton() {
     return () => {
       if (btn) observer.unobserve(btn);
     };
-  }, [refSendBtn]);
+  }, [observerCallback]);
 
   return (
     <>

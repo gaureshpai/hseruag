@@ -1,6 +1,17 @@
-import { type ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
+import type { ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
 
 export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
+  {
+    title: "Software Engineer Intern",
+    organisation: {
+      name: "Brink AI Labs",
+      href: "https://trybrink.com",
+    },
+    date: "November 2025 - Present",
+    location: "Remote",
+    description:
+      "Working with builders from Disney+ Hotstar, JioCinema & Swiggy to develop production-grade software.",
+  },
   {
     title: "Project Lead Developer",
     organisation: {
