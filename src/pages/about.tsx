@@ -26,19 +26,19 @@ export default function About({
   const seoConfig = generateSEOConfig({
     title: "About",
     description:
-      "Learn about Gauresh G Pai, a passionate Frontend Developer and Engineering Student with 2+ years of experience. Discover my journey, skills in React, Next.js, TypeScript, professional experience, education, and achievements in web development.",
+      "Learn about Gauresh G Pai, a passionate Software Engineer with 2+ years of experience. Discover my journey, skills in React, Next.js, TypeScript, professional experience, education, and achievements in web development.",
     canonical: "https://gauresh.is-a.dev/about",
     openGraph: {
-      title: "About Gauresh G Pai - Frontend Developer & Engineering Student",
+      title: "About Gauresh G Pai - Software Engineer",
       description:
-        "Frontend Developer specializing in React & Next.js. Explore my professional journey, technical skills, education, and accomplishments.",
+        "Software Engineer specializing in React & Next.js. Explore my professional journey, technical skills, education, and accomplishments.",
       type: "profile",
     },
     additionalMetaTags: [
       {
         name: "keywords",
         content:
-          "About Gauresh G Pai, Frontend Developer Biography, React Developer Experience, Engineering Student, Web Developer Journey, Professional Experience, Technical Skills, Education, Achievements, Career Path, Software Engineer India",
+          "About Gauresh G Pai, Software Engineer Biography, React Developer Experience, Engineering Student, Web Developer Journey, Professional Experience, Technical Skills, Education, Achievements, Career Path, Software Engineer India",
       },
       {
         property: "profile:first_name",
@@ -54,9 +54,9 @@ export default function About({
   const personSchema = generatePersonSchema({
     name: "Gauresh G Pai",
     url: "https://gauresh.is-a.dev/about",
-    jobTitle: "Frontend Developer",
+    jobTitle: "Software Engineer",
     description:
-      "Passionate Frontend Developer and Engineering Student with expertise in building scalable web applications using React, Next.js, and TypeScript.",
+      "Passionate Software Engineer with expertise in building scalable web applications using React, Next.js, and TypeScript.",
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([

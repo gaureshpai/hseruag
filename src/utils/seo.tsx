@@ -40,7 +40,7 @@ export function generateSEOConfig(config: SEOConfig): NextSeoProps {
 
   const title = pageTitle
     ? `${pageTitle} | Gauresh G Pai`
-    : "Frontend Developer";
+    : "Software Engineer";
 
   const ogTitle = openGraph.title || title;
   const ogDescription = openGraph.description || description;

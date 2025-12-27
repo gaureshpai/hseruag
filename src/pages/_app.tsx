@@ -19,9 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <DefaultSeo
-        defaultTitle="Gauresh G Pai | Frontend Developer Portfolio"
+        defaultTitle="Gauresh G Pai | Software Engineer Portfolio"
         titleTemplate="%s | Gauresh G Pai"
-        description="Professional portfolio of Gauresh G Pai, a Frontend Developer specializing in React, Next.js, TypeScript, and modern web technologies. Explore projects, experience, and certifications."
+        description="Professional portfolio of Gauresh G Pai, a Software Engineer specializing in React, Next.js, TypeScript, and modern web technologies. Explore projects, experience, and certifications."
         canonical="https://gauresh.is-a.dev"
         openGraph={{
           type: "website",
@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
               url: "https://gauresh.is-a.dev/logo.png",
               width: 1200,
               height: 630,
-              alt: "Gauresh G Pai - Frontend Developer",
+              alt: "Gauresh G Pai - Software Engineer",
             },
           ],
         }}

@@ -42,19 +42,19 @@ export default function Home({
 }: HomePageProps) {
   const seoConfig = generateSEOConfig({
     description:
-      "Explore the professional portfolio of Gauresh G Pai, a skilled Frontend Developer and Engineering Student with 2 years of hands-on experience. Discover innovative projects, expertise in React, Next.js, TypeScript, and modern web technologies.",
+      "Explore the professional portfolio of Gauresh G Pai, a skilled Software Engineer with 2 years of hands-on experience. Discover innovative projects, expertise in React, Next.js, TypeScript, and modern web technologies.",
     canonical: "https://gauresh.is-a.dev",
     openGraph: {
-      title: "Gauresh G Pai - Frontend Developer Portfolio",
+      title: "Gauresh G Pai - Software Engineer Portfolio",
       description:
-        "Frontend Developer specializing in React, Next.js & TypeScript. 9+ client projects delivered with scalable, user-friendly web applications.",
+        "Software Engineer specializing in React, Next.js & TypeScript. 9+ client projects delivered with scalable, user-friendly web applications.",
       type: "profile",
     },
     additionalMetaTags: [
       {
         name: "keywords",
         content:
-          "Gauresh G Pai, Frontend Developer, React Developer, Next.js Developer, TypeScript, JavaScript, Web Developer, Engineering Student, UI/UX, Tailwind CSS, Full Stack Developer, Portfolio, Web Development, Software Engineer, India Developer",
+          "Gauresh G Pai, Software Engineer, React Developer, Next.js Developer, TypeScript, JavaScript, Web Developer, Engineering Student, UI/UX, Tailwind CSS, Full Stack Developer, Portfolio, Web Development, Software Engineer, India Developer",
       },
       {
         property: "profile:first_name",
@@ -86,9 +86,9 @@ export default function Home({
   const personSchema = generatePersonSchema({
     name: "Gauresh G Pai",
     url: "https://gauresh.is-a.dev",
-    jobTitle: "Frontend Developer",
+    jobTitle: "Software Engineer",
     description:
-      "Skilled Frontend Developer specializing in React, Next.js, and TypeScript with 2 years of experience delivering scalable web applications.",
+      "Skilled Software Engineer specializing in React, Next.js, and TypeScript with 2 years of experience delivering scalable web applications.",
     knowsAbout: [
       "JavaScript",
       "TypeScript",

@@ -22,7 +22,7 @@ export default function Hero() {
               Gauresh G Pai
             </h1>
             <span className="text-xl font-semibold text-black dark:text-white md:text-3xl">
-              Frontend Developer · 9+ Client Projects Delivered
+              Software Engineer · 9+ Client Projects Delivered
             </span>
             <div className="mt-4 max-w-4xl text-base font-semibold text-black dark:text-white sm:text-base md:text-xl">
               I craft scalable, user-friendly web applications with clean
