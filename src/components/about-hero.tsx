@@ -10,17 +10,23 @@ export default function AboutHero() {
 
         <p className="mt-8 space-y-6 text-base font-medium leading-relaxed text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
           <span>
-            I am a 2026 Computer Science Engineering graduate passionate about
-            developing innovative web-based solutions. My primary tech stack
-            includes JavaScript, TypeScript, React, Next.js, Tailwind CSS, and
-            more technologies that enable efficient and scalable development.
+            I’m a Software Engineer passionate about building web‑based
+            solutions with TypeScript, React, Next.js, and Tailwind CSS.
+            Currently, I’m working as a Software Engineer at{" "}
+            <Link
+              href="https://trybrink.com"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Brink AI Labs.
+            </Link>
           </span>
           <br />
           <br />
           <span>
-            I am also a UiPath Student Developer Champion for 2025-26 and a
-            dedicated core community member at DevNation AJIET. Additionally, I
-            actively contribute to{" "}
+            I’m a UiPath Student Developer Champion (2025–26) and a core
+            community member at DevNation &{" "}
             <Link
               href="https://dk24.org"
               className="text-blue-600 underline"
@@ -29,14 +35,22 @@ export default function AboutHero() {
             >
               DK24
             </Link>
-            , where I work to connect college tech communities and foster
-            innovation through workshops, hackathons, and collaborative
-            projects.
+            , where I help connect tech communities and drive innovation through
+            workshops, hackathons, and collaborative projects.
           </span>
           <br />
           <br />
           <span>
-            My work experience includes roles at{" "}
+            I’ve worked with{" "}
+            <Link
+              href="https://billmaxo.com"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Billmaxo Solutions
+            </Link>{" "}
+            and{" "}
             <Link
               href="https://www.kreekarvat.in"
               className="text-blue-600 underline"
@@ -45,16 +59,7 @@ export default function AboutHero() {
             >
               Kreekarvat Technologies
             </Link>{" "}
-            and{" "}
-            <Link
-              href="https://billmaxo.com"
-              className="text-blue-600 underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Billmaxo Solutions
-            </Link>
-            , an internship at{" "}
+            , interned at{" "}
             <Link
               href="https://ajims.edu.in/Webpages/Index.aspx"
               className="text-blue-600 underline"
@@ -63,21 +68,21 @@ export default function AboutHero() {
             >
               AJIMS
             </Link>
-            , and leading a UDAL DC Fellowship 2025 team that built hospital
-            automation systems powering 73 screens with real-time blood bank,
+            , and led a UDAL DC Fellowship 2025 team that built hospital
+            automation systems powering 73 screens with real‑time blood bank,
             OT, and pharmacy updates.
           </span>
           <br />
           <br />
           <span>
-            I actively contribute to open-source projects like{" "}
+            I actively contribute to open‑source projects like{" "}
             <Link
               href="https://gaureshpai.github.io/create-next-quick/"
               className="text-blue-600 underline"
               target="_blank"
               rel="noopener noreferrer"
             >
-              create-next-quick
+              create‑next‑quick
             </Link>
             ,{" "}
             <Link
@@ -102,9 +107,8 @@ export default function AboutHero() {
           <br />
           <br />
           <span>
-            Beyond my technical work, I enjoy connecting with like-minded
-            individuals, collaborating on impactful projects, and building
-            solutions that make a difference. Feel free to explore my{" "}
+            I love collaborating with like‑minded builders on impactful
+            projects. Feel free to explore my{" "}
             <Link
               href="https://gaureshpai.dev/projects"
               className="text-blue-600 underline"
@@ -125,6 +129,7 @@ export default function AboutHero() {
             .
           </span>
         </p>
+
         <div className="z-100 mt-6 flex cursor-pointer items-center gap-4">
           <Link
             href="/Gauresh_G_Pai_SWE.pdf"
