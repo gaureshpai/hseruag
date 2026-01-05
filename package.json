@@ -16,7 +16,7 @@
     "@octokit/rest": "^22.0.1",
     "@tailwindcss/forms": "^0.5.11",
     "formik": "^2.4.9",
-    "framer-motion": "^12.14.0",
+    "framer-motion": "^12.23.28",
     "lru-cache": "^11.2.4",
     "lucide-react": "^0.562.0",
     "nanoid": "^5.1.6",
