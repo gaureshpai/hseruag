@@ -12,7 +12,7 @@ export default function AboutHero() {
           <span>
             I’m a Software Engineer passionate about building web‑based
             solutions with TypeScript, React, Next.js, and Tailwind CSS.
-            Currently, I’m working as a Software Engineer at{" "}
+            Currently, I’m working at{" "}
             <Link
               href="https://trybrink.com"
               className="text-blue-600 underline"
