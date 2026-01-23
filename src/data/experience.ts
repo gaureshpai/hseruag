@@ -10,7 +10,7 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     date: "November 2025 - Present",
     location: "Remote",
     description:
-      "Working with builders from Disney+ Hotstar, JioCinema & Swiggy to develop production-grade software.",
+      "We’re building the platform that lets AI agents operate real systems - from decisions to actions — in the enterprise.\n Working with builders from Disney+ Hotstar, JioCinema & Swiggy to develop production-grade software.",
   },
   {
     title: "Project Lead Developer",
