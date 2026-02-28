@@ -60,7 +60,9 @@ const WorksPage = ({ projects, imageGallerySchema }: WorksPageProps) => {
       name: project.title,
       url: project.liveUrl || `${SITE_URL}/works`,
       description: project.description,
-      image: `${SITE_URL}${project.screenshot}`,
+      image: project.screenshot
+        ? `${SITE_URL}${project.screenshot}`
+        : undefined,
     })),
   });
 
