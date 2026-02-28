@@ -10,7 +10,6 @@ function ShowCaseLiIcon(props: ExperienceListIconProps) {
   const { scrollYProgress } = useScroll({
     target: props.iconRef,
     offset: ["center end", "center center"],
-    layoutEffect: false,
   });
   return (
     <figure className="absolute left-0 stroke-zinc-900">
