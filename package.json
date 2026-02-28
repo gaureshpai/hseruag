@@ -1,13 +1,13 @@
 {
   "name": "hseruag",
   "version": "5.0.1",
-  "description": "Welcome to my portfolio website, showcasing my projects, skills, and experiences as a developer. This application is built with Next.js, providing a responsive and visually appealing platform to highlight my work.",
+  "description": "Gauresh's Portfolio",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "biome lint --css-parse-tailwind-directives=true .",
+    "lint": "biome lint .",
     "format": "biome format --write .",
     "prepare": "husky"
   },

@@ -4,14 +4,14 @@ Welcome to my personal portfolio website! This application is built with Next.js
 
 ## Features
 
--   **Responsive Design:** Optimized for various screen sizes, ensuring a seamless experience on desktops, tablets, and mobile devices.
--   **Project Showcase:** Dedicated sections to display projects with descriptions and relevant details.
--   **Skills & Experience:** Detailed overview of technical skills and professional experiences.
--   **SEO Optimized:** Enhanced with `next-seo` for better search engine visibility.
--   **Interactive UI:** Utilizes Framer Motion for smooth animations and transitions.
--   **Theme Switching:** Supports light and dark modes with `next-themes`.
--   **Contact Form:** Functionality to allow visitors to reach out via email.
--   **GitHub Integration:** Potentially fetches projects or data from GitHub using `@octokit/rest`.
+- **Responsive Design:** Optimized for various screen sizes, ensuring a seamless experience on desktops, tablets, and mobile devices.
+- **Project Showcase:** Dedicated sections to display projects with descriptions and relevant details.
+- **Skills & Experience:** Detailed overview of technical skills and professional experiences.
+- **SEO Optimized:** Enhanced with `next-seo` for better search engine visibility.
+- **Interactive UI:** Utilizes Framer Motion for smooth animations and transitions.
+- **Theme Switching:** Supports light and dark modes with `next-themes`.
+- **Contact Form:** Functionality to allow visitors to reach out via email.
+- **GitHub Integration:** Potentially fetches projects or data from GitHub using `@octokit/rest`.
 
 ## Tech Stack
 
@@ -45,12 +45,12 @@ This project is built with a modern and robust set of technologies:
 
 ## Scripts Overview
 
--   `dev`: Starts the Next.js development server.
--   `build`: Builds the Next.js application for production.
--   `start`: Starts the Next.js production server.
--   `lint`: Lints the project code using Biome.
--   `format`: Formats the project code using Biome.
--   `prepare`: Installs Husky hooks.
+- `dev`: Starts the Next.js development server.
+- `build`: Builds the Next.js application for production.
+- `start`: Starts the Next.js production server.
+- `lint`: Lints the project code using Biome.
+- `format`: Formats the project code using Biome.
+- `prepare`: Installs Husky hooks.
 
 ## Linting, Formatting, and Git Hooks
 
@@ -82,8 +82,8 @@ To get a local copy up and running, follow these simple steps.
 
 ### Running the Application
 
--   To run the development server:
-    ```sh
-    npm run dev
-    ```
-    Open [http://localhost:3000](http://localhost:3000) in your browser.
+- To run the development server:
+  ```sh
+  npm run dev
+  ```
+  Open [http://localhost:3000](http://localhost:3000) in your browser.

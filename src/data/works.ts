@@ -131,7 +131,7 @@ const projects: Project[] = [
     description:
       "A digital tribute website honoring R.K. Baliga, the visionary behind India's first electronics city. Features timeline, biography, and legacy impact sections.",
     role: "Full-Stack Developer",
-    liveUrl: "https://rkbaligalegacy.vercel.app",
+    liveUrl: "https://www.rkbaliga.org",
     tags: ["Legacy", "Tribute", "Biography", "Static Site"],
     owner: "Dr. Ragavendra R Baliga",
     company: "Kreekarvat Technologies",
