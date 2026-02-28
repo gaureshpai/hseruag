@@ -1,24 +1,30 @@
+import Head from "next/head";
 import Image from "next/legacy/image";
 import { NextSeo } from "next-seo";
-import Head from "next/head";
+import { SITE_URL } from "@/constants/site";
 import type { Certificate } from "@/data/certificates";
 import {
-  generateSEOConfig,
-  generateCollectionPageSchema,
   generateBreadcrumbSchema,
+  generateCollectionPageSchema,
+  generateImageCollectionSchema,
+  generateItemListSchema,
+  generateSEOConfig,
+  type ImageCollectionSchemaResult,
   injectJSONLD,
 } from "@/utils/seo";
 
 const CertificatesPage = ({
   certificates,
+  imageGallerySchema,
 }: {
   certificates: Certificate[];
+  imageGallerySchema: ImageCollectionSchemaResult;
 }) => {
   const seoConfig = generateSEOConfig({
     title: "Certificates",
     description:
       "View Gauresh G Pai's professional certificates and certifications from Coursera, Udemy, UiPath, and other platforms. Showcasing continuous learning in web development, React, Next.js, TypeScript, automation, and modern technologies.",
-    canonical: "https://gauresh.is-a.dev/certificates",
+    canonical: `${SITE_URL}/certificates`,
     openGraph: {
       title: "Professional Certificates - Gauresh G Pai",
       description:
@@ -38,18 +44,37 @@ const CertificatesPage = ({
     name: "Professional Certificates by Gauresh G Pai",
     description:
       "A comprehensive collection of professional certificates and qualifications demonstrating continuous learning and expertise in web development.",
-    url: "https://gauresh.is-a.dev/certificates",
+    url: `${SITE_URL}/certificates`,
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://gauresh.is-a.dev" },
-    { name: "Certificates", url: "https://gauresh.is-a.dev/certificates" },
+    { name: "Home", url: SITE_URL },
+    { name: "Certificates", url: `${SITE_URL}/certificates` },
   ]);
+  const certificateListSchema = generateItemListSchema({
+    name: "Professional Certificates by Gauresh G Pai",
+    url: `${SITE_URL}/certificates`,
+    description:
+      "List of professional certificates and certifications earned by Gauresh G Pai.",
+    items: certificates.map((certificate) => ({
+      name: certificate.title,
+      url: `${SITE_URL}/certificates`,
+      image: `${SITE_URL}${certificate.screenshot}`,
+      description: `Certificate: ${certificate.title}`,
+    })),
+  });
 
   return (
     <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
       <NextSeo {...seoConfig} />
-      <Head>{injectJSONLD([collectionSchema, breadcrumbSchema])}</Head>
+      <Head>
+        {injectJSONLD([
+          collectionSchema,
+          breadcrumbSchema,
+          imageGallerySchema,
+          certificateListSchema,
+        ])}
+      </Head>
       <div className="mx-auto max-w-7xl">
         <h1 className="text-2xl font-semibold text-foreground md:text-4xl">
           Certificates
@@ -87,12 +112,31 @@ const CertificatesPage = ({
   );
 };
 
+/**
+ * Fetches certificate data and constructs an image collection JSON-LD schema for the certificates page.
+ *
+ * @returns An object with `certificates` (array of Certificate) and `imageGallerySchema` (image collection schema object for JSON-LD injection)
+ */
 export async function getStaticProps() {
   const { getCertificates } = await import("@/data/certificates");
+  const { getPublicImagesByPage } = await import("@/server/public-images");
   const certificates = getCertificates();
+  const imagesByPage = getPublicImagesByPage();
+  const imageGallerySchema = generateImageCollectionSchema({
+    name: "Certificates Image Gallery",
+    url: `${SITE_URL}/certificates`,
+    description:
+      "Professional certificates and certifications earned by Gauresh G Pai.",
+    images: imagesByPage["/certificates"].map((image) => ({
+      url: image.url,
+      title: image.title,
+      caption: image.caption,
+    })),
+  });
   return {
     props: {
       certificates,
+      imageGallerySchema,
     },
   };
 }

@@ -1,0 +1,13 @@
+# robots.txt for gauresh.is-a.dev
+
+User-agent: *
+Allow: /
+
+# Disallow API routes from being crawled
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://gauresh.is-a.dev/sitemap.xml
+
+# Crawl delay (optional, helps prevent overloading)
+Crawl-delay: 1
