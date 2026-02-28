@@ -3,6 +3,13 @@ import { SiGithub, SiLeetcode, SiLinkedin, SiNpm, SiX } from "react-icons/si";
 import ButtonContainer from "@/components/ButtonContainer";
 import ContactButton from "@/components/contact-form/contact-button";
 
+/**
+ * Renders the site's footer with a contact section, call-to-action buttons, and social/profile links.
+ *
+ * Includes a prominent email mailto link, a contact button, a ButtonContainer, the current year with author attribution, and accessible external social links.
+ *
+ * @returns The footer JSX element containing contact information, action buttons, and social icons.
+ */
 export default function Footer() {
   return (
     <footer className="flex w-full flex-col items-center gap-20 bg-transparent px-6 py-8 sm:px-14 md:px-20">

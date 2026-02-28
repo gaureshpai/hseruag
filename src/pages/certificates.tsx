@@ -112,6 +112,11 @@ const CertificatesPage = ({
   );
 };
 
+/**
+ * Fetches certificate data and constructs an image collection JSON-LD schema for the certificates page.
+ *
+ * @returns An object with `certificates` (array of Certificate) and `imageGallerySchema` (image collection schema object for JSON-LD injection)
+ */
 export async function getStaticProps() {
   const { getCertificates } = await import("@/data/certificates");
   const { getPublicImagesByPage } = await import("@/server/public-images");

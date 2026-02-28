@@ -161,6 +161,11 @@ const WorksPage = ({ projects, imageGallerySchema }: WorksPageProps) => {
 
 export default WorksPage;
 
+/**
+ * Prepares props for the Works page by loading project data and constructing an image gallery schema for the /works gallery.
+ *
+ * @returns An object with `props` containing `projects` (the list of project entries) and `imageGallerySchema` (a structured image collection schema for the works page)
+ */
 export async function getStaticProps() {
   const { default: projects } = await import("@/data/works");
   const { getPublicImagesByPage } = await import("@/server/public-images");

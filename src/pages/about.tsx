@@ -18,6 +18,15 @@ type AboutPageProps = {
   achievements: ExperienceShowcaseListItemProps[];
 };
 
+/**
+ * Renders the About page for Gauresh G Pai including SEO, structured data, and content sections.
+ *
+ * @param education - List of education items to display in the Education section
+ * @param experience - List of professional experience items to display in the Experience section
+ * @param extra - List of positions of responsibility to display in the Positions of Responsibility section
+ * @param achievements - List of achievement items to display in the Achievements section
+ * @returns A React element rendering the About page with SEO/meta tags, injected JSON-LD, the hero, and four experience showcase lists
+ */
 export default function About({
   education,
   experience,

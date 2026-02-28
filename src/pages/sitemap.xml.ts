@@ -26,6 +26,27 @@ function escapeXml(value: string): string {
     .replaceAll("'", "&apos;");
 }
 
+/**
+ * Escape special XML characters in a string.
+ *
+ * @param value - The string to escape for safe inclusion in XML
+ * @returns The input string with `&`, `<`, `>`, `"` and `'` replaced by their XML entity equivalents
+ */
+function escapeXml(value: string): string {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&apos;");
+}
+
+/**
+ * Builds an XML sitemap document from a list of sitemap entries, including optional image metadata.
+ *
+ * @param urls - Array of sitemap entries. If an entry includes `images`, each image's `url`, `title`, and `caption` are rendered as `image:image` blocks and XML-escaped.
+ * @returns The complete sitemap XML as a string suitable for serving at /sitemap.xml
+ */
 function generateSiteMap(urls: SitemapURL[]): string {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"

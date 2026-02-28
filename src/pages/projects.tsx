@@ -108,6 +108,13 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
 
 export default ProjectsPage;
 
+/**
+ * Fetches project data and constructs an image-collection JSON-LD schema for the projects page.
+ *
+ * @returns An object with `props` containing:
+ * - `projects`: the array of project entries loaded from the project's data module.
+ * - `imageGallerySchema`: a JSON-LD object representing the projects image gallery (name, url, description, and images).
+ */
 export async function getStaticProps() {
   const { PROJECTS } = await import("@/data/projectsgit");
   const { getPublicImagesByPage } = await import("@/server/public-images");

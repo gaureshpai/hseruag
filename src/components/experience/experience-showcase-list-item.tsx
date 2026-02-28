@@ -6,6 +6,12 @@ export interface ExperienceListIconProps {
   iconRef: RefObject<HTMLElement>;
 }
 
+/**
+ * Renders the list-item circular icon whose outer stroke animates based on the target element's vertical scroll progress.
+ *
+ * @param props.iconRef - Ref to the element used as the scroll target that drives the animated stroke.
+ * @returns A JSX figure containing an SVG with a static outer ring, a scroll-driven animated stroke, and a filled center circle.
+ */
 function ShowCaseLiIcon(props: ExperienceListIconProps) {
   const { scrollYProgress } = useScroll({
     target: props.iconRef,

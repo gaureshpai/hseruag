@@ -5,6 +5,13 @@ import FloatingMailButton, {
   floatingMailButtonoptions,
 } from "@/components/contact-form/floating-mail-button";
 
+/**
+ * Renders a "Send Message" button and manages the floating mail button and contact form modal visibility.
+ *
+ * The component displays a floating mail button when the primary send button is not visible in the viewport and the modal is closed. Clicking the primary button opens the contact form modal.
+ *
+ * @returns A React element containing the send-message button, an optional floating mail button, and the contact form modal.
+ */
 export default function ContactButton() {
   const refSendBtn = useRef<HTMLButtonElement>(null);
 
