@@ -1,6 +1,6 @@
+import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import type { Project } from "@/data/projectsgit";
-import { Github, ExternalLink } from "lucide-react";
 
 const ProjectCard: React.FC<Project & { index: number }> = ({
   index,

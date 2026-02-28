@@ -1,7 +1,6 @@
 import type { GetServerSideProps } from "next";
+import { SITE_URL } from "@/constants/site";
 import type { PublicImage } from "@/server/public-images";
-
-const SITE_URL = "https://gauresh.is-a.dev";
 
 interface SitemapURL {
   loc: string;
@@ -16,6 +15,15 @@ interface SitemapURL {
     | "never";
   priority: number;
   images?: PublicImage[];
+}
+
+function escapeXml(value: string): string {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&apos;");
 }
 
 /**

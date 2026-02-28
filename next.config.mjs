@@ -13,7 +13,7 @@ const nextConfig = {
     minimumCacheTTL: 60,
   },
   reactStrictMode: true,
-  poweredByHeader: false
+  poweredByHeader: false,
 };
 
 export default nextConfig;

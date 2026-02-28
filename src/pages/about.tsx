@@ -3,6 +3,7 @@ import { NextSeo } from "next-seo";
 import AboutHero from "@/components/about-hero";
 import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
 import type { ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
+import { SITE_URL } from "@/constants/site";
 import {
   generateBreadcrumbSchema,
   generatePersonSchema,
@@ -36,7 +37,7 @@ export default function About({
     title: "About",
     description:
       "Learn about Gauresh G Pai, a passionate Software Engineer with 2+ years of experience. Discover my journey, skills in React, Next.js, TypeScript, professional experience, education, and achievements in web development.",
-    canonical: "https://gauresh.is-a.dev/about",
+    canonical: `${SITE_URL}/about`,
     openGraph: {
       title: "About Gauresh G Pai - Software Engineer",
       description:
@@ -62,15 +63,15 @@ export default function About({
 
   const personSchema = generatePersonSchema({
     name: "Gauresh G Pai",
-    url: "https://gauresh.is-a.dev/about",
+    url: `${SITE_URL}/about`,
     jobTitle: "Software Engineer",
     description:
       "Passionate Software Engineer with expertise in building scalable web applications using React, Next.js, and TypeScript.",
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://gauresh.is-a.dev" },
-    { name: "About", url: "https://gauresh.is-a.dev/about" },
+    { name: "Home", url: SITE_URL },
+    { name: "About", url: `${SITE_URL}/about` },
   ]);
 
   return (

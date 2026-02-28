@@ -1,6 +1,6 @@
-import type { NextApiResponse, NextApiRequest } from "next";
 import { LRUCache } from "lru-cache";
 import { nanoid } from "nanoid";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 const RATE_LIMITER_USER_ID_COOKIE_NAME = "userUuid" as const;
 const RATE_LIMITER_EXPIRY_DATE_COOKIE_NAME = "userUuid_expires" as const;

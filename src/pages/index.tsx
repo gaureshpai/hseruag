@@ -4,12 +4,15 @@ import { NextSeo } from "next-seo";
 import type { ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
 import Hero from "@/components/Hero";
 import type { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+import { SITE_URL } from "@/constants/site";
 import type { Project } from "@/data/projects";
 import {
   generateImageCollectionSchema,
+  generateItemListSchema,
   generatePersonSchema,
   generateSEOConfig,
   generateWebsiteSchema,
+  type ImageCollectionSchemaResult,
   injectJSONLD,
 } from "@/utils/seo";
 
@@ -32,7 +35,7 @@ type HomePageProps = {
   education: ExperienceShowcaseListItemProps[];
   experience: ExperienceShowcaseListItemProps[];
   achievements: ExperienceShowcaseListItemProps[];
-  imageGallerySchema: object;
+  imageGallerySchema: ImageCollectionSchemaResult;
 };
 
 /**
@@ -52,7 +55,7 @@ export default function Home({
   const seoConfig = generateSEOConfig({
     description:
       "Explore the professional portfolio of Gauresh G Pai, a skilled Software Engineer with 2 years of hands-on experience. Discover innovative projects, expertise in React, Next.js, TypeScript, and modern web technologies.",
-    canonical: "https://gauresh.is-a.dev",
+    canonical: SITE_URL,
     openGraph: {
       title: "Gauresh G Pai - Software Engineer Portfolio",
       description:
@@ -94,7 +97,7 @@ export default function Home({
 
   const personSchema = generatePersonSchema({
     name: "Gauresh G Pai",
-    url: "https://gauresh.is-a.dev",
+    url: SITE_URL,
     jobTitle: "Software Engineer",
     description:
       "Skilled Software Engineer specializing in React, Next.js, and TypeScript with 2 years of experience delivering scalable web applications.",
@@ -114,16 +117,35 @@ export default function Home({
 
   const websiteSchema = generateWebsiteSchema({
     name: "Gauresh G Pai - Portfolio",
-    url: "https://gauresh.is-a.dev",
+    url: SITE_URL,
     description:
       "Professional portfolio showcasing frontend development projects, skills, and experience in modern web technologies.",
+  });
+  const featuredProjectsSchema = generateItemListSchema({
+    name: "Featured Projects",
+    url: SITE_URL,
+    description:
+      "Featured software engineering and web development projects by Gauresh G Pai.",
+    items: projects.map((project) => ({
+      name: project.title,
+      url: project.liveUrl || project.githubUrl || `${SITE_URL}/projects`,
+      description: project.description,
+      image: project.screenshot
+        ? `${SITE_URL}${project.screenshot}`
+        : undefined,
+    })),
   });
 
   return (
     <>
       <NextSeo {...seoConfig} />
       <Head>
-        {injectJSONLD([personSchema, websiteSchema, imageGallerySchema])}
+        {injectJSONLD([
+          personSchema,
+          websiteSchema,
+          imageGallerySchema,
+          featuredProjectsSchema,
+        ])}
       </Head>
       <Hero />
       <SkillsShowcase skills={skills} />
@@ -168,7 +190,7 @@ export async function getStaticProps() {
   const allImages = getAllPublicImages();
   const imageGallerySchema = generateImageCollectionSchema({
     name: "Portfolio Image Library",
-    url: "https://gauresh.is-a.dev",
+    url: SITE_URL,
     description:
       "Complete image library of Gauresh G Pai's portfolio, including projects, professional work, certificates, and brand assets.",
     images: allImages.map((image) => ({

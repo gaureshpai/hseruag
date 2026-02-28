@@ -1,5 +1,4 @@
-import { type SVGMotionProps, motion } from "framer-motion";
-
+import { motion, type SVGMotionProps } from "framer-motion";
 import { classNames } from "@/utility/classNames";
 
 const Path = (props: SVGMotionProps<SVGPathElement>) => (
