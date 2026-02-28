@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/legacy/image";
+import Link from "next/link";
 import { ArrowTopRight } from "@/components/icons";
 import type { Certificate } from "@/data/certificates";
 

@@ -2,7 +2,7 @@ export interface Project {
   title: string;
   description: string;
   liveUrl: string | null;
-  link: string;
+  link: string | null;
   role?: string;
   tags: string[];
   owner?: string;
@@ -12,26 +12,6 @@ export interface Project {
 }
 
 export const PROJECTS: Project[] = [
-  {
-    title: "SignFlix",
-    description:
-      "An accessible video streaming platform with integrated sign language interpretation for the deaf and hard-of-hearing community.",
-    link: "",
-    liveUrl: "https://signflix.vercel.app",
-    tags: [
-      "idea",
-      "incomplete",
-      "innovation",
-      "major-project",
-      "nextjs",
-      "prisma-orm",
-      "tailwind CSS",
-      "typescript",
-      "git",
-    ],
-    collaborators: ["Jnanesh", "Himanshu Hegde", "Milan C I"],
-    screenshot: "/projects/signflix.jpg",
-  },
   {
     title: "create-next-quick",
     description:
@@ -105,6 +85,50 @@ export const PROJECTS: Project[] = [
     screenshot: "/projects/dkutils.png",
   },
   {
+    title: "SignFlix",
+    description:
+      "An accessible video streaming platform with integrated sign language interpretation for the deaf and hard-of-hearing community.",
+    link: null,
+    liveUrl: "https://signflix.vercel.app",
+    tags: [
+      "idea",
+      "incomplete",
+      "innovation",
+      "major-project",
+      "nextjs",
+      "prisma-orm",
+      "tailwindcss",
+      "typescript",
+      "git",
+    ],
+    collaborators: ["Jnanesh", "Himanshu Hegde", "Milan C I"],
+    screenshot: "/projects/signflix.jpg",
+  },
+  {
+    title: "pulseui-base",
+    description:
+      "Ultra-lightweight React component library with design tokens, multi-brand theming, and TypeScript support. Zero heavy dependencies - perfect for production apps.",
+    link: "https://github.com/gaureshpai/pulseui-base",
+    liveUrl: "https://npmjs.com/package/pulseui-base",
+    tags: [
+      "component-library",
+      "design-tokens",
+      "react",
+      "react-component-library",
+      "reactjs",
+      "typescript",
+      "npm",
+      "npm-package",
+      "npm-packages",
+      "open-source",
+      "react-package",
+      "figma",
+      "token-sync",
+    ],
+    collaborators: ["Vignesh Kamath"],
+    screenshot: "/projects/pulseui.png",
+  },
+  {
     title: "Easpataal",
     description:
       "A full-stack web/mobile application designed to eliminate long waiting times and enhance efficiency in hospital environments, specifically addressing the challenges of overcrowded queues common in many Indian hospitals.",
@@ -141,30 +165,6 @@ export const PROJECTS: Project[] = [
     ],
     collaborators: ["Anusha Prabhu"],
     screenshot: "/projects/learnio.png",
-  },
-  {
-    title: "pulseui-base",
-    description:
-      "Ultra-lightweight React component library with design tokens, multi-brand theming, and TypeScript support. Zero heavy dependencies - perfect for production apps.",
-    link: "https://github.com/gaureshpai/pulseui-base",
-    liveUrl: "https://npmjs.com/package/pulseui-base",
-    tags: [
-      "component-library",
-      "design-tokens",
-      "react",
-      "react-component-library",
-      "reactjs",
-      "typescript",
-      "npm",
-      "npm-package",
-      "npm-packages",
-      "open-source",
-      "react-package",
-      "figma",
-      "token-sync",
-    ],
-    collaborators: ["Vignesh Kamath"],
-    screenshot: "/projects/pulseui.png",
   },
   {
     title: "HallGrid",

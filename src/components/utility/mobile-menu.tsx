@@ -1,7 +1,12 @@
-import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import { Fragment } from "react";
 import ThemeSwitch from "@/components/utility/theme-switch";
 
+/**
+ * Renders a right-aligned sliding mobile menu panel that contains a ThemeSwitch and a centered footer displaying the current year and author name.
+ *
+ * @returns A React element representing the mobile menu panel.
+ */
 export default function MobileMenu() {
   return (
     <Transition as={Fragment}>
@@ -20,7 +25,7 @@ export default function MobileMenu() {
               <ThemeSwitch />
             </div>
             <div className="absolute bottom-6 w-full text-center">
-              © {new Date().getFullYear()} Gauresh G Pai
+              © 2022 - {new Date().getFullYear()} Gauresh G Pai
             </div>
           </div>
         </Dialog.Panel>

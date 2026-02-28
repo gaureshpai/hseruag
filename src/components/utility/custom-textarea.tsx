@@ -1,5 +1,4 @@
-import { type InputHTMLAttributes, forwardRef } from "react";
-
+import { forwardRef, type InputHTMLAttributes } from "react";
 import { classNames } from "@/utility/classNames";
 
 export type TextareaProps = InputHTMLAttributes<HTMLTextAreaElement>;

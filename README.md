@@ -1,89 +1,33 @@
-# Personal Portfolio Website
+# hseruag
 
-Welcome to my personal portfolio website! This application is built with Next.js to showcase my projects, skills, and experiences as a developer. It provides a responsive and visually appealing platform designed to highlight my work and professional journey.
+Personal portfolio built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 
-## Features
+## Stack
 
--   **Responsive Design:** Optimized for various screen sizes, ensuring a seamless experience on desktops, tablets, and mobile devices.
--   **Project Showcase:** Dedicated sections to display projects with descriptions and relevant details.
--   **Skills & Experience:** Detailed overview of technical skills and professional experiences.
--   **SEO Optimized:** Enhanced with `next-seo` for better search engine visibility.
--   **Interactive UI:** Utilizes Framer Motion for smooth animations and transitions.
--   **Theme Switching:** Supports light and dark modes with `next-themes`.
--   **Contact Form:** Functionality to allow visitors to reach out via email.
--   **GitHub Integration:** Potentially fetches projects or data from GitHub using `@octokit/rest`.
+- Next.js 16 (Pages Router)
+- React 18
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- next-seo (SEO metadata + JSON-LD)
+- Nodemailer (contact form API)
+- Biome + Husky + lint-staged
 
-## Tech Stack
+## Scripts
 
-This project is built with a modern and robust set of technologies:
+- `pnpm dev` - Run dev server
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm lint` - Run Biome check (with write)
+- `pnpm format` - Format code with Biome
+- `pnpm type-check` - TypeScript type check
 
-- **Frontend Framework:**
-  - [Next.js](https://nextjs.org/) (v16) - React framework for server-side rendering, static site generation, and API routes.
-  - [React](https://reactjs.org/) (v18) - A JavaScript library for building user interfaces.
-- **Styling:**
-  - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development.
-  - [Headless UI](https://headlessui.dev/) - Unstyled, fully accessible UI components.
-- **Animation:**
-  - [Framer Motion](https://www.framer.com/motion/) - A production-ready motion library for React.
-- **Forms & Validation:**
-  - [Formik](https://formik.org/) - Build forms in React, without the tears.
-  - [Yup](https://github.com/jquense/yup) - JavaScript schema builder for value parsing and validation.
-- **SEO:**
-  - [Next SEO](https://github.com/garmeeh/next-seo) - Easily configure your Next.js SEO.
-- **Theming:**
-  - [Next Themes](https://github.com/pacocoursey/next-themes) - An elegant, cross-browser, next-generation dark mode theme solution for Next.js.
-- **Email:**
-  - [Nodemailer](https://nodemailer.com/) - Module for Node.js applications to allow easy email sending.
-- **GitHub API:**
-  - [`@octokit/rest`](https://github.com/octokit/rest.js/) - GitHub REST API client for JavaScript.
-- **Icons:**
-  - [Lucide React](https://lucide.dev/) - A collection of beautiful open-source icons.
-- **Code Quality:**
-  - [Biome](https://biomejs.dev/) - A high-performance toolchain for web development, used for linting and formatting.
-  - [Husky](https://typicode.github.io/husky/) - Modern native Git hooks made easy.
-  - [lint-staged](https://github.com/okonet/lint-staged) - Run linters against staged git files and don't let 💩 slip into your code base!
+## Local Setup
 
-## Scripts Overview
-
--   `dev`: Starts the Next.js development server.
--   `build`: Builds the Next.js application for production.
--   `start`: Starts the Next.js production server.
--   `lint`: Lints the project code using Biome.
--   `format`: Formats the project code using Biome.
--   `prepare`: Installs Husky hooks.
-
-## Linting, Formatting, and Git Hooks
-
-This project uses [Biome](https://biomejs.dev/) for code formatting and linting. [Husky](https://typicode.github.io/husky/) is used to manage Git hooks, and [lint-staged](https://github.com/okonet/lint-staged) is configured to run Biome on staged files before each commit. This ensures that all committed code adheres to the project's code style and quality standards.
-
-The pre-commit hook will automatically format and lint your staged files. If there are any linting errors that cannot be fixed automatically, the commit will be aborted.
-
-## Getting Started
-
-To get a local copy up and running, follow these simple steps.
-
-### Prerequisites
-
-- Node.js (v18 or later)
-- npm or yarn
-
-### Installation
-
-1.  Clone the repository:
-    ```sh
-    git clone https://github.com/gaureshpai/hseruag.git
-    ```
-2.  Install NPM packages:
-    ```sh
-    npm install
-    ```
-3.  Set up your environment variables:
-    Create a `.env` file in the root directory (if not already present) and populate it with any necessary API keys or configurations (e.g., for Nodemailer or GitHub API). Refer to `.env.example` for guidance.
-
-### Running the Application
-
--   To run the development server:
-    ```sh
-    npm run dev
-    ```
-    Open [http://localhost:3000](http://localhost:3000) in your browser.
+```bash
+git clone https://github.com/gaureshpai/hseruag.git
+cd hseruag
+pnpm install
+cp .env.example .env
+pnpm dev
+```

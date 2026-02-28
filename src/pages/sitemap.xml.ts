@@ -1,6 +1,6 @@
 import type { GetServerSideProps } from "next";
-
-const SITE_URL = "https://gauresh.is-a.dev";
+import { SITE_URL } from "@/constants/site";
+import type { PublicImage } from "@/server/public-images";
 
 interface SitemapURL {
   loc: string;
@@ -14,8 +14,32 @@ interface SitemapURL {
     | "yearly"
     | "never";
   priority: number;
+  images?: PublicImage[];
 }
 
+/**
+ * Escape special XML characters in a string.
+ *
+ * @param value - The string to escape for safe inclusion in XML
+ * @returns The input string with `&`, `<`, `>`, `"` and `'` replaced by their XML entity equivalents
+ */
+function escapeXml(value: string): string {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&apos;");
+}
+
+/**
+ * Generates an XML sitemap containing the provided URLs and any associated image metadata.
+ *
+ * Each entry in `urls` is rendered as a <url> element. If an entry includes `images`, each image's `url`, `title`, and `caption` are rendered as <image:image> blocks with XML escaping.
+ *
+ * @param urls - Sitemap entries to include; entries may include an optional `images` array to include image metadata
+ * @returns The sitemap XML document as a string
+ */
 function generateSiteMap(urls: SitemapURL[]): string {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -26,12 +50,24 @@ function generateSiteMap(urls: SitemapURL[]): string {
            xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
      ${urls
        .map((url) => {
+         const imageTags = (url.images || [])
+           .map(
+             (image) => `
+          <image:image>
+            <image:loc>${escapeXml(image.url)}</image:loc>
+            <image:title>${escapeXml(image.title)}</image:title>
+            <image:caption>${escapeXml(image.caption)}</image:caption>
+          </image:image>`,
+           )
+           .join("");
+
          return `
        <url>
            <loc>${url.loc}</loc>
            <lastmod>${url.lastmod}</lastmod>
            <changefreq>${url.changefreq}</changefreq>
            <priority>${url.priority}</priority>
+           ${imageTags}
        </url>
      `;
        })
@@ -46,6 +82,8 @@ function SiteMap() {
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const currentDate = new Date().toISOString();
+  const { getPublicImagesByPage } = await import("@/server/public-images");
+  const imagesByPage = getPublicImagesByPage();
 
   // Define static pages with their properties
   const staticPages: SitemapURL[] = [
@@ -54,30 +92,35 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
       lastmod: currentDate,
       changefreq: "weekly",
       priority: 1.0,
+      images: imagesByPage["/"],
     },
     {
       loc: `${SITE_URL}/about`,
       lastmod: currentDate,
       changefreq: "monthly",
       priority: 0.8,
+      images: [],
     },
     {
       loc: `${SITE_URL}/projects`,
       lastmod: currentDate,
       changefreq: "weekly",
       priority: 0.9,
+      images: imagesByPage["/projects"],
     },
     {
       loc: `${SITE_URL}/works`,
       lastmod: currentDate,
       changefreq: "weekly",
       priority: 0.9,
+      images: imagesByPage["/works"],
     },
     {
       loc: `${SITE_URL}/certificates`,
       lastmod: currentDate,
       changefreq: "monthly",
       priority: 0.7,
+      images: imagesByPage["/certificates"],
     },
   ];
 
