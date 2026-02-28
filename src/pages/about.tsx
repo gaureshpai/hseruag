@@ -1,12 +1,13 @@
-import { NextSeo } from "next-seo";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 import AboutHero from "@/components/about-hero";
 import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
 import type { ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
+import { SITE_URL } from "@/constants/site";
 import {
-  generateSEOConfig,
-  generatePersonSchema,
   generateBreadcrumbSchema,
+  generatePersonSchema,
+  generateSEOConfig,
   injectJSONLD,
 } from "@/utils/seo";
 
@@ -17,6 +18,15 @@ type AboutPageProps = {
   achievements: ExperienceShowcaseListItemProps[];
 };
 
+/**
+ * Render the About page for Gauresh G Pai with SEO metadata, JSON-LD, hero, and content sections.
+ *
+ * @param education - Education items for the "Education" section
+ * @param experience - Professional experience items for the "Experience" section
+ * @param extra - Positions of responsibility for the "Positions of Responsibility" section
+ * @param achievements - Achievement items for the "Achievements" section
+ * @returns A React element representing the About page with SEO/meta tags, injected JSON-LD, the hero, and four experience showcase lists
+ */
 export default function About({
   education,
   experience,
@@ -27,7 +37,7 @@ export default function About({
     title: "About",
     description:
       "Learn about Gauresh G Pai, a passionate Software Engineer with 2+ years of experience. Discover my journey, skills in React, Next.js, TypeScript, professional experience, education, and achievements in web development.",
-    canonical: "https://gauresh.is-a.dev/about",
+    canonical: `${SITE_URL}/about`,
     openGraph: {
       title: "About Gauresh G Pai - Software Engineer",
       description:
@@ -53,15 +63,15 @@ export default function About({
 
   const personSchema = generatePersonSchema({
     name: "Gauresh G Pai",
-    url: "https://gauresh.is-a.dev/about",
+    url: `${SITE_URL}/about`,
     jobTitle: "Software Engineer",
     description:
       "Passionate Software Engineer with expertise in building scalable web applications using React, Next.js, and TypeScript.",
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://gauresh.is-a.dev" },
-    { name: "About", url: "https://gauresh.is-a.dev/about" },
+    { name: "Home", url: SITE_URL },
+    { name: "About", url: `${SITE_URL}/about` },
   ]);
 
   return (
@@ -75,7 +85,6 @@ export default function About({
         title="Positions of Responsibility"
         details={extra}
       />
-      \
       <ExperienceShowcaseList title="Achievements" details={achievements} />
     </>
   );
