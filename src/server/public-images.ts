@@ -58,12 +58,18 @@ function walkPublicDir(dir: string): string[] {
   return files;
 }
 
+let cachedImages: PublicImage[] | null = null;
+
 export function getAllPublicImages(): PublicImage[] {
+  if (cachedImages) {
+    return cachedImages;
+  }
+
   if (!fs.existsSync(PUBLIC_DIR)) {
     return [];
   }
 
-  return walkPublicDir(PUBLIC_DIR)
+  cachedImages = walkPublicDir(PUBLIC_DIR)
     .filter((filePath) =>
       SUPPORTED_IMAGE_EXTENSIONS.has(path.extname(filePath).toLowerCase()),
     )
@@ -78,12 +84,14 @@ export function getAllPublicImages(): PublicImage[] {
         path: relativePath,
         url: `${SITE_URL}${relativePath}`,
         title: label,
-        caption: `${label} image from Gauresh G Pai portfolio`,
+        caption: `${label} image from Gauresh G Pai's portfolio`,
         pagePath: getPagePathFromPublicPath(relativePath),
         lastModifiedISO: stats.mtime.toISOString(),
       };
     })
     .sort((a, b) => a.path.localeCompare(b.path));
+
+  return cachedImages;
 }
 
 export function getPublicImagesByPage(): Record<

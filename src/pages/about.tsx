@@ -75,7 +75,6 @@ export default function About({
         title="Positions of Responsibility"
         details={extra}
       />
-      \
       <ExperienceShowcaseList title="Achievements" details={achievements} />
     </>
   );

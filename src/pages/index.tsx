@@ -150,7 +150,7 @@ export async function getStaticProps() {
     name: "Portfolio Image Library",
     url: "https://gauresh.is-a.dev",
     description:
-      "Complete image library of Gauresh G Pai portfolio, including projects, professional work, certificates, and brand assets.",
+      "Complete image library of Gauresh G Pai's portfolio, including projects, professional work, certificates, and brand assets.",
     images: allImages.map((image) => ({
       url: image.url,
       title: image.title,
