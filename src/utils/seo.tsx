@@ -1,6 +1,6 @@
 import type { NextSeoProps } from "next-seo";
+import { SITE_URL } from "@/constants/site";
 
-const SITE_URL = "https://gauresh.is-a.dev";
 const SITE_NAME = "Gauresh G Pai";
 const TWITTER_HANDLE = "@hseruag";
 
@@ -51,6 +51,7 @@ export function generateSEOConfig(config: SEOConfig): NextSeoProps {
       width: 1200,
       height: 630,
       alt: `${title} - Preview`,
+      type: "image/png",
     },
   ];
 
@@ -81,15 +82,30 @@ export function generateSEOConfig(config: SEOConfig): NextSeoProps {
       },
       {
         name: "robots",
-        content: "index, follow",
+        content:
+          "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
       },
       {
         name: "googlebot",
-        content: "index, follow",
+        content:
+          "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      },
+      {
+        name: "bingbot",
+        content:
+          "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
       },
       {
         name: "viewport",
         content: "width=device-width, initial-scale=1, maximum-scale=5",
+      },
+      {
+        name: "referrer",
+        content: "strict-origin-when-cross-origin",
+      },
+      {
+        name: "format-detection",
+        content: "telephone=no,address=no,email=no",
       },
       {
         name: "theme-color",
@@ -171,6 +187,10 @@ export function generateWebsiteSchema(data: WebsiteSchema) {
     author: {
       "@type": "Person",
       name: SITE_NAME,
+    },
+    potentialAction: {
+      "@type": "ReadAction",
+      target: [data.url],
     },
     inLanguage: "en-US",
   };
@@ -257,7 +277,25 @@ export interface ImageCollectionSchema {
   images: ImageSchemaItem[];
 }
 
-export function generateImageCollectionSchema(data: ImageCollectionSchema) {
+export interface ImageCollectionSchemaResult {
+  "@context": "https://schema.org";
+  "@type": "ImageGallery";
+  name: string;
+  url: string;
+  description: string;
+  inLanguage: "en-US";
+  associatedMedia: Array<{
+    "@type": "ImageObject";
+    contentUrl: string;
+    url: string;
+    name: string;
+    caption: string;
+  }>;
+}
+
+export function generateImageCollectionSchema(
+  data: ImageCollectionSchema,
+): ImageCollectionSchemaResult {
   return {
     "@context": "https://schema.org",
     "@type": "ImageGallery",
@@ -271,6 +309,66 @@ export function generateImageCollectionSchema(data: ImageCollectionSchema) {
       url: image.url,
       name: image.title,
       caption: image.caption || image.title,
+    })),
+  };
+}
+
+export interface ItemListSchemaItem {
+  name: string;
+  url?: string;
+  description?: string;
+  image?: string;
+}
+
+export interface ItemListSchemaInput {
+  name: string;
+  url: string;
+  description: string;
+  items: ItemListSchemaItem[];
+}
+
+export interface ItemListSchemaResult {
+  "@context": "https://schema.org";
+  "@type": "ItemList";
+  name: string;
+  description: string;
+  url: string;
+  numberOfItems: number;
+  itemListOrder: "https://schema.org/ItemListOrderAscending";
+  itemListElement: Array<{
+    "@type": "ListItem";
+    position: number;
+    item: {
+      "@type": "CreativeWork";
+      name: string;
+      url?: string;
+      description?: string;
+      image?: string;
+    };
+  }>;
+}
+
+export function generateItemListSchema(
+  data: ItemListSchemaInput,
+): ItemListSchemaResult {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: data.name,
+    description: data.description,
+    url: data.url,
+    numberOfItems: data.items.length,
+    itemListOrder: "https://schema.org/ItemListOrderAscending",
+    itemListElement: data.items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "CreativeWork",
+        name: item.name,
+        url: item.url,
+        description: item.description,
+        image: item.image,
+      },
     })),
   };
 }

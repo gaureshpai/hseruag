@@ -2,7 +2,7 @@ export interface Project {
   title: string;
   description: string;
   liveUrl: string | null;
-  link: string;
+  link: string | null;
   role?: string;
   tags: string[];
   owner?: string;
@@ -88,7 +88,7 @@ export const PROJECTS: Project[] = [
     title: "SignFlix",
     description:
       "An accessible video streaming platform with integrated sign language interpretation for the deaf and hard-of-hearing community.",
-    link: "",
+    link: null,
     liveUrl: "https://signflix.vercel.app",
     tags: [
       "idea",
@@ -97,7 +97,7 @@ export const PROJECTS: Project[] = [
       "major-project",
       "nextjs",
       "prisma-orm",
-      "tailwind CSS",
+      "tailwindcss",
       "typescript",
       "git",
     ],

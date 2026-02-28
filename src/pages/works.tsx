@@ -3,18 +3,21 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
+import { SITE_URL } from "@/constants/site";
 import type { Project } from "@/data/works";
 import {
   generateBreadcrumbSchema,
   generateCollectionPageSchema,
   generateImageCollectionSchema,
+  generateItemListSchema,
   generateSEOConfig,
+  type ImageCollectionSchemaResult,
   injectJSONLD,
 } from "@/utils/seo";
 
 type WorksPageProps = {
   projects: Project[];
-  imageGallerySchema: object;
+  imageGallerySchema: ImageCollectionSchemaResult;
 };
 
 const WorksPage = ({ projects, imageGallerySchema }: WorksPageProps) => {
@@ -22,7 +25,7 @@ const WorksPage = ({ projects, imageGallerySchema }: WorksPageProps) => {
     title: "Professional Work",
     description:
       "Browse Gauresh G Pai's professional work portfolio featuring 9+ client projects and professional engagements. Real-world web applications built with React, Next.js, TypeScript, and Tailwind CSS for various companies and clients.",
-    canonical: "https://gauresh.is-a.dev/works",
+    canonical: `${SITE_URL}/works`,
     openGraph: {
       title: "Professional Work Portfolio - Gauresh G Pai",
       description:
@@ -42,19 +45,35 @@ const WorksPage = ({ projects, imageGallerySchema }: WorksPageProps) => {
     name: "Professional Work by Gauresh G Pai",
     description:
       "A collection of professional client projects and engagements demonstrating real-world expertise in web development.",
-    url: "https://gauresh.is-a.dev/works",
+    url: `${SITE_URL}/works`,
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://gauresh.is-a.dev" },
-    { name: "Professional Work", url: "https://gauresh.is-a.dev/works" },
+    { name: "Home", url: SITE_URL },
+    { name: "Professional Work", url: `${SITE_URL}/works` },
   ]);
+  const workListSchema = generateItemListSchema({
+    name: "Professional Work by Gauresh G Pai",
+    url: `${SITE_URL}/works`,
+    description: "List of client and professional projects by Gauresh G Pai.",
+    items: projects.map((project) => ({
+      name: project.title,
+      url: project.liveUrl || `${SITE_URL}/works`,
+      description: project.description,
+      image: `${SITE_URL}${project.screenshot}`,
+    })),
+  });
 
   return (
     <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
       <NextSeo {...seoConfig} />
       <Head>
-        {injectJSONLD([collectionSchema, breadcrumbSchema, imageGallerySchema])}
+        {injectJSONLD([
+          collectionSchema,
+          breadcrumbSchema,
+          imageGallerySchema,
+          workListSchema,
+        ])}
       </Head>
       <div className="mx-auto max-w-7xl">
         <h1 className="text-2xl font-semibold text-foreground md:text-4xl">
@@ -148,7 +167,7 @@ export async function getStaticProps() {
   const imagesByPage = getPublicImagesByPage();
   const imageGallerySchema = generateImageCollectionSchema({
     name: "Professional Work Image Gallery",
-    url: "https://gauresh.is-a.dev/works",
+    url: `${SITE_URL}/works`,
     description:
       "Screenshot gallery for professional and client work delivered by Gauresh G Pai.",
     images: imagesByPage["/works"].map((image) => ({

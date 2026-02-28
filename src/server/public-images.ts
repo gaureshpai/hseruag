@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
+import { SITE_URL } from "@/constants/site";
 
-const SITE_URL = "https://gauresh.is-a.dev";
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 const SUPPORTED_IMAGE_EXTENSIONS = new Set([
   ".png",
