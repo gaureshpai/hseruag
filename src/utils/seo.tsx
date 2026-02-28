@@ -283,13 +283,31 @@ export interface ImageCollectionSchema {
   images: ImageSchemaItem[];
 }
 
+export interface ImageCollectionSchemaResult {
+  "@context": "https://schema.org";
+  "@type": "ImageGallery";
+  name: string;
+  url: string;
+  description: string;
+  inLanguage: "en-US";
+  associatedMedia: Array<{
+    "@type": "ImageObject";
+    contentUrl: string;
+    url: string;
+    name: string;
+    caption: string;
+  }>;
+}
+
 /**
  * Generate a JSON-LD ImageGallery schema for a collection of images.
  *
  * @param data - Collection metadata and the list of images (each with `url`, `title`, and optional `caption`)
  * @returns A JSON-LD `ImageGallery` object whose `associatedMedia` is an array of `ImageObject` entries for each image
  */
-export function generateImageCollectionSchema(data: ImageCollectionSchema) {
+export function generateImageCollectionSchema(
+  data: ImageCollectionSchema,
+): ImageCollectionSchemaResult {
   return {
     "@context": "https://schema.org",
     "@type": "ImageGallery",
