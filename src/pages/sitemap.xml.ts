@@ -86,7 +86,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
       lastmod: currentDate,
       changefreq: "monthly",
       priority: 0.8,
-      images: imagesByPage["/"],
+      images: [],
     },
     {
       loc: `${SITE_URL}/projects`,
