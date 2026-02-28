@@ -38,9 +38,7 @@ export function generateSEOConfig(config: SEOConfig): NextSeoProps {
     additionalMetaTags = [],
   } = config;
 
-  const title = pageTitle
-    ? `${pageTitle} | Gauresh G Pai`
-    : "Software Engineer";
+  const title = pageTitle ? `${pageTitle}` : "Software Engineer";
 
   const ogTitle = openGraph.title || title;
   const ogDescription = openGraph.description || description;

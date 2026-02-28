@@ -34,7 +34,7 @@ export default function Footer() {
       <ButtonContainer />
       <div className="flex w-full flex-col items-center justify-between gap-8 text-center md:flex-row md:justify-between lg:mx-auto lg:max-w-7xl">
         <span className="text-foreground">
-          © {new Date().getFullYear()} Gauresh G Pai
+          © 2022 - {new Date().getFullYear()} Gauresh G Pai
         </span>
         <div className="flex gap-8">
           <Link

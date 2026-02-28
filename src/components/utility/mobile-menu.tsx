@@ -27,7 +27,7 @@ export default function MobileMenu() {
               <ThemeSwitch />
             </div>
             <div className="absolute bottom-6 w-full text-center">
-              © {new Date().getFullYear()} Gauresh G Pai
+              © 2022 - {new Date().getFullYear()} Gauresh G Pai
             </div>
           </div>
         </Dialog.Panel>
