@@ -244,6 +244,37 @@ export function generateCollectionPageSchema(data: CollectionPageSchema) {
   };
 }
 
+export interface ImageSchemaItem {
+  url: string;
+  title: string;
+  caption?: string;
+}
+
+export interface ImageCollectionSchema {
+  name: string;
+  url: string;
+  description: string;
+  images: ImageSchemaItem[];
+}
+
+export function generateImageCollectionSchema(data: ImageCollectionSchema) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: data.name,
+    url: data.url,
+    description: data.description,
+    inLanguage: "en-US",
+    associatedMedia: data.images.map((image) => ({
+      "@type": "ImageObject",
+      contentUrl: image.url,
+      url: image.url,
+      name: image.title,
+      caption: image.caption || image.title,
+    })),
+  };
+}
+
 // Helper to inject JSON-LD into page
 export function injectJSONLD(data: object | object[]) {
   const schemas = Array.isArray(data) ? data : [data];

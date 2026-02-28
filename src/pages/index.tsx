@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import type { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
 import type { Project } from "@/data/projects";
 import {
+  generateImageCollectionSchema,
   generatePersonSchema,
   generateSEOConfig,
   generateWebsiteSchema,
@@ -31,6 +32,7 @@ type HomePageProps = {
   education: ExperienceShowcaseListItemProps[];
   experience: ExperienceShowcaseListItemProps[];
   achievements: ExperienceShowcaseListItemProps[];
+  imageGallerySchema: object;
 };
 
 export default function Home({
@@ -39,6 +41,7 @@ export default function Home({
   education,
   experience,
   achievements,
+  imageGallerySchema,
 }: HomePageProps) {
   const seoConfig = generateSEOConfig({
     description:
@@ -113,7 +116,9 @@ export default function Home({
   return (
     <>
       <NextSeo {...seoConfig} />
-      <Head>{injectJSONLD([personSchema, websiteSchema])}</Head>
+      <Head>
+        {injectJSONLD([personSchema, websiteSchema, imageGallerySchema])}
+      </Head>
       <Hero />
       <SkillsShowcase skills={skills} />
       <ProjectShowcase projects={projects} />
@@ -130,6 +135,7 @@ export async function getStaticProps() {
   const { EDUCATION } = await import("@/data/education");
   const { EXPERIENCE } = await import("@/data/experience");
   const { ACHIEVEMENTS } = await import("@/data/achievements");
+  const { getAllPublicImages } = await import("@/server/public-images");
 
   const skills = SKILLS_DATA.map((section) => ({
     ...section,
@@ -139,6 +145,19 @@ export async function getStaticProps() {
     })),
   }));
 
+  const allImages = getAllPublicImages();
+  const imageGallerySchema = generateImageCollectionSchema({
+    name: "Portfolio Image Library",
+    url: "https://gauresh.is-a.dev",
+    description:
+      "Complete image library of Gauresh G Pai portfolio, including projects, professional work, certificates, and brand assets.",
+    images: allImages.map((image) => ({
+      url: image.url,
+      title: image.title,
+      caption: image.caption,
+    })),
+  });
+
   return {
     props: {
       projects: PROJECT_SHOWCASE,
@@ -146,6 +165,7 @@ export async function getStaticProps() {
       education: EDUCATION,
       experience: EXPERIENCE,
       achievements: ACHIEVEMENTS,
+      imageGallerySchema,
     },
   };
 }
