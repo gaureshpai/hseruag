@@ -3,11 +3,9 @@ import { Fragment } from "react";
 import ThemeSwitch from "@/components/utility/theme-switch";
 
 /**
- * Renders a right-side sliding mobile menu panel.
+ * Renders a right-aligned sliding mobile menu panel that contains a ThemeSwitch and a centered footer displaying the current year and author name.
  *
- * The panel slides in/out with a 300ms transform transition, contains a ThemeSwitch aligned to the bottom of its content area, and displays a centered footer showing the current year and author name.
- *
- * @returns A React element for a right-side sliding mobile menu panel containing a theme switch and a footer with the current year.
+ * @returns A React element representing the mobile menu panel.
  */
 export default function MobileMenu() {
   return (

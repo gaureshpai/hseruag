@@ -29,6 +29,18 @@ export interface SEOConfig {
   additionalMetaTags?: NextSeoProps["additionalMetaTags"];
 }
 
+/**
+ * Build a NextSeoProps object from a lightweight SEO configuration.
+ *
+ * Uses provided values with sensible defaults: page title falls back to "Software Engineer",
+ * `canonical` defaults to the site URL, Open Graph fields fall back to title/description/type,
+ * and a default Open Graph image is added when none are provided. Additional meta and link tags
+ * are merged into the resulting configuration.
+ *
+ * @param config - Partial SEO configuration that may include title, description, canonical URL,
+ *                 Open Graph data, and extra meta tags.
+ * @returns The complete NextSeoProps object ready to pass to a Next.js SEO component.
+ */
 export function generateSEOConfig(config: SEOConfig): NextSeoProps {
   const {
     title: pageTitle,
@@ -175,6 +187,12 @@ export interface WebsiteSchema {
   description: string;
 }
 
+/**
+ * Generate a JSON-LD WebSite schema for the provided site metadata.
+ *
+ * @param data - Site metadata containing `name`, `url`, and `description`
+ * @returns A JSON-LD object representing a schema.org `WebSite` with the site name, URL, description, an author set to the library's site name, a `ReadAction` potentialAction targeting the site URL, and `inLanguage` set to "en-US"
+ */
 export function generateWebsiteSchema(data: WebsiteSchema) {
   return {
     "@context": "https://schema.org",
@@ -248,10 +266,10 @@ export interface CollectionPageSchema {
 }
 
 /**
- * Create a JSON-LD object for a Schema.org CollectionPage used in SEO.
+ * Generate a Schema.org CollectionPage JSON-LD object for a collection page.
  *
- * @param data - Object containing `name`, `description`, and `url` to populate the CollectionPage schema
- * @returns A JSON-LD object with `@context`, `@type: "CollectionPage"`, `name`, `description`, `url`, an `author` set to the site's name, and `inLanguage: "en-US"`
+ * @param data - Values to populate the CollectionPage schema (`name`, `description`, `url`)
+ * @returns A JSON-LD object representing a `CollectionPage` with an `author` set to the site name and `inLanguage` set to `en-US`
  */
 export function generateCollectionPageSchema(data: CollectionPageSchema) {
   return {
@@ -364,6 +382,12 @@ export interface ItemListSchemaResult {
   }>;
 }
 
+/**
+ * Builds a JSON-LD `ItemList` schema for the provided collection of items.
+ *
+ * @param data - Object containing `name`, `url`, `description`, and `items` to include in the list
+ * @returns A JSON-LD `ItemList` object whose `itemListElement` contains `ListItem` entries with positions matching the input order
+ */
 export function generateItemListSchema(
   data: ItemListSchemaInput,
 ): ItemListSchemaResult {
@@ -389,7 +413,12 @@ export function generateItemListSchema(
   };
 }
 
-// Helper to inject JSON-LD into page
+/**
+ * Create React <script> elements that embed one or more JSON-LD schemas.
+ *
+ * @param data - A JSON-LD object or an array of JSON-LD objects to inject into the page
+ * @returns An array of React <script> elements with type "application/ld+json", each containing a serialized schema
+ */
 export function injectJSONLD(data: object | object[]) {
   const schemas = Array.isArray(data) ? data : [data];
   return schemas.map((schema, index) => (

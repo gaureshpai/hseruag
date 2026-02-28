@@ -23,10 +23,10 @@ export type PublicImage = {
 };
 
 /**
- * Create a human-friendly label from an image file path.
+ * Creates a human-friendly label from an image file path or filename.
  *
- * @param filePath - File path or filename to derive the label from
- * @returns The file's base name with hyphens and underscores replaced by single spaces and surrounding whitespace removed
+ * @param filePath - The file path or filename to derive the label from
+ * @returns The base filename with hyphens and underscores replaced by single spaces, consecutive spaces collapsed, and surrounding whitespace removed
  */
 function formatImageLabel(filePath: string): string {
   const parsed = path.parse(filePath);
@@ -55,7 +55,7 @@ function getPagePathFromPublicPath(
 }
 
 /**
- * Recursively enumerates all files under the given directory and returns their full file system paths.
+ * Recursively enumerates all files under the given directory.
  *
  * @param dir - Path to the directory to walk
  * @returns An array of absolute file paths for every file found under `dir`

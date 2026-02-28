@@ -14,6 +14,13 @@ const CursorTrailCanvas = dynamic(
   { ssr: false },
 );
 
+/**
+ * Top-level Next.js App component that configures site-wide SEO, theming, layout, and page transition behavior, and renders the active page.
+ *
+ * @param Component - The Next.js page component to render for the current route
+ * @param pageProps - Props to be passed to the rendered page component
+ * @returns The React element tree composing global providers, layout, and the active page
+ */
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   return (

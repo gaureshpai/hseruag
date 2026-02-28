@@ -33,10 +33,12 @@ function escapeXml(value: string): string {
 }
 
 /**
- * Builds an XML sitemap document from a list of sitemap entries, including optional image metadata.
+ * Generates an XML sitemap containing the provided URLs and any associated image metadata.
  *
- * @param urls - Array of sitemap entries. If an entry includes `images`, each image's `url`, `title`, and `caption` are rendered as `image:image` blocks and XML-escaped.
- * @returns The complete sitemap XML as a string suitable for serving at /sitemap.xml
+ * Each entry in `urls` is rendered as a <url> element. If an entry includes `images`, each image's `url`, `title`, and `caption` are rendered as <image:image> blocks with XML escaping.
+ *
+ * @param urls - Sitemap entries to include; entries may include an optional `images` array to include image metadata
+ * @returns The sitemap XML document as a string
  */
 function generateSiteMap(urls: SitemapURL[]): string {
   return `<?xml version="1.0" encoding="UTF-8"?>

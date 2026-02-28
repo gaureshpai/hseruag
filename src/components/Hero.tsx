@@ -2,12 +2,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 
 /**
- * Renders the animated hero section with name, role, descriptive text, and a resume download link.
+ * Renders an animated hero section containing the name, role subtitle, descriptive text, and a resume download link.
  *
- * The component uses entry/exit animations and responsive styling to present the heading, subtitle,
- * supporting description that highlights key technologies, and a button linking to a downloadable PDF resume.
+ * Uses entry/exit animations and responsive layout to present the heading, supporting text, and a downloadable resume button.
  *
- * @returns The JSX element for the hero section containing the animated heading, subtitle, description, and download link.
+ * @returns The JSX element for the hero section
  */
 export default function Hero() {
   return (
