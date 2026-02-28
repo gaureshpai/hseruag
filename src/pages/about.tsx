@@ -1,12 +1,12 @@
-import { NextSeo } from "next-seo";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 import AboutHero from "@/components/about-hero";
 import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
 import type { ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
 import {
-  generateSEOConfig,
-  generatePersonSchema,
   generateBreadcrumbSchema,
+  generatePersonSchema,
+  generateSEOConfig,
   injectJSONLD,
 } from "@/utils/seo";
 
@@ -17,6 +17,15 @@ type AboutPageProps = {
   achievements: ExperienceShowcaseListItemProps[];
 };
 
+/**
+ * Renders the About page for Gauresh G Pai including SEO, structured data, and content sections.
+ *
+ * @param education - List of education items to display in the Education section
+ * @param experience - List of professional experience items to display in the Experience section
+ * @param extra - List of positions of responsibility to display in the Positions of Responsibility section
+ * @param achievements - List of achievement items to display in the Achievements section
+ * @returns A React element rendering the About page with SEO/meta tags, injected JSON-LD, the hero, and four experience showcase lists
+ */
 export default function About({
   education,
   experience,
@@ -75,7 +84,6 @@ export default function About({
         title="Positions of Responsibility"
         details={extra}
       />
-      \
       <ExperienceShowcaseList title="Achievements" details={achievements} />
     </>
   );

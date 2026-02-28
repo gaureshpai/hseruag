@@ -1,19 +1,24 @@
-import ProjectCard from "@/components/projects/project-page";
-import { NextSeo } from "next-seo";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
+import ProjectCard from "@/components/projects/project-page";
 import type { Project } from "@/data/projectsgit";
 import {
-  generateSEOConfig,
-  generateCollectionPageSchema,
   generateBreadcrumbSchema,
+  generateCollectionPageSchema,
+  generateImageCollectionSchema,
+  generateSEOConfig,
   injectJSONLD,
 } from "@/utils/seo";
 
 type ProjectsPageProps = {
   projects: Project[];
+  imageGallerySchema: object;
 };
 
-const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
+const ProjectsPage: React.FC<ProjectsPageProps> = ({
+  projects,
+  imageGallerySchema,
+}) => {
   const seoConfig = generateSEOConfig({
     title: "Projects",
     description:
@@ -53,7 +58,9 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
   return (
     <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
       <NextSeo {...seoConfig} />
-      <Head>{injectJSONLD([collectionSchema, breadcrumbSchema])}</Head>
+      <Head>
+        {injectJSONLD([collectionSchema, breadcrumbSchema, imageGallerySchema])}
+      </Head>
       <div className="mx-auto max-w-7xl">
         <h1 className="text-2xl font-semibold text-foreground md:text-4xl">
           Projects
@@ -79,11 +86,32 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
 
 export default ProjectsPage;
 
+/**
+ * Fetches project data and constructs an image-collection JSON-LD schema for the projects page.
+ *
+ * @returns An object with `props` containing:
+ * - `projects`: the array of project entries loaded from the project's data module.
+ * - `imageGallerySchema`: a JSON-LD object representing the projects image gallery (name, url, description, and images).
+ */
 export async function getStaticProps() {
   const { PROJECTS } = await import("@/data/projectsgit");
+  const { getPublicImagesByPage } = await import("@/server/public-images");
+  const imagesByPage = getPublicImagesByPage();
+  const imageGallerySchema = generateImageCollectionSchema({
+    name: "Projects Image Gallery",
+    url: "https://gauresh.is-a.dev/projects",
+    description:
+      "Screenshot gallery for software engineering and web development projects by Gauresh G Pai.",
+    images: imagesByPage["/projects"].map((image) => ({
+      url: image.url,
+      title: image.title,
+      caption: image.caption,
+    })),
+  });
   return {
     props: {
       projects: PROJECTS,
+      imageGallerySchema,
     },
   };
 }

@@ -1,18 +1,21 @@
+import Head from "next/head";
 import Image from "next/legacy/image";
 import { NextSeo } from "next-seo";
-import Head from "next/head";
 import type { Certificate } from "@/data/certificates";
 import {
-  generateSEOConfig,
-  generateCollectionPageSchema,
   generateBreadcrumbSchema,
+  generateCollectionPageSchema,
+  generateImageCollectionSchema,
+  generateSEOConfig,
   injectJSONLD,
 } from "@/utils/seo";
 
 const CertificatesPage = ({
   certificates,
+  imageGallerySchema,
 }: {
   certificates: Certificate[];
+  imageGallerySchema: object;
 }) => {
   const seoConfig = generateSEOConfig({
     title: "Certificates",
@@ -49,7 +52,9 @@ const CertificatesPage = ({
   return (
     <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
       <NextSeo {...seoConfig} />
-      <Head>{injectJSONLD([collectionSchema, breadcrumbSchema])}</Head>
+      <Head>
+        {injectJSONLD([collectionSchema, breadcrumbSchema, imageGallerySchema])}
+      </Head>
       <div className="mx-auto max-w-7xl">
         <h1 className="text-2xl font-semibold text-foreground md:text-4xl">
           Certificates
@@ -87,12 +92,31 @@ const CertificatesPage = ({
   );
 };
 
+/**
+ * Fetches certificate data and constructs an image collection JSON-LD schema for the certificates page.
+ *
+ * @returns An object with `certificates` (array of Certificate) and `imageGallerySchema` (image collection schema object for JSON-LD injection)
+ */
 export async function getStaticProps() {
   const { getCertificates } = await import("@/data/certificates");
+  const { getPublicImagesByPage } = await import("@/server/public-images");
   const certificates = getCertificates();
+  const imagesByPage = getPublicImagesByPage();
+  const imageGallerySchema = generateImageCollectionSchema({
+    name: "Certificates Image Gallery",
+    url: "https://gauresh.is-a.dev/certificates",
+    description:
+      "Professional certificates and certifications earned by Gauresh G Pai.",
+    images: imagesByPage["/certificates"].map((image) => ({
+      url: image.url,
+      title: image.title,
+      caption: image.caption,
+    })),
+  });
   return {
     props: {
       certificates,
+      imageGallerySchema,
     },
   };
 }

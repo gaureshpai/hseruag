@@ -1,13 +1,14 @@
-import { NextSeo } from "next-seo";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import Hero from "@/components/Hero";
-import type { Project } from "@/data/projects";
-import type { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+import { NextSeo } from "next-seo";
 import type { ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
+import Hero from "@/components/Hero";
+import type { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+import type { Project } from "@/data/projects";
 import {
-  generateSEOConfig,
+  generateImageCollectionSchema,
   generatePersonSchema,
+  generateSEOConfig,
   generateWebsiteSchema,
   injectJSONLD,
 } from "@/utils/seo";
@@ -31,14 +32,22 @@ type HomePageProps = {
   education: ExperienceShowcaseListItemProps[];
   experience: ExperienceShowcaseListItemProps[];
   achievements: ExperienceShowcaseListItemProps[];
+  imageGallerySchema: object;
 };
 
+/**
+ * Render the portfolio home page, configure SEO and JSON-LD, and compose the primary page sections (Hero, Skills, Projects, Experience, Education, Achievements).
+ *
+ * @param imageGallerySchema - JSON-LD ImageCollection/ImageGallery object to be injected into the page head for structured data
+ * @returns The React element representing the home page
+ */
 export default function Home({
   projects,
   skills,
   education,
   experience,
   achievements,
+  imageGallerySchema,
 }: HomePageProps) {
   const seoConfig = generateSEOConfig({
     description:
@@ -113,7 +122,9 @@ export default function Home({
   return (
     <>
       <NextSeo {...seoConfig} />
-      <Head>{injectJSONLD([personSchema, websiteSchema])}</Head>
+      <Head>
+        {injectJSONLD([personSchema, websiteSchema, imageGallerySchema])}
+      </Head>
       <Hero />
       <SkillsShowcase skills={skills} />
       <ProjectShowcase projects={projects} />
@@ -124,12 +135,27 @@ export default function Home({
   );
 }
 
+/**
+ * Collects and prepares the data required by the Home page for static generation.
+ *
+ * Gathers project, skills, education, experience, and achievement data, transforms skills into a simplified shape,
+ * and constructs an image gallery JSON-LD schema from public images for injection into the page.
+ *
+ * @returns An object with a `props` property containing:
+ *  - `projects`: the project showcase array
+ *  - `skills`: transformed skills grouped by section, each skill as `{ name, icon }`
+ *  - `education`: education entries
+ *  - `experience`: professional experience entries
+ *  - `achievements`: achievement entries
+ *  - `imageGallerySchema`: JSON-LD image collection schema for the site's public images
+ */
 export async function getStaticProps() {
   const { PROJECT_SHOWCASE } = await import("@/data/projects");
   const { SKILLS_DATA } = await import("@/data/skills");
   const { EDUCATION } = await import("@/data/education");
   const { EXPERIENCE } = await import("@/data/experience");
   const { ACHIEVEMENTS } = await import("@/data/achievements");
+  const { getAllPublicImages } = await import("@/server/public-images");
 
   const skills = SKILLS_DATA.map((section) => ({
     ...section,
@@ -139,6 +165,19 @@ export async function getStaticProps() {
     })),
   }));
 
+  const allImages = getAllPublicImages();
+  const imageGallerySchema = generateImageCollectionSchema({
+    name: "Portfolio Image Library",
+    url: "https://gauresh.is-a.dev",
+    description:
+      "Complete image library of Gauresh G Pai's portfolio, including projects, professional work, certificates, and brand assets.",
+    images: allImages.map((image) => ({
+      url: image.url,
+      title: image.title,
+      caption: image.caption,
+    })),
+  });
+
   return {
     props: {
       projects: PROJECT_SHOWCASE,
@@ -146,6 +185,7 @@ export async function getStaticProps() {
       education: EDUCATION,
       experience: EXPERIENCE,
       achievements: ACHIEVEMENTS,
+      imageGallerySchema,
     },
   };
 }

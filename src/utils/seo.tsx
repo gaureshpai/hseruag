@@ -229,6 +229,12 @@ export interface CollectionPageSchema {
   url: string;
 }
 
+/**
+ * Create a JSON-LD object for a Schema.org CollectionPage used in SEO.
+ *
+ * @param data - Object containing `name`, `description`, and `url` to populate the CollectionPage schema
+ * @returns A JSON-LD object with `@context`, `@type: "CollectionPage"`, `name`, `description`, `url`, an `author` set to the site's name, and `inLanguage: "en-US"`
+ */
 export function generateCollectionPageSchema(data: CollectionPageSchema) {
   return {
     "@context": "https://schema.org",
@@ -244,7 +250,49 @@ export function generateCollectionPageSchema(data: CollectionPageSchema) {
   };
 }
 
-// Helper to inject JSON-LD into page
+export interface ImageSchemaItem {
+  url: string;
+  title: string;
+  caption?: string;
+}
+
+export interface ImageCollectionSchema {
+  name: string;
+  url: string;
+  description: string;
+  images: ImageSchemaItem[];
+}
+
+/**
+ * Generate a JSON-LD ImageGallery schema for a collection of images.
+ *
+ * @param data - Collection metadata and the list of images (each with `url`, `title`, and optional `caption`)
+ * @returns A JSON-LD `ImageGallery` object whose `associatedMedia` is an array of `ImageObject` entries for each image
+ */
+export function generateImageCollectionSchema(data: ImageCollectionSchema) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: data.name,
+    url: data.url,
+    description: data.description,
+    inLanguage: "en-US",
+    associatedMedia: data.images.map((image) => ({
+      "@type": "ImageObject",
+      contentUrl: image.url,
+      url: image.url,
+      name: image.title,
+      caption: image.caption || image.title,
+    })),
+  };
+}
+
+/**
+ * Create React script elements that embed one or more JSON-LD schema objects.
+ *
+ * @param data - A schema object or an array of schema objects to be serialized as JSON-LD
+ * @returns An array of React `<script>` elements (type "application/ld+json") each containing the JSON-LD string of a schema object
+ */
 export function injectJSONLD(data: object | object[]) {
   const schemas = Array.isArray(data) ? data : [data];
   return schemas.map((schema, index) => (

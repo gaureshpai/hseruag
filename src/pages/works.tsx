@@ -1,21 +1,23 @@
-import Link from "next/link";
-import Image from "next/image";
-import { NextSeo } from "next-seo";
-import Head from "next/head";
 import { ExternalLink } from "lucide-react";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import { NextSeo } from "next-seo";
 import type { Project } from "@/data/works";
 import {
-  generateSEOConfig,
-  generateCollectionPageSchema,
   generateBreadcrumbSchema,
+  generateCollectionPageSchema,
+  generateImageCollectionSchema,
+  generateSEOConfig,
   injectJSONLD,
 } from "@/utils/seo";
 
 type WorksPageProps = {
   projects: Project[];
+  imageGallerySchema: object;
 };
 
-const WorksPage = ({ projects }: WorksPageProps) => {
+const WorksPage = ({ projects, imageGallerySchema }: WorksPageProps) => {
   const seoConfig = generateSEOConfig({
     title: "Professional Work",
     description:
@@ -51,7 +53,9 @@ const WorksPage = ({ projects }: WorksPageProps) => {
   return (
     <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
       <NextSeo {...seoConfig} />
-      <Head>{injectJSONLD([collectionSchema, breadcrumbSchema])}</Head>
+      <Head>
+        {injectJSONLD([collectionSchema, breadcrumbSchema, imageGallerySchema])}
+      </Head>
       <div className="mx-auto max-w-7xl">
         <h1 className="text-2xl font-semibold text-foreground md:text-4xl">
           Professional Work
@@ -138,11 +142,30 @@ const WorksPage = ({ projects }: WorksPageProps) => {
 
 export default WorksPage;
 
+/**
+ * Prepares props for the Works page by loading project data and constructing an image gallery schema for the /works gallery.
+ *
+ * @returns An object with `props` containing `projects` (the list of project entries) and `imageGallerySchema` (a structured image collection schema for the works page)
+ */
 export async function getStaticProps() {
   const { default: projects } = await import("@/data/works");
+  const { getPublicImagesByPage } = await import("@/server/public-images");
+  const imagesByPage = getPublicImagesByPage();
+  const imageGallerySchema = generateImageCollectionSchema({
+    name: "Professional Work Image Gallery",
+    url: "https://gauresh.is-a.dev/works",
+    description:
+      "Screenshot gallery for professional and client work delivered by Gauresh G Pai.",
+    images: imagesByPage["/works"].map((image) => ({
+      url: image.url,
+      title: image.title,
+      caption: image.caption,
+    })),
+  });
   return {
     props: {
       projects,
+      imageGallerySchema,
     },
   };
 }
