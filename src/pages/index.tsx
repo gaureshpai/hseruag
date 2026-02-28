@@ -1,13 +1,13 @@
-import { NextSeo } from "next-seo";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import Hero from "@/components/Hero";
-import type { Project } from "@/data/projects";
-import type { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+import { NextSeo } from "next-seo";
 import type { ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
+import Hero from "@/components/Hero";
+import type { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+import type { Project } from "@/data/projects";
 import {
-  generateSEOConfig,
   generatePersonSchema,
+  generateSEOConfig,
   generateWebsiteSchema,
   injectJSONLD,
 } from "@/utils/seo";

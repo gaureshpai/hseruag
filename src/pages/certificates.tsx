@@ -1,11 +1,11 @@
+import Head from "next/head";
 import Image from "next/legacy/image";
 import { NextSeo } from "next-seo";
-import Head from "next/head";
 import type { Certificate } from "@/data/certificates";
 import {
-  generateSEOConfig,
-  generateCollectionPageSchema,
   generateBreadcrumbSchema,
+  generateCollectionPageSchema,
+  generateSEOConfig,
   injectJSONLD,
 } from "@/utils/seo";
 

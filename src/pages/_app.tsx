@@ -1,10 +1,9 @@
-import type { AppProps } from "next/app";
-import { useRouter } from "next/router";
-import dynamic from "next/dynamic";
-import { DefaultSeo } from "next-seo";
-
-import { ThemeProvider } from "next-themes";
 import { AnimatePresence } from "framer-motion";
+import type { AppProps } from "next/app";
+import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
+import { DefaultSeo } from "next-seo";
+import { ThemeProvider } from "next-themes";
 
 import MainLayout from "@/layout/main-layout";
 import "@/styles/globals.css";

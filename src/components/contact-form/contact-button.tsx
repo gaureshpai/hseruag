@@ -1,11 +1,9 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-
 import { MailIcon } from "lucide-react";
-
+import { useCallback, useEffect, useRef, useState } from "react";
+import ContactFormModal from "@/components/contact-form/contact-form-modal";
 import FloatingMailButton, {
   floatingMailButtonoptions,
 } from "@/components/contact-form/floating-mail-button";
-import ContactFormModal from "@/components/contact-form/contact-form-modal";
 
 export default function ContactButton() {
   const refSendBtn = useRef<HTMLButtonElement>(null);

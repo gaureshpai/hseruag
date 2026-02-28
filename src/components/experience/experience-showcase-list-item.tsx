@@ -1,6 +1,6 @@
-import { type RefObject, useRef } from "react";
-import Link from "next/link";
 import { motion, useScroll } from "framer-motion";
+import Link from "next/link";
+import { type RefObject, useRef } from "react";
 
 export interface ExperienceListIconProps {
   iconRef: RefObject<HTMLElement>;

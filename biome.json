@@ -5,13 +5,6 @@
     "clientKind": "git",
     "useIgnoreFile": true
   },
-  "assist": {
-    "actions": {
-      "source": {
-        "organizeImports": "off"
-      }
-    }
-  },
   "files": {
     "includes": ["src/**", "!!**/*.css", "!!src/utility/cursor-trail.ts"]
   },
@@ -26,6 +19,7 @@
       "a11y": "off",
       "suspicious": {
         "noArrayIndexKey": "off",
+        "noUnknownAtRules": "off",
         "noExplicitAny": "off",
         "noTsIgnore": "off"
       }
@@ -34,6 +28,11 @@
   "javascript": {
     "formatter": {
       "quoteStyle": "double"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
     }
   }
 }

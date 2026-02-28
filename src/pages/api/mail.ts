@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ValidationError } from "yup";
 import { mailValidationSchema } from "@/components/contact-form/contact-form";
-import { rateLimiterApi, getUserId } from "@/utility/rate-limiter";
 import { mail } from "@/utility/mail";
+import { getUserId, rateLimiterApi } from "@/utility/rate-limiter";
 
 const REQUEST_PER_HOUR = 5 as const;
 const RATELIMIT_DURATION = 3600000 as const;

@@ -1,6 +1,5 @@
-import type { Dispatch, SetStateAction } from "react";
-
 import { CircleCheckIcon, TriangleAlertIcon } from "lucide-react";
+import type { Dispatch, SetStateAction } from "react";
 
 import CustomToast from "@/components/utility/custom-toast";
 import { classNames } from "@/utility/classNames";

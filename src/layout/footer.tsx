@@ -1,7 +1,7 @@
+import Link from "next/link";
+import { SiGithub, SiLeetcode, SiLinkedin, SiNpm, SiX } from "react-icons/si";
 import ButtonContainer from "@/components/ButtonContainer";
 import ContactButton from "@/components/contact-form/contact-button";
-import Link from "next/link";
-import { SiGithub, SiLeetcode, SiLinkedin, SiX, SiNpm } from "react-icons/si";
 
 export default function Footer() {
   return (

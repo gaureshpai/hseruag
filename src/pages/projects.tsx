@@ -1,11 +1,11 @@
-import ProjectCard from "@/components/projects/project-page";
-import { NextSeo } from "next-seo";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
+import ProjectCard from "@/components/projects/project-page";
 import type { Project } from "@/data/projectsgit";
 import {
-  generateSEOConfig,
-  generateCollectionPageSchema,
   generateBreadcrumbSchema,
+  generateCollectionPageSchema,
+  generateSEOConfig,
   injectJSONLD,
 } from "@/utils/seo";
 

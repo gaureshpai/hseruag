@@ -1,7 +1,6 @@
 import Link from "next/link";
-
-import ThemeSwitch from "@/components/utility/theme-switch";
 import AnimatedLogo from "@/animation/animated-logo";
+import ThemeSwitch from "@/components/utility/theme-switch";
 
 export default function Navbar() {
   return (

@@ -1,12 +1,12 @@
-import { NextSeo } from "next-seo";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 import AboutHero from "@/components/about-hero";
 import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
 import type { ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
 import {
-  generateSEOConfig,
-  generatePersonSchema,
   generateBreadcrumbSchema,
+  generatePersonSchema,
+  generateSEOConfig,
   injectJSONLD,
 } from "@/utils/seo";
 

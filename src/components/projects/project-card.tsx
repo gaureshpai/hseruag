@@ -1,6 +1,6 @@
+import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import type { Project } from "@/data/projects";
-import { Github, ExternalLink } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;

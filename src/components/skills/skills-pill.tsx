@@ -1,6 +1,6 @@
 import type { FC, SVGProps } from "react";
-import * as SiIcons from "react-icons/si";
 import * as FaIcons from "react-icons/fa";
+import * as SiIcons from "react-icons/si";
 
 type IconName = keyof typeof SiIcons | keyof typeof FaIcons;
 
