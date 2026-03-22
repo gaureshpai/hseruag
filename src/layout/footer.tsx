@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { SiGithub, SiLeetcode, SiLinkedin, SiNpm, SiX } from "react-icons/si";
 import ButtonContainer from "@/components/ButtonContainer";
@@ -16,6 +18,10 @@ import {
  * @returns The footer JSX element containing a contact email link, call-to-action buttons, copyright attribution, and external social icons.
  */
 export default function Footer() {
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(EMAIL);
+  };
+
   return (
     <footer className="flex w-full flex-col items-center gap-20 bg-transparent px-6 py-8 sm:px-14 md:px-20">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 rounded-2xl bg-accent p-8 text-background sm:p-12 md:gap-12 lg:p-20">
@@ -29,6 +35,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
+          onClick={copyToClipboard}
         >
           <span>{EMAIL}</span>
         </Link>
@@ -36,7 +43,7 @@ export default function Footer() {
       <ButtonContainer />
       <div className="flex w-full flex-col items-center justify-between gap-8 text-center md:flex-row md:justify-between lg:mx-auto lg:max-w-7xl">
         <span className="text-foreground">
-          © 2022 - {new Date().getFullYear()} Gauresh G Pai
+          © 2022-{new Date().getFullYear()} Gauresh G Pai
         </span>
         <div className="flex gap-8">
           <Link
