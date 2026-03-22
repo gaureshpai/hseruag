@@ -10,11 +10,9 @@ import {
 } from "@/constants/site";
 
 /**
- * Renders the site's footer with a contact section, call-to-action buttons, and social/profile links.
+ * Renders the site footer with a contact call-to-action, action buttons, current-year attribution, and social/profile links.
  *
- * Includes a prominent email mailto link, a contact button, a ButtonContainer, the current year with author attribution, and accessible external social links.
- *
- * @returns The footer JSX element containing contact information, action buttons, and social icons.
+ * @returns The footer JSX element containing a contact email link, call-to-action buttons, copyright attribution, and external social icons.
  */
 export default function Footer() {
   return (

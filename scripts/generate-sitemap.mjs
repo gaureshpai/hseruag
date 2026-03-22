@@ -13,11 +13,21 @@ const SUPPORTED_IMAGE_EXTENSIONS = new Set([
   ".avif",
 ]);
 
+/**
+ * Create a human-readable label from an image file path or filename.
+ * @param {string} filePath - Image file path or filename (may include directories and extension).
+ * @returns {string} A cleaned label derived from the filename: extension removed, dashes and underscores replaced with single spaces, consecutive spaces collapsed, and trimmed.
+ */
 function formatImageLabel(filePath) {
   const parsed = path.parse(filePath);
   return parsed.name.replace(/[-_]+/g, " ").replace(/\s+/g, " ").trim();
 }
 
+/**
+ * Map a public file path to its sitemap page grouping.
+ * @param {string} publicPath - A POSIX-style path relative to the public directory (leading `/`).
+ * @returns {string} The sitemap page path: `"/projects"` for paths starting with `/projects/`, `"/works"` for `/works/`, `"/certificates"` for `/certs/`, or `"/"` otherwise.
+ */
 function getPagePathFromPublicPath(publicPath) {
   if (publicPath.startsWith("/projects/")) return "/projects";
   if (publicPath.startsWith("/works/")) return "/works";
@@ -25,6 +35,12 @@ function getPagePathFromPublicPath(publicPath) {
   return "/";
 }
 
+/**
+ * Recursively collects full paths of all non-directory files under the given directory.
+ *
+ * @param {string} dir - Absolute or relative path of the directory to traverse.
+ * @returns {string[]} An array of file paths for every file found (directories are omitted).
+ */
 function walkPublicDir(dir) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   const files = [];
@@ -39,6 +55,11 @@ function walkPublicDir(dir) {
   return files;
 }
 
+/**
+ * Escape characters that are significant in XML by replacing them with their corresponding entities.
+ * @param {string} value - The string to escape for inclusion in XML.
+ * @returns {string} The input with `&`, `<`, `>`, `"` and `'` replaced by `&amp;`, `&lt;`, `&gt;`, `&quot;`, and `&apos;` respectively.
+ */
 function escapeXml(value) {
   return value
     .replaceAll("&", "&amp;")
@@ -48,6 +69,11 @@ function escapeXml(value) {
     .replaceAll("'", "&apos;");
 }
 
+/**
+ * Generates a sitemap XML file that lists fixed site pages and embeds discovered images from the public directory.
+ *
+ * The function scans the public directory for supported image files, derives per-image URLs, titles, captions, and target page groupings, groups images by page, assembles sitemap entries with a current ISO lastmod timestamp, and writes the resulting XML to public/sitemap.xml.
+ */
 function generateSiteMap() {
   const currentDate = new Date().toISOString();
   const allImages = walkPublicDir(PUBLIC_DIR)
