@@ -54,9 +54,14 @@ function generateSiteMap() {
     .filter((filePath) => SUPPORTED_IMAGE_EXTENSIONS.has(path.extname(filePath).toLowerCase()))
     .map((filePath) => {
       const relativePath = `/${path.relative(PUBLIC_DIR, filePath).replace(/\\/g, "/")}`;
+      const encodedPath = relativePath
+        .split("/")
+        .map((segment) => encodeURIComponent(segment))
+        .join("/")
+        .replace(/%2F/g, "/");
       const label = formatImageLabel(relativePath);
       return {
-        url: `${SITE_URL}${relativePath}`,
+        url: `${SITE_URL}${encodedPath}`,
         title: label,
         caption: `${label} image from Gauresh G Pai's portfolio`,
         pagePath: getPagePathFromPublicPath(relativePath),

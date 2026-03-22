@@ -70,12 +70,14 @@ export default function ExperienceShowcaseListItem(
             href={props.organisation.href}
             className="cursor-pointer text-accent underline"
             target="_blank"
-            rel="nofollow"
+            rel="nofollow noopener noreferrer"
           >
             @{props.organisation.name}
           </Link>
         ) : (
-          <a className="text-accent underline">@{props.organisation.name}</a>
+          <span className="text-accent underline">
+            @{props.organisation.name}
+          </span>
         )}
       </h3>
       <span className="text-sm font-medium text-foreground xs:text-base">

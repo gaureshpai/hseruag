@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SiGithub, SiLeetcode, SiLinkedin, SiNpm, SiX } from "react-icons/si";
 import ButtonContainer from "@/components/ButtonContainer";
 import {
+  EMAIL,
   GITHUB_URL,
   LEETCODE_URL,
   LINKEDIN_URL,
@@ -26,12 +27,12 @@ export default function Footer() {
           </span>
         </div>
         <Link
-          href={`mailto:paigauresh@gmail.com`}
+          href={`mailto:${EMAIL}`}
           target="_blank"
           rel="noopener noreferrer"
           className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
         >
-          <span>paigauresh@gmail.com</span>
+          <span>{EMAIL}</span>
         </Link>
       </div>
       <ButtonContainer />

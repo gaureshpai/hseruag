@@ -156,6 +156,12 @@ export interface PersonSchema {
   knowsAbout?: string[];
 }
 
+/**
+ * Generate a JSON-LD Person schema for the provided personal metadata.
+ *
+ * @param data - Person metadata containing `name`, `url`, `jobTitle`, `description`, etc.
+ * @returns A JSON-LD object representing a schema.org `Person`
+ */
 export function generatePersonSchema(data: PersonSchema) {
   return {
     "@context": "https://schema.org",
@@ -213,6 +219,12 @@ export interface BreadcrumbItem {
   url: string;
 }
 
+/**
+ * Generate a JSON-LD BreadcrumbList schema for the provided breadcrumb items.
+ *
+ * @param items - A list of breadcrumb items, each with a `name` and `url`
+ * @returns A JSON-LD object representing a schema.org `BreadcrumbList`
+ */
 export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     "@context": "https://schema.org",
@@ -236,6 +248,12 @@ export interface ProjectSchema {
   keywords?: string[];
 }
 
+/**
+ * Generate a JSON-LD CreativeWork schema for a project.
+ *
+ * @param data - Project metadata containing `name`, `description`, `url`, `image`, `author`, etc.
+ * @returns A JSON-LD object representing a schema.org `CreativeWork` (Project)
+ */
 export function generateProjectSchema(data: ProjectSchema) {
   return {
     "@context": "https://schema.org",
