@@ -55,7 +55,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
-            aria-label="link to Twitter profile"
+            aria-label="link to X profile"
           >
             <SiX className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
