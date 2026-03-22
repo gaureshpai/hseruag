@@ -1,14 +1,19 @@
 import Link from "next/link";
 import { SiGithub, SiLeetcode, SiLinkedin, SiNpm, SiX } from "react-icons/si";
 import ButtonContainer from "@/components/ButtonContainer";
-import ContactButton from "@/components/contact-form/contact-button";
+import EmailCTA from "@/components/utility/email-cta";
+import {
+  GITHUB_URL,
+  LEETCODE_URL,
+  LINKEDIN_URL,
+  NPM_URL,
+  X_URL,
+} from "@/constants/site";
 
 /**
- * Renders the site's footer with a contact section, call-to-action buttons, and social/profile links.
+ * Renders the site footer with a contact call-to-action, action buttons, current-year attribution, and social/profile links.
  *
- * Includes a prominent email mailto link, a contact button, a ButtonContainer, the current year with author attribution, and accessible external social links.
- *
- * @returns The footer JSX element containing contact information, action buttons, and social icons.
+ * @returns The footer JSX element containing a contact email link, call-to-action buttons, copyright attribution, and external social icons.
  */
 export default function Footer() {
   return (
@@ -19,26 +24,16 @@ export default function Footer() {
             Get in touch
           </span>
         </div>
-        <Link
-          href={`mailto:paigauresh@gmail.com`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
-        >
-          <span>paigauresh@gmail.com</span>
-        </Link>
-        <div className="flex justify-center">
-          <ContactButton />
-        </div>
+        <EmailCTA />
       </div>
       <ButtonContainer />
       <div className="flex w-full flex-col items-center justify-between gap-8 text-center md:flex-row md:justify-between lg:mx-auto lg:max-w-7xl">
         <span className="text-foreground">
-          © 2022 - {new Date().getFullYear()} Gauresh G Pai
+          © 2022-{new Date().getFullYear()} Gauresh G Pai
         </span>
         <div className="flex gap-8">
           <Link
-            href="https://github.com/gaureshpai"
+            href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
@@ -47,7 +42,7 @@ export default function Footer() {
             <SiGithub className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
-            href="https://linkedin.com/in/gaureshpai"
+            href={LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
@@ -56,16 +51,16 @@ export default function Footer() {
             <SiLinkedin className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
-            href="https://x.com/hseruag"
+            href={X_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
-            aria-label="link to Twitter profile"
+            aria-label="link to X profile"
           >
             <SiX className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
-            href="https://leetcode.com/u/gaureshpai"
+            href={LEETCODE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
@@ -74,7 +69,7 @@ export default function Footer() {
             <SiLeetcode className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
-            href="https://www.npmjs.com/~gaureshpai"
+            href={NPM_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"

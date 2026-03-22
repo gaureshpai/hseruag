@@ -5,6 +5,12 @@ export type CursorTrail = {
   color?: string;
 };
 
+/**
+ * Initializes and manages a cursor trail animation on a canvas.
+ *
+ * @param props - Configuration for the cursor trail, including the canvas ref and optional color
+ * @returns An object with methods to clean up event listeners and control the animation (start, stop, render)
+ */
 export function cursorTrail(props: CursorTrail) {
   const colorRaw = getComputedStyle(document.documentElement).getPropertyValue(
     "--accent",

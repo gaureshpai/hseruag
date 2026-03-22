@@ -45,7 +45,7 @@ export interface ExperienceShowcaseListItemProps {
   title: string;
   organisation: {
     name: string;
-    href: string;
+    href?: string;
   };
   date: string;
   location: string;
@@ -53,6 +53,14 @@ export interface ExperienceShowcaseListItemProps {
   description?: string;
 }
 
+/**
+ * Render a timeline-style list item for an experience entry with a scroll-driven animated icon.
+ *
+ * The component attaches a DOM ref to the root `<li>` and passes it to the animated icon so the icon's stroke animates based on the element's scroll progress. When `organisation.href` is provided the organisation is rendered as an external link opened in a new tab with `rel="nofollow noopener noreferrer"`; otherwise the organisation name is rendered as underlined text. If `description` is present it is split on newlines and each line is rendered as a prefixed bullet on its own line.
+ *
+ * @param props - Data for the list item.
+ * @returns The rendered `<li>` element for the timeline entry.
+ */
 export default function ExperienceShowcaseListItem(
   props: ExperienceShowcaseListItemProps,
 ) {
@@ -65,14 +73,20 @@ export default function ExperienceShowcaseListItem(
       <ShowCaseLiIcon iconRef={ref} />
       <h3 className="text-base font-bold text-foreground sm:text-xl md:text-2xl">
         {props.title}{" "}
-        <Link
-          href={props.organisation.href}
-          className="cursor-pointer text-accent underline"
-          target="_blank"
-          rel="nofollow"
-        >
-          @{props.organisation.name}
-        </Link>
+        {props.organisation.href ? (
+          <Link
+            href={props.organisation.href}
+            className="cursor-pointer text-accent underline"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
+            @{props.organisation.name}
+          </Link>
+        ) : (
+          <span className="text-accent underline">
+            @{props.organisation.name}
+          </span>
+        )}
       </h3>
       <span className="text-sm font-medium text-foreground xs:text-base">
         {props.date} | {props.location} {props.marks && `| ${props.marks}`}

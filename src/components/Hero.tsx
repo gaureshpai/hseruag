@@ -43,7 +43,7 @@ export default function Hero() {
             </div>
             <div className="mt-6 flex cursor-pointer items-center gap-4">
               <Link
-                href="/Gauresh_G_Pai_SWE.pdf"
+                href="/Gauresh_G_Pai.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 download={true}

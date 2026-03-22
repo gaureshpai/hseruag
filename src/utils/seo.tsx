@@ -1,5 +1,5 @@
 import type { NextSeoProps } from "next-seo";
-import { SITE_URL } from "@/constants/site";
+import { GITHUB_URL, LINKEDIN_URL, SITE_URL, X_URL } from "@/constants/site";
 
 const SITE_NAME = "Gauresh G Pai";
 const TWITTER_HANDLE = "@hseruag";
@@ -156,6 +156,15 @@ export interface PersonSchema {
   knowsAbout?: string[];
 }
 
+/**
+ * Generate a schema.org JSON-LD Person object.
+ *
+ * @param data - Fields to populate the Person schema. Optional fields:
+ *   - `image` defaults to `${SITE_URL}/logo.png`
+ *   - `sameAs` defaults to `[GITHUB_URL, LINKEDIN_URL, X_URL]`
+ *   - `knowsAbout` defaults to a curated list of common web/JavaScript topics
+ * @returns An object representing the JSON-LD `Person` with `@context`, `@type`, and the provided or defaulted properties
+ */
 export function generatePersonSchema(data: PersonSchema) {
   return {
     "@context": "https://schema.org",
@@ -165,11 +174,7 @@ export function generatePersonSchema(data: PersonSchema) {
     jobTitle: data.jobTitle,
     description: data.description,
     image: data.image || `${SITE_URL}/logo.png`,
-    sameAs: data.sameAs || [
-      "https://github.com/GaureshPai",
-      "https://linkedin.com/in/gaureshgpai",
-      "https://twitter.com/hseruag",
-    ],
+    sameAs: data.sameAs || [GITHUB_URL, LINKEDIN_URL, X_URL],
     knowsAbout: data.knowsAbout || [
       "JavaScript",
       "TypeScript",
@@ -217,6 +222,12 @@ export interface BreadcrumbItem {
   url: string;
 }
 
+/**
+ * Generate a JSON-LD BreadcrumbList schema for the provided breadcrumb items.
+ *
+ * @param items - A list of breadcrumb items, each with a `name` and `url`
+ * @returns A JSON-LD object representing a schema.org `BreadcrumbList`
+ */
 export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     "@context": "https://schema.org",
@@ -240,6 +251,16 @@ export interface ProjectSchema {
   keywords?: string[];
 }
 
+/**
+ * Create a JSON-LD CreativeWork schema for a project.
+ *
+ * The returned object follows schema.org's `CreativeWork` shape and includes a nested
+ * `Person` for the author and `inLanguage: "en-US"`. If `data.url` is not provided,
+ * `@id` defaults to `${SITE_URL}/projects`.
+ *
+ * @param data - Project metadata: `name`, `description`, `url`, `image`, `author`, and optional `dateCreated` and `keywords`
+ * @returns A JSON-LD object representing a schema.org `CreativeWork` for the provided project
+ */
 export function generateProjectSchema(data: ProjectSchema) {
   return {
     "@context": "https://schema.org",
