@@ -1,7 +1,9 @@
+import { GITHUB_URL } from "@/constants/site";
+
 export interface Project {
   title: string;
   description: string;
-  liveUrl: string | null;
+  liveUrl?: string | null;
   githubUrl?: string | null;
   role: string;
   tags: string[];
@@ -17,7 +19,7 @@ export const PROJECT_SHOWCASE: Project[] = [
     description:
       "A CLI tool to quickly set up a Next.js project with Tailwind CSS and TypeScript.",
     liveUrl: "https://gaureshpai.github.io/create-next-quick",
-    githubUrl: "https://github.com/gaureshpai/create-next-quick",
+    githubUrl: `${GITHUB_URL}/create-next-quick`,
     role: "Developer",
     tags: ["Node.js", "Next.js", "Tailwind CSS", "TypeScript", "npm", "CLI"],
     collaborators: [],
@@ -27,7 +29,7 @@ export const PROJECT_SHOWCASE: Project[] = [
     title: "reclaimspace",
     description:
       "A CLI tool to reclaim disk space by finding and removing unnecessary development folders and files.",
-    githubUrl: "https://github.com/gaureshpai/reclaimspace",
+    githubUrl: `${GITHUB_URL}/reclaimspace`,
     liveUrl: "https://gaureshpai.github.io/reclaimspace",
     tags: [
       "cli",
@@ -47,7 +49,7 @@ export const PROJECT_SHOWCASE: Project[] = [
     title: "Utility Hub",
     description: "A collection of useful web utilities built with MERN stack.",
     liveUrl: "https://dkutils.vercel.app",
-    githubUrl: "https://github.com/gaureshpai/UtilityHub",
+    githubUrl: `${GITHUB_URL}/UtilityHub`,
     role: "Full Stack Developer",
     tags: [
       "MERN",
@@ -67,7 +69,7 @@ export const PROJECT_SHOWCASE: Project[] = [
     title: "SignFlix",
     description:
       "An accessible video streaming platform with integrated sign language interpretation for the deaf and hard-of-hearing community.",
-    liveUrl: "https://signflix.vercel.app/",
+    // liveUrl: "https://signflix.vercel.app/",
     role: "Full Stack Developer",
     tags: [
       "nextjs",
@@ -87,7 +89,7 @@ export const PROJECT_SHOWCASE: Project[] = [
     description:
       "A prototype for a Construction Project Resource Management system.",
     liveUrl: "https://cprm-prototype.vercel.app/",
-    githubUrl: "https://github.com/gaureshpai/CPRM-Prototype",
+    githubUrl: `${GITHUB_URL}/CPRM-Prototype`,
     role: "Full Stack Developer",
     tags: [
       "Nextjs",
@@ -106,7 +108,7 @@ export const PROJECT_SHOWCASE: Project[] = [
       "Promotional site for Aakar 2025 Techno-Cultural Fest. Integrated event listings, dynamic schedules, and registration forms with creative branding.",
     role: "Frontend Developer",
     liveUrl: "https://aakar2025.in/",
-    githubUrl: "https://github.com/gaureshpai/aakar2025",
+    githubUrl: `${GITHUB_URL}/aakar2025`,
     tags: [
       "Event",
       "College",

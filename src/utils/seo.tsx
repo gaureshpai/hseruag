@@ -1,5 +1,5 @@
 import type { NextSeoProps } from "next-seo";
-import { SITE_URL } from "@/constants/site";
+import { GITHUB_URL, LINKEDIN_URL, SITE_URL, X_URL } from "@/constants/site";
 
 const SITE_NAME = "Gauresh G Pai";
 const TWITTER_HANDLE = "@hseruag";
@@ -165,11 +165,7 @@ export function generatePersonSchema(data: PersonSchema) {
     jobTitle: data.jobTitle,
     description: data.description,
     image: data.image || `${SITE_URL}/logo.png`,
-    sameAs: data.sameAs || [
-      "https://github.com/GaureshPai",
-      "https://linkedin.com/in/gaureshgpai",
-      "https://twitter.com/hseruag",
-    ],
+    sameAs: data.sameAs || [GITHUB_URL, LINKEDIN_URL, X_URL],
     knowsAbout: data.knowsAbout || [
       "JavaScript",
       "TypeScript",

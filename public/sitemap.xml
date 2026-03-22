@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <url>
+    <loc>https://gauresh.is-a.dev/</loc>
+    <lastmod>2026-03-22T13:12:56.981Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+    
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/android-chrome-192x192.png</image:loc>
+      <image:title>android chrome 192x192</image:title>
+      <image:caption>android chrome 192x192 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/android-chrome-512x512.png</image:loc>
+      <image:title>android chrome 512x512</image:title>
+      <image:caption>android chrome 512x512 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/apple-touch-icon.png</image:loc>
+      <image:title>apple touch icon</image:title>
+      <image:caption>apple touch icon image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/favicon-16x16.png</image:loc>
+      <image:title>favicon 16x16</image:title>
+      <image:caption>favicon 16x16 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/favicon-32x32.png</image:loc>
+      <image:title>favicon 32x32</image:title>
+      <image:caption>favicon 32x32 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/images/logo.png</image:loc>
+      <image:title>logo</image:title>
+      <image:caption>logo image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/logo.png</image:loc>
+      <image:title>logo</image:title>
+      <image:caption>logo image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gauresh.is-a.dev/about/</loc>
+    <lastmod>2026-03-22T13:12:56.981Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    
+  </url>
+  <url>
+    <loc>https://gauresh.is-a.dev/projects/</loc>
+    <lastmod>2026-03-22T13:12:56.981Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/car.png</image:loc>
+      <image:title>car</image:title>
+      <image:caption>car image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/cms.png</image:loc>
+      <image:title>cms</image:title>
+      <image:caption>cms image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/cprm.png</image:loc>
+      <image:title>cprm</image:title>
+      <image:caption>cprm image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/create-next-quick.png</image:loc>
+      <image:title>create next quick</image:title>
+      <image:caption>create next quick image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/demo.png</image:loc>
+      <image:title>demo</image:title>
+      <image:caption>demo image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/devhack.png</image:loc>
+      <image:title>devhack</image:title>
+      <image:caption>devhack image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/dkutils.png</image:loc>
+      <image:title>dkutils</image:title>
+      <image:caption>dkutils image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/docuwave.png</image:loc>
+      <image:title>docuwave</image:title>
+      <image:caption>docuwave image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/easpataal.png</image:loc>
+      <image:title>easpataal</image:title>
+      <image:caption>easpataal image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/epic.png</image:loc>
+      <image:title>epic</image:title>
+      <image:caption>epic image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/gginterpretations.png</image:loc>
+      <image:title>gginterpretations</image:title>
+      <image:caption>gginterpretations image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/ggquizopia.png</image:loc>
+      <image:title>ggquizopia</image:title>
+      <image:caption>ggquizopia image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/ggreplicator.png</image:loc>
+      <image:title>ggreplicator</image:title>
+      <image:caption>ggreplicator image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/gmaps.png</image:loc>
+      <image:title>gmaps</image:title>
+      <image:caption>gmaps image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/hallgrid.png</image:loc>
+      <image:title>hallgrid</image:title>
+      <image:caption>hallgrid image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/hearease.png</image:loc>
+      <image:title>hearease</image:title>
+      <image:caption>hearease image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/html.png</image:loc>
+      <image:title>html</image:title>
+      <image:caption>html image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/ideaspark.png</image:loc>
+      <image:title>ideaspark</image:title>
+      <image:caption>ideaspark image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/learnio.png</image:loc>
+      <image:title>learnio</image:title>
+      <image:caption>learnio image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/login.png</image:loc>
+      <image:title>login</image:title>
+      <image:caption>login image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/mla.png</image:loc>
+      <image:title>mla</image:title>
+      <image:caption>mla image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/movieland.png</image:loc>
+      <image:title>movieland</image:title>
+      <image:caption>movieland image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/old_portfolio.png</image:loc>
+      <image:title>old portfolio</image:title>
+      <image:caption>old portfolio image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/pulseui.png</image:loc>
+      <image:title>pulseui</image:title>
+      <image:caption>pulseui image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/quiz.png</image:loc>
+      <image:title>quiz</image:title>
+      <image:caption>quiz image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/reactnativeepictrailsds.png</image:loc>
+      <image:title>reactnativeepictrailsds</image:title>
+      <image:caption>reactnativeepictrailsds image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/reclaimspace.png</image:loc>
+      <image:title>reclaimspace</image:title>
+      <image:caption>reclaimspace image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/projects/signflix.jpg</image:loc>
+      <image:title>signflix</image:title>
+      <image:caption>signflix image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gauresh.is-a.dev/works/</loc>
+    <lastmod>2026-03-22T13:12:56.981Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/a3.png</image:loc>
+      <image:title>a3</image:title>
+      <image:caption>a3 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/aakar.png</image:loc>
+      <image:title>aakar</image:title>
+      <image:caption>aakar image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/damaru.png</image:loc>
+      <image:title>damaru</image:title>
+      <image:caption>damaru image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/emp.png</image:loc>
+      <image:title>emp</image:title>
+      <image:caption>emp image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/exactitudemedfoundation.png</image:loc>
+      <image:title>exactitudemedfoundation</image:title>
+      <image:caption>exactitudemedfoundation image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/examsmitra.png</image:loc>
+      <image:title>examsmitra</image:title>
+      <image:caption>examsmitra image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/gajalakshmicranes.png</image:loc>
+      <image:title>gajalakshmicranes</image:title>
+      <image:caption>gajalakshmicranes image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/kreekarvat.png</image:loc>
+      <image:title>kreekarvat</image:title>
+      <image:caption>kreekarvat image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/mangaloretaxi.png</image:loc>
+      <image:title>mangaloretaxi</image:title>
+      <image:caption>mangaloretaxi image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/placeholder.svg</image:loc>
+      <image:title>placeholder</image:title>
+      <image:caption>placeholder image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/rkbaligalegecy.png</image:loc>
+      <image:title>rkbaligalegecy</image:title>
+      <image:caption>rkbaligalegecy image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/svstems.png</image:loc>
+      <image:title>svstems</image:title>
+      <image:caption>svstems image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/svstpu.png</image:loc>
+      <image:title>svstpu</image:title>
+      <image:caption>svstpu image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/ullas.png</image:loc>
+      <image:title>ullas</image:title>
+      <image:caption>ullas image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/works/venjix.jpg</image:loc>
+      <image:title>venjix</image:title>
+      <image:caption>venjix image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gauresh.is-a.dev/certificates/</loc>
+    <lastmod>2026-03-22T13:12:56.981Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 1.jpg</image:loc>
+      <image:title>Certificate 1</image:title>
+      <image:caption>Certificate 1 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 10.jpg</image:loc>
+      <image:title>Certificate 10</image:title>
+      <image:caption>Certificate 10 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 11.jpg</image:loc>
+      <image:title>Certificate 11</image:title>
+      <image:caption>Certificate 11 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 12.png</image:loc>
+      <image:title>Certificate 12</image:title>
+      <image:caption>Certificate 12 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 13.jpg</image:loc>
+      <image:title>Certificate 13</image:title>
+      <image:caption>Certificate 13 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 14.png</image:loc>
+      <image:title>Certificate 14</image:title>
+      <image:caption>Certificate 14 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 15.png</image:loc>
+      <image:title>Certificate 15</image:title>
+      <image:caption>Certificate 15 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 16.png</image:loc>
+      <image:title>Certificate 16</image:title>
+      <image:caption>Certificate 16 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 17.png</image:loc>
+      <image:title>Certificate 17</image:title>
+      <image:caption>Certificate 17 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 18.jpg</image:loc>
+      <image:title>Certificate 18</image:title>
+      <image:caption>Certificate 18 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 19.png</image:loc>
+      <image:title>Certificate 19</image:title>
+      <image:caption>Certificate 19 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 2.jpg</image:loc>
+      <image:title>Certificate 2</image:title>
+      <image:caption>Certificate 2 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 20.jpg</image:loc>
+      <image:title>Certificate 20</image:title>
+      <image:caption>Certificate 20 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 21.jpg</image:loc>
+      <image:title>Certificate 21</image:title>
+      <image:caption>Certificate 21 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 22.jpg</image:loc>
+      <image:title>Certificate 22</image:title>
+      <image:caption>Certificate 22 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 23.png</image:loc>
+      <image:title>Certificate 23</image:title>
+      <image:caption>Certificate 23 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 24.png</image:loc>
+      <image:title>Certificate 24</image:title>
+      <image:caption>Certificate 24 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 25.png</image:loc>
+      <image:title>Certificate 25</image:title>
+      <image:caption>Certificate 25 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 26.png</image:loc>
+      <image:title>Certificate 26</image:title>
+      <image:caption>Certificate 26 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 27.jpg</image:loc>
+      <image:title>Certificate 27</image:title>
+      <image:caption>Certificate 27 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 28.jpg</image:loc>
+      <image:title>Certificate 28</image:title>
+      <image:caption>Certificate 28 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 29.jpg</image:loc>
+      <image:title>Certificate 29</image:title>
+      <image:caption>Certificate 29 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 3.jpg</image:loc>
+      <image:title>Certificate 3</image:title>
+      <image:caption>Certificate 3 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 30.jpg</image:loc>
+      <image:title>Certificate 30</image:title>
+      <image:caption>Certificate 30 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 31.jpg</image:loc>
+      <image:title>Certificate 31</image:title>
+      <image:caption>Certificate 31 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 32.png</image:loc>
+      <image:title>Certificate 32</image:title>
+      <image:caption>Certificate 32 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 33.png</image:loc>
+      <image:title>Certificate 33</image:title>
+      <image:caption>Certificate 33 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 34.jpg</image:loc>
+      <image:title>Certificate 34</image:title>
+      <image:caption>Certificate 34 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 35.png</image:loc>
+      <image:title>Certificate 35</image:title>
+      <image:caption>Certificate 35 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 4.png</image:loc>
+      <image:title>Certificate 4</image:title>
+      <image:caption>Certificate 4 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 5.png</image:loc>
+      <image:title>Certificate 5</image:title>
+      <image:caption>Certificate 5 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 6.webp</image:loc>
+      <image:title>Certificate 6</image:title>
+      <image:caption>Certificate 6 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 7.png</image:loc>
+      <image:title>Certificate 7</image:title>
+      <image:caption>Certificate 7 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 8.png</image:loc>
+      <image:title>Certificate 8</image:title>
+      <image:caption>Certificate 8 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate 9.png</image:loc>
+      <image:title>Certificate 9</image:title>
+      <image:caption>Certificate 9 image from Gauresh G Pai&apos;s portfolio</image:caption>
+    </image:image>
+  </url>
+</urlset>

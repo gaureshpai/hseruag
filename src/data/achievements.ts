@@ -1,11 +1,12 @@
 import type { ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
+import { NPM_URL } from "@/constants/site";
 
 export const ACHIEVEMENTS: ExperienceShowcaseListItemProps[] = [
   {
     title: "Hackathon Excellence",
     organisation: {
       name: "Cardano & Microsoft",
-      href: "https://www.linkedin.com/in/gaureshpai/",
+      // href: "https://www.linkedin.com/in/gaureshpai/",
     },
     date: "2025",
     location: "International",
@@ -16,7 +17,7 @@ export const ACHIEVEMENTS: ExperienceShowcaseListItemProps[] = [
     title: "Leadership Roles",
     organisation: {
       name: "UiPath & Kreekarvat",
-      href: "https://www.linkedin.com/in/gaureshpai/",
+      // href: "https://www.linkedin.com/in/gaureshpai/",
     },
     date: "2025 - 2026",
     location: "Hybrid",
@@ -27,11 +28,22 @@ export const ACHIEVEMENTS: ExperienceShowcaseListItemProps[] = [
     title: "Competitions & Community",
     organisation: {
       name: "Yukti & GDSC",
-      href: "https://www.linkedin.com/in/gaureshpai/",
+      // href: "https://www.linkedin.com/in/gaureshpai/",
     },
     date: "2025",
     location: "AJIET",
     description:
       "Winner of Code Debugging (2025) at Yukti 2025.\nCore team member of DevNation, GDSC AJIET and DK24 - A tech community connecting college communities.",
+  },
+  {
+    title: "Open Source Contributions",
+    organisation: {
+      name: "GitHub & NPM",
+      href: `${NPM_URL}`,
+    },
+    date: `2024 - ${new Date().getFullYear()}`,
+    location: "AJIET",
+    description:
+      "reclaimspace: A CLI tool to reclaim disk space by finding and removing regeneratable development folders.\nCreate-next-quick: A CLI tool to quickly create Next.js projects with various templates and configurations.\nUCP: Contributed to the documentation for the Universal Commerce Protocol (UCP) - #99.",
   },
 ];

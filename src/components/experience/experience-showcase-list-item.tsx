@@ -45,7 +45,7 @@ export interface ExperienceShowcaseListItemProps {
   title: string;
   organisation: {
     name: string;
-    href: string;
+    href?: string;
   };
   date: string;
   location: string;
@@ -65,14 +65,18 @@ export default function ExperienceShowcaseListItem(
       <ShowCaseLiIcon iconRef={ref} />
       <h3 className="text-base font-bold text-foreground sm:text-xl md:text-2xl">
         {props.title}{" "}
-        <Link
-          href={props.organisation.href}
-          className="cursor-pointer text-accent underline"
-          target="_blank"
-          rel="nofollow"
-        >
-          @{props.organisation.name}
-        </Link>
+        {props.organisation.href ? (
+          <Link
+            href={props.organisation.href}
+            className="cursor-pointer text-accent underline"
+            target="_blank"
+            rel="nofollow"
+          >
+            @{props.organisation.name}
+          </Link>
+        ) : (
+          <a className="text-accent underline">@{props.organisation.name}</a>
+        )}
       </h3>
       <span className="text-sm font-medium text-foreground xs:text-base">
         {props.date} | {props.location} {props.marks && `| ${props.marks}`}

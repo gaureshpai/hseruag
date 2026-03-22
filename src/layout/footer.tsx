@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { SiGithub, SiLeetcode, SiLinkedin, SiNpm, SiX } from "react-icons/si";
 import ButtonContainer from "@/components/ButtonContainer";
-import ContactButton from "@/components/contact-form/contact-button";
+import {
+  GITHUB_URL,
+  LEETCODE_URL,
+  LINKEDIN_URL,
+  NPM_URL,
+  X_URL,
+} from "@/constants/site";
 
 /**
  * Renders the site's footer with a contact section, call-to-action buttons, and social/profile links.
@@ -27,9 +33,6 @@ export default function Footer() {
         >
           <span>paigauresh@gmail.com</span>
         </Link>
-        <div className="flex justify-center">
-          <ContactButton />
-        </div>
       </div>
       <ButtonContainer />
       <div className="flex w-full flex-col items-center justify-between gap-8 text-center md:flex-row md:justify-between lg:mx-auto lg:max-w-7xl">
@@ -38,7 +41,7 @@ export default function Footer() {
         </span>
         <div className="flex gap-8">
           <Link
-            href="https://github.com/gaureshpai"
+            href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
@@ -47,7 +50,7 @@ export default function Footer() {
             <SiGithub className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
-            href="https://linkedin.com/in/gaureshpai"
+            href={LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
@@ -56,7 +59,7 @@ export default function Footer() {
             <SiLinkedin className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
-            href="https://x.com/hseruag"
+            href={X_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
@@ -65,7 +68,7 @@ export default function Footer() {
             <SiX className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
-            href="https://leetcode.com/u/gaureshpai"
+            href={LEETCODE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
@@ -74,7 +77,7 @@ export default function Footer() {
             <SiLeetcode className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
           <Link
-            href="https://www.npmjs.com/~gaureshpai"
+            href={NPM_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="h-6 w-6"
