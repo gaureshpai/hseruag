@@ -56,12 +56,10 @@ export interface ExperienceShowcaseListItemProps {
 /**
  * Render a timeline-style list item for an experience entry with a scroll-driven animated icon.
  *
+ * The component attaches a DOM ref to the root `<li>` and passes it to the animated icon so the icon's stroke animates based on the element's scroll progress. When `organisation.href` is provided the organisation is rendered as an external link opened in a new tab with `rel="nofollow noopener noreferrer"`; otherwise the organisation name is rendered as underlined text. If `description` is present it is split on newlines and each line is rendered as a prefixed bullet on its own line.
+ *
  * @param props - Data for the list item.
- *   - `organisation.href`, when provided, is rendered as an external link opening in a new tab with `rel="nofollow"`;
- *     otherwise the organisation name is rendered as plain underlined text.
- *   - `description`, if present, is split on newlines and each line is rendered as a prefixed bullet (`-`) on its own line.
- *   - A DOM ref is attached to the root `<li>` and passed to the animated icon so the icon's stroke animates with the element's scroll progress.
- * @returns The rendered `<li>` element containing the animated icon, title with organisation handle, date/location/marks metadata, and optional multiline description.
+ * @returns The rendered `<li>` element for the timeline entry.
  */
 export default function ExperienceShowcaseListItem(
   props: ExperienceShowcaseListItemProps,

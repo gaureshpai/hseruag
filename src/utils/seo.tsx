@@ -157,13 +157,13 @@ export interface PersonSchema {
 }
 
 /**
- * Create a JSON-LD Person object compliant with schema.org.
+ * Generate a schema.org JSON-LD Person object.
  *
- * @param data - Input fields for the Person schema. Optional fields and their defaults:
- *   - `image`: defaults to `${SITE_URL}/logo.png` if not provided.
- *   - `sameAs`: defaults to `[GITHUB_URL, LINKEDIN_URL, X_URL]` if not provided.
- *   - `knowsAbout`: defaults to a curated list of common web/JS topics if not provided.
- * @returns A plain object containing the JSON-LD Person schema with `@context`, `@type`, and populated fields.
+ * @param data - Fields to populate the Person schema. Optional fields:
+ *   - `image` defaults to `${SITE_URL}/logo.png`
+ *   - `sameAs` defaults to `[GITHUB_URL, LINKEDIN_URL, X_URL]`
+ *   - `knowsAbout` defaults to a curated list of common web/JavaScript topics
+ * @returns An object representing the JSON-LD `Person` with `@context`, `@type`, and the provided or defaulted properties
  */
 export function generatePersonSchema(data: PersonSchema) {
   return {
@@ -252,10 +252,14 @@ export interface ProjectSchema {
 }
 
 /**
- * Generate a JSON-LD CreativeWork schema for a project.
+ * Create a JSON-LD CreativeWork schema for a project.
  *
- * @param data - Project metadata containing `name`, `description`, `url`, `image`, `author`, etc.
- * @returns A JSON-LD object representing a schema.org `CreativeWork` (Project)
+ * The returned object follows schema.org's `CreativeWork` shape and includes a nested
+ * `Person` for the author and `inLanguage: "en-US"`. If `data.url` is not provided,
+ * `@id` defaults to `${SITE_URL}/projects`.
+ *
+ * @param data - Project metadata: `name`, `description`, `url`, `image`, `author`, and optional `dateCreated` and `keywords`
+ * @returns A JSON-LD object representing a schema.org `CreativeWork` for the provided project
  */
 export function generateProjectSchema(data: ProjectSchema) {
   return {

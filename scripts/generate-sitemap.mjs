@@ -56,9 +56,9 @@ function walkPublicDir(dir) {
 }
 
 /**
- * Escape characters that are significant in XML by replacing them with their corresponding entities.
- * @param {string} value - The string to escape for inclusion in XML.
- * @returns {string} The input with `&`, `<`, `>`, `"` and `'` replaced by `&amp;`, `&lt;`, `&gt;`, `&quot;`, and `&apos;` respectively.
+ * Escape characters significant in XML by replacing them with their corresponding entities.
+ * @param {string} value - The string to escape for safe inclusion in XML.
+ * @returns {string} The input string with `&`, `<`, `>`, `"` and `'` replaced by `&amp;`, `&lt;`, `&gt;`, `&quot;`, and `&apos;` respectively.
  */
 function escapeXml(value) {
   return value
