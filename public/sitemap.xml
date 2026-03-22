@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://gauresh.is-a.dev/</loc>
-    <lastmod>2026-03-22T13:12:56.981Z</lastmod>
+    <lastmod>2026-03-22T13:45:45.974Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
     
@@ -46,14 +46,14 @@
   </url>
   <url>
     <loc>https://gauresh.is-a.dev/about/</loc>
-    <lastmod>2026-03-22T13:12:56.981Z</lastmod>
+    <lastmod>2026-03-22T13:45:45.974Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     
   </url>
   <url>
     <loc>https://gauresh.is-a.dev/projects/</loc>
-    <lastmod>2026-03-22T13:12:56.981Z</lastmod>
+    <lastmod>2026-03-22T13:45:45.974Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     
@@ -200,7 +200,7 @@
   </url>
   <url>
     <loc>https://gauresh.is-a.dev/works/</loc>
-    <lastmod>2026-03-22T13:12:56.981Z</lastmod>
+    <lastmod>2026-03-22T13:45:45.974Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     
@@ -282,182 +282,182 @@
   </url>
   <url>
     <loc>https://gauresh.is-a.dev/certificates/</loc>
-    <lastmod>2026-03-22T13:12:56.981Z</lastmod>
+    <lastmod>2026-03-22T13:45:45.974Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 1.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%201.jpg</image:loc>
       <image:title>Certificate 1</image:title>
       <image:caption>Certificate 1 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 10.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2010.jpg</image:loc>
       <image:title>Certificate 10</image:title>
       <image:caption>Certificate 10 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 11.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2011.jpg</image:loc>
       <image:title>Certificate 11</image:title>
       <image:caption>Certificate 11 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 12.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2012.png</image:loc>
       <image:title>Certificate 12</image:title>
       <image:caption>Certificate 12 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 13.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2013.jpg</image:loc>
       <image:title>Certificate 13</image:title>
       <image:caption>Certificate 13 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 14.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2014.png</image:loc>
       <image:title>Certificate 14</image:title>
       <image:caption>Certificate 14 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 15.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2015.png</image:loc>
       <image:title>Certificate 15</image:title>
       <image:caption>Certificate 15 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 16.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2016.png</image:loc>
       <image:title>Certificate 16</image:title>
       <image:caption>Certificate 16 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 17.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2017.png</image:loc>
       <image:title>Certificate 17</image:title>
       <image:caption>Certificate 17 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 18.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2018.jpg</image:loc>
       <image:title>Certificate 18</image:title>
       <image:caption>Certificate 18 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 19.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2019.png</image:loc>
       <image:title>Certificate 19</image:title>
       <image:caption>Certificate 19 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 2.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%202.jpg</image:loc>
       <image:title>Certificate 2</image:title>
       <image:caption>Certificate 2 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 20.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2020.jpg</image:loc>
       <image:title>Certificate 20</image:title>
       <image:caption>Certificate 20 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 21.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2021.jpg</image:loc>
       <image:title>Certificate 21</image:title>
       <image:caption>Certificate 21 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 22.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2022.jpg</image:loc>
       <image:title>Certificate 22</image:title>
       <image:caption>Certificate 22 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 23.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2023.png</image:loc>
       <image:title>Certificate 23</image:title>
       <image:caption>Certificate 23 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 24.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2024.png</image:loc>
       <image:title>Certificate 24</image:title>
       <image:caption>Certificate 24 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 25.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2025.png</image:loc>
       <image:title>Certificate 25</image:title>
       <image:caption>Certificate 25 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 26.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2026.png</image:loc>
       <image:title>Certificate 26</image:title>
       <image:caption>Certificate 26 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 27.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2027.jpg</image:loc>
       <image:title>Certificate 27</image:title>
       <image:caption>Certificate 27 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 28.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2028.jpg</image:loc>
       <image:title>Certificate 28</image:title>
       <image:caption>Certificate 28 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 29.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2029.jpg</image:loc>
       <image:title>Certificate 29</image:title>
       <image:caption>Certificate 29 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 3.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%203.jpg</image:loc>
       <image:title>Certificate 3</image:title>
       <image:caption>Certificate 3 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 30.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2030.jpg</image:loc>
       <image:title>Certificate 30</image:title>
       <image:caption>Certificate 30 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 31.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2031.jpg</image:loc>
       <image:title>Certificate 31</image:title>
       <image:caption>Certificate 31 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 32.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2032.png</image:loc>
       <image:title>Certificate 32</image:title>
       <image:caption>Certificate 32 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 33.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2033.png</image:loc>
       <image:title>Certificate 33</image:title>
       <image:caption>Certificate 33 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 34.jpg</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2034.jpg</image:loc>
       <image:title>Certificate 34</image:title>
       <image:caption>Certificate 34 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 35.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%2035.png</image:loc>
       <image:title>Certificate 35</image:title>
       <image:caption>Certificate 35 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 4.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%204.png</image:loc>
       <image:title>Certificate 4</image:title>
       <image:caption>Certificate 4 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 5.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%205.png</image:loc>
       <image:title>Certificate 5</image:title>
       <image:caption>Certificate 5 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 6.webp</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%206.webp</image:loc>
       <image:title>Certificate 6</image:title>
       <image:caption>Certificate 6 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 7.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%207.png</image:loc>
       <image:title>Certificate 7</image:title>
       <image:caption>Certificate 7 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 8.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%208.png</image:loc>
       <image:title>Certificate 8</image:title>
       <image:caption>Certificate 8 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gauresh.is-a.dev/certs/Certificate 9.png</image:loc>
+      <image:loc>https://gauresh.is-a.dev/certs/Certificate%209.png</image:loc>
       <image:title>Certificate 9</image:title>
       <image:caption>Certificate 9 image from Gauresh G Pai&apos;s portfolio</image:caption>
     </image:image>
