@@ -18,8 +18,14 @@ import {
  * @returns The footer JSX element containing a contact email link, call-to-action buttons, copyright attribution, and external social icons.
  */
 export default function Footer() {
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(EMAIL);
+  const copyToClipboard = async () => {
+    if (navigator?.clipboard) {
+      try {
+        await navigator.clipboard.writeText(EMAIL);
+      } catch (error) {
+        console.warn("Failed to copy email to clipboard:", error);
+      }
+    }
   };
 
   return (
