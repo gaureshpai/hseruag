@@ -58,7 +58,7 @@ const ButtonContainer = () => {
         target="_blank"
       >
         <div className="relative max-w-max">
-          <span className="text-accent">Google me</span>
+          <span className="text-accent">Look me up</span>
           <span className="absolute -bottom-1 left-0 h-[2px] w-0 origin-left rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full"></span>
         </div>
         <div className="h-8 w-8">

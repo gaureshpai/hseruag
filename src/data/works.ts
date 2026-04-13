@@ -16,7 +16,7 @@ const projects: Project[] = [
     description:
       "Promotional site for Aakar 2025 Techno-Cultural Fest. Integrated event listings, dynamic schedules, and registration forms with creative branding.",
     role: "Frontend Developer",
-    liveUrl: "https://aakar2025.in/",
+    liveUrl: null,
     tags: ["Event", "College", "Festival", "Tech Fest"],
     owner: "Aakar 2025",
     company: "Kreekarvat Technologies",

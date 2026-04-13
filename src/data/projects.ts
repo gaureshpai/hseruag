@@ -107,7 +107,7 @@ export const PROJECT_SHOWCASE: Project[] = [
     description:
       "Promotional site for Aakar 2025 Techno-Cultural Fest. Integrated event listings, dynamic schedules, and registration forms with creative branding.",
     role: "Frontend Developer",
-    liveUrl: "https://aakar2025.in/",
+    liveUrl: null,
     githubUrl: `${GITHUB_URL}/aakar2025`,
     tags: [
       "Event",
