@@ -44,6 +44,6 @@ export const ACHIEVEMENTS: ExperienceShowcaseListItemProps[] = [
     date: `2024 - ${new Date().getFullYear()}`,
     location: "AJIET",
     description:
-      "reclaimspace: A CLI tool to reclaim disk space by finding and removing regeneratable development folders.\nCreate-next-quick: A CLI tool to quickly create Next.js projects with various templates and configurations.\nUCP: Contributed to the documentation for the Universal Commerce Protocol (UCP) - #99, #331, #332.",
+      "reclaimspace: A CLI tool to reclaim disk space by finding and removing regeneratable development folders.\nCreate-next-quick: A CLI tool to quickly create Next.js projects with various templates and configurations.\nUCP: Contributed to the documentation for the Universal Commerce Protocol (UCP) #99, #331, #332.",
   },
 ];
