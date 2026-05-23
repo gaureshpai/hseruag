@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "node scripts/generate-sitemap.mjs && next build",
+    "clean": "reclaimspace -y",
     "start": "serve out",
     "lint": "biome lint --write .",
     "check": "biome check --write .",
@@ -36,6 +37,7 @@
     "yup": "^1.7.1"
   },
   "devDependencies": {
+    "reclaimspace": "^0.2.2",
     "@biomejs/biome": "^2.4.4",
     "@types/node": "^25.0.3",
     "@types/react": "^18.3.12",
