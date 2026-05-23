@@ -19,23 +19,16 @@ export default function AboutHero() {
 
         <p className="mt-8 space-y-6 text-base font-medium leading-relaxed text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
           <span>
-            I’m a Software Engineer passionate about building web‑based
-            solutions with TypeScript, React, Next.js, and Tailwind CSS.
-            Currently, I’m working at{" "}
+            I’m a Software Engineer working at{" "}
             <Link
               href="https://trybrink.com"
               className="text-blue-600 underline"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Brink AI Labs.
-            </Link>
-          </span>
-          <br />
-          <br />
-          <span>
-            I’m a UiPath Student Developer Champion (2025–26) and a core
-            community member at DevNation &{" "}
+              Brink AI Labs
+            </Link>{" "}
+            and an active community contributor at{" "}
             <Link
               href="https://dk24.org"
               className="text-blue-600 underline"
@@ -44,8 +37,30 @@ export default function AboutHero() {
             >
               DK24
             </Link>
-            , where I help connect tech communities and drive innovation through
-            workshops, hackathons, and collaborative projects.
+            , where I help connect tech communities and drive innovation.
+          </span>
+          <br />
+          <br />
+          <span>
+            I’m a former{" "}
+            <Link
+              href="https://www.linkedin.com/posts/uipath-community_automation-futureofwork-uipathcommunity-activity-7309891806182227968-ssKi/"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              UiPath Student Developer Champion (2025–26)
+            </Link>{" "}
+            and previously contributed to{" "}
+            <Link
+              href="https://github.com/Ajiet-DevNation"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              DevNation
+            </Link>
+            .
           </span>
           <br />
           <br />
@@ -67,7 +82,7 @@ export default function AboutHero() {
               rel="noopener noreferrer"
             >
               Kreekarvat Technologies
-            </Link>{" "}
+            </Link>
             , interned at{" "}
             <Link
               href="https://ajims.edu.in/Webpages/Index.aspx"
@@ -77,41 +92,53 @@ export default function AboutHero() {
             >
               AJIMS
             </Link>
-            , and led a UDAL DC Fellowship 2025 team that built hospital
-            automation systems powering 73 screens with real‑time blood bank,
-            OT, and pharmacy updates.
+            , and led a{" "}
+            <Link
+              href="https://www.linkedin.com/posts/gaureshpai_udal2025-dcfellow-innovation-ugcPost-7402369144433635328-Tkr-/"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              UDAL DC Fellowship 2025
+            </Link>{" "}
+            team.
           </span>
           <br />
           <br />
           <span>
-            I actively contribute to open‑source projects like{" "}
+            I was part of the winning teams at the{" "}
             <Link
-              href="https://gaureshpai.github.io/create-next-quick/"
+              href="https://www.linkedin.com/feed/update/urn:li:activity:7401507922889150466/"
               className="text-blue-600 underline"
               target="_blank"
               rel="noopener noreferrer"
             >
-              create‑next‑quick
-            </Link>
-            ,{" "}
-            <Link
-              href="https://gaureshpai.github.io/reclaimspace/"
-              className="text-blue-600 underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              reclaimspace
+              AINNOVATION 2025 Hackathon
             </Link>{" "}
-            and more; check my{" "}
-            <a
-              href="https://www.npmjs.com/~gaureshpai"
+            organized by Microsoft and Kyndryl, and the{" "}
+            <Link
+              href="https://www.linkedin.com/feed/update/urn:li:activity:7376945596563116032/"
+              className="text-blue-600 underline"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 underline"
             >
-              npm profile
-            </a>
+              Cardano Hackathon Asia 2025 – IBW Edition
+            </Link>
             .
+          </span>
+          <br />
+          <br />
+          <span>
+            I’ve also contributed to the open source{" "}
+            <Link
+              href="https://github.com/Universal-Commerce-Protocol/ucp/commits/main/?author=gaureshpai"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Universal Commerce Protocol (UCP)
+            </Link>{" "}
+            repository.
           </span>
           <br />
           <br />
