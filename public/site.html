@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gauresh G Pai | Software Engineer</title>
+  <meta name="description"
+    content="Gauresh G Pai - Software Engineer. TypeScript, React, Next.js, TailwindCSS." />
+  <link rel="canonical" href="https://gauresh-site-remix.lovable.app/" />
+  <meta property="og:title" content="Gauresh G Pai - Software Engineer" />
+  <meta property="og:description"
+    content="Gauresh G Pai - Software Engineer. TypeScript, React, Next.js, TailwindCSS." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gauresh-site-remix.lovable.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gauresh G Pai - Software Engineer" />
+  <meta name="twitter:description"
+    content="Gauresh G Pai - Software Engineer. TypeScript, React, Next.js, TailwindCSS." />
+  <meta name="theme-color" content="#fbfaf7" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif&display=swap"
+    rel="stylesheet">
+  <!-- Load Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Gauresh G Pai",
+  "jobTitle":"Software Engineer",
+  "url":"https://gauresh-site-remix.lovable.app/",
+  "sameAs":[
+    "https://github.com/gaureshpai",
+    "https://www.npmjs.com/~gaureshpai",
+    "https://gauresh.is-a.dev/"
+  ]
+}
+</script>
+  <style>
+    :root {
+      --bg: #fbfaf7;
+      --surface: #ffffff;
+      --ink: #111111;
+      --ink-2: #2d2d2d;
+      --muted: #6b6b6b;
+      --line: #e8e5df;
+      --chip: #f2efe9;
+      --radius: 14px;
+      --max: 920px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #111111;
+      --surface: #1a1a1a;
+      --ink: #f0f0f0;
+      --ink-2: #d4d4d4;
+      --muted: #888888;
+      --line: #333333;
+      --chip: #222222;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: clip;
+      scrollbar-width: none;
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .5s ease, transform .35s ease
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: none
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      font-size: 16px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+      transition: border-color .2s, color .2s
+    }
+
+    a:hover {
+      border-color: var(--ink)
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: clamp(60px, 10vw, 96px) clamp(20px, 5vw, 32px)
+    }
+
+    header.hero {
+      padding-top: clamp(64px, 14vw, 120px);
+      padding-bottom: 48px
+    }
+
+    .eyebrow {
+      font-size: 12.5px;
+      color: var(--muted);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 22px
+    }
+
+    h1 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(40px, 8vw, 72px);
+      line-height: 1.02;
+      letter-spacing: -.015em;
+      margin: 0 0 18px;
+    }
+
+    .lead {
+      font-size: clamp(15px, 2.2vw, 17px);
+      color: var(--ink-2);
+      max-width: 620px;
+      margin: 0 0 28px
+    }
+
+    .lead strong {
+      color: var(--ink);
+      font-weight: 600
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 20px;
+      background: var(--ink);
+      color: var(--bg);
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      font-size: 13.5px;
+      font-weight: 500;
+      letter-spacing: .01em;
+      transition: background .2s;
+    }
+
+    .btn:hover {
+      background: var(--surface);
+      color: var(--ink)
+    }
+
+    /* Resume Button Specific Styles */
+    .btn.btn-resume {
+      background: var(--surface);
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+
+    .btn.btn-resume:hover {
+      background: var(--ink);
+      color: var(--bg);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--ink)
+    }
+
+    .btn.ghost:hover {
+      background: var(--ink);
+      color: var(--bg);
+    }
+
+    h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(26px, 4.2vw, 38px);
+      letter-spacing: -.01em;
+      margin: 0 0 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    h2 .more {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    h2 .more:hover {
+      color: var(--ink);
+      border-color: var(--ink)
+    }
+
+    section {
+      margin-top: 12px;
+      padding: 48px 0
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px
+    }
+
+    @media(min-width:640px) {
+      .skills-grid {
+        grid-template-columns: repeat(3, 1fr)
+      }
+    }
+
+    .skill-group h3 {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--muted);
+      margin: 0 0 12px;
+      font-weight: 600
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px
+    }
+
+    .chip {
+      background: var(--chip);
+      color: var(--ink);
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      white-space: nowrap
+    }
+
+    /* Projects - jtuluve-style row list */
+    .projects {
+      display: flex;
+      flex-direction: column;
+      margin: 0 -14px;
+      padding: 0 14px;
+      overflow: visible
+    }
+
+    #projects {
+      overflow: visible
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 6px;
+      padding: 28px 14px;
+      margin: 0 -14px;
+      border-radius: 10px;
+      -webkit-tap-highlight-color: transparent;
+      transition: background-color .25s ease;
+      position: relative;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    @media(min-width:640px) {
+      .project {
+        grid-template-columns: minmax(0, 1fr) auto;
+        column-gap: 24px;
+        align-items: baseline
+      }
+
+      .project-links {
+        position: static;
+      }
+
+      .project-head {
+        padding-right: 0
+      }
+    }
+
+    .project-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 10px;
+      min-width: 0;
+      padding-right: 50px
+    }
+
+    .project-head h3 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: -.01em;
+      transition: color .2s ease;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      position: absolute;
+      top: 28px;
+      right: 14px;
+    }
+
+    .project-links a {
+      color: var(--ink-2);
+      border-bottom: none;
+    }
+
+    .project-links a:hover {
+      color: var(--ink);
+    }
+
+    .project p {
+      margin: 2px 0 0;
+      font-size: 14.5px;
+      color: var(--ink-2);
+      grid-column: 1 / -1
+    }
+
+    .project .meta {
+      grid-column: 1 / -1;
+      font-size: 12.5px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px
+    }
+
+    .project .meta b {
+      color: var(--ink-2);
+      font-weight: 500
+    }
+
+    .project .tags {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px
+    }
+
+    .tag {
+      font-size: 11.5px;
+      color: var(--muted);
+      background: transparent;
+      border: 1px solid var(--line);
+      padding: 2px 9px;
+      border-radius: 999px;
+      transition: border-color .2s ease, color .2s ease
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Timeline */
+    .timeline {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .timeline > div,
+    .timeline > li {
+      padding-left: 0;
+      padding-bottom: 28px;
+      position: relative
+    }
+
+    .timeline > div:last-child,
+    .timeline > li:last-child {
+      padding-bottom: 0;
+    }
+
+    @media(min-width:640px) {
+      .timeline > div,
+      .timeline > li {
+        padding-left: 20px;
+        border-left: 2px solid var(--line)
+      }
+
+      .timeline > div:last-child,
+      .timeline > li:last-child {
+        border-left-color: transparent
+      }
+
+      .timeline > div::before,
+      .timeline > li::before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        top: 9px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--ink)
+      }
+    }
+
+    .role {
+      font-size: 16.5px;
+      font-weight: 600;
+      margin: 0 0 4px;
+      line-height: 1.35
+    }
+
+    .role a {
+      border-bottom-style: dotted
+    }
+
+    .when {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin: 0 0 10px
+    }
+
+    .timeline ul {
+      margin: 6px 0 0;
+      padding-left: 18px;
+      color: var(--ink-2);
+      font-size: 14.5px
+    }
+
+    .timeline ul li {
+      margin: 0 0 6px
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 8px;
+      padding: 40px clamp(20px, 5vw, 32px) 56px;
+      background: var(--bg);
+    }
+
+    .foot {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px
+    }
+
+    @media(min-width:640px) {
+      .foot {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end
+      }
+    }
+
+    .foot h4 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-weight: 400;
+      font-size: 24px;
+      margin: 0 0 6px
+    }
+
+    .foot p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13.5px
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 100%;
+      justify-content: center
+    }
+
+    .socials a {
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s, border-color .2s, color .2s;
+      flex: none;
+    }
+
+    .socials a:hover {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: var(--bg);
+    }
+
+    @media(min-width:640px) {
+      .socials {
+        width: auto;
+        justify-content: flex-end
+      }
+
+      .socials a {
+        width: 38px;
+        height: 38px
+      }
+    }
+
+    .copyright {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-top: 32px;
+      text-align: center
+    }
+
+    ::selection {
+      background: var(--ink);
+      color: var(--bg)
+    }
+
+    img {
+      max-width: 100%;
+      height: auto
+    }
+
+    /* Hanging Ornament Theme Switcher */
+    .lamp-toggle {
+      position: fixed;
+      top: 0;
+      right: 28px;
+      z-index: 9999;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 24px
+    }
+
+    .lamp-string {
+      width: 1px;
+      height: 48px;
+      background: var(--ink);
+      opacity: .3;
+      transition: opacity .3s, height .4s ease, transform .4s ease
+    }
+
+    .lamp-toggle:hover .lamp-string {
+      height: 56px;
+      opacity: .5
+    }
+
+    .lamp-string.pulling {
+      height: 90px;
+      opacity: .6
+    }
+
+    .lamp-toggle:hover .lamp-string {
+      opacity: .5
+    }
+
+    .lamp-ornament {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--chip);
+      border: 1.5px solid var(--line);
+      transition: background .4s, border-color .4s, box-shadow .4s, transform .3s ease
+    }
+
+    .lamp-ornament.pulling {
+      transform: translateY(16px)
+    }
+
+    [data-theme="dark"] .lamp-ornament {
+      background: var(--ink);
+      border-color: var(--ink);
+      box-shadow: 0 0 16px rgba(240,240,240,0.3)
+    }
+
+    .lamp-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9998;
+      opacity: 0;
+      transition: opacity .5s ease
+    }
+
+    .lamp-glow.active {
+      opacity: 1
+    }
+
+    .lamp-glow-circle {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: transform .5s cubic-bezier(.4,0,.2,1), background .5s
+    }
+
+    .lamp-glow.active .lamp-glow-circle {
+      transform: scale(1)
+    }
+
+    @media(min-width:640px) {
+      .lamp-toggle {
+        right: 32px
+      }
+    }
+  </style>
+</head>
+
+<body>    <div class="lamp-glow" id="lamp-glow">
+      <div class="lamp-glow-circle" id="glow-circle"></div>
+    </div>
+    <div class="lamp-toggle" id="theme-toggle" role="button" tabindex="0" aria-label="Toggle dark mode">
+      <div class="lamp-string"></div>
+      <div class="lamp-ornament"></div>
+    </div>
+
+    <main class="wrap">
+
+    <header class="hero">
+      <div class="eyebrow">Software Engineer</div>
+      <h1>Gauresh G Pai</h1>
+      <p class="lead">
+        Love turning ideas into code. I build web applications that are fast, accessible, and delightful to use. Collaborative
+        by nature, I thrive on delivering impactful solutions that make a difference.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="./Gauresh_G_Pai.pdf" download>Download Resume</a>
+        <a class="btn btn-resume" href="https://github.com/gaureshpai">GitHub</a>
+      </div>
+    </header>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div>
+          <p class="role">Software Engineer <a href="https://trybrink.com/">@Brink AI Labs</a></p>
+          <p class="when">November 2025 – Present · Remote</p>
+          <p>We're building the platform that lets AI agents operate real systems - from decisions to actions in the
+              enterprise.</p>
+        </div>
+        <div>
+          <p class="role">Project Lead Developer <a
+              href="https://www.linkedin.com/posts/gaureshpai_udal2025-dcfellow-innovation-activity-7402369146069622785-X8nU">@Government
+              of Karnataka | UDAL DC Fellowship</a></p>
+          <p class="when">August 2025 – November 2025 · Hybrid</p>
+          <p>Led a cross-functional team to build a real-time hospital management system powering 73 hospital screens across blood
+          bank, OT, and pharmacy in collaboration with the district administration.</p>
+        </div>
+        <div>
+          <p class="role">Tool Developer Intern <a href="https://billmaxo.com/">@Billmaxo Solutions</a></p>
+          <p class="when">January 2025 – June 2025 · Remote</p>
+          <p>Developed automation tools including a WhatsApp marketing API and real-time Swiggy/Zomato order scrapers, reducing
+          manual effort by 70%, processing 500+ orders in real time, and improving workflow efficiency by 40% through third-party
+          API integrations.</p>
+        </div>
+        <div>
+          <p class="role">Project Manager Developer <a href="https://kreekarvat.in/">@Kreekarvat Technologies</a></p>
+          <p class="when">August 2024 – April 2025 · Hybrid</p>
+          <p>Orchestrated the end-to-end delivery of 9+ full-stack web applications across education, healthcare, and FMCG sectors,
+          aligning cross-functional teams and improving efficiency by 25%.</p>
+        </div>
+        <div>
+          <p class="role">Full Stack Developer Intern <a href="https://ajims.vercel.app/">@A.J. Institute of Medical
+              Sciences and Research Centre - India</a></p>
+          <p class="when">September 2023 – August 2024 · On-site</p>
+          <p>Implemented a Faculty Appraisal Application for 100+ users, integrating MongoDB and Firebase for scalable infrastructure
+          and delivering the project two weeks ahead of schedule in a 4-member agile team.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects <a class="more" href="https://gauresh.is-a.dev/projects/">All projects <i data-lucide="arrow-right"
+            style="width: 14px; height: 14px;"></i></a></h2>
+      <div class="projects">
+
+        <article class="project" data-preview-img="./projects/reclaimspace.png">
+          <div class="project-head">
+            <h3>reclaimspace</h3>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/gaureshpai/reclaimspace" aria-label="Code" title="Code"><svg
+                xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg></a>
+            <a href="https://www.npmjs.com/package/reclaimspace" aria-label="Live" title="Live"><i
+                data-lucide="external-link" style="width: 18px; height: 18px;"></i></a>
+          </div>
+          <p>A CLI tool to reclaim disk space by finding and removing unnecessary development folders and files.</p>
+          <div class="tags">
+            <span class="tag">cli</span><span class="tag">nodejs</span><span class="tag">npm</span><span
+              class="tag">babel</span><span class="tag">jest</span><span class="tag">npm-package</span><span
+              class="tag">dev</span><span class="tag">npkill</span>
+          </div>
+        </article>
+
+        <article class="project" data-preview-img="./projects/create-next-quick.png">
+          <div class="project-head">
+            <h3>create-next-quick</h3>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/gaureshpai/create-next-quick" aria-label="Code" title="Code"><svg
+                xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg></a>
+            <a href="https://www.npmjs.com/package/create-next-quick" aria-label="Live" title="Live"><i
+                data-lucide="external-link" style="width: 18px; height: 18px;"></i></a>
+          </div>
+          <p>create-next-quick is a CLI tool that lets you instantly create a new Next.js project with your choice of
+            options.</p>
+          <div class="tags">
+            <span class="tag">frontend</span><span class="tag">js</span><span class="tag">nextjs</span><span
+              class="tag">npm-package</span><span class="tag">scaffolding</span><span class="tag">starter</span>
+          </div>
+        </article>
+
+        <article class="project" data-preview-img="./projects/cprm.png">
+          <div class="project-head">
+            <h3>cprm-prototype</h3>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/gaureshpai/CPRM-Prototype" aria-label="Code" title="Code"><svg
+                xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg></a>
+            <a href="https://cprm-prototype.vercel.app/" aria-label="Live" title="Live"><i data-lucide="external-link"
+                style="width: 18px; height: 18px;"></i></a>
+          </div>
+          <p>The Centralized Patient &amp; Resource Management System (CPRM) is a comprehensive hospital management
+            solution prototype developed for Wenlock Hospital as part of the UDAL Fellowship challenge.</p>
+          <div class="tags">
+            <span class="tag">nextjs</span><span class="tag">postgresql</span><span class="tag">prisma-orm</span><span
+              class="tag">react</span><span class="tag">shadcn-ui</span><span class="tag">tailwindcss</span><span
+              class="tag">typescript</span><span class="tag">neondb</span><span class="tag">fellowship</span>
+          </div>
+        </article>
+
+        <article class="project" data-preview-img="./projects/pulseui.png">
+          <div class="project-head">
+            <h3>pulseui-base</h3>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/gaureshpai/pulseui-base" aria-label="Code" title="Code"><svg
+                xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg></a>
+            <a href="https://npmjs.com/package/pulseui-base" aria-label="Live" title="Live"><i
+                data-lucide="external-link" style="width: 18px; height: 18px;"></i></a>
+          </div>
+          <p>Ultra-lightweight React component library with design tokens, multi-brand theming, and TypeScript support.
+            Zero heavy dependencies - perfect for production apps.</p>
+          <div class="meta"><span><b>Collaborators:</b> Vignesh Kamath</span></div>
+          <div class="tags">
+            <span class="tag">component-library</span><span class="tag">design-tokens</span><span
+              class="tag">react</span><span class="tag">typescript</span><span class="tag">npm-package</span><span
+              class="tag">open-source</span>
+          </div>
+        </article>
+
+        <article class="project" data-preview-img="./projects/easpataal.png">
+          <div class="project-head">
+            <h3>Easpataal</h3>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/gaureshpai/Easpataal" aria-label="Code" title="Code"><svg
+                xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg></a>
+            <a href="https://easpataal.vercel.app/" aria-label="Live" title="Live"><i data-lucide="external-link"
+                style="width: 18px; height: 18px;"></i></a>
+          </div>
+          <p>A full-stack web/mobile application designed to eliminate long waiting times and enhance efficiency in
+            hospital environments, specifically addressing the challenges of overcrowded queues common in many Indian
+            hospitals.</p>
+          <div class="meta"><span><b>Collaborators:</b> Jnanesh, Himanshu Hegde</span></div>
+          <div class="tags">
+            <span class="tag">react</span><span class="tag">nextjs</span><span class="tag">postgresql</span><span
+              class="tag">tailwindcss</span><span class="tag">supabase</span><span class="tag">vercel</span>
+          </div>
+        </article>
+
+        <article class="project" data-preview-img="./works/aakar.png">
+          <div class="project-head">
+            <h3>Aakar 2025</h3>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/gaureshpai/aakar2025" aria-label="Code" title="Code"><svg
+                xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg></a>
+          </div>
+          <p>Promotional site for Aakar 2025 Techno-Cultural Fest. Integrated event listings, dynamic schedules, and
+            registration forms with creative branding.</p>
+          <div class="meta">
+            <span><b>Owner:</b> Aakar 2025</span>
+            <span><b>Company:</b> Kreekarvat Technologies</span>
+            <span><b>Role:</b> Frontend Developer</span>
+          </div>
+          <div class="tags">
+            <span class="tag">nextjs</span><span class="tag">tailwindcss</span><span class="tag">javascript</span><span
+              class="tag">event</span><span class="tag">tech-fest</span>
+          </div>
+        </article>
+
+        <article class="project" data-preview-img="./projects/signflix.jpg">
+          <div class="project-head">
+            <h3>SignFlix</h3>
+          </div>
+          <p>An accessible video streaming platform with integrated sign language interpretation for the deaf and
+            hard-of-hearing community.</p>
+          <div class="meta"><span><b>Collaborators:</b> Jnanesh, Himanshu Hegde, Milan C I</span></div>
+          <div class="tags">
+            <span class="tag">nextjs</span><span class="tag">prisma-orm</span><span class="tag">tailwindcss</span><span
+              class="tag">typescript</span><span class="tag">major-project</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="timeline">
+        <li>
+          <p class="role">Bachelor of Engineering in CSE <a href="https://ajiet.edu.in/">@AJ Institute of Engineering
+              &amp; Technology</a></p>
+          <p class="when">2022–2026 · Mangaluru, Karnataka · CGPA: 8.875/10</p>
+        </li>
+        <li>
+          <p class="role">Pre-University College <a href="https://staloysiuspuc.in/">@St Aloysius PU College</a></p>
+          <p class="when">2020–2022 · Mangaluru, Karnataka · Percentage: 96%</p>
+        </li>
+        <li>
+          <p class="role">School <a
+              href="https://schools.org.in/dakshina-kannada/29240108307/svs-english-medium-high-school-vidyagiri-bantwal.html">@SVS
+              English School Vidyagiri Bantwal</a></p>
+          <p class="when">2008–2020 · Bantwal, Karnataka · Percentage: 96.96%</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <ul class="timeline">
+        <li>
+          <p class="role">Hackathon Excellence @Cardano &amp; Microsoft</p>
+          <p class="when">2025 · International</p>
+          <ul>
+            <li>Secured 2nd Runner-up at Cardano Hackathon Asia 2025 - IBW Edition in the Privacy Dapps Track.</li>
+            <li>Secured 2nd Runner-up at Annovation 2025 Hackathon by Kyndryl and Microsoft among 1,081 teams.</li>
+          </ul>
+        </li>
+        <li>
+          <p class="role">Leadership Roles @UiPath &amp; Kreekarvat</p>
+          <p class="when">2025 – 2026 · Hybrid</p>
+          <ul>
+            <li>Served as Student Developer Champion at UiPath (2025–26).</li>
+            <li>Project Manager at Kreekarvat Technologies.</li>
+            <li>Technical Lead, Web Lead &amp; Core Committee - Aakar 2025.</li>
+            <li>Project Lead Developer at UDAL DC Fellowship 2025.</li>
+          </ul>
+        </li>
+        <li>
+          <p class="role">Competitions &amp; Community @Yukti &amp; GDSC</p>
+          <p class="when">2025 · AJIET</p>
+          <ul>
+            <li>Winner of Code Debugging (2025) at Yukti 2025.</li>
+            <li>Core team member of DevNation, GDSC AJIET and DK24 - a tech community connecting college communities.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="role">Open Source Contributions <a href="https://www.npmjs.com/~gaureshpai">@GitHub &amp; NPM</a>
+          </p>
+          <p class="when">2024 – 2026 · AJIET</p>
+          <ul>
+            <li>reclaimspace: A CLI tool to reclaim disk space by finding and removing regeneratable development
+              folders.</li>
+            <li>create-next-quick: A CLI tool to quickly create Next.js projects with various templates and
+              configurations.</li>
+            <li>UCP: Contributed to the documentation for the Universal Commerce Protocol (#99, #331, #332).</li>
+            <li>ElevenLabs Agents SDK: Improved cross-platform version generation and build workflow consistency (#764).
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div>
+        <h4>Let's connect</h4>
+        <p>Open to software engineering, full-stack, and automation work.</p>
+      </div>
+      <nav class="socials" aria-label="Social links">
+        <a href="https://github.com/gaureshpai" aria-label="GitHub" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://www.npmjs.com/~gaureshpai" aria-label="npm" title="npm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M1.763 0C.786 0 0 .786 0 1.763v20.474C0 23.214.786 24 1.763 24h20.474c.977 0 1.763-.786 1.763-1.763V1.763C24 .786 23.214 0 22.237 0zM5.13 5.323l8.024.006v13.338h-3.31V8.29h-1.39v10.377H5.13z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/gaureshpai" aria-label="LinkedIn" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <a href="./Gauresh_G_Pai.pdf" download aria-label="Resume" title="Resume">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+        </a>
+        <a href="https://gauresh.is-a.dev/old" aria-label="Old portfolio" title="Old portfolio">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('in-view');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.06 });
+      document.querySelectorAll('section, .project, .timeline > div, .timeline > li').forEach(el => {
+        el.classList.add('reveal');
+        io.observe(el);
+      });
+    }
+
+    // Theme Switcher - Pull-String Lamp
+    const themeToggle = document.getElementById('theme-toggle');
+    const lampGlow = document.getElementById('lamp-glow');
+    const glowCircle = document.getElementById('glow-circle');
+
+    function setTheme(theme, animate) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
+
+    function animateToggle() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      const rect = themeToggle.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const maxR = Math.hypot(window.innerWidth, window.innerHeight);
+      const lampStr = document.querySelector('.lamp-string');
+      const lampOrn = document.querySelector('.lamp-ornament');
+
+      lampStr.classList.add('pulling');
+      lampOrn.classList.add('pulling');
+
+      glowCircle.style.left = cx - maxR + 'px';
+      glowCircle.style.top = cy - maxR + 'px';
+      glowCircle.style.width = maxR * 2 + 'px';
+      glowCircle.style.height = maxR * 2 + 'px';
+      glowCircle.style.background = next === 'dark' ? '#ffffff' : '#111111';
+
+      lampGlow.classList.add('active');
+
+      setTimeout(() => setTheme(next), 250);
+
+      setTimeout(() => {
+        lampGlow.classList.remove('active');
+        lampStr.classList.remove('pulling');
+        lampOrn.classList.remove('pulling');
+      }, 550);
+    }
+
+    // Load saved theme or respect system preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+
+    themeToggle.addEventListener('click', animateToggle);
+    themeToggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); animateToggle(); }
+    });
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+import dynamic from "next/dynamic";
+import Head from "next/head";
+import { NextSeo } from "next-seo";
+import type { ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
+import Hero from "@/components/Hero";
+import type { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+import { SITE_URL } from "@/constants/site";
+import type { Project } from "@/data/projects";
+import {
+  generateImageCollectionSchema,
+  generateItemListSchema,
+  generatePersonSchema,
+  generateSEOConfig,
+  generateWebsiteSchema,
+  type ImageCollectionSchemaResult,
+  injectJSONLD,
+} from "@/utils/seo";
+
+const SkillsShowcase = dynamic(
+  () => import("@/components/skills/skills-showcase"),
+  { ssr: true },
+);
+const ProjectShowcase = dynamic(
+  () => import("@/components/projects/project-showcase"),
+  { ssr: true },
+);
+const ExperienceShowcaseList = dynamic(
+  () => import("@/components/experience/experience-showcase-list"),
+  { ssr: true },
+);
+
+type HomePageProps = {
+  projects: Project[];
+  skills: SkillsShowcaseProps["skills"];
+  education: ExperienceShowcaseListItemProps[];
+  experience: ExperienceShowcaseListItemProps[];
+  achievements: ExperienceShowcaseListItemProps[];
+  imageGallerySchema: ImageCollectionSchemaResult;
+};
+
+/**
+ * Render the portfolio home page, configure SEO and JSON-LD, and compose the primary page sections (Hero, Skills, Projects, Experience, Education, Achievements).
+ *
+ * @param imageGallerySchema - JSON-LD ImageCollection/ImageGallery object to be injected into the page head for structured data
+ * @returns The React element representing the home page
+ */
+export default function Home({
+  projects,
+  skills,
+  education,
+  experience,
+  achievements,
+  imageGallerySchema,
+}: HomePageProps) {
+  const seoConfig = generateSEOConfig({
+    description:
+      "Explore the professional portfolio of Gauresh G Pai, a skilled Software Engineer with 2 years of hands-on experience. Discover innovative projects, expertise in React, Next.js, TypeScript, and modern web technologies.",
+    canonical: `${SITE_URL}/old`,
+    openGraph: {
+      title: "Gauresh G Pai - Software Engineer Portfolio",
+      description:
+        "Software Engineer specializing in React, Next.js & TypeScript. 9+ client projects delivered with scalable, user-friendly web applications.",
+      type: "profile",
+    },
+    additionalMetaTags: [
+      {
+        name: "keywords",
+        content:
+          "Gauresh G Pai, Software Engineer, React Developer, Next.js Developer, TypeScript, JavaScript, Web Developer, Engineering Student, UI/UX, Tailwind CSS, Full Stack Developer, Portfolio, Web Development, Software Engineer, India Developer",
+      },
+      {
+        property: "profile:first_name",
+        content: "Gauresh",
+      },
+      {
+        property: "profile:last_name",
+        content: "G Pai",
+      },
+      {
+        property: "profile:username",
+        content: "hseruag",
+      },
+      {
+        name: "geo.region",
+        content: "IN",
+      },
+      {
+        name: "geo.placename",
+        content: "India",
+      },
+      {
+        name: "language",
+        content: "English",
+      },
+    ],
+  });
+
+  const personSchema = generatePersonSchema({
+    name: "Gauresh G Pai",
+    url: SITE_URL,
+    jobTitle: "Software Engineer",
+    description:
+      "Skilled Software Engineer specializing in React, Next.js, and TypeScript with 2 years of experience delivering scalable web applications.",
+    knowsAbout: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "TailwindCSS",
+      "Frontend Development",
+      "Web Development",
+      "UI/UX Design",
+      "Responsive Design",
+      "Performance Optimization",
+    ],
+  });
+
+  const websiteSchema = generateWebsiteSchema({
+    name: "Gauresh G Pai - Portfolio",
+    url: SITE_URL,
+    description:
+      "Professional portfolio showcasing frontend development projects, skills, and experience in modern web technologies.",
+  });
+  const featuredProjectsSchema = generateItemListSchema({
+    name: "Featured Projects",
+    url: SITE_URL,
+    description:
+      "Featured software engineering and web development projects by Gauresh G Pai.",
+    items: projects.map((project) => ({
+      name: project.title,
+      url: project.liveUrl || project.githubUrl || `${SITE_URL}/projects`,
+      description: project.description,
+      image: project.screenshot
+        ? `${SITE_URL}${project.screenshot}`
+        : undefined,
+    })),
+  });
+
+  return (
+    <>
+      <NextSeo {...seoConfig} />
+      <Head>
+        {injectJSONLD([
+          personSchema,
+          websiteSchema,
+          imageGallerySchema,
+          featuredProjectsSchema,
+        ])}
+      </Head>
+      <Hero />
+      <SkillsShowcase skills={skills} />
+      <ProjectShowcase projects={projects} />
+      <ExperienceShowcaseList title="Experience" details={experience} />
+      <ExperienceShowcaseList title="Education" details={education} />
+      <ExperienceShowcaseList title="Achievements" details={achievements} />
+    </>
+  );
+}
+
+/**
+ * Collects and prepares the data required by the Home page for static generation.
+ *
+ * Gathers project, skills, education, experience, and achievement data, transforms skills into a simplified shape,
+ * and constructs an image gallery JSON-LD schema from public images for injection into the page.
+ *
+ * @returns An object with a `props` property containing:
+ *  - `projects`: the project showcase array
+ *  - `skills`: transformed skills grouped by section, each skill as `{ name, icon }`
+ *  - `education`: education entries
+ *  - `experience`: professional experience entries
+ *  - `achievements`: achievement entries
+ *  - `imageGallerySchema`: JSON-LD image collection schema for the site's public images
+ */
+export async function getStaticProps() {
+  const { PROJECT_SHOWCASE } = await import("@/data/projects");
+  const { SKILLS_DATA } = await import("@/data/skills");
+  const { EDUCATION } = await import("@/data/education");
+  const { EXPERIENCE } = await import("@/data/experience");
+  const { ACHIEVEMENTS } = await import("@/data/achievements");
+  const { getAllPublicImages } = await import("@/server/public-images");
+
+  const skills = SKILLS_DATA.map((section) => ({
+    ...section,
+    skills: section.skills.map((skill) => ({
+      name: skill.name,
+      icon: skill.icon,
+    })),
+  }));
+
+  const allImages = getAllPublicImages();
+  const imageGallerySchema = generateImageCollectionSchema({
+    name: "Portfolio Image Library",
+    url: SITE_URL,
+    description:
+      "Complete image library of Gauresh G Pai's portfolio, including projects, professional work, certificates, and brand assets.",
+    images: allImages.map((image) => ({
+      url: image.url,
+      title: image.title,
+      caption: image.caption,
+    })),
+  });
+
+  return {
+    props: {
+      projects: PROJECT_SHOWCASE,
+      skills,
+      education: EDUCATION,
+      experience: EXPERIENCE,
+      achievements: ACHIEVEMENTS,
+      imageGallerySchema,
+    },
+  };
+}
