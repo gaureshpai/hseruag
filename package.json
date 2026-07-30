@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/generate-sitemap.mjs && next build && cp public/site.html out/index.html",
+    "build": "node scripts/generate-sitemap.mjs && next build && mkdir -p out/index && cp public/site.html out/index/index.html",
     "clean": "reclaimspace -y",
     "start": "serve out",
     "lint": "biome lint --write .",
