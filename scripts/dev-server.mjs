@@ -19,7 +19,8 @@ const nextProcess = spawn(process.execPath, [nextCli, "dev", "-p", String(nextPo
 });
 
 const server = createServer((request, response) => {
-  if (request.url === "/" || request.url === "") {
+  const pathname = new URL(request.url || "/", "http://localhost").pathname;
+  if (pathname === "/") {
     response.writeHead(200, {
       "content-type": "text/html; charset=utf-8",
       "content-length": statSync(homepagePath).size,
