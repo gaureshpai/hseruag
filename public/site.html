@@ -42,8 +42,8 @@
     <meta property="og:site_name" content="Gauresh G Pai" />
     <meta property="og:image:alt" content="Gauresh G Pai - Software Engineer" />
     <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
     <meta
       property="og:image"
       content="https://gauresh.is-a.dev/logo-black.png"
@@ -819,6 +819,7 @@
       role="button"
       tabindex="0"
       aria-label="Toggle dark mode"
+      aria-pressed="false"
     >
       <div class="lamp-string"></div>
       <div class="lamp-ornament"></div>
@@ -1471,7 +1472,10 @@
       function setTheme(theme, animate) {
         document.documentElement.setAttribute("data-theme", theme);
         localStorage.setItem("theme", theme);
+        themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
       }
+
+      setTheme(document.documentElement.getAttribute("data-theme") || "light");
 
       function animateToggle() {
         const current = document.documentElement.getAttribute("data-theme");

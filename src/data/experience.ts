@@ -32,7 +32,7 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     date: "January 2025 - June 2025",
     location: "Remote",
     description:
-      "Developed a WhatsApp marketing API tool that automates outreach and saves 70% of the work.\nDeveloped scraping tools that extract 500+ restaurant orders in real time for Swiggy and Zomato.\nReduced processing time by 40% and increased workflow efficiency through the integration of third-party services and APIs.",
+      "Developed automation tools including a WhatsApp marketing API and real-time Swiggy/Zomato order scrapers, reducing manual effort by 70%, processing 500+ orders in real time, and improving workflow efficiency by 40% through third-party API integrations.",
   },
   {
     title: "Project Manager Developer",

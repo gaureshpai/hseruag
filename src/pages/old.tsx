@@ -97,7 +97,8 @@ export default function Home({
 
   const personSchema = generatePersonSchema({
     name: "Gauresh G Pai",
-    url: SITE_URL,
+    url: `${SITE_URL}/old/`,
+    id: `${SITE_URL}/#person`,
     jobTitle: "Software Engineer",
     description:
       "Software Engineer at Brink AI Labs specializing in React, Next.js, TypeScript, automation, and production web applications.",
@@ -122,7 +123,8 @@ export default function Home({
 
   const websiteSchema = generateWebsiteSchema({
     name: "Gauresh G Pai - Portfolio",
-    url: SITE_URL,
+    url: `${SITE_URL}/old/`,
+    id: `${SITE_URL}/#website`,
     description:
       "Professional portfolio showcasing frontend development projects, skills, and experience in modern web technologies.",
   });

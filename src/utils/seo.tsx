@@ -157,6 +157,7 @@ export function generateSEOConfig(config: SEOConfig): NextSeoProps {
 export interface PersonSchema {
   name: string;
   url: string;
+  id?: string;
   jobTitle: string;
   description: string;
   image?: string;
@@ -176,6 +177,7 @@ export function generatePersonSchema(data: PersonSchema) {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
+    ...(data.id ? { "@id": data.id } : {}),
     name: data.name,
     url: data.url,
     jobTitle: data.jobTitle,
@@ -222,6 +224,7 @@ export interface WebsiteSchema {
   name: string;
   url: string;
   description: string;
+  id?: string;
 }
 
 /**
@@ -234,6 +237,7 @@ export function generateWebsiteSchema(data: WebsiteSchema) {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    ...(data.id ? { "@id": data.id } : {}),
     name: data.name,
     url: data.url,
     description: data.description,
