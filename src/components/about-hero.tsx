@@ -138,6 +138,15 @@ export default function AboutHero() {
             >
               Universal Commerce Protocol (UCP)
             </Link>{" "}
+            &
+            <Link
+              href="https://github.com/elevenlabs/packages/commits/main/?author=gaureshpai"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ElevenLabs Agents SDK
+            </Link>
             repository.
           </span>
           <br />
