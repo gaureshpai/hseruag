@@ -4,7 +4,7 @@ export const LINKEDIN_URL = "https://www.linkedin.com/in/gaureshpai/";
 
 export const GITHUB_URL = "https://github.com/gaureshpai";
 
-export const X_URL = "https://x.com/@hseruag";
+export const X_URL = "https://x.com/hseruag";
 
 export const EMAIL = "paigauresh@gmail.com";
 
