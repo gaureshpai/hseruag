@@ -21,7 +21,7 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     date: "August 2025 - November 2025",
     location: "Hybrid",
     description:
-      "Built a system that powers 73 hospital screens with real-time updates for the blood bank, OT and pharmacy.\n Worked closely with district administration to enhance hospital systems.\n Led a team by collaborating with individuals from diverse tech backgrounds, resulting in one application and multiple services developed during the fellowship.",
+      "Built a system that powers 73 hospital screens with real-time updates for the blood bank, OT and pharmacy.\nWorked closely with district administration to enhance hospital systems.\nLed a team by collaborating with individuals from diverse tech backgrounds, resulting in one application and multiple services developed during the fellowship.",
   },
   {
     title: "Tool Developer Intern",
@@ -32,7 +32,7 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     date: "January 2025 - June 2025",
     location: "Remote",
     description:
-      "developed a WhatsApp marketing API tool that automates outreach and saves 70% of the work.\n developed scraping tools that extract 500+ restaurant orders in real time for Swiggy and Zomato.\n reduced processing time by 40% and increased workflow efficiency through the integration of third-party services and APIs.",
+      "Developed a WhatsApp marketing API tool that automates outreach and saves 70% of the work.\nDeveloped scraping tools that extract 500+ restaurant orders in real time for Swiggy and Zomato.\nReduced processing time by 40% and increased workflow efficiency through the integration of third-party services and APIs.",
   },
   {
     title: "Project Manager Developer",
@@ -43,17 +43,17 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     date: "August 2024 - April 2025",
     location: "Hybrid",
     description:
-      "Delivered 9+ web projects across education, healthcare, FMCG sectors.\n Directed frontend and backend dev efforts, leveraging Next.js, React.js, and Node.js stack. \n Coordinated cross-functional teams and clients, gathering requirements and aligning solutions with business goals.\n Applied agile methods to streamline workflows, boosting efficiency and collaboration by 25%.",
+      "Orchestrated the end-to-end delivery of 9+ full-stack web applications across education, healthcare, and FMCG sectors, aligning cross-functional teams and improving efficiency by 25%.",
   },
   {
-    title: "Full Stack developer Intern",
+    title: "Full Stack Developer Intern",
     organisation: {
       name: "A.J. Institute of Medical Sciences and Research Centre - India",
       href: "https://ajims.vercel.app/",
     },
     date: "September 2023 - August 2024",
-    location: "on Site",
+    location: "On-site",
     description:
-      "Developed a Faculty Appraisal Application for 100+ users, enhancing transparency and adoption.\n Integrated MongoDB and Firebase for secure, scalable data storage, ensuring 99% uptime during pilot deployment.\n Collaborated in a 4-member team using agile practices, delivering the project 2 weeks ahead of schedule.",
+      "Implemented a Faculty Appraisal Application for 100+ users, integrating MongoDB and Firebase for scalable infrastructure and delivering the project two weeks ahead of schedule in a four-member agile team.",
   },
 ];

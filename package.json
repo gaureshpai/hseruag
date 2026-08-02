@@ -4,10 +4,11 @@
   "description": "Gauresh's Portfolio",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "node scripts/generate-sitemap.mjs && next build",
+    "dev": "node scripts/dev-server.mjs",
+    "build": "node scripts/generate-sitemap.mjs && next build && node scripts/prepare-static-export.mjs",
     "clean": "reclaimspace -y",
     "start": "serve out",
+    "test": "node scripts/verify-static-export.mjs",
     "lint": "biome lint --write .",
     "check": "biome check --write .",
     "format": "biome format --write .",

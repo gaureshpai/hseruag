@@ -1,5 +1,13 @@
 import type { NextSeoProps } from "next-seo";
-import { GITHUB_URL, LINKEDIN_URL, SITE_URL, X_URL } from "@/constants/site";
+import {
+  GITHUB_URL,
+  INSTAGRAM_URL,
+  LEETCODE_URL,
+  LINKEDIN_URL,
+  NPM_URL,
+  SITE_URL,
+  X_URL,
+} from "@/constants/site";
 
 const SITE_NAME = "Gauresh G Pai";
 const TWITTER_HANDLE = "@hseruag";
@@ -154,6 +162,8 @@ export interface PersonSchema {
   image?: string;
   sameAs?: string[];
   knowsAbout?: string[];
+  worksFor?: { name: string; url: string };
+  alumniOf?: { name: string; url: string };
 }
 
 /**
@@ -174,7 +184,32 @@ export function generatePersonSchema(data: PersonSchema) {
     jobTitle: data.jobTitle,
     description: data.description,
     image: data.image || `${SITE_URL}/logo.png`,
-    sameAs: data.sameAs || [GITHUB_URL, LINKEDIN_URL, X_URL],
+    sameAs: data.sameAs || [
+      GITHUB_URL,
+      LINKEDIN_URL,
+      X_URL,
+      INSTAGRAM_URL,
+      LEETCODE_URL,
+      NPM_URL,
+    ],
+    ...(data.worksFor
+      ? {
+          worksFor: {
+            "@type": "Organization",
+            name: data.worksFor.name,
+            url: data.worksFor.url,
+          },
+        }
+      : {}),
+    ...(data.alumniOf
+      ? {
+          alumniOf: {
+            "@type": "CollegeOrUniversity",
+            name: data.alumniOf.name,
+            url: data.alumniOf.url,
+          },
+        }
+      : {}),
     knowsAbout: data.knowsAbout || [
       "JavaScript",
       "TypeScript",
