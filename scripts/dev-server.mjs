@@ -59,6 +59,9 @@ server.listen(publicPort, "127.0.0.1", () => {
   console.log(`Static homepage: / | Next.js routes: internal port ${nextPort}`);
 });
 
+/**
+ * Shuts down the HTTP server and terminates the Next.js process.
+ */
 function shutdown() {
   server.close();
   nextProcess.kill();

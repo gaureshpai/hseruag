@@ -167,13 +167,10 @@ export interface PersonSchema {
 }
 
 /**
- * Generate a schema.org JSON-LD Person object.
+ * Creates a Schema.org `Person` object from the supplied identity and professional details.
  *
- * @param data - Fields to populate the Person schema. Optional fields:
- *   - `image` defaults to `${SITE_URL}/logo.png`
- *   - `sameAs` defaults to `[GITHUB_URL, LINKEDIN_URL, X_URL]`
- *   - `knowsAbout` defaults to a curated list of common web/JavaScript topics
- * @returns An object representing the JSON-LD `Person` with `@context`, `@type`, and the provided or defaulted properties
+ * @param data - Person details, including optional image, social profiles, areas of expertise, employer, and educational institution.
+ * @returns A `Person` object with supplied values and defaults for image, social profiles, and areas of expertise.
  */
 export function generatePersonSchema(data: PersonSchema) {
   return {

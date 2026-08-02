@@ -39,10 +39,10 @@ type HomePageProps = {
 };
 
 /**
- * Render the portfolio home page, configure SEO and JSON-LD, and compose the primary page sections (Hero, Skills, Projects, Experience, Education, Achievements).
+ * Renders the portfolio home page with SEO metadata, structured data, and portfolio sections.
  *
- * @param imageGallerySchema - JSON-LD ImageCollection/ImageGallery object to be injected into the page head for structured data
- * @returns The React element representing the home page
+ * @param imageGallerySchema - Structured data describing the site's image gallery.
+ * @returns The rendered portfolio home page.
  */
 export default function Home({
   projects,
@@ -163,18 +163,11 @@ export default function Home({
 }
 
 /**
- * Collects and prepares the data required by the Home page for static generation.
+ * Prepares the data required to statically render the Home page.
  *
- * Gathers project, skills, education, experience, and achievement data, transforms skills into a simplified shape,
- * and constructs an image gallery JSON-LD schema from public images for injection into the page.
+ * Simplifies skill entries and builds an image gallery schema from public images.
  *
- * @returns An object with a `props` property containing:
- *  - `projects`: the project showcase array
- *  - `skills`: transformed skills grouped by section, each skill as `{ name, icon }`
- *  - `education`: education entries
- *  - `experience`: professional experience entries
- *  - `achievements`: achievement entries
- *  - `imageGallerySchema`: JSON-LD image collection schema for the site's public images
+ * @returns An object containing the page props: projects, skills, education, experience, achievements, and the image gallery schema.
  */
 export async function getStaticProps() {
   const { PROJECT_SHOWCASE } = await import("@/data/projects");
