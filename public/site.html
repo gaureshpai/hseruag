@@ -49,7 +49,7 @@
       content="https://gauresh.is-a.dev/logo-black.png"
     />
     <meta property="og:locale" content="en_IN" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
       content="Gauresh G Pai | Software Engineer in Mangaluru"
@@ -81,7 +81,12 @@
     />
     <script>
       (function () {
-        var t = localStorage.getItem("theme");
+        var t;
+        try {
+          t = localStorage.getItem("theme");
+        } catch (e) {
+          // localStorage unavailable (privacy mode, disabled storage)
+        }
         if (!t)
           t = window.matchMedia("(prefers-color-scheme: dark)").matches
             ? "dark"
@@ -745,10 +750,6 @@
         opacity: 0.6;
       }
 
-      .lamp-toggle:hover .lamp-string {
-        opacity: 0.5;
-      }
-
       .lamp-ornament {
         width: 18px;
         height: 18px;
@@ -1261,7 +1262,7 @@
                 Edition in the Privacy Dapps Track.
               </li>
               <li>
-                Secured 2nd Runner-up at Annovation 2025 Hackathon by Kyndryl
+                Secured 2nd Runner-up at AINNOVATION 2025 Hackathon by Kyndryl
                 and Microsoft among 1,081 teams.
               </li>
             </ul>
@@ -1469,9 +1470,13 @@
       const lampGlow = document.getElementById("lamp-glow");
       const glowCircle = document.getElementById("glow-circle");
 
-      function setTheme(theme, animate) {
+      function setTheme(theme) {
         document.documentElement.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
+        try {
+          localStorage.setItem("theme", theme);
+        } catch (e) {
+          // localStorage unavailable (privacy mode, disabled storage)
+        }
         themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
       }
 

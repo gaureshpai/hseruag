@@ -165,6 +165,7 @@ export interface PersonSchema {
   knowsAbout?: string[];
   worksFor?: { name: string; url: string };
   alumniOf?: { name: string; url: string };
+  mainEntityOfPage?: string;
 }
 
 /**
@@ -217,6 +218,7 @@ export function generatePersonSchema(data: PersonSchema) {
       "Frontend Development",
       "Web Development",
     ],
+    ...(data.mainEntityOfPage ? { mainEntityOfPage: data.mainEntityOfPage } : {}),
   };
 }
 
@@ -225,6 +227,7 @@ export interface WebsiteSchema {
   url: string;
   description: string;
   id?: string;
+  mainEntityOfPage?: string;
 }
 
 /**
@@ -250,6 +253,7 @@ export function generateWebsiteSchema(data: WebsiteSchema) {
       target: [data.url],
     },
     inLanguage: "en-US",
+    ...(data.mainEntityOfPage ? { mainEntityOfPage: data.mainEntityOfPage } : {}),
   };
 }
 

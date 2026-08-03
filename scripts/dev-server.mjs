@@ -88,7 +88,7 @@ function handleFailure(error) {
   if (shuttingDown) return;
   shuttingDown = true;
   console.error("Hybrid dev server failed:", error);
-  process.exitCode = 1;
+  if (!process.exitCode) process.exitCode = 1;
 
   if (server.listening) server.close();
   if (nextProcess && !nextProcess.killed) nextProcess.kill();

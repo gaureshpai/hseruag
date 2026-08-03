@@ -97,7 +97,7 @@ export default function Home({
 
   const personSchema = generatePersonSchema({
     name: "Gauresh G Pai",
-    url: `${SITE_URL}/old/`,
+    url: SITE_URL,
     id: `${SITE_URL}/#person`,
     jobTitle: "Software Engineer",
     description:
@@ -119,14 +119,16 @@ export default function Home({
       name: "AJ Institute of Engineering & Technology",
       url: "https://ajiet.edu.in/",
     },
+    mainEntityOfPage: `${SITE_URL}/old/`,
   });
 
   const websiteSchema = generateWebsiteSchema({
     name: "Gauresh G Pai - Portfolio",
-    url: `${SITE_URL}/old/`,
+    url: SITE_URL,
     id: `${SITE_URL}/#website`,
     description:
       "Professional portfolio showcasing frontend development projects, skills, and experience in modern web technologies.",
+    mainEntityOfPage: `${SITE_URL}/old/`,
   });
   const featuredProjectsSchema = generateItemListSchema({
     name: "Featured Projects",
