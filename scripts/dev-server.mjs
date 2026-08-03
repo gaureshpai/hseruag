@@ -130,11 +130,12 @@ function shutdown() {
 process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
 if (nextProcess) {
-  nextProcess.on("exit", (code) => {
+  nextProcess.on("exit", (code, signal) => {
     if (code && code !== 0) process.exitCode = code;
-    if (!shuttingDown && code) {
-      handleFailure(new Error(`Next.js exited with code ${code}`));
+    if (!shuttingDown) {
+      handleFailure(new Error(`Next.js exited with code ${code} signal ${signal}`));
+    } else if (server.listening) {
+      server.close();
     }
-    if (server.listening) server.close();
   });
 }
