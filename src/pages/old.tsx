@@ -39,10 +39,15 @@ type HomePageProps = {
 };
 
 /**
- * Renders the portfolio home page with SEO metadata, structured data, and portfolio sections.
+ * Renders the portfolio page with SEO metadata, structured data, and showcase sections.
  *
+ * @param projects - Projects displayed in the portfolio showcase.
+ * @param skills - Skills displayed in the skills showcase.
+ * @param education - Education entries displayed on the page.
+ * @param experience - Professional experience entries displayed on the page.
+ * @param achievements - Achievements displayed on the page.
  * @param imageGallerySchema - Structured data describing the site's image gallery.
- * @returns The rendered portfolio home page.
+ * @returns The rendered portfolio page.
  */
 export default function Home({
   projects,

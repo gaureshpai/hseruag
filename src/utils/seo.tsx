@@ -169,10 +169,10 @@ export interface PersonSchema {
 }
 
 /**
- * Creates a Schema.org `Person` object from the supplied identity and professional details.
+ * Creates a Schema.org `Person` object from identity and professional details.
  *
- * @param data - Person details, including optional image, social profiles, areas of expertise, employer, and educational institution.
- * @returns A `Person` object with supplied values and defaults for image, social profiles, and areas of expertise.
+ * @param data - Person details, including optional identifier, image, social profiles, expertise, employer, educational institution, and page reference.
+ * @returns A `Person` object with the supplied values and applicable defaults.
  */
 export function generatePersonSchema(data: PersonSchema) {
   return {
@@ -231,10 +231,10 @@ export interface WebsiteSchema {
 }
 
 /**
- * Generate a JSON-LD WebSite schema for the provided site metadata.
+ * Creates a Schema.org `WebSite` object from site metadata.
  *
- * @param data - Site metadata containing `name`, `url`, and `description`
- * @returns A JSON-LD object representing a schema.org `WebSite` with the site name, URL, description, an author set to the library's site name, a `ReadAction` potentialAction targeting the site URL, and `inLanguage` set to "en-US"
+ * @param data - Site metadata containing the name, URL, description, and optional identifier or page reference
+ * @returns A `WebSite` object with the site owner as author, a read action targeting the site URL, and English language metadata
  */
 export function generateWebsiteSchema(data: WebsiteSchema) {
   return {

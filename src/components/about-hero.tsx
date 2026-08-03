@@ -1,13 +1,9 @@
 import Link from "next/link";
 
 /**
- * Renders the centered hero section introducing Gauresh G Pai, including a heading,
- * multi-paragraph bio with external links, and a "Download Resume" action.
+ * Renders a hero section introducing Gauresh G Pai with a biography and resume download link.
  *
- * The component outputs responsive markup styled with Tailwind CSS and includes
- * links that open in a new tab with `rel="noopener noreferrer"`.
- *
- * @returns The JSX element for the About hero section
+ * @returns The About hero section JSX element
  */
 export default function AboutHero() {
   return (
