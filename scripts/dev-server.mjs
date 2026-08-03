@@ -99,7 +99,7 @@ server.on("error", handleFailure);
 try {
   nextProcess = spawn(
     process.execPath,
-    [nextCli, "dev", "-p", String(nextPort)],
+    [nextCli, "dev", "--webpack", "-p", String(nextPort)],
     {
       stdio: "inherit",
       env: process.env,

@@ -15,9 +15,9 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 mt-2 px-6 py-8 sm:mt-8 sm:px-14 md:px-20">
       <div className="mx-auto flex items-center justify-between lg:max-w-7xl">
         <Link
-          href="/old"
+          href="/old/"
           className="drop-shadow-teralight flex items-center justify-center"
-          aria-label="Return to home page"
+          aria-label="Old portfolio"
         >
           <div className="relative h-12 w-12 sm:h-14 sm:w-14">
             <AnimatedLogo />

@@ -6,7 +6,7 @@
   "packageManager": "pnpm@10.26.0",
   "scripts": {
     "dev": "node scripts/dev-server.mjs",
-    "build": "node scripts/generate-sitemap.mjs && next build && node scripts/prepare-static-export.mjs",
+    "build": "node scripts/generate-sitemap.mjs && next build --webpack && node scripts/prepare-static-export.mjs",
     "clean": "reclaimspace -y",
     "start": "serve out",
     "pretest": "pnpm build",
