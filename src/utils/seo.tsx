@@ -218,7 +218,9 @@ export function generatePersonSchema(data: PersonSchema) {
       "Frontend Development",
       "Web Development",
     ],
-    ...(data.mainEntityOfPage ? { mainEntityOfPage: data.mainEntityOfPage } : {}),
+    ...(data.mainEntityOfPage
+      ? { mainEntityOfPage: data.mainEntityOfPage }
+      : {}),
   };
 }
 
@@ -253,7 +255,9 @@ export function generateWebsiteSchema(data: WebsiteSchema) {
       target: [data.url],
     },
     inLanguage: "en-US",
-    ...(data.mainEntityOfPage ? { mainEntityOfPage: data.mainEntityOfPage } : {}),
+    ...(data.mainEntityOfPage
+      ? { mainEntityOfPage: data.mainEntityOfPage }
+      : {}),
   };
 }
 

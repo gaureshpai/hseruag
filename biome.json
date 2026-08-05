@@ -6,7 +6,12 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["src/**", "!!**/*.css", "!!src/utility/cursor-trail.ts"]
+    "includes": [
+      "src/**",
+      "!!**/*.css",
+      "!!src/utility/cursor-trail.ts",
+      "public/site.html"
+    ]
   },
   "formatter": {
     "enabled": true,
