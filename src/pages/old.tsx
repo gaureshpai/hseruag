@@ -172,11 +172,9 @@ export default function Home({
 }
 
 /**
- * Prepares the data required to statically render the Home page.
+ * Prepares the portfolio data and image gallery schema required to render the Home page.
  *
- * Simplifies skill entries and builds an image gallery schema from public images.
- *
- * @returns An object containing the page props: projects, skills, education, experience, achievements, and the image gallery schema.
+ * @returns The static page props containing projects, simplified skills, education, experience, achievements, and the image gallery schema.
  */
 export async function getStaticProps() {
   const { PROJECT_SHOWCASE } = await import("@/data/projects");
