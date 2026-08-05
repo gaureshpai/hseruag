@@ -1,5 +1,13 @@
 import type { NextSeoProps } from "next-seo";
-import { GITHUB_URL, LINKEDIN_URL, SITE_URL, X_URL } from "@/constants/site";
+import {
+  GITHUB_URL,
+  INSTAGRAM_URL,
+  LEETCODE_URL,
+  LINKEDIN_URL,
+  NPM_URL,
+  SITE_URL,
+  X_URL,
+} from "@/constants/site";
 
 const SITE_NAME = "Gauresh G Pai";
 const TWITTER_HANDLE = "@hseruag";
@@ -149,32 +157,59 @@ export function generateSEOConfig(config: SEOConfig): NextSeoProps {
 export interface PersonSchema {
   name: string;
   url: string;
+  id?: string;
   jobTitle: string;
   description: string;
   image?: string;
   sameAs?: string[];
   knowsAbout?: string[];
+  worksFor?: { name: string; url: string };
+  alumniOf?: { name: string; url: string };
+  mainEntityOfPage?: string;
 }
 
 /**
- * Generate a schema.org JSON-LD Person object.
+ * Creates a Schema.org `Person` object from identity and professional details.
  *
- * @param data - Fields to populate the Person schema. Optional fields:
- *   - `image` defaults to `${SITE_URL}/logo.png`
- *   - `sameAs` defaults to `[GITHUB_URL, LINKEDIN_URL, X_URL]`
- *   - `knowsAbout` defaults to a curated list of common web/JavaScript topics
- * @returns An object representing the JSON-LD `Person` with `@context`, `@type`, and the provided or defaulted properties
+ * @param data - Person details, including optional identifier, image, social profiles, expertise, employer, educational institution, and page reference.
+ * @returns A `Person` object with the supplied values and applicable defaults.
  */
 export function generatePersonSchema(data: PersonSchema) {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
+    ...(data.id ? { "@id": data.id } : {}),
     name: data.name,
     url: data.url,
     jobTitle: data.jobTitle,
     description: data.description,
     image: data.image || `${SITE_URL}/logo.png`,
-    sameAs: data.sameAs || [GITHUB_URL, LINKEDIN_URL, X_URL],
+    sameAs: data.sameAs || [
+      GITHUB_URL,
+      LINKEDIN_URL,
+      X_URL,
+      INSTAGRAM_URL,
+      LEETCODE_URL,
+      NPM_URL,
+    ],
+    ...(data.worksFor
+      ? {
+          worksFor: {
+            "@type": "Organization",
+            name: data.worksFor.name,
+            url: data.worksFor.url,
+          },
+        }
+      : {}),
+    ...(data.alumniOf
+      ? {
+          alumniOf: {
+            "@type": "CollegeOrUniversity",
+            name: data.alumniOf.name,
+            url: data.alumniOf.url,
+          },
+        }
+      : {}),
     knowsAbout: data.knowsAbout || [
       "JavaScript",
       "TypeScript",
@@ -183,6 +218,9 @@ export function generatePersonSchema(data: PersonSchema) {
       "Frontend Development",
       "Web Development",
     ],
+    ...(data.mainEntityOfPage
+      ? { mainEntityOfPage: data.mainEntityOfPage }
+      : {}),
   };
 }
 
@@ -190,18 +228,21 @@ export interface WebsiteSchema {
   name: string;
   url: string;
   description: string;
+  id?: string;
+  mainEntityOfPage?: string;
 }
 
 /**
- * Generate a JSON-LD WebSite schema for the provided site metadata.
+ * Creates a Schema.org `WebSite` object from site metadata.
  *
- * @param data - Site metadata containing `name`, `url`, and `description`
- * @returns A JSON-LD object representing a schema.org `WebSite` with the site name, URL, description, an author set to the library's site name, a `ReadAction` potentialAction targeting the site URL, and `inLanguage` set to "en-US"
+ * @param data - Site metadata containing the name, URL, description, and optional identifier or page reference
+ * @returns A `WebSite` object with the site owner as author, a read action targeting the site URL, and English language metadata
  */
 export function generateWebsiteSchema(data: WebsiteSchema) {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    ...(data.id ? { "@id": data.id } : {}),
     name: data.name,
     url: data.url,
     description: data.description,
@@ -214,6 +255,9 @@ export function generateWebsiteSchema(data: WebsiteSchema) {
       target: [data.url],
     },
     inLanguage: "en-US",
+    ...(data.mainEntityOfPage
+      ? { mainEntityOfPage: data.mainEntityOfPage }
+      : {}),
   };
 }
 

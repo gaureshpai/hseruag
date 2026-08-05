@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "framework": null,
+  "buildCommand": "pnpm build",
+  "outputDirectory": "out",
+  "rewrites": [{ "source": "/", "destination": "/site.html" }]
+}

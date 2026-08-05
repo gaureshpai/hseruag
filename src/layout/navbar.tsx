@@ -3,21 +3,18 @@ import AnimatedLogo from "@/animation/animated-logo";
 import ThemeSwitch from "@/components/utility/theme-switch";
 
 /**
- * Renders the top navigation bar with a home link and theme switch.
+ * Renders the sticky top navigation bar with a link to the old portfolio and a theme switch control.
  *
- * The header is sticky and contains a left-aligned link wrapping the animated logo
- * that navigates to the home page, and a right-aligned navigation area hosting the theme switch.
- *
- * @returns The JSX header element containing the home link with `AnimatedLogo` and the `ThemeSwitch` control.
+ * @returns The navigation header element.
  */
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 mt-2 px-6 py-8 sm:mt-8 sm:px-14 md:px-20">
       <div className="mx-auto flex items-center justify-between lg:max-w-7xl">
         <Link
-          href="/"
+          href="/old/"
           className="drop-shadow-teralight flex items-center justify-center"
-          aria-label="Return to home page"
+          aria-label="Old portfolio"
         >
           <div className="relative h-12 w-12 sm:h-14 sm:w-14">
             <AnimatedLogo />
