@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-      Gauresh G Pai | Software Engineer in Mangaluru
+      Gauresh G Pai · Software Engineer in Mangaluru
     </title>
     <meta
       name="description"
@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta
       property="og:title"
-      content="Gauresh G Pai | Software Engineer in Mangaluru"
+      content="Gauresh G Pai · Software Engineer in Mangaluru"
     />
     <meta
       property="og:description"
@@ -52,7 +52,7 @@
     <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
-      content="Gauresh G Pai | Software Engineer in Mangaluru"
+      content="Gauresh G Pai · Software Engineer in Mangaluru"
     />
     <meta
       name="twitter:description"
@@ -175,7 +175,7 @@
             "@type": "ProfilePage",
             "@id": "https://gauresh.is-a.dev/#profile",
             "url": "https://gauresh.is-a.dev/",
-            "name": "Gauresh G Pai | Software Engineer",
+            "name": "Gauresh G Pai · Software Engineer",
             "isPartOf": { "@id": "https://gauresh.is-a.dev/#website" },
             "mainEntity": { "@id": "https://gauresh.is-a.dev/#person" },
             "inLanguage": "en-IN"
@@ -606,6 +606,27 @@
         line-height: 1.35;
       }
 
+      #experience > h2 {
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: clamp(30px, 5vw, 44px);
+        font-weight: 400;
+        letter-spacing: -0.01em;
+      }
+
+      #experience .role,
+      #experience .role a {
+        font-family: "Inter", sans-serif;
+        font-size: 16.5px;
+        font-weight: 600;
+        line-height: 1.35;
+      }
+
+      #experience .timeline > div > p:not(.role):not(.when) {
+        margin: 0;
+        color: var(--ink-2);
+        font-size: 14.5px;
+      }
+
       .role a {
         border-bottom-style: dotted;
       }
@@ -727,6 +748,14 @@
         flex-direction: column;
         align-items: center;
         width: 24px;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .lamp-toggle:focus,
+      .lamp-toggle:focus-visible {
+        outline: none;
       }
 
       .lamp-string {
@@ -805,6 +834,12 @@
       @media (min-width: 640px) {
         .lamp-toggle {
           right: 32px;
+        }
+      }
+
+      @media (max-width: 639px) {
+        .lamp-toggle {
+          position: absolute;
         }
       }
     </style>
@@ -1253,7 +1288,6 @@
         <ul class="timeline">
           <li>
             <p class="role">Hackathon Excellence @Cardano &amp; Microsoft</p>
-            <p class="when">2025 · International</p>
             <ul>
               <li>
                 Secured 2nd Runner-up at Cardano Hackathon Asia 2025 - IBW
@@ -1267,7 +1301,6 @@
           </li>
           <li>
             <p class="role">Leadership Roles @UiPath &amp; Kreekarvat</p>
-            <p class="when">2025 – 2026 · Hybrid</p>
             <ul>
               <li>Served as Student Developer Champion at UiPath (2025–26).</li>
               <li>Project Manager at Kreekarvat Technologies.</li>
@@ -1279,7 +1312,6 @@
           </li>
           <li>
             <p class="role">Competitions &amp; Community @Yukti &amp; GDSC</p>
-            <p class="when">2025 · AJIET</p>
             <ul>
               <li>Winner of Code Debugging (2025) at Yukti 2025.</li>
               <li>
@@ -1293,7 +1325,6 @@
               Open Source Contributions
               <a href="https://www.npmjs.com/~gaureshpai" target="_blank" rel="noopener noreferrer">@GitHub &amp; NPM</a>
             </p>
-            <p class="when">2024 – 2026 · AJIET</p>
             <ul>
               <li>
                 reclaimspace: A CLI tool to reclaim disk space by finding and
