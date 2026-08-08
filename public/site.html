@@ -194,6 +194,16 @@
         --chip: #f2efe9;
         --radius: 14px;
         --max: 920px;
+        /* Top-down responsive font scale with per-font-family maxes (smaller maximums for a tighter layout) */
+        --max-serif: 38px; /* used by Instrument Serif headings */
+        --max-sans: 16px;  /* used by Inter headings/body */
+        --fs-hero: clamp(40px, 8vw, 72px); /* hero name - restore original */
+        --fs-h1: clamp(34px, 7vw, var(--max-serif));
+        --fs-h2: clamp(20px, 4vw, var(--max-serif));
+        --fs-h3: clamp(15px, 3vw, var(--max-sans));
+        --fs-lead: clamp(14px, 2.2vw, 16px);
+        --fs-body: clamp(13px, 1.9vw, 15px);
+        --fs-small: 12px;
       }
 
       [data-theme="dark"] {
@@ -286,14 +296,19 @@
       h1 {
         font-family: "Instrument Serif", Georgia, serif;
         font-weight: 400;
-        font-size: clamp(40px, 8vw, 72px);
+        font-size: var(--fs-h1);
         line-height: 1.02;
         letter-spacing: -0.015em;
         margin: 0 0 18px;
       }
 
+      /* Hero-specific override to restore original larger name sizing */
+      .hero h1 {
+        font-size: var(--fs-hero);
+      }
+
       .lead {
-        font-size: clamp(15px, 2.2vw, 17px);
+        font-size: var(--fs-lead);
         color: var(--ink-2);
         max-width: 620px;
         margin: 0 0 28px;
@@ -353,7 +368,7 @@
       h2 {
         font-family: "Instrument Serif", Georgia, serif;
         font-weight: 400;
-        font-size: clamp(26px, 4.2vw, 38px);
+        font-size: var(--fs-h2);
         letter-spacing: -0.01em;
         margin: 0 0 24px;
         padding-bottom: 12px;
@@ -417,7 +432,7 @@
         color: var(--ink);
         padding: 5px 11px;
         border-radius: 999px;
-        font-size: 12.5px;
+        font-size: var(--fs-small);
         white-space: nowrap;
       }
 
@@ -475,7 +490,7 @@
 
       .project-head h3 {
         margin: 0;
-        font-size: 19px;
+        font-size: var(--fs-h3);
         font-weight: 600;
         font-family: "Inter", sans-serif;
         letter-spacing: -0.01em;
@@ -503,7 +518,7 @@
 
       .project p {
         margin: 2px 0 0;
-        font-size: 14.5px;
+        font-size: var(--fs-body);
         color: var(--ink-2);
         grid-column: 1 / -1;
       }
@@ -600,15 +615,16 @@
       }
 
       .role {
-        font-size: 16.5px;
+        font-size: var(--fs-h3);
         font-weight: 600;
         margin: 0 0 4px;
         line-height: 1.35;
       }
 
-      #experience > h2 {
+      /* Ensure section headings (Experience, Projects, Education, Achievements) use the same responsive size */
+      section > h2 {
         font-family: "Instrument Serif", Georgia, serif;
-        font-size: clamp(26px, 5vw, 44px);
+        font-size: var(--fs-h2);
         font-weight: 400;
         letter-spacing: -0.01em;
       }
@@ -616,7 +632,7 @@
       #experience .role,
       #experience .role a {
         font-family: "Inter", sans-serif;
-        font-size: 16.5px;
+        font-size: var(--fs-h3);
         font-weight: 600;
         line-height: 1.35;
       }
@@ -624,7 +640,7 @@
       #experience .timeline > div > p:not(.role):not(.when) {
         margin: 0;
         color: var(--ink-2);
-        font-size: 14.5px;
+        font-size: var(--fs-body);
       }
 
       .role a {
@@ -632,7 +648,7 @@
       }
 
       .when {
-        font-size: 12.5px;
+        font-size: var(--fs-small);
         color: var(--muted);
         margin: 0 0 10px;
       }
@@ -641,7 +657,7 @@
         margin: 6px 0 0;
         padding-left: 18px;
         color: var(--ink-2);
-        font-size: 14.5px;
+        font-size: var(--fs-body);
       }
 
       .timeline ul li {
@@ -793,7 +809,8 @@
       }
 
       .lamp-ornament.pulling {
-        transform: translateY(16px);
+        /* Move ornament down to remain attached to the extended thread */
+        transform: translateY(30px);
       }
 
       [data-theme="dark"] .lamp-ornament {
