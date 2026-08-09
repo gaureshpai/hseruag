@@ -6,8 +6,8 @@ on:
 
 permissions:
   contents: read
-  pull-requests: read
-  issues: write
+  pull-requests: write
+  deployments: write
 
 jobs:
   deploy:
@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Queue exact PR commit in gp-cloud
         id: deploy
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           github-token: ${{ github.token }}
           script: |
@@ -34,12 +34,43 @@ jobs:
               body: JSON.stringify({ pr_number: context.issue.number }),
             });
             const result = await response.json();
-            if (!response.ok) core.setFailed(result.error || `gp-cloud returned ${response.status}`);
+            if (!response.ok) throw new Error(result.error || `gp-cloud returned ${response.status}`);
             core.setOutput('preview_url', result.preview_url);
             core.setOutput('deployment_id', result.id);
-            await github.rest.issues.createComment({
+            const comment = await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
               body: `🚀 gp-cloud deployment queued for commit \`${result.sha}\`.\n\nPreview: ${result.preview_url}\nDeployment: \`${result.id}\``,
             });
+            const updateComment = async (body) => github.rest.issues.updateComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              comment_id: comment.data.id,
+              body,
+            });
+            let current = result;
+            let lastState = result.state;
+            const deadline = Date.now() + 15 * 60 * 1000;
+            while (!['RUNNING', 'FAILED', 'STOPPED'].includes(current.state)) {
+              if (Date.now() > deadline) throw new Error('gp-cloud deployment timed out after 15 minutes');
+              await new Promise(resolve => setTimeout(resolve, 5000));
+              const statusResponse = await fetch(`https://control.preview.venjix.in/actions/gp-cloud-deploy/${result.id}`, {
+                headers: {
+                  'Authorization': `Bearer ${token}`,
+                  'X-GitHub-Repository': `${context.repo.owner}/${context.repo.repo}`,
+                },
+              });
+              current = await statusResponse.json();
+              if (!statusResponse.ok) throw new Error(current.error || `gp-cloud status returned ${statusResponse.status}`);
+              if (current.state !== lastState) {
+                lastState = current.state;
+                await updateComment(`⏳ gp-cloud deployment **${current.state}** for commit \`${current.sha}\`.\n\nPreview: ${current.preview_url || result.preview_url}\nDeployment: \`${result.id}\``);
+              }
+            }
+            if (current.state === 'RUNNING') {
+              await updateComment(`✅ gp-cloud deployment successful.\n\nCommit: \`${current.checked_out_sha || current.sha}\`\nPreview: ${current.preview_url}\nDeployment: \`${current.id}\``);
+            } else {
+              await updateComment(`❌ gp-cloud deployment failed.\n\nCommit: \`${current.sha}\`\nError: ${current.error || 'See gp-cloud deployment logs.'}\nDeployment: \`${current.id}\``);
+              core.setFailed(current.error || 'gp-cloud deployment failed');
+            }
