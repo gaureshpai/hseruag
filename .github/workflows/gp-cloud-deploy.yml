@@ -24,7 +24,7 @@ jobs:
           github-token: ${{ github.token }}
           script: |
             const token = (await github.auth()).token;
-            const response = await fetch('https://control.preview.venjix.in/actions/gp-cloud-deploy', {
+            const response = await fetch(`${process.env.GP_CLOUD_CONTROL_URL}/actions/gp-cloud-deploy`, {
               method: 'POST',
               headers: {
                 'Authorization': `Bearer ${token}`,
@@ -55,7 +55,7 @@ jobs:
             while (!['RUNNING', 'FAILED', 'STOPPED'].includes(current.state)) {
               if (Date.now() > deadline) throw new Error('gp-cloud deployment timed out after 15 minutes');
               await new Promise(resolve => setTimeout(resolve, 5000));
-              const statusResponse = await fetch(`https://control.preview.venjix.in/actions/gp-cloud-deploy/${result.id}`, {
+              const statusResponse = await fetch(`${process.env.GP_CLOUD_CONTROL_URL}/actions/gp-cloud-deploy/${result.id}`, {
                 headers: {
                   'Authorization': `Bearer ${token}`,
                   'X-GitHub-Repository': `${context.repo.owner}/${context.repo.repo}`,
