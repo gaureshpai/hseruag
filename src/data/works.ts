@@ -12,6 +12,17 @@ export interface Project {
 
 const projects: Project[] = [
   {
+    title: "RK Baliga memorial",
+    description:
+      "Discover R.K. Baliga, the visionary founder of Electronics City in Bangalore who transformed Karnataka into India's Silicon Valley. Complete biography, legacy, and history of India's tech pioneer (1929-1988).",
+    role: "Developer",
+    liveUrl: "https://www.rkbaliga.org",
+    tags: ["Memorial", "Tribute", "Biography", "Static Site"],
+    owner: "Dr. Ragavendra R Baliga",
+    company: "",
+    screenshot: "/works/rkbaligalegecy.png",
+  },
+  {
     title: "Aakar 2025",
     description:
       "Promotional site for Aakar 2025 Techno-Cultural Fest. Integrated event listings, dynamic schedules, and registration forms with creative branding.",
@@ -125,17 +136,6 @@ const projects: Project[] = [
     company: "Billmaxo Solutions",
     collaborators: ["Jnanesh"],
     screenshot: "/works/placeholder.svg",
-  },
-  {
-    title: "RK Baliga Legacy Website",
-    description:
-      "A digital tribute website honoring R.K. Baliga, the visionary behind India's first electronics city. Features timeline, biography, and legacy impact sections.",
-    role: "Full-Stack Developer",
-    liveUrl: "https://www.rkbaliga.org",
-    tags: ["Legacy", "Tribute", "Biography", "Static Site"],
-    owner: "Dr. Ragavendra R Baliga",
-    company: "Kreekarvat Technologies",
-    screenshot: "/works/rkbaligalegecy.png",
   },
   {
     title: "SVS Temple PU College",

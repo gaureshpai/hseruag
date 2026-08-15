@@ -15,17 +15,6 @@ export interface Project {
 
 export const PROJECT_SHOWCASE: Project[] = [
   {
-    title: "Create Next Quick",
-    description:
-      "A CLI tool to quickly set up a Next.js project with Tailwind CSS and TypeScript.",
-    liveUrl: "https://gaureshpai.github.io/create-next-quick",
-    githubUrl: `${GITHUB_URL}/create-next-quick`,
-    role: "Developer",
-    tags: ["Node.js", "Next.js", "Tailwind CSS", "TypeScript", "npm", "CLI"],
-    collaborators: [],
-    screenshot: "/projects/create-next-quick.png",
-  },
-  {
     title: "reclaimspace",
     description:
       "A CLI tool to reclaim disk space by finding and removing unnecessary development folders and files.",
@@ -45,6 +34,33 @@ export const PROJECT_SHOWCASE: Project[] = [
     role: "Developer",
     screenshot: "/projects/reclaimspace.png",
   },
+  {
+    title: "docmetry",
+    description:
+      "A standalone CLI and Python package for extracting PDFs into a stable artifact contract and measuring document intelligence systems.",
+    githubUrl: `${GITHUB_URL}/docmetry`,
+    role: "Developer",
+    tags: [
+      "Python",
+      "CLI",
+      "PDF",
+      "OCR",
+      "document-intelligence",
+      "evaluation",
+    ],
+    screenshot: "/works/placeholder.svg",
+    collaborators: [],
+  },
+  // {
+  //   title: "GP Cloud Preview",
+  //   description:
+  //     "A self-hosted pull-request preview control plane that builds, health-checks, and publishes exact Git commit deployments.",
+  //   githubUrl: `${GITHUB_URL}/gp-cloud-preview`,
+  //   role: "Developer",
+  //   tags: ["Python", "Docker", "Caddy", "GitHub", "deployment", "security"],
+  //   screenshot: "/works/placeholder.svg",
+  //   collaborators: [],
+  // },
   // {
   //   title: "Utility Hub",
   //   description: "A collection of useful web utilities built with MERN stack.",

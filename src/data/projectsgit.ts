@@ -15,6 +15,31 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    title: "docmetry",
+    description:
+      "A standalone CLI and Python package for extracting PDFs into a stable artifact contract and measuring document intelligence systems.",
+    link: `${GITHUB_URL}/docmetry`,
+    liveUrl: null,
+    screenshot: "/works/placeholder.svg",
+    tags: [
+      "python",
+      "cli",
+      "pdf",
+      "ocr",
+      "document-intelligence",
+      "evaluation",
+    ],
+  },
+  {
+    title: "GP Cloud Preview",
+    description:
+      "A self-hosted pull-request preview control plane that builds, health-checks, and publishes exact Git commit deployments.",
+    link: `${GITHUB_URL}/gp-cloud-preview`,
+    liveUrl: null,
+    screenshot: "/works/placeholder.svg",
+    tags: ["python", "docker", "caddy", "github", "deployment", "security"],
+  },
+  {
     title: "create-next-quick",
     description:
       "create-next-quick is a CLI tool that lets you instantly create a new Next.js project with your choice of options.",
