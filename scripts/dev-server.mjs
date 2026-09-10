@@ -113,7 +113,9 @@ try {
 if (nextProcess) {
   server.listen(publicPort, "127.0.0.1", () => {
     console.log(`Hybrid dev server: http://localhost:${publicPort}`);
-    console.log(`Static homepage: / | Next.js routes: internal port ${nextPort}`);
+    console.log(
+      `Static homepage: / | Next.js routes: internal port ${nextPort}`,
+    );
   });
 }
 
@@ -133,7 +135,9 @@ if (nextProcess) {
   nextProcess.on("exit", (code, signal) => {
     if (code && code !== 0) process.exitCode = code;
     if (!shuttingDown) {
-      handleFailure(new Error(`Next.js exited with code ${code} signal ${signal}`));
+      handleFailure(
+        new Error(`Next.js exited with code ${code} signal ${signal}`),
+      );
     } else if (server.listening) {
       server.close();
     }

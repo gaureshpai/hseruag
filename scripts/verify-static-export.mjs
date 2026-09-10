@@ -27,4 +27,6 @@ if (homepageContents !== sourceContents) {
   throw new Error("out/index.html is not rendered from public/site.html");
 }
 
-console.log("Static export smoke test passed: HTML homepage and Next.js routes are present.");
+console.log(
+  "Static export smoke test passed: HTML homepage and Next.js routes are present.",
+);

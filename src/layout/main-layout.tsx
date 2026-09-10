@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import Footer from "@/layout/footer";
 import Navbar from "@/layout/navbar";
 import { classNames } from "@/utility/classNames";

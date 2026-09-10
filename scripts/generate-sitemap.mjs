@@ -77,7 +77,9 @@ function escapeXml(value) {
 function generateSiteMap() {
   const currentDate = new Date().toISOString();
   const allImages = walkPublicDir(PUBLIC_DIR)
-    .filter((filePath) => SUPPORTED_IMAGE_EXTENSIONS.has(path.extname(filePath).toLowerCase()))
+    .filter((filePath) =>
+      SUPPORTED_IMAGE_EXTENSIONS.has(path.extname(filePath).toLowerCase()),
+    )
     .map((filePath) => {
       const relativePath = `/${path.relative(PUBLIC_DIR, filePath).replace(/\\/g, "/")}`;
       const encodedPath = relativePath
@@ -108,11 +110,41 @@ function generateSiteMap() {
   }
 
   const staticPages = [
-    { loc: `${SITE_URL}/`, lastmod: currentDate, changefreq: "weekly", priority: 1.0, images: imagesByPage["/"] },
-    { loc: `${SITE_URL}/about/`, lastmod: currentDate, changefreq: "monthly", priority: 0.8, images: [] },
-    { loc: `${SITE_URL}/projects/`, lastmod: currentDate, changefreq: "weekly", priority: 0.9, images: imagesByPage["/projects"] },
-    { loc: `${SITE_URL}/works/`, lastmod: currentDate, changefreq: "weekly", priority: 0.9, images: imagesByPage["/works"] },
-    { loc: `${SITE_URL}/certificates/`, lastmod: currentDate, changefreq: "monthly", priority: 0.7, images: imagesByPage["/certificates"] },
+    {
+      loc: `${SITE_URL}/`,
+      lastmod: currentDate,
+      changefreq: "weekly",
+      priority: 1.0,
+      images: imagesByPage["/"],
+    },
+    {
+      loc: `${SITE_URL}/about/`,
+      lastmod: currentDate,
+      changefreq: "monthly",
+      priority: 0.8,
+      images: [],
+    },
+    {
+      loc: `${SITE_URL}/projects/`,
+      lastmod: currentDate,
+      changefreq: "weekly",
+      priority: 0.9,
+      images: imagesByPage["/projects"],
+    },
+    {
+      loc: `${SITE_URL}/works/`,
+      lastmod: currentDate,
+      changefreq: "weekly",
+      priority: 0.9,
+      images: imagesByPage["/works"],
+    },
+    {
+      loc: `${SITE_URL}/certificates/`,
+      lastmod: currentDate,
+      changefreq: "monthly",
+      priority: 0.7,
+      images: imagesByPage["/certificates"],
+    },
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
