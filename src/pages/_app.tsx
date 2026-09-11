@@ -4,10 +4,12 @@ import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { DefaultSeo } from "next-seo";
 import { ThemeProvider } from "next-themes";
+import { useEffect } from "react";
 import { SITE_URL } from "@/constants/site";
 
 import MainLayout from "@/layout/main-layout";
 import "@/styles/globals.css";
+import { initPostHog, usePostHogPageView } from "@/utils/posthog";
 
 const CursorTrailCanvas = dynamic(
   () => import("@/components/cursor-trail-canvas"),
@@ -23,6 +25,13 @@ const CursorTrailCanvas = dynamic(
  */
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+
+  usePostHogPageView();
+
+  useEffect(() => {
+    initPostHog();
+  }, []);
+
   return (
     <>
       <DefaultSeo
