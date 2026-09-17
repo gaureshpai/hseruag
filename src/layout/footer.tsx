@@ -9,6 +9,7 @@ import {
   NPM_URL,
   X_URL,
 } from "@/constants/site";
+import { trackEvent } from "@/utils/posthog";
 
 /**
  * Renders the site footer with a contact call-to-action, action buttons, current-year attribution, and social/profile links.
@@ -38,6 +39,9 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="h-6 w-6"
             aria-label="link to Github profile"
+            onClick={() =>
+              trackEvent("portfolio_social_link_clicked", { network: "github" })
+            }
           >
             <SiGithub className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
@@ -47,6 +51,11 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="h-6 w-6"
             aria-label="link to Linkedin profile"
+            onClick={() =>
+              trackEvent("portfolio_social_link_clicked", {
+                network: "linkedin",
+              })
+            }
           >
             <SiLinkedin className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
@@ -56,6 +65,9 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="h-6 w-6"
             aria-label="link to X profile"
+            onClick={() =>
+              trackEvent("portfolio_social_link_clicked", { network: "x" })
+            }
           >
             <SiX className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
@@ -65,6 +77,11 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="h-6 w-6"
             aria-label="link to Leetcode profile"
+            onClick={() =>
+              trackEvent("portfolio_social_link_clicked", {
+                network: "leetcode",
+              })
+            }
           >
             <SiLeetcode className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>
@@ -74,6 +91,9 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="h-6 w-6"
             aria-label="link to NPM profile"
+            onClick={() =>
+              trackEvent("portfolio_social_link_clicked", { network: "npm" })
+            }
           >
             <SiNpm className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </Link>

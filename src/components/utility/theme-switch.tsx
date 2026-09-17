@@ -1,5 +1,6 @@
 import { useTheme } from "next-themes";
 import { type Dispatch, type SetStateAction, useEffect, useState } from "react";
+import { trackEvent } from "@/utils/posthog";
 
 export interface ThemeSwitchProps {
   setClose?: Dispatch<SetStateAction<boolean>>;
@@ -12,10 +13,13 @@ export default function ThemeSwitch(props: ThemeSwitchProps) {
   useEffect(() => setMounted(true), []);
 
   const handleThemeChange = () => {
+    const nextTheme = resolvedTheme === "dark" ? "light" : "dark";
+
     if (props.setClose) {
       props.setClose(false);
     }
-    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+    setTheme(nextTheme);
+    trackEvent("portfolio_theme_changed", { theme: nextTheme });
   };
 
   return (

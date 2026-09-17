@@ -1,6 +1,7 @@
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import type { Project } from "@/data/projects";
+import { trackEvent } from "@/utils/posthog";
 
 interface ProjectCardProps {
   project: Project;
@@ -78,6 +79,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-xs underline md:text-sm"
+            onClick={() =>
+              trackEvent("portfolio_project_link_clicked", {
+                project: project.title,
+                link_type: "github",
+              })
+            }
           >
             <Github className="h-5 w-5" /> View on GitHub
           </a>
@@ -88,6 +95,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-xs underline md:text-sm"
+            onClick={() =>
+              trackEvent("portfolio_project_link_clicked", {
+                project: project.title,
+                link_type: "live_demo",
+              })
+            }
           >
             <ExternalLink className="h-5 w-5" /> Live Demo
           </a>

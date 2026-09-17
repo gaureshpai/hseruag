@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { trackEvent } from "@/utils/posthog";
 
 /**
  * Renders an animated hero section containing the name, role subtitle, descriptive text, and a resume download link.
@@ -44,6 +45,11 @@ export default function Hero() {
             <div className="mt-6 flex cursor-pointer items-center gap-4">
               <Link
                 href="/Gauresh_G_Pai.pdf"
+                onClick={() =>
+                  trackEvent("portfolio_resume_downloaded", {
+                    placement: "hero",
+                  })
+                }
                 target="_blank"
                 rel="noopener noreferrer"
                 download={true}

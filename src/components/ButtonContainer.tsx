@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { trackEvent } from "@/utils/posthog";
 import { ArrowTopRight } from "./icons";
 
 const ButtonContainer = () => {
@@ -6,6 +7,12 @@ const ButtonContainer = () => {
     <div className="mx-auto flex flex-wrap justify-center gap-2 md:max-w-7xl">
       <Link
         href="/about"
+        onClick={() =>
+          trackEvent("portfolio_navigation_clicked", {
+            destination: "/about",
+            placement: "home_cta",
+          })
+        }
         className="group relative flex min-w-[15rem] items-center justify-center gap-2 text-base font-semibold sm:text-lg md:text-xl"
       >
         <div className="relative max-w-max">
@@ -18,6 +25,12 @@ const ButtonContainer = () => {
       </Link>
       <Link
         href="/projects"
+        onClick={() =>
+          trackEvent("portfolio_navigation_clicked", {
+            destination: "/projects",
+            placement: "home_cta",
+          })
+        }
         className="group relative flex min-w-[15rem] items-center justify-center gap-2 text-base font-semibold sm:text-lg md:text-xl"
       >
         <div className="relative max-w-max">
@@ -30,6 +43,12 @@ const ButtonContainer = () => {
       </Link>
       <Link
         href="/certificates"
+        onClick={() =>
+          trackEvent("portfolio_navigation_clicked", {
+            destination: "/certificates",
+            placement: "home_cta",
+          })
+        }
         className="group relative flex min-w-[15rem] items-center justify-center gap-2 text-base font-semibold sm:text-lg md:text-xl"
       >
         <div className="relative max-w-max">
@@ -42,6 +61,12 @@ const ButtonContainer = () => {
       </Link>
       <Link
         href="/works"
+        onClick={() =>
+          trackEvent("portfolio_navigation_clicked", {
+            destination: "/works",
+            placement: "home_cta",
+          })
+        }
         className="group relative flex min-w-[15rem] items-center justify-center gap-2 text-base font-semibold sm:text-lg md:text-xl"
       >
         <div className="relative max-w-max">
@@ -56,6 +81,12 @@ const ButtonContainer = () => {
         href="https://www.google.com/search?q=Gauresh+G+Pai"
         className="group relative flex min-w-[15rem] items-center justify-center gap-2 text-base font-semibold sm:text-lg md:text-xl"
         target="_blank"
+        onClick={() =>
+          trackEvent("portfolio_outbound_link_clicked", {
+            destination: "google_search",
+            placement: "home_cta",
+          })
+        }
       >
         <div className="relative max-w-max">
           <span className="text-accent">Look me up</span>

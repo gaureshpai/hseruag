@@ -6,6 +6,11 @@ const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY;
 const POSTHOG_HOST =
   process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com";
 
+type AnalyticsProperties = Record<
+  string,
+  string | number | boolean | null | undefined
+>;
+
 export function initPostHog() {
   if (typeof window === "undefined" || !POSTHOG_KEY) {
     return;
@@ -40,6 +45,18 @@ export function initPostHog() {
   });
 }
 
+export function trackEvent(
+  eventName: string,
+  properties: AnalyticsProperties = {},
+) {
+  if (typeof window === "undefined" || !POSTHOG_KEY) {
+    return;
+  }
+
+  initPostHog();
+  posthog.capture(eventName, properties);
+}
+
 export function usePostHogPageView() {
   const router = useRouter();
 
@@ -51,8 +68,12 @@ export function usePostHogPageView() {
     initPostHog();
 
     const handleRouteChange = (url: string) => {
+      const absoluteUrl = new URL(url, window.location.origin).toString();
       posthog.capture("$pageview", {
-        $current_url: url,
+        $current_url: absoluteUrl,
+        page_path: new URL(absoluteUrl).pathname,
+        page_title: document.title,
+        referrer: document.referrer || undefined,
       });
     };
 
