@@ -36,12 +36,12 @@ export default function About({
   const seoConfig = generateSEOConfig({
     title: "About",
     description:
-      "Learn about Gauresh G Pai, a Product Engineer at Metaforms AI and former Founding Engineer / SDE at Brink AI Labs. Discover his journey, skills in React, Next.js, TypeScript, professional experience, education, and achievements in web development.",
+      "Learn about Gauresh G Pai, a Product Engineer at Metaforms and former Founding Engineer / SDE at Brink AI Labs. Discover his journey, skills in React, Next.js, TypeScript, professional experience, education, and achievements in web development.",
     canonical: `${SITE_URL}/about`,
     openGraph: {
       title: "About Gauresh G Pai - Product Engineer",
       description:
-        "Product Engineer at Metaforms AI specializing in React & Next.js. Explore my professional journey, technical skills, education, and accomplishments.",
+        "Product Engineer at Metaforms specializing in React & Next.js. Explore my professional journey, technical skills, education, and accomplishments.",
       type: "profile",
     },
     additionalMetaTags: [
@@ -66,7 +66,7 @@ export default function About({
     url: `${SITE_URL}/about`,
     jobTitle: "Product Engineer",
     description:
-      "Product Engineer at Metaforms AI with expertise in building scalable web applications using React, Next.js, and TypeScript.",
+      "Product Engineer at Metaforms with expertise in building scalable web applications using React, Next.js, and TypeScript.",
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([

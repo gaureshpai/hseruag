@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <DefaultSeo
         defaultTitle="Gauresh G Pai | Product Engineer Portfolio"
         titleTemplate="%s | Gauresh G Pai"
-        description="Professional portfolio of Gauresh G Pai, a Product Engineer at Metaforms AI and former Founding Engineer / SDE at Brink AI Labs, specializing in React, Next.js, TypeScript, and modern web technologies."
+        description="Professional portfolio of Gauresh G Pai, a Product Engineer at Metaforms and former Founding Engineer / SDE at Brink AI Labs, specializing in React, Next.js, TypeScript, and modern web technologies."
         canonical={SITE_URL}
         openGraph={{
           type: "website",

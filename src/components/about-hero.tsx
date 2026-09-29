@@ -22,7 +22,7 @@ export default function AboutHero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Metaforms AI
+              Metaforms
             </Link>{" "}
             and an active community contributor at{" "}
             <Link

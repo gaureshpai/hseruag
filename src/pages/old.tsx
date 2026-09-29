@@ -59,12 +59,12 @@ export default function Home({
 }: HomePageProps) {
   const seoConfig = generateSEOConfig({
     description:
-      "Portfolio of Gauresh G Pai, a Product Engineer at Metaforms AI and former Founding Engineer / SDE at Brink AI Labs, building production software, AI-agent workflows, automation tools, and accessible web applications with React, Next.js, and TypeScript.",
+      "Portfolio of Gauresh G Pai, a Product Engineer at Metaforms and former Founding Engineer / SDE at Brink AI Labs, building production software, AI-agent workflows, automation tools, and accessible web applications with React, Next.js, and TypeScript.",
     canonical: `${SITE_URL}/old/`,
     openGraph: {
       title: "Gauresh G Pai - Product Engineer Portfolio",
       description:
-        "Product Engineer at Metaforms AI, previously a Founding Engineer / SDE at Brink AI Labs, specializing in React, Next.js & TypeScript.",
+        "Product Engineer at Metaforms, previously a Founding Engineer / SDE at Brink AI Labs, specializing in React, Next.js & TypeScript.",
       type: "profile",
     },
     additionalMetaTags: [
@@ -106,7 +106,7 @@ export default function Home({
     id: `${SITE_URL}/#person`,
     jobTitle: "Product Engineer",
     description:
-      "Product Engineer at Metaforms AI, previously a Founding Engineer / SDE at Brink AI Labs, specializing in React, Next.js, TypeScript, automation, and production web applications.",
+      "Product Engineer at Metaforms, previously a Founding Engineer / SDE at Brink AI Labs, specializing in React, Next.js, TypeScript, automation, and production web applications.",
     knowsAbout: [
       "JavaScript",
       "TypeScript",
