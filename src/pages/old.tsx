@@ -58,6 +58,7 @@ export default function Home({
   imageGallerySchema,
 }: HomePageProps) {
   const seoConfig = generateSEOConfig({
+    title: "Gauresh G Pai - Product Engineer Portfolio",
     description:
       "Portfolio of Gauresh G Pai, a Product Engineer at Metaforms and former Founding Engineer / SDE at Brink AI Labs, building production software, AI-agent workflows, automation tools, and accessible web applications with React, Next.js, and TypeScript.",
     canonical: `${SITE_URL}/old/`,
