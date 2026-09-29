@@ -2,7 +2,7 @@ import type { ExperienceShowcaseListItemProps } from "@/components/experience/ex
 
 export const EDUCATION: ExperienceShowcaseListItemProps[] = [
   {
-    title: "Bachelor Of Engineering in Computer Science and Engineering",
+    title: "Bachelor of Engineering in CSE",
     organisation: {
       name: "AJ Institute of Engineering & Technology",
       href: "https://ajiet.edu.in/",
@@ -14,7 +14,7 @@ export const EDUCATION: ExperienceShowcaseListItemProps[] = [
   {
     title: "Pre-University College",
     organisation: {
-      name: "ST ALOYSIUS PU COLLEGE",
+      name: "St Aloysius PU College",
       href: "https://staloysiuspuc.in/",
     },
     date: "2020-2022",
