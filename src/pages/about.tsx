@@ -48,7 +48,7 @@ export default function About({
       {
         name: "keywords",
         content:
-          "About Gauresh G Pai, Software Engineer Biography, React Developer Experience, Engineering Student, Web Developer Journey, Professional Experience, Technical Skills, Education, Achievements, Career Path, Software Engineer India",
+          "About Gauresh G Pai, Product Engineer, Software Engineer Biography, React Developer Experience, Engineering Student, Web Developer Journey, Professional Experience, Technical Skills, Education, Achievements, Career Path, Software Engineer India",
       },
       {
         property: "profile:first_name",
