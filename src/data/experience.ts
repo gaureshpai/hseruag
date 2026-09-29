@@ -19,7 +19,7 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     date: "November 2025 - September 2026",
     location: "Remote",
     description:
-      "Developed knowledge infrastructure for an AI construction platform by connecting documents, RFIs, contracts, emails, calendars, and collaboration tools into a unified retrieval layer for contextual AI agents and automated workflows.\nBuilt AI analytics and customer engagement infrastructure for Shopify storefronts, including real- time event collection, session management, behaviour tracking, recommendations, cart interventions, and merchant control plane features.",
+      "Developed knowledge infrastructure for an AI construction platform by connecting documents, RFIs, contracts, emails, calendars, and collaboration tools into a unified retrieval layer for contextual AI agents and automated workflows.\nBuilt AI analytics and customer engagement infrastructure for Shopify storefronts, including real-time event collection, session management, behaviour tracking, recommendations, cart interventions, and merchant control plane features.",
   },
   {
     title: "Project Lead Developer",
