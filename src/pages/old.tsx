@@ -59,12 +59,12 @@ export default function Home({
 }: HomePageProps) {
   const seoConfig = generateSEOConfig({
     description:
-      "Portfolio of Gauresh G Pai, a Software Engineer at Brink AI Labs building production software, AI-agent workflows, automation tools, and accessible web applications with React, Next.js, and TypeScript.",
+      "Portfolio of Gauresh G Pai, a Product Engineer at Metaforms AI and former Founding Engineer / SDE at Brink AI Labs, building production software, AI-agent workflows, automation tools, and accessible web applications with React, Next.js, and TypeScript.",
     canonical: `${SITE_URL}/old/`,
     openGraph: {
-      title: "Gauresh G Pai - Software Engineer Portfolio",
+      title: "Gauresh G Pai - Product Engineer Portfolio",
       description:
-        "Software Engineer specializing in React, Next.js & TypeScript. 9+ client projects delivered with scalable, user-friendly web applications.",
+        "Product Engineer at Metaforms AI, previously a Founding Engineer / SDE at Brink AI Labs, specializing in React, Next.js & TypeScript.",
       type: "profile",
     },
     additionalMetaTags: [
@@ -104,9 +104,9 @@ export default function Home({
     name: "Gauresh G Pai",
     url: SITE_URL,
     id: `${SITE_URL}/#person`,
-    jobTitle: "Software Engineer",
+    jobTitle: "Product Engineer",
     description:
-      "Software Engineer at Brink AI Labs specializing in React, Next.js, TypeScript, automation, and production web applications.",
+      "Product Engineer at Metaforms AI, previously a Founding Engineer / SDE at Brink AI Labs, specializing in React, Next.js, TypeScript, automation, and production web applications.",
     knowsAbout: [
       "JavaScript",
       "TypeScript",
@@ -119,7 +119,7 @@ export default function Home({
       "Responsive Design",
       "Performance Optimization",
     ],
-    worksFor: { name: "Brink AI Labs", url: "https://trybrink.com" },
+    worksFor: { name: "Metaforms AI", url: "https://metaforms.ai/" },
     alumniOf: {
       name: "AJ Institute of Engineering & Technology",
       url: "https://ajiet.edu.in/",

@@ -30,9 +30,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <DefaultSeo
-        defaultTitle="Gauresh G Pai | Software Engineer Portfolio"
+        defaultTitle="Gauresh G Pai | Product Engineer Portfolio"
         titleTemplate="%s | Gauresh G Pai"
-        description="Professional portfolio of Gauresh G Pai, a Software Engineer specializing in React, Next.js, TypeScript, and modern web technologies. Explore projects, experience, and certifications."
+        description="Professional portfolio of Gauresh G Pai, a Product Engineer at Metaforms AI and former Founding Engineer / SDE at Brink AI Labs, specializing in React, Next.js, TypeScript, and modern web technologies."
         canonical={SITE_URL}
         openGraph={{
           type: "website",
@@ -44,7 +44,7 @@ export default function App({ Component, pageProps }: AppProps) {
               url: `${SITE_URL}/logo.png`,
               width: 1200,
               height: 630,
-              alt: "Gauresh G Pai - Software Engineer",
+              alt: "Gauresh G Pai - Product Engineer",
             },
           ],
         }}

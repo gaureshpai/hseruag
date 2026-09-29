@@ -2,15 +2,24 @@ import type { ExperienceShowcaseListItemProps } from "@/components/experience/ex
 
 export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
   {
-    title: "Software Engineer",
+    title: "Product Engineer",
+    organisation: {
+      name: "Metaforms AI",
+      href: "https://metaforms.ai/",
+    },
+    date: "September 2026 - Present",
+    location: "Onsite",
+  },
+  {
+    title: "Founding Engineer / Software Engineer",
     organisation: {
       name: "Brink AI Labs",
       href: "https://trybrink.com",
     },
-    date: "November 2025 - Present",
+    date: "November 2025 - September 2026",
     location: "Remote",
     description:
-      "We’re building the platform that lets AI agents operate real systems - from decisions to actions in the enterprise.\nWorking with builders from Meta, Disney+ Hotstar, JioCinema & Swiggy to develop production-grade software.",
+      "Developed knowledge infrastructure for an AI construction platform by connecting documents, RFIs, contracts, emails, calendars, and collaboration tools into a unified retrieval layer for contextual AI agents and automated workflows.\nBuilt AI analytics and customer engagement infrastructure for Shopify storefronts, including real- time event collection, session management, behaviour tracking, recommendations, cart interventions, and merchant control plane features.",
   },
   {
     title: "Project Lead Developer",
