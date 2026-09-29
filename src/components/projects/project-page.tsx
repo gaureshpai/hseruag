@@ -18,7 +18,7 @@ const ProjectCard: React.FC<Project & { index: number }> = ({
           height={1080}
           src={project.screenshot || "placeholder.svg"}
           alt={`${project.title} screenshot`}
-          className="aspect-auto rounded-lg object-contain transition-transform duration-300"
+          className="aspect-video rounded-lg object-contain transition-transform duration-300"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           priority={index < 4}
         />

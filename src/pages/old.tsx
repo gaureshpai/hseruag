@@ -58,20 +58,21 @@ export default function Home({
   imageGallerySchema,
 }: HomePageProps) {
   const seoConfig = generateSEOConfig({
+    title: "Gauresh G Pai - Product Engineer Portfolio",
     description:
-      "Portfolio of Gauresh G Pai, a Software Engineer at Brink AI Labs building production software, AI-agent workflows, automation tools, and accessible web applications with React, Next.js, and TypeScript.",
+      "Portfolio of Gauresh G Pai, a Product Engineer at Metaforms and former Founding Engineer / SDE at Brink AI Labs, building production software, AI-agent workflows, automation tools, and accessible web applications with React, Next.js, and TypeScript.",
     canonical: `${SITE_URL}/old/`,
     openGraph: {
-      title: "Gauresh G Pai - Software Engineer Portfolio",
+      title: "Gauresh G Pai - Product Engineer Portfolio",
       description:
-        "Software Engineer specializing in React, Next.js & TypeScript. 9+ client projects delivered with scalable, user-friendly web applications.",
+        "Product Engineer at Metaforms, previously a Founding Engineer / SDE at Brink AI Labs, specializing in React, Next.js & TypeScript.",
       type: "profile",
     },
     additionalMetaTags: [
       {
         name: "keywords",
         content:
-          "Gauresh G Pai, Software Engineer, React Developer, Next.js Developer, TypeScript, JavaScript, Web Developer, Engineering Student, UI/UX, Tailwind CSS, Full Stack Developer, Portfolio, Web Development, Software Engineer, India Developer",
+          "Gauresh G Pai, Product Engineer, Software Engineer, React Developer, Next.js Developer, TypeScript, JavaScript, Web Developer, Engineering Student, UI/UX, Tailwind CSS, Full Stack Developer, Portfolio, Web Development, Software Engineer, India Developer",
       },
       {
         property: "profile:first_name",
@@ -104,9 +105,9 @@ export default function Home({
     name: "Gauresh G Pai",
     url: SITE_URL,
     id: `${SITE_URL}/#person`,
-    jobTitle: "Software Engineer",
+    jobTitle: "Product Engineer",
     description:
-      "Software Engineer at Brink AI Labs specializing in React, Next.js, TypeScript, automation, and production web applications.",
+      "Product Engineer at Metaforms, previously a Founding Engineer / SDE at Brink AI Labs, specializing in React, Next.js, TypeScript, automation, and production web applications.",
     knowsAbout: [
       "JavaScript",
       "TypeScript",
@@ -119,7 +120,7 @@ export default function Home({
       "Responsive Design",
       "Performance Optimization",
     ],
-    worksFor: { name: "Brink AI Labs", url: "https://trybrink.com" },
+    worksFor: { name: "Metaforms AI", url: "https://metaforms.ai/" },
     alumniOf: {
       name: "AJ Institute of Engineering & Technology",
       url: "https://ajiet.edu.in/",

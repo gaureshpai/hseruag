@@ -15,14 +15,14 @@ export default function AboutHero() {
 
         <p className="mt-8 space-y-6 text-base font-medium leading-relaxed text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
           <span>
-            I’m a Software Engineer working at{" "}
+            I’m a Product Engineer working at{" "}
             <Link
-              href="https://trybrink.com"
+              href="https://metaforms.ai/"
               className="text-blue-600 underline"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Brink AI Labs
+              Metaforms
             </Link>{" "}
             and an active community contributor at{" "}
             <Link
@@ -33,7 +33,17 @@ export default function AboutHero() {
             >
               DK24
             </Link>
-            , where I help connect tech communities and drive innovation.
+            , where I help connect tech communities and drive innovation. I
+            previously worked as a Founding Engineer / SDE at{" "}
+            <Link
+              href="https://trybrink.com/"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Brink AI Labs
+            </Link>
+            .
           </span>
           <br />
           <br />

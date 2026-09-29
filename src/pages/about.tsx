@@ -36,19 +36,19 @@ export default function About({
   const seoConfig = generateSEOConfig({
     title: "About",
     description:
-      "Learn about Gauresh G Pai, a passionate Software Engineer with 2+ years of experience. Discover my journey, skills in React, Next.js, TypeScript, professional experience, education, and achievements in web development.",
+      "Learn about Gauresh G Pai, a Product Engineer at Metaforms and former Founding Engineer / SDE at Brink AI Labs. Discover his journey, skills in React, Next.js, TypeScript, professional experience, education, and achievements in web development.",
     canonical: `${SITE_URL}/about`,
     openGraph: {
-      title: "About Gauresh G Pai - Software Engineer",
+      title: "About Gauresh G Pai - Product Engineer",
       description:
-        "Software Engineer specializing in React & Next.js. Explore my professional journey, technical skills, education, and accomplishments.",
+        "Product Engineer at Metaforms specializing in React & Next.js. Explore my professional journey, technical skills, education, and accomplishments.",
       type: "profile",
     },
     additionalMetaTags: [
       {
         name: "keywords",
         content:
-          "About Gauresh G Pai, Software Engineer Biography, React Developer Experience, Engineering Student, Web Developer Journey, Professional Experience, Technical Skills, Education, Achievements, Career Path, Software Engineer India",
+          "About Gauresh G Pai, Product Engineer, Software Engineer Biography, React Developer Experience, Engineering Student, Web Developer Journey, Professional Experience, Technical Skills, Education, Achievements, Career Path, Software Engineer India",
       },
       {
         property: "profile:first_name",
@@ -64,9 +64,9 @@ export default function About({
   const personSchema = generatePersonSchema({
     name: "Gauresh G Pai",
     url: `${SITE_URL}/about`,
-    jobTitle: "Software Engineer",
+    jobTitle: "Product Engineer",
     description:
-      "Passionate Software Engineer with expertise in building scalable web applications using React, Next.js, and TypeScript.",
+      "Product Engineer at Metaforms with expertise in building scalable web applications using React, Next.js, and TypeScript.",
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([

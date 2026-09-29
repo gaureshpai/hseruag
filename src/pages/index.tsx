@@ -54,19 +54,19 @@ export default function Home({
 }: HomePageProps) {
   const seoConfig = generateSEOConfig({
     description:
-      "Explore the professional portfolio of Gauresh G Pai, a skilled Software Engineer with 2 years of hands-on experience. Discover innovative projects, expertise in React, Next.js, TypeScript, and modern web technologies.",
+      "Explore the professional portfolio of Gauresh G Pai, a Product Engineer at Metaforms and former Founding Engineer / SDE at Brink AI Labs. Discover innovative projects and expertise in React, Next.js, TypeScript, and modern web technologies.",
     canonical: SITE_URL,
     openGraph: {
-      title: "Gauresh G Pai - Software Engineer Portfolio",
+      title: "Gauresh G Pai - Product Engineer Portfolio",
       description:
-        "Software Engineer specializing in React, Next.js & TypeScript. 9+ client projects delivered with scalable, user-friendly web applications.",
+        "Product Engineer at Metaforms, previously a Founding Engineer / SDE at Brink AI Labs, specializing in React, Next.js & TypeScript.",
       type: "profile",
     },
     additionalMetaTags: [
       {
         name: "keywords",
         content:
-          "Gauresh G Pai, Software Engineer, React Developer, Next.js Developer, TypeScript, JavaScript, Web Developer, Engineering Student, UI/UX, Tailwind CSS, Full Stack Developer, Portfolio, Web Development, Software Engineer, India Developer",
+          "Gauresh G Pai, Product Engineer, Software Engineer, React Developer, Next.js Developer, TypeScript, JavaScript, Web Developer, Engineering Student, UI/UX, Tailwind CSS, Full Stack Developer, Portfolio, Web Development, Software Engineer, India Developer",
       },
       {
         property: "profile:first_name",
@@ -98,9 +98,9 @@ export default function Home({
   const personSchema = generatePersonSchema({
     name: "Gauresh G Pai",
     url: SITE_URL,
-    jobTitle: "Software Engineer",
+    jobTitle: "Product Engineer",
     description:
-      "Skilled Software Engineer specializing in React, Next.js, and TypeScript with 2 years of experience delivering scalable web applications.",
+      "Product Engineer at Metaforms, previously a Founding Engineer / SDE at Brink AI Labs, specializing in React, Next.js, and TypeScript.",
     knowsAbout: [
       "JavaScript",
       "TypeScript",
